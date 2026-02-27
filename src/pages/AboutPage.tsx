@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
+import usePageSEO from "@/hooks/usePageSEO";
 
 const AboutPage = () => {
+  usePageSEO({
+    title: "About Celebrity Reputation Management Agency | 15+ Years, 500+ Campaigns",
+    description: "The premier white-glove reputation management agency exclusively serving celebrities, athletes, entertainers, and public figures since 2009. 500+ campaigns, 94% page-one clearance rate.",
+  });
   return (
     <PageLayout>
       <section className="bg-primary pt-[120px] pb-[clamp(52px,7vw,80px)]">

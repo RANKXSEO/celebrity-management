@@ -1,20 +1,46 @@
 import { useParams, Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useMemo } from "react";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import { blogPosts } from "@/pages/BlogHub";
 import { blogContent } from "@/data/blogContent";
+import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 
 const BlogPost = () => {
   const { slug } = useParams();
   const post = blogPosts.find((p) => p.slug === slug);
   const content = slug ? blogContent[slug] : undefined;
 
-  useEffect(() => {
-    if (post) {
-      document.title = `${post.title} | Celebrity Reputation Management Agency`;
-    }
-  }, [post]);
+  const jsonLd = useMemo(() => post ? {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": post.title,
+        "datePublished": post.date,
+        "author": { "@id": `${BASE_URL}/#organization` },
+        "publisher": { "@id": `${BASE_URL}/#organization` },
+        "url": `${BASE_URL}/blog/${post.slug}`,
+        "mainEntityOfPage": `${BASE_URL}/blog/${post.slug}`,
+        "articleSection": post.tag,
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${BASE_URL}/blog` },
+          { "@type": "ListItem", "position": 3, "name": post.title, "item": `${BASE_URL}/blog/${post.slug}` },
+        ],
+      },
+    ],
+  } : undefined, [post]);
+
+  usePageSEO({
+    title: post ? `${post.title} | Celebrity Reputation Management Agency` : "Post Not Found",
+    description: content?.intro?.slice(0, 155) + "..." || post?.title || "",
+    type: "article",
+    jsonLd,
+  });
 
   if (!post) return <PageLayout><div className="pt-32 pb-20 text-center"><h1 className="font-display text-3xl">Post not found</h1><Link to="/blog" className="text-gold mt-4 inline-block">← Back to blog</Link></div></PageLayout>;
 
@@ -25,7 +51,15 @@ const BlogPost = () => {
       <article>
         <section className="bg-primary pt-[120px] pb-[clamp(40px,5vw,60px)]">
           <div className="max-w-[720px] mx-auto px-4 sm:px-6 lg:px-8">
-            <Link to="/blog" className="text-[11px] tracking-[0.14em] uppercase text-gold font-bold hover:text-gold-light transition-colors mb-4 inline-block">← All Articles</Link>
+            <nav aria-label="Breadcrumb" className="mb-4">
+              <ol className="flex items-center gap-2 text-[11px] tracking-[0.14em] uppercase text-gold font-bold">
+                <li><Link to="/" className="hover:text-gold-light transition-colors">Home</Link></li>
+                <li aria-hidden="true">/</li>
+                <li><Link to="/blog" className="hover:text-gold-light transition-colors">Blog</Link></li>
+                <li aria-hidden="true">/</li>
+                <li className="text-primary-foreground/50 truncate max-w-[200px]">{post.title}</li>
+              </ol>
+            </nav>
             <div className="flex items-center gap-2 mb-4">
               <span className="text-[9px] font-bold tracking-[0.1em] uppercase text-gold bg-gold/10 px-2 py-0.5 rounded-full">{post.tag}</span>
               <span className="text-[11px] text-primary-foreground/30">{post.date} · {post.read}</span>
@@ -37,14 +71,12 @@ const BlogPost = () => {
         <section className="py-[clamp(40px,5vw,60px)] bg-background">
           <div className="max-w-[720px] mx-auto px-4 sm:px-6 lg:px-8">
 
-            {/* Intro */}
             {content ? (
               <>
                 <p className="text-muted-foreground leading-relaxed text-[17px] mb-8 font-body">
                   {content.intro}
                 </p>
 
-                {/* Key takeaways box */}
                 <div className="bg-card border border-border rounded-2xl p-6 mb-10">
                   <h3 className="font-display text-xl font-bold mb-3">Key Takeaways</h3>
                   <ul className="space-y-2 text-sm text-muted-foreground">
@@ -54,7 +86,6 @@ const BlogPost = () => {
                   </ul>
                 </div>
 
-                {/* Article body */}
                 {content.sections.map((sec, i) => (
                   <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
                     <h2 className="font-display text-[clamp(1.4rem,2.5vw,1.875rem)] tracking-tight mb-4">{sec.heading}</h2>
@@ -64,7 +95,6 @@ const BlogPost = () => {
                   </motion.div>
                 ))}
 
-                {/* Related services from content */}
                 {content.relatedServiceSlugs.length > 0 && (
                   <div className="bg-card border border-border rounded-2xl p-6 mb-10">
                     <h3 className="font-display text-lg font-bold mb-3">Related Services</h3>
@@ -81,7 +111,6 @@ const BlogPost = () => {
                 )}
               </>
             ) : (
-              /* Fallback for posts without detailed content */
               <div className="prose prose-lg max-w-none">
                 <p className="text-muted-foreground leading-relaxed text-base mb-6">
                   This is a comprehensive guide from the reputation management experts at Celebrity Reputation Management Agency. For personalised advice about your specific situation, <Link to="/free-consultation" className="text-gold hover:underline">request a free, confidential reputation audit</Link>.

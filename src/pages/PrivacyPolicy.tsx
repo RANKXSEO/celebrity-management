@@ -1,11 +1,12 @@
 import PageLayout from "@/components/PageLayout";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import usePageSEO from "@/hooks/usePageSEO";
 
 const PrivacyPolicy = () => {
-  useEffect(() => {
-    document.title = "Privacy Policy | Celebrity Reputation Management Agency";
-  }, []);
+  usePageSEO({
+    title: "Privacy Policy | Celebrity Reputation Management Agency",
+    description: "Privacy policy for Celebrity Reputation Management Agency. How we collect, use, and protect your personal information.",
+  });
 
   return (
     <PageLayout>

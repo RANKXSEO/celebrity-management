@@ -1,11 +1,40 @@
+import { useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import { audiencePages } from "@/data/audiencePages";
+import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 
 const AudiencePage = () => {
   const { slug } = useParams();
   const page = audiencePages.find((p) => p.slug === slug);
+
+  const jsonLd = useMemo(() => page ? {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": page.h1,
+        "description": page.metaDesc,
+        "url": `${BASE_URL}/who-we-serve/${page.slug}`,
+        "isPartOf": { "@id": `${BASE_URL}/#website` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
+          { "@type": "ListItem", "position": 2, "name": "Who We Serve", "item": `${BASE_URL}/who-we-serve` },
+          { "@type": "ListItem", "position": 3, "name": page.h1, "item": `${BASE_URL}/who-we-serve/${page.slug}` },
+        ],
+      },
+    ],
+  } : undefined, [page]);
+
+  usePageSEO({
+    title: page ? `${page.title} | Celebrity Reputation Management Agency` : "Page Not Found",
+    description: page?.metaDesc || "",
+    jsonLd,
+  });
 
   if (!page) return <PageLayout><div className="pt-32 pb-20 text-center"><h1 className="font-display text-3xl">Page not found</h1><Link to="/who-we-serve" className="text-gold mt-4 inline-block">← Back to who we serve</Link></div></PageLayout>;
 
@@ -13,7 +42,15 @@ const AudiencePage = () => {
     <PageLayout>
       <section className="bg-primary pt-[120px] pb-[clamp(52px,7vw,80px)]">
         <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8">
-          <Link to="/who-we-serve" className="text-[11px] tracking-[0.14em] uppercase text-gold font-bold hover:text-gold-light transition-colors mb-4 inline-block">← Who We Serve</Link>
+          <nav aria-label="Breadcrumb" className="mb-4">
+            <ol className="flex items-center gap-2 text-[11px] tracking-[0.14em] uppercase text-gold font-bold">
+              <li><Link to="/" className="hover:text-gold-light transition-colors">Home</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><Link to="/who-we-serve" className="hover:text-gold-light transition-colors">Who We Serve</Link></li>
+              <li aria-hidden="true">/</li>
+              <li className="text-primary-foreground/50">{page.h1}</li>
+            </ol>
+          </nav>
           <div className="text-4xl mb-4">{page.emoji}</div>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] text-primary-foreground font-bold tracking-tight mb-4">{page.h1}</h1>
           <p className="text-primary-foreground/50 text-lg leading-relaxed mb-8">{page.heroDesc}</p>
@@ -30,7 +67,6 @@ const AudiencePage = () => {
 
       <section className="py-[clamp(52px,7vw,80px)] bg-background">
         <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Challenges */}
           <h2 className="font-display text-2xl font-bold mb-6">The Reputation Challenges You Face</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
             {page.challenges.map((c, i) => (
@@ -41,7 +77,6 @@ const AudiencePage = () => {
             ))}
           </div>
 
-          {/* How we help */}
           <h2 className="font-display text-2xl font-bold mb-4">How We Help</h2>
           <div className="space-y-4 mb-12">
             {page.relevantServices.map((rs) => (
@@ -56,7 +91,16 @@ const AudiencePage = () => {
             ))}
           </div>
 
-          {/* Trust signals */}
+          {/* Cross-link to related blog content */}
+          <div className="bg-card border border-border rounded-2xl p-6 mb-12">
+            <h3 className="font-display text-lg font-bold mb-3">Recommended Reading</h3>
+            <ul className="space-y-2">
+              <li><Link to="/blog/what-is-celebrity-reputation-management" className="text-gold hover:text-gold-light transition-colors font-medium text-sm">What is celebrity reputation management? (Complete guide) →</Link></li>
+              <li><Link to="/blog/signs-you-need-reputation-management" className="text-gold hover:text-gold-light transition-colors font-medium text-sm">10 warning signs you need a reputation manager →</Link></li>
+              <li><Link to="/blog/celebrity-reputation-management-cost" className="text-gold hover:text-gold-light transition-colors font-medium text-sm">How much does celebrity reputation management cost? →</Link></li>
+            </ul>
+          </div>
+
           <div className="bg-card border border-border rounded-2xl p-6 mb-12">
             <h3 className="font-display text-lg font-bold mb-4">Why Clients Trust Us</h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
@@ -74,7 +118,6 @@ const AudiencePage = () => {
             </div>
           </div>
 
-          {/* Testimonial */}
           <div className="bg-primary rounded-2xl p-8 mb-12">
             <div className="font-display text-4xl text-gold/40 mb-2">"</div>
             <blockquote className="font-display text-lg italic text-primary-foreground leading-relaxed mb-4">{page.testimonial.quote}</blockquote>
@@ -82,10 +125,9 @@ const AudiencePage = () => {
             <div className="text-[11px] text-primary-foreground/30 mt-0.5">{page.testimonial.role}</div>
           </div>
 
-          {/* CTA */}
           <div className="bg-card border-2 border-gold/20 rounded-2xl p-8 text-center">
             <h3 className="font-display text-2xl font-bold mb-3">Ready to Protect Your Reputation?</h3>
-            <p className="text-muted-foreground mb-5">Every situation is unique. Start with a free, confidential audit — we'll tell you exactly where you stand and what's achievable.</p>
+            <p className="text-muted-foreground mb-5">Every situation is unique. Start with a <Link to="/free-consultation" className="text-gold hover:underline">free, confidential audit</Link> — we'll tell you exactly where you stand and what's achievable.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link to="/free-consultation" className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-7 py-3.5 rounded text-base font-bold shadow-gold hover:bg-gold-light transition-all">
                 Get Your Free Reputation Audit →

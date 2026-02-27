@@ -2,8 +2,23 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import { solutionPages } from "@/data/solutionPages";
+import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
+import { useMemo } from "react";
 
 const SolutionsHub = () => {
+  const jsonLd = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "CollectionPage", "name": "Reputation Solutions by Problem", "url": `${BASE_URL}/solutions`, "isPartOf": { "@id": `${BASE_URL}/#website` } },
+      { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL }, { "@type": "ListItem", "position": 2, "name": "Solutions", "item": `${BASE_URL}/solutions` }] },
+    ],
+  }), []);
+
+  usePageSEO({
+    title: "Reputation Solutions by Problem | Cancel Culture, Defamation, Tabloid Content & More",
+    description: "Find solutions for your specific reputation problem: cancel culture recovery, defamation removal, tabloid suppression, leaked content removal, scandal recovery, and arrest record removal.",
+    jsonLd,
+  });
   return (
     <PageLayout>
       <section className="bg-primary pt-[120px] pb-[clamp(52px,7vw,80px)]">
