@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import PageLayout from "@/components/PageLayout";
+import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
+import { useMemo } from "react";
 
 const blogPosts = [
   { slug: "first-48-hours-celebrity-crisis", title: "The First 48 Hours After a Story Breaks: What Actually Works in a Celebrity Reputation Crisis", tag: "Crisis", date: "Feb 10, 2026", read: "8 min" },
@@ -32,6 +34,32 @@ const tagColors: Record<string, string> = {
 };
 
 const BlogHub = () => {
+  const jsonLd = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "name": "Celebrity Reputation Management Blog & Expert Guides",
+        "description": "Expert guides on crisis management, search result suppression, Wikipedia management, and AI search reputation for celebrities and public figures.",
+        "url": `${BASE_URL}/blog`,
+        "isPartOf": { "@id": `${BASE_URL}/#website` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${BASE_URL}/blog` },
+        ],
+      },
+    ],
+  }), []);
+
+  usePageSEO({
+    title: "Celebrity Reputation Management Blog | Expert Guides & Insights",
+    description: "Expert guides on celebrity crisis management, negative search result suppression, Wikipedia management, AI search reputation, and more. From the team at Celebrity Reputation Management Agency.",
+    jsonLd,
+  });
+
   return (
     <PageLayout>
       <section className="bg-primary pt-[120px] pb-[clamp(52px,7vw,80px)]">

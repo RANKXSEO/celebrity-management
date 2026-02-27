@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import PageLayout from "@/components/PageLayout";
+import usePageSEO from "@/hooks/usePageSEO";
 
 const ContactPage = () => {
+  usePageSEO({
+    title: "Contact Celebrity Reputation Management Agency | 24/7 Crisis Line",
+    description: "Contact our celebrity reputation management team. 24/7 crisis line: 1-800-555-0199. Email: hello@celebrity-reputation-management.com. NDA-protected, confidential, and discreet.",
+  });
   return (
     <PageLayout>
       <section className="bg-primary pt-[120px] pb-[clamp(52px,7vw,80px)]">

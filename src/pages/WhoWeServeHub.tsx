@@ -2,8 +2,23 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import { audiencePages } from "@/data/audiencePages";
+import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
+import { useMemo } from "react";
 
 const WhoWeServeHub = () => {
+  const jsonLd = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "CollectionPage", "name": "Who We Serve — Celebrity Reputation Management by Industry", "url": `${BASE_URL}/who-we-serve`, "isPartOf": { "@id": `${BASE_URL}/#website` } },
+      { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL }, { "@type": "ListItem", "position": 2, "name": "Who We Serve", "item": `${BASE_URL}/who-we-serve` }] },
+    ],
+  }), []);
+
+  usePageSEO({
+    title: "Who We Serve | Reputation Management for Actors, Athletes, Musicians, Executives & More",
+    description: "We serve exclusively high-profile individuals: actors, musicians, athletes, influencers, CEOs, politicians, and reality TV stars. Industry-specific reputation management expertise.",
+    jsonLd,
+  });
   return (
     <PageLayout>
       <section className="bg-primary pt-[120px] pb-[clamp(52px,7vw,80px)]">

@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
+import usePageSEO from "@/hooks/usePageSEO";
 
 const ResourcesPage = () => {
+  usePageSEO({
+    title: "Celebrity Reputation Management Resources | Free Guides & Checklists",
+    description: "Free guides, checklists, and expert insights on celebrity reputation management. Crisis playbooks, pricing transparency, and self-assessment tools from 500+ campaigns.",
+  });
   return (
     <PageLayout>
       <section className="bg-primary pt-[120px] pb-[clamp(52px,7vw,80px)]">

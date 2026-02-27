@@ -2,8 +2,23 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import { servicePages } from "@/data/servicePages";
+import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
+import { useMemo } from "react";
 
 const ServicesHub = () => {
+  const jsonLd = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "CollectionPage", "name": "Celebrity Reputation Management Services", "description": "Comprehensive reputation management services for celebrities and public figures. Suppression, removal, crisis management, Wikipedia, AI search.", "url": `${BASE_URL}/services`, "isPartOf": { "@id": `${BASE_URL}/#website` } },
+      { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL }, { "@type": "ListItem", "position": 2, "name": "Services", "item": `${BASE_URL}/services` }] },
+    ],
+  }), []);
+
+  usePageSEO({
+    title: "Celebrity Reputation Management Services | Full-Service ORM for Public Figures",
+    description: "Comprehensive reputation management services for celebrities: negative result suppression, Google content removal, crisis management, Wikipedia editing, AI search reputation (GEO), and more.",
+    jsonLd,
+  });
   return (
     <PageLayout>
       <section className="bg-primary pt-[120px] pb-[clamp(52px,7vw,80px)]">

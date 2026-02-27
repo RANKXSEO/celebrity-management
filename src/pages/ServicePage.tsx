@@ -1,13 +1,49 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import { servicePages } from "@/data/servicePages";
+import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 
 const ServicePage = () => {
   const { slug } = useParams();
   const page = servicePages.find((p) => p.slug === slug);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const jsonLd = useMemo(() => page ? {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": page.h1,
+        "description": page.metaDesc,
+        "provider": { "@id": `${BASE_URL}/#organization` },
+        "url": `${BASE_URL}/services/${page.slug}`,
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": `${BASE_URL}/services` },
+          { "@type": "ListItem", "position": 3, "name": page.h1, "item": `${BASE_URL}/services/${page.slug}` },
+        ],
+      },
+      ...(page.faqs.length > 0 ? [{
+        "@type": "FAQPage",
+        "mainEntity": page.faqs.map(f => ({
+          "@type": "Question",
+          "name": f.q,
+          "acceptedAnswer": { "@type": "Answer", "text": f.a },
+        })),
+      }] : []),
+    ],
+  } : undefined, [page]);
+
+  usePageSEO({
+    title: page ? `${page.title} | Celebrity Reputation Management Agency` : "Service Not Found",
+    description: page?.metaDesc || "",
+    jsonLd,
+  });
 
   if (!page) return <PageLayout><div className="pt-32 pb-20 text-center"><h1 className="font-display text-3xl">Service not found</h1><Link to="/services" className="text-gold mt-4 inline-block">← Back to all services</Link></div></PageLayout>;
 
@@ -16,9 +52,15 @@ const ServicePage = () => {
       {/* Hero */}
       <section className="bg-primary pt-[120px] pb-[clamp(52px,7vw,80px)]">
         <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2.5 mb-4">
-            <Link to="/services" className="text-[11px] tracking-[0.14em] uppercase text-gold font-bold hover:text-gold-light transition-colors">← All Services</Link>
-          </div>
+          <nav aria-label="Breadcrumb" className="mb-4">
+            <ol className="flex items-center gap-2 text-[11px] tracking-[0.14em] uppercase text-gold font-bold">
+              <li><Link to="/" className="hover:text-gold-light transition-colors">Home</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><Link to="/services" className="hover:text-gold-light transition-colors">Services</Link></li>
+              <li aria-hidden="true">/</li>
+              <li className="text-primary-foreground/50">{page.h1}</li>
+            </ol>
+          </nav>
           <div className="text-4xl mb-4">{page.icon}</div>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] text-primary-foreground font-bold tracking-tight mb-4">{page.h1}</h1>
           <p className="text-primary-foreground/50 text-lg leading-relaxed mb-8">{page.heroDesc}</p>
@@ -90,7 +132,7 @@ const ServicePage = () => {
           {/* Mid-page CTA */}
           <div className="bg-card border-2 border-gold/20 rounded-2xl p-6 mb-12 text-center">
             <h3 className="font-display text-xl font-bold mb-2">Not sure if this is the right service?</h3>
-            <p className="text-sm text-muted-foreground mb-4">Start with a free, confidential reputation audit. We'll tell you exactly what you need — and what you don't.</p>
+            <p className="text-sm text-muted-foreground mb-4">Start with a <Link to="/free-consultation" className="text-gold hover:underline">free, confidential reputation audit</Link>. We'll tell you exactly what you need — and what you don't.</p>
             <Link to="/free-consultation" className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-6 py-3 rounded text-sm font-bold shadow-gold hover:bg-gold-light transition-all">
               Get Your Free Audit — No Obligation →
             </Link>

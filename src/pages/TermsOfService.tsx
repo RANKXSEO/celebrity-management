@@ -1,11 +1,12 @@
 import PageLayout from "@/components/PageLayout";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import usePageSEO from "@/hooks/usePageSEO";
 
 const TermsOfService = () => {
-  useEffect(() => {
-    document.title = "Terms of Service | Celebrity Reputation Management Agency";
-  }, []);
+  usePageSEO({
+    title: "Terms of Service | Celebrity Reputation Management Agency",
+    description: "Terms of service for Celebrity Reputation Management Agency. Engagement terms, confidentiality, and service conditions.",
+  });
 
   return (
     <PageLayout>

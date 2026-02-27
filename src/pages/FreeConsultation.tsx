@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import PageLayout from "@/components/PageLayout";
+import usePageSEO from "@/hooks/usePageSEO";
 
 const FreeConsultation = () => {
+  usePageSEO({
+    title: "Free Celebrity Reputation Audit | Confidential Assessment",
+    description: "Get a free, confidential reputation audit. We'll analyse your Google results, Wikipedia, Knowledge Panel, AI search answers, and social media — with zero obligation. Response within 2 hours.",
+  });
   return (
     <PageLayout>
       <section className="bg-primary pt-[120px] pb-[clamp(52px,7vw,80px)]">
