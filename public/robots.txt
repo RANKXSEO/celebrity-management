@@ -1,8 +1,10 @@
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 2
 
 User-agent: Twitterbot
 Allow: /
@@ -22,7 +24,14 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: *
+User-agent: Applebot
 Allow: /
 
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_
+Disallow: /404
+
 Sitemap: https://celebrity-reputation-management.com/sitemap.xml
+Host: https://celebrity-reputation-management.com
