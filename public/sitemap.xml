@@ -1,61 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://celebrity-reputation-management.com/</loc><lastmod>2026-02-27</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <!-- Services -->
-  <url><loc>https://celebrity-reputation-management.com/services</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/services/negative-search-results</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/services/google-results-removal</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/services/celebrity-crisis-management</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/services/wikipedia-for-celebrities</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/services/knowledge-panel-management</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/services/ai-search-reputation</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/services/social-media-reputation</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/services/content-suppression</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/services/review-management</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/services/reputation-protection</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <!-- Who We Serve -->
-  <url><loc>https://celebrity-reputation-management.com/who-we-serve</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/who-we-serve/actors-entertainers</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/who-we-serve/musicians-artists</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/who-we-serve/athletes-sports-stars</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/who-we-serve/influencers-content-creators</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/who-we-serve/executives-ceos</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/who-we-serve/politicians-public-officials</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/who-we-serve/reality-tv-personalities</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <!-- Solutions -->
-  <url><loc>https://celebrity-reputation-management.com/solutions</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/solutions/cancel-culture-reputation-repair</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/solutions/defamation-fake-news-removal</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/solutions/paparazzi-tabloid-content</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/solutions/old-arrest-records-online</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/solutions/leaked-content-removal</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/solutions/scandal-recovery</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <!-- Blog -->
-  <url><loc>https://celebrity-reputation-management.com/blog</loc><lastmod>2026-02-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/first-48-hours-celebrity-crisis</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/what-chatgpt-says-about-you</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/how-to-get-wikipedia-page</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/surviving-cancel-culture</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/celebrity-scandal-48-hour-playbook</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/right-to-be-forgotten-celebrities</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/how-long-suppress-negative-google</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/google-knowledge-panel-guide</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/old-tabloid-articles-ranking</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/wikipedia-notability-explained</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/celebrity-wikipedia-mistakes</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/what-is-celebrity-reputation-management</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/celebrity-reputation-management-cost</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/reputation-management-vs-pr</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/social-media-crisis-guide</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/reddit-celebrity-reputation</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/10-celebrity-reputation-disasters</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/blog/signs-you-need-reputation-management</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url><loc>https://celebrity-reputation-management.com/</loc><lastmod>2026-02-28</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <!-- Services Hub + Individual -->
+  <url><loc>https://celebrity-reputation-management.com/services</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/services/negative-search-results</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/services/google-results-removal</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/services/celebrity-crisis-management</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/services/wikipedia-for-celebrities</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/services/knowledge-panel-management</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/services/ai-search-reputation</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/services/social-media-reputation</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/services/content-suppression</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/services/review-management</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/services/reputation-protection</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- Who We Serve Hub + Individual -->
+  <url><loc>https://celebrity-reputation-management.com/who-we-serve</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/who-we-serve/actors-entertainers</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/who-we-serve/musicians-artists</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/who-we-serve/athletes-sports-stars</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/who-we-serve/influencers-content-creators</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/who-we-serve/executives-ceos</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/who-we-serve/politicians-public-officials</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/who-we-serve/reality-tv-personalities</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Solutions Hub + Individual -->
+  <url><loc>https://celebrity-reputation-management.com/solutions</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/solutions/cancel-culture-reputation-repair</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/solutions/defamation-fake-news-removal</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/solutions/paparazzi-tabloid-content</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/solutions/old-arrest-records-online</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/solutions/leaked-content-removal</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/solutions/scandal-recovery</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Blog Hub + Posts -->
+  <url><loc>https://celebrity-reputation-management.com/blog</loc><lastmod>2026-02-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/first-48-hours-celebrity-crisis</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/what-chatgpt-says-about-you</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/how-to-get-wikipedia-page</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/surviving-cancel-culture</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/celebrity-scandal-48-hour-playbook</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/right-to-be-forgotten-celebrities</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/how-long-suppress-negative-google</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/google-knowledge-panel-guide</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/old-tabloid-articles-ranking</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/wikipedia-notability-explained</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/celebrity-wikipedia-mistakes</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/what-is-celebrity-reputation-management</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/celebrity-reputation-management-cost</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/reputation-management-vs-pr</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/social-media-crisis-guide</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/reddit-celebrity-reputation</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/10-celebrity-reputation-disasters</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/blog/signs-you-need-reputation-management</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <!-- Other Pages -->
-  <url><loc>https://celebrity-reputation-management.com/about</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/free-consultation</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/contact</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/resources</loc><lastmod>2026-02-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/privacy-policy</loc><lastmod>2026-02-27</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://celebrity-reputation-management.com/terms-of-service</loc><lastmod>2026-02-27</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/about</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/free-consultation</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/contact</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/resources</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/privacy-policy</loc><lastmod>2026-02-28</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://celebrity-reputation-management.com/terms-of-service</loc><lastmod>2026-02-28</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
