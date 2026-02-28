@@ -84,8 +84,8 @@ const ContactSection = () => {
 
         <div className="mt-8 text-center">
           <p className="text-sm text-muted-foreground mb-2">Prefer to talk? Call the crisis line directly:</p>
-          <a href="tel:+18005550199" className="font-display text-2xl font-bold text-gold hover:text-gold-light transition-colors">
-            1-800-555-0199
+          <a href="tel:+16462224346" className="font-display text-2xl font-bold text-gold hover:text-gold-light transition-colors">
+            (646) 222-4346
           </a>
           <p className="text-[11px] text-muted-foreground mt-1">Available 24/7 · Typical response: under 15 minutes</p>
         </div>

@@ -41,10 +41,10 @@ const CtaBanner = () => {
             Get Your Free Reputation Audit
           </Link>
           <a
-            href="tel:+18005550199"
+            href="tel:+16462224346"
             className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground px-7 py-3.5 rounded text-base font-medium hover:border-gold-light hover:text-gold-light transition-all"
           >
-            Call Now: 1-800-555-0199
+            Call Now: (646) 222-4346
           </a>
         </div>
         <p className="text-[11px] text-primary-foreground/20 mt-4 tracking-[0.04em]">

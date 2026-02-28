@@ -62,7 +62,7 @@ const SolutionPage = () => {
             <Link to="/free-consultation" className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-6 py-3 rounded text-sm font-bold shadow-gold hover:bg-gold-light transition-all">
               Get Emergency Help Now →
             </Link>
-            <a href="tel:+18005550199" className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground px-6 py-3 rounded text-sm font-medium hover:border-gold-light hover:text-gold-light transition-all">
+            <a href="tel:+16462224346" className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground px-6 py-3 rounded text-sm font-medium hover:border-gold-light hover:text-gold-light transition-all">
               📞 24/7 Crisis Line
             </a>
           </div>
@@ -168,8 +168,8 @@ const SolutionPage = () => {
               <Link to="/free-consultation" className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-7 py-3.5 rounded text-base font-bold shadow-gold hover:bg-gold-light transition-all">
                 Get Your Free Reputation Audit →
               </Link>
-              <a href="tel:+18005550199" className="text-sm text-primary-foreground/50 hover:text-gold-light transition-colors">
-                or call 1-800-555-0199 (24/7)
+              <a href="tel:+16462224346" className="text-sm text-primary-foreground/50 hover:text-gold-light transition-colors">
+                or call (646) 222-4346 (24/7)
               </a>
             </div>
           </div>

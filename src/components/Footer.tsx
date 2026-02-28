@@ -12,11 +12,11 @@ const Footer = () => {
               Specialist <Link to="/services" className="text-primary-foreground/50 hover:text-gold-light transition-colors">online reputation management</Link> for celebrities, athletes, entertainers, influencers, executives, and public figures. Serving the <strong className="text-primary-foreground/45">United States</strong>, <strong className="text-primary-foreground/45">United Kingdom</strong>, and internationally since 2009.
             </p>
             <address className="not-italic flex flex-col gap-2">
-              <a href="tel:+18005550199" className="flex items-center gap-2.5 text-[13px] text-primary-foreground/45 hover:text-gold-light transition-colors">
-                <span className="text-gold text-sm" aria-hidden="true">📞</span> 1-800-555-0199 (24/7)
+              <a href="tel:+16462224346" className="flex items-center gap-2.5 text-[13px] text-primary-foreground/45 hover:text-gold-light transition-colors">
+                <span className="text-gold text-sm" aria-hidden="true">📞</span> (646) 222-4346 (24/7)
               </a>
-              <a href="mailto:hello@celebrity-reputation-management.com" className="flex items-center gap-2.5 text-[13px] text-primary-foreground/45 hover:text-gold-light transition-colors">
-                <span className="text-gold text-sm" aria-hidden="true">✉️</span> hello@celebrity-reputation-management.com
+              <a href="mailto:contact@celebrity-reputation-management.com" className="flex items-center gap-2.5 text-[13px] text-primary-foreground/45 hover:text-gold-light transition-colors">
+                <span className="text-gold text-sm" aria-hidden="true">✉️</span> contact@celebrity-reputation-management.com
               </a>
             </address>
           </div>

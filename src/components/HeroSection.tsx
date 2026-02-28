@@ -61,10 +61,10 @@ const HeroSection = () => {
             Get a Free Reputation Audit
           </Link>
           <a
-            href="tel:+18005550199"
+            href="tel:+16462224346"
             className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground px-7 py-3.5 rounded text-base font-medium hover:border-gold-light hover:text-gold-light transition-all"
           >
-            24/7 Crisis Line: 1-800-555-0199
+            24/7 Crisis Line: (646) 222-4346
           </a>
         </motion.div>
 
