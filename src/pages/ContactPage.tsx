@@ -5,7 +5,7 @@ import usePageSEO from "@/hooks/usePageSEO";
 const ContactPage = () => {
   usePageSEO({
     title: "Contact Celebrity Reputation Management Agency | 24/7 Crisis Line",
-    description: "Contact our celebrity reputation management team. 24/7 crisis line: 1-800-555-0199. Email: hello@celebrity-reputation-management.com. NDA-protected, confidential, and discreet.",
+    description: "Contact our celebrity reputation management team. 24/7 crisis line: (646) 222-4346. Email: contact@celebrity-reputation-management.com. NDA-protected, confidential, and discreet.",
   });
   return (
     <PageLayout>
@@ -28,14 +28,14 @@ const ContactPage = () => {
             <div className="bg-card border border-border rounded-2xl p-6 text-center">
               <div className="text-3xl mb-3">📞</div>
               <h2 className="font-body text-lg font-bold text-foreground mb-2">24/7 Crisis Line</h2>
-              <a href="tel:+18005550199" className="font-display text-2xl font-bold text-gold hover:text-gold-light transition-colors">1-800-555-0199</a>
+              <a href="tel:+16462224346" className="font-display text-2xl font-bold text-gold hover:text-gold-light transition-colors">(646) 222-4346</a>
               <p className="text-[12px] text-muted-foreground mt-2">Answered by senior strategists — not voicemail, not junior staff.</p>
               <p className="text-[12px] text-muted-foreground mt-1">Average response: under 60 seconds.</p>
             </div>
             <div className="bg-card border border-border rounded-2xl p-6 text-center">
               <div className="text-3xl mb-3">✉️</div>
               <h2 className="font-body text-lg font-bold text-foreground mb-2">Email</h2>
-              <a href="mailto:hello@celebrity-reputation-management.com" className="text-gold hover:text-gold-light transition-colors text-sm font-medium">hello@celebrity-reputation-management.com</a>
+              <a href="mailto:contact@celebrity-reputation-management.com" className="text-gold hover:text-gold-light transition-colors text-sm font-medium">contact@celebrity-reputation-management.com</a>
               <p className="text-[12px] text-muted-foreground mt-2">Response within 2 hours during business hours.</p>
               <p className="text-[12px] text-muted-foreground mt-1">All emails are encrypted and NDA-protected.</p>
             </div>

@@ -33,8 +33,8 @@ const FaqSection = () => {
               <p className="text-sm text-primary-foreground/35 leading-relaxed mb-4">
                 If something is happening right now, skip the form. Call the crisis line — someone picks up, day or night.
               </p>
-              <a href="tel:+18005550199" className="font-display text-2xl font-bold text-gold-light block">
-                1-800-555-0199
+              <a href="tel:+16462224346" className="font-display text-2xl font-bold text-gold-light block">
+                (646) 222-4346
               </a>
               <div className="text-[9px] text-primary-foreground/20 mt-1 tracking-[0.04em]">Typical response: under 15 minutes</div>
               <Link
