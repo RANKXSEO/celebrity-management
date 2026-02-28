@@ -4,6 +4,7 @@ import Logo from "./Logo";
 
 const navLinks = [
   { label: "Services", href: "/services" },
+  { label: "Google Review Removal", href: "/services/google-review-removal" },
   { label: "Who We Serve", href: "/who-we-serve" },
   { label: "Solutions", href: "/solutions" },
   { label: "About", href: "/about" },

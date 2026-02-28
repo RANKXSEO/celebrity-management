@@ -33,6 +33,7 @@ const Footer = () => {
               <Link to="/services/social-media-reputation" className="text-sm text-primary-foreground/35 hover:text-primary-foreground/70 transition-colors">Social Media Reputation Defence</Link>
               <Link to="/services/review-management" className="text-sm text-primary-foreground/35 hover:text-primary-foreground/70 transition-colors">Review & Rating Management</Link>
               <Link to="/services/reputation-protection" className="text-sm text-primary-foreground/35 hover:text-primary-foreground/70 transition-colors">Reputation Monitoring & Protection</Link>
+              <Link to="/services/google-review-removal" className="text-sm text-primary-foreground/35 hover:text-primary-foreground/70 transition-colors">Google Review Removal Service</Link>
             </div>
           </nav>
 
