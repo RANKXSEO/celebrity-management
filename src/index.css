@@ -96,12 +96,6 @@
     display: block;
   }
 
-  /* Content-visibility for offscreen sections */
-  section {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 600px;
-  }
-
   h1, h2, h3, h4, h5 {
     font-family: 'Cormorant Garamond', Georgia, serif;
     line-height: 1.12;
