@@ -1,7 +1,7 @@
 const StatsBar = () => {
   const stats = [
-    { num: "500+", label: "Campaigns for celebrities & public figures" },
-    { num: "15 yrs", label: "Protecting reputations since 2009" },
+    { num: "500+", label: "Celebrity reputation management campaigns" },
+    { num: "15 yrs", label: "Reputation management expertise since 2009" },
     { num: "94%", label: "Negative page-one results cleared" },
     { num: "< 48 hr", label: "Average crisis first-response time" },
   ];

@@ -11,7 +11,7 @@ const ContactSection = () => {
             <div className="w-6 h-px bg-gold" />
           </div>
           <h2 className="font-display text-[clamp(1.625rem,2.8vw,2.5rem)] tracking-tight mb-3">
-            Request Your Free <em className="text-gold italic">Reputation Audit</em>
+            Get a Free Celebrity <em className="text-gold italic">Reputation Management</em> Audit
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed max-w-[500px] mx-auto">
             Tell us what's going on. Everything you share is treated as confidential — NDA available before we get into any detail.

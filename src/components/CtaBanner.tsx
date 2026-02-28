@@ -21,7 +21,7 @@ const CtaBanner = () => {
           Limited availability — we keep a small client list
         </div>
         <h2 className="font-display text-[clamp(1.625rem,3vw,2.5rem)] text-primary-foreground font-bold mb-3 tracking-tight">
-          Negative Content Gets Harder to Remove <em className="text-gold-light italic">the Longer It Stays Up.</em>
+          Start Your Reputation Management Today — <em className="text-gold-light italic">Before It Gets Harder.</em>
         </h2>
         <p className="text-primary-foreground/40 text-base leading-relaxed mb-4 max-w-[520px] mx-auto">
           A reputation audit takes about 20 minutes and doesn't cost anything. We'll walk you through what's showing up, what's achievable, and what it would realistically take — no pressure, no obligation.

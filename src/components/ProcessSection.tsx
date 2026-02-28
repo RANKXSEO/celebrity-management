@@ -19,7 +19,7 @@ const ProcessSection = () => {
             <div className="w-6 h-px bg-gold" />
           </div>
           <h2 className="font-display text-[clamp(1.625rem,2.8vw,2.5rem)] tracking-tight mb-3">
-            From Free Audit to <em className="text-gold italic">Full Protection</em> in Four Steps
+            How Our Reputation Management <em className="text-gold italic">Process Works</em>
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed">
             We tell you what we find, what it'll take, and what you can expect — before you spend anything.

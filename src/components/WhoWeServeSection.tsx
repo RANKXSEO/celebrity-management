@@ -23,7 +23,7 @@ const WhoWeServeSection = () => {
             <div className="w-6 h-px bg-gold/50" />
           </div>
           <h2 className="font-display text-[clamp(1.625rem,2.8vw,2.5rem)] tracking-tight text-primary-foreground mb-4">
-            Online Reputation Management Built for <em className="text-gold-light italic">People in the Spotlight</em>
+            Reputation Management for <em className="text-gold-light italic">Celebrities & Public Figures</em>
           </h2>
           <p className="text-primary-foreground/45 text-[17px] leading-relaxed">
             We don't work with local businesses or small brands. Every client is a public figure with a unique set of reputational risks, media exposure, and career considerations. That focus is what makes us different.
