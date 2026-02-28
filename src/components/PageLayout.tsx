@@ -14,7 +14,7 @@ const PageLayout = ({ children }: { children: ReactNode }) => {
   }, [pathname]);
 
   return (
-    <main>
+    <main id="main-content">
       <Navbar />
       {children}
       <Footer />

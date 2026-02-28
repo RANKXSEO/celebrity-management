@@ -1,0 +1,26 @@
+{
+  "name": "Celebrity Reputation Management Agency",
+  "short_name": "CRMA",
+  "description": "Specialist online reputation management for celebrities, athletes, and public figures.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#152238",
+  "theme_color": "#152238",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["business", "lifestyle"],
+  "lang": "en",
+  "dir": "ltr"
+}

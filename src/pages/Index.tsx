@@ -16,7 +16,7 @@ import FloatingCta from "@/components/FloatingCta";
 
 const Index = () => {
   return (
-    <main>
+    <main id="main-content">
       <Navbar />
       <HeroSection />
       <TrustBar />

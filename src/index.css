@@ -81,6 +81,25 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Focus visible for keyboard accessibility */
+  :focus-visible {
+    outline: 2px solid hsl(var(--gold));
+    outline-offset: 2px;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Content-visibility for offscreen sections */
+  section {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 600px;
   }
 
   h1, h2, h3, h4, h5 {
