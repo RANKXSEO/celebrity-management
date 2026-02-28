@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
@@ -11,7 +11,7 @@ import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 const SolutionPage = () => {
   const { slug } = useParams();
   const page = solutionPages.find((p) => p.slug === slug);
-  const [openFaq] = useState<number | null>(null);
+  // openFaq removed — SolutionPage doesn't render inline FAQ accordions
 
   const jsonLd = useMemo(() => page ? {
     "@context": "https://schema.org",

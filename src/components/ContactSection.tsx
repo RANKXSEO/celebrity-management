@@ -11,7 +11,7 @@ const ContactSection = () => {
             <div className="w-6 h-px bg-gold" />
           </div>
           <h2 className="font-display text-[clamp(1.625rem,2.8vw,2.5rem)] tracking-tight mb-3">
-            Get a Free Celebrity <em className="text-gold italic">Reputation Management</em> Audit
+            Request a Confidential <em className="text-gold italic">Reputation</em> Assessment
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed max-w-[500px] mx-auto">
             Tell us what's going on. Everything you share is treated as confidential — NDA available before we get into any detail.
@@ -21,7 +21,6 @@ const ContactSection = () => {
         <div className="flex items-center justify-center gap-4 text-[11px] text-muted-foreground mb-6 flex-wrap">
           <span className="flex items-center gap-1">NDA-protected</span>
           <span className="flex items-center gap-1">Response within 2 hours</span>
-          <span className="flex items-center gap-1">500+ campaigns</span>
           <span className="flex items-center gap-1">US, UK & international</span>
         </div>
 

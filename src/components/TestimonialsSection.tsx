@@ -43,10 +43,10 @@ const TestimonialsSection = () => {
             <div className="w-6 h-px bg-gold" />
           </div>
           <h2 className="font-display text-[clamp(1.625rem,2.8vw,2.5rem)] tracking-tight mb-3">
-            Celebrity Reputation Management <em className="text-gold italic">Results</em>
+            What Our Clients <em className="text-gold italic">Actually</em> Say
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed">
-            Client identities are protected. These are real outcomes from real engagements — shared with permission and anonymised at each client's request.
+            Identities protected. Real outcomes from real engagements — shared with permission, anonymised at each client's request.
           </p>
         </header>
 
@@ -81,12 +81,12 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="text-center mt-10">
-          <p className="text-muted-foreground text-sm mb-3">Want to know what we could do in your situation?</p>
+          <p className="text-muted-foreground text-sm mb-3">Wondering what's possible in your situation?</p>
           <Link
             to="/free-consultation"
             className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-6 py-3 rounded text-sm font-bold shadow-gold hover:bg-gold-light hover:-translate-y-0.5 transition-all"
           >
-            Request a Free Reputation Audit
+            Talk to Us — It's Free and Confidential
           </Link>
         </div>
       </div>

@@ -21,16 +21,16 @@ const CtaBanner = () => {
           Limited availability — we keep a small client list
         </div>
         <h2 className="font-display text-[clamp(1.625rem,3vw,2.5rem)] text-primary-foreground font-bold mb-3 tracking-tight">
-          Start Your Reputation Management Today — <em className="text-gold-light italic">Before It Gets Harder.</em>
+          The Longer You Wait, <em className="text-gold-light italic">the Harder It Gets.</em>
         </h2>
         <p className="text-primary-foreground/40 text-base leading-relaxed mb-4 max-w-[520px] mx-auto">
-          A reputation audit takes about 20 minutes and doesn't cost anything. We'll walk you through what's showing up, what's achievable, and what it would realistically take — no pressure, no obligation.
+          A reputation audit takes about 20 minutes and costs nothing. We'll show you exactly what's ranking, what's fixable, and what a realistic timeline looks like.
         </p>
 
         <div className="flex items-center justify-center gap-4 text-[11px] text-primary-foreground/25 mb-7 flex-wrap">
-          <span>94% page-one clearance rate</span>
-          <span>500+ campaigns delivered</span>
-          <span>Measurable results in 30 days</span>
+          <span>Measurable ranking shifts in 30 days</span>
+          <span>NDA before we start talking</span>
+          <span>No long-term contracts required</span>
         </div>
 
         <div className="flex items-center justify-center gap-3 flex-wrap">

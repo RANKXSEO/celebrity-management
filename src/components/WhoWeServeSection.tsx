@@ -26,7 +26,7 @@ const WhoWeServeSection = () => {
             Reputation Management for <em className="text-gold-light italic">Celebrities & Public Figures</em>
           </h2>
           <p className="text-primary-foreground/45 text-[17px] leading-relaxed">
-            We don't work with local businesses or small brands. Every client is a public figure with a unique set of reputational risks, media exposure, and career considerations. That focus is what makes us different.
+            We don't take on local businesses or small brands. Every client is a public figure with real media exposure and career-level stakes. That narrow focus is why we're good at this.
           </p>
         </header>
 
