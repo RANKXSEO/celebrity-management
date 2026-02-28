@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import ContentRenderer from "@/components/ContentRenderer";
 import { audiencePages } from "@/data/audiencePages";
+import { servicePages } from "@/data/servicePages";
+import { solutionPages } from "@/data/solutionPages";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 
 const AudiencePage = () => {
@@ -124,6 +126,37 @@ const AudiencePage = () => {
             <blockquote className="font-display text-lg italic text-primary-foreground leading-relaxed mb-4">{page.testimonial.quote}</blockquote>
             <div className="text-sm font-bold text-gold-light">{page.testimonial.name}</div>
             <div className="text-[11px] text-primary-foreground/30 mt-0.5">{page.testimonial.role}</div>
+          </div>
+
+          {/* Cross-hub: Other Audiences */}
+          <div className="mb-10">
+            <h3 className="font-display text-lg font-bold mb-3">We Also Serve</h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {audiencePages.filter(a => a.slug !== page.slug).map(aud => (
+                <li key={aud.slug}><Link to={`/who-we-serve/${aud.slug}`} className="text-sm text-gold hover:text-gold-light transition-colors font-medium">{aud.emoji} {aud.h1} →</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Cross-hub: Solutions */}
+          <div className="bg-card border border-border rounded-2xl p-6 mb-10">
+            <h3 className="font-display text-lg font-bold mb-3">Reputation Solutions by Problem</h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {solutionPages.slice(0, 6).map(sol => (
+                <li key={sol.slug}><Link to={`/solutions/${sol.slug}`} className="text-sm text-gold hover:text-gold-light transition-colors font-medium">{sol.icon} {sol.h1} →</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Cross-hub: Key Services */}
+          <div className="bg-card border border-border rounded-2xl p-6 mb-10">
+            <h3 className="font-display text-lg font-bold mb-3">Our Reputation Management Services</h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {servicePages.slice(0, 6).map(svc => (
+                <li key={svc.slug}><Link to={`/services/${svc.slug}`} className="text-sm text-gold hover:text-gold-light transition-colors font-medium">{svc.icon} {svc.h1} →</Link></li>
+              ))}
+            </ul>
+            <Link to="/services" className="text-sm text-gold hover:text-gold-light transition-colors font-bold mt-3 inline-block">View all services →</Link>
           </div>
 
           <div className="bg-card border-2 border-gold/20 rounded-2xl p-8 text-center">
