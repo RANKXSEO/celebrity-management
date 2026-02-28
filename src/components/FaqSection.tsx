@@ -72,16 +72,16 @@ const FaqSection = () => {
               </p>
             </header>
 
-            <div className="flex flex-col" itemScope itemType="https://schema.org/FAQPage">
+            <div className="flex flex-col">
               {faqs.map((faq, i) => (
-                <div key={i} className="border-b border-border" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                <div key={i} className="border-b border-border">
                   <button
                     onClick={() => setOpenIndex(openIndex === i ? null : i)}
                     className="flex items-start justify-between gap-3 py-4 w-full text-left font-body text-[15px] font-semibold text-primary hover:text-gold transition-colors leading-snug"
                     aria-expanded={openIndex === i}
                     aria-controls={`faq-answer-${i}`}
                   >
-                    <span itemProp="name">{faq.q}</span>
+                    <span>{faq.q}</span>
                     <span
                       className={`w-[22px] h-[22px] rounded-full border border-border flex items-center justify-center flex-shrink-0 text-gold text-sm font-light mt-0.5 transition-all ${
                         openIndex === i ? "bg-gold border-gold text-primary-foreground rotate-45" : ""
@@ -96,10 +96,9 @@ const FaqSection = () => {
                     className={`grid transition-all duration-300 ease-in-out ${
                       openIndex === i ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
                     }`}
-                    itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"
                   >
                     <div className="overflow-hidden">
-                      <p className="text-[15px] text-muted-foreground leading-relaxed pb-4" itemProp="text">
+                      <p className="text-[15px] text-muted-foreground leading-relaxed pb-4">
                         {faq.a}
                       </p>
                     </div>
