@@ -2,83 +2,90 @@ const Logo = ({ className = "", light = true }: { className?: string; light?: bo
   const textColor = light ? "text-primary-foreground" : "text-primary";
 
   return (
-    <div className={`flex items-center gap-3.5 select-none ${className}`}>
-      {/* Shield with geometric frame */}
+    <div className={`flex items-center gap-3 select-none ${className}`}>
+      {/* Gold shield with geometric frame — matching social share image */}
       <svg
-        width="36"
-        height="42"
-        viewBox="0 0 36 42"
+        width="34"
+        height="40"
+        viewBox="0 0 34 40"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="flex-shrink-0"
         aria-hidden="true"
       >
         <defs>
-          <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="hsl(40, 65%, 62%)" />
-            <stop offset="45%" stopColor="hsl(35, 72%, 50%)" />
-            <stop offset="100%" stopColor="hsl(30, 60%, 38%)" />
+          <linearGradient id="shield-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="hsl(45, 80%, 68%)" />
+            <stop offset="50%" stopColor="hsl(40, 75%, 50%)" />
+            <stop offset="100%" stopColor="hsl(35, 65%, 38%)" />
           </linearGradient>
-          <linearGradient id="gold-grad-light" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="hsl(40, 65%, 68%)" />
-            <stop offset="100%" stopColor="hsl(35, 55%, 52%)" />
+          <linearGradient id="shield-highlight" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" stopColor="hsl(45, 85%, 75%)" />
+            <stop offset="100%" stopColor="hsl(38, 70%, 45%)" />
           </linearGradient>
         </defs>
 
-        {/* Geometric diamond frame behind shield */}
+        {/* Outer geometric hexagonal frame */}
         <path
-          d="M18 1L33 11V31L18 41L3 31V11L18 1Z"
-          stroke="url(#gold-grad-light)"
-          strokeWidth="0.5"
-          opacity="0.25"
+          d="M17 1L31 9V31L17 39L3 31V9L17 1Z"
+          stroke="hsl(40, 55%, 50%)"
+          strokeWidth="0.4"
+          opacity="0.2"
           fill="none"
         />
+        {/* Inner geometric frame */}
         <path
-          d="M18 5L30 13V29L18 37L6 29V13L18 5Z"
-          stroke="url(#gold-grad-light)"
+          d="M17 4.5L28 11V29L17 35.5L6 29V11L17 4.5Z"
+          stroke="hsl(40, 55%, 50%)"
           strokeWidth="0.3"
-          opacity="0.15"
+          opacity="0.12"
           fill="none"
         />
 
-        {/* Main shield - filled gold */}
+        {/* Horizontal gold lines flanking shield */}
+        <line x1="2" y1="22" x2="9" y2="22" stroke="url(#shield-gold)" strokeWidth="0.7" opacity="0.5" />
+        <line x1="25" y1="22" x2="32" y2="22" stroke="url(#shield-gold)" strokeWidth="0.7" opacity="0.5" />
+
+        {/* Main shield — filled gold gradient */}
         <path
-          d="M18 7L7 12.5V22C7 29 11.5 34.5 18 37C24.5 34.5 29 29 29 22V12.5L18 7Z"
-          fill="url(#gold-grad)"
+          d="M17 8L8 13V22C8 28.5 12 33.5 17 35.5C22 33.5 26 28.5 26 22V13L17 8Z"
+          fill="url(#shield-gold)"
         />
-        {/* Inner shield highlight */}
+
+        {/* Dark inner shield */}
         <path
-          d="M18 10L10 14.2V22C10 27.5 13.5 32 18 34C22.5 32 26 27.5 26 22V14.2L18 10Z"
+          d="M17 11L11 14.5V22C11 27 14 30.8 17 32.5C20 30.8 23 27 23 22V14.5L17 11Z"
+          fill="hsl(213, 55%, 10%)"
+        />
+
+        {/* Small inner gold shield — the highlight crest */}
+        <path
+          d="M17 14L13 16.2V21.5C13 25 15 27.5 17 28.5C19 27.5 21 25 21 21.5V16.2L17 14Z"
+          fill="url(#shield-highlight)"
+        />
+
+        {/* Inner shield border for depth */}
+        <path
+          d="M17 11L11 14.5V22C11 27 14 30.8 17 32.5C20 30.8 23 27 23 22V14.5L17 11Z"
           fill="none"
-          stroke="hsl(40, 70%, 72%)"
-          strokeWidth="0.6"
+          stroke="hsl(40, 70%, 60%)"
+          strokeWidth="0.5"
           opacity="0.6"
         />
-
-        {/* C monogram */}
-        <text
-          x="18"
-          y="23"
-          textAnchor="middle"
-          dominantBaseline="central"
-          fontFamily="'Cormorant Garamond', Georgia, serif"
-          fontWeight="700"
-          fontSize="14"
-          fill="hsl(213, 53%, 14%)"
-        >
-          C
-        </text>
       </svg>
 
       {/* Wordmark */}
       <div className="flex flex-col leading-none">
         <span
-          className={`font-display text-[14px] sm:text-[16px] font-bold tracking-[0.08em] uppercase ${textColor}`}
+          className={`font-display text-[13px] sm:text-[15px] font-bold tracking-[0.1em] ${textColor}`}
           style={{ fontVariant: "small-caps" }}
         >
           Celebrity Reputation
         </span>
-        <span className="text-[8.5px] sm:text-[9.5px] tracking-[0.22em] uppercase text-gold font-semibold mt-[3px]">
+        <span
+          className={`font-display text-[13px] sm:text-[15px] font-bold tracking-[0.1em] ${textColor}`}
+          style={{ fontVariant: "small-caps" }}
+        >
           Management Agency
         </span>
       </div>
