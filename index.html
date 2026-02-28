@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -23,9 +25,10 @@
     
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://celebrity-reputation-management.com/" />
-    <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/36abfd09-9fff-469e-b795-e7d8a19013fe/id-preview-1e1ab781--4f1a3e09-d580-43e8-aeb9-3358c355e3f0.lovable.app-1772227045178.png">
+    <meta property="og:image" content="https://celebrity-reputation-management.com/og-image.png">
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Celebrity Reputation Management Agency — Protecting Public Figures Since 2009" />
     <meta property="og:site_name" content="Celebrity Reputation Management Agency" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="en_GB" />
@@ -34,7 +37,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     
     
-    <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/36abfd09-9fff-469e-b795-e7d8a19013fe/id-preview-1e1ab781--4f1a3e09-d580-43e8-aeb9-3358c355e3f0.lovable.app-1772227045178.png">
+    <meta name="twitter:image" content="https://celebrity-reputation-management.com/og-image.png">
+    <meta name="twitter:image:alt" content="Celebrity Reputation Management Agency — Protecting Public Figures Since 2009" />
 
     <!-- Geo targeting for US and UK -->
     <meta name="geo.region" content="US" />
@@ -185,7 +189,15 @@
 </head>
 
   <body>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:bg-[#152238] focus:text-white focus:px-4 focus:py-2 focus:rounded focus:text-sm focus:font-bold">Skip to main content</a>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
   </body>
 </html>
