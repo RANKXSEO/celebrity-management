@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useMemo } from "react";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
+import ContentRenderer from "@/components/ContentRenderer";
 import { blogPosts } from "@/pages/BlogHub";
 import { blogContent } from "@/data/blogContent";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
@@ -90,7 +91,7 @@ const BlogPost = () => {
                   <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
                     <h2 className="font-display text-[clamp(1.4rem,2.5vw,1.875rem)] tracking-tight mb-4">{sec.heading}</h2>
                     {sec.body.split('\n\n').map((para, j) => (
-                      <p key={j} className="text-muted-foreground text-base leading-relaxed mb-4 font-body">{para}</p>
+                      <ContentRenderer key={j} content={para} className="text-muted-foreground text-base leading-relaxed mb-4 font-body" />
                     ))}
                   </motion.div>
                 ))}
