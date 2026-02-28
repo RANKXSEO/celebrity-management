@@ -41,9 +41,9 @@ const BlogPreview = () => {
               <div className="w-6 h-px bg-gold" />
               <span className="text-[11px] tracking-[0.14em] uppercase text-gold font-bold">From the Team</span>
             </div>
-            <h2 className="font-display text-[clamp(1.625rem,2.8vw,2.5rem)] tracking-tight">
-              Celebrity Reputation Management <em className="text-gold italic">Guides & Insights</em>
-            </h2>
+             <h2 className="font-display text-[clamp(1.625rem,2.8vw,2.5rem)] tracking-tight">
+               From the Desk: <em className="text-gold italic">Guides & Insights</em>
+             </h2>
           </header>
           <Link to="/blog" className="inline-flex items-center gap-2 border border-primary text-primary px-4 py-2 rounded text-sm font-bold hover:bg-primary hover:text-primary-foreground transition-all">
             All Articles
@@ -78,7 +78,7 @@ const BlogPreview = () => {
                 </div>
                 <div className="p-[clamp(16px,2vw,22px)]">
                   <div className="flex items-center gap-2 text-[11px] text-ink-muted mb-1.5">
-                    <time>{post.date}</time>
+                    <time dateTime={new Date(post.date).toISOString().split('T')[0]}>{post.date}</time>
                     <span className="w-0.5 h-0.5 rounded-full bg-ink-light" aria-hidden="true" />
                     <span>{post.read}</span>
                   </div>
