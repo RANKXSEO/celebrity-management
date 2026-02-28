@@ -36,7 +36,7 @@ const HeroSection = () => {
           transition={{ delay: 0.25, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           className="font-display text-primary-foreground font-bold text-[clamp(2.75rem,6vw,5rem)] leading-[1.06] tracking-tight max-w-[720px] mb-5"
         >
-          One Bad Headline Shouldn't Define Your Legacy. <em className="text-gold-light italic">We Make Sure It Doesn't.</em>
+          Celebrity Reputation Management That Protects Your Legacy. <em className="text-gold-light italic">One Bad Headline Shouldn't Define It.</em>
         </motion.h1>
 
         <motion.p
@@ -45,7 +45,7 @@ const HeroSection = () => {
           transition={{ delay: 0.4, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           className="text-[clamp(1rem,1.5vw,1.125rem)] text-primary-foreground/55 leading-[1.74] max-w-[560px] mb-10"
         >
-          We work with celebrities, athletes, and public figures to take back control of Google, Wikipedia, social media, and AI search results. When people search your name, they should find the truth — not a tabloid narrative from five years ago.
+          Our reputation management agency works exclusively with celebrities, athletes, and public figures to take back control of Google, Wikipedia, social media, and AI search results. When people search your name, they should find the truth — not a tabloid narrative from five years ago.
         </motion.p>
 
         <motion.div

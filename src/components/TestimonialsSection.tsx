@@ -43,7 +43,7 @@ const TestimonialsSection = () => {
             <div className="w-6 h-px bg-gold" />
           </div>
           <h2 className="font-display text-[clamp(1.625rem,2.8vw,2.5rem)] tracking-tight mb-3">
-            Results From <em className="text-gold italic">Actual Campaigns</em>
+            Celebrity Reputation Management <em className="text-gold italic">Results</em>
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed">
             Client identities are protected. These are real outcomes from real engagements — shared with permission and anonymised at each client's request.

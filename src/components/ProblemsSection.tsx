@@ -21,7 +21,7 @@ const ProblemsSection = () => {
               <span className="text-[11px] tracking-[0.14em] uppercase text-gold font-bold">Common Scenarios</span>
             </div>
             <h2 className="font-display text-[clamp(1.625rem,2.8vw,2.5rem)] tracking-tight mb-3">
-              Situations We Handle <em className="text-gold italic">Every Week</em>
+              Reputation Management Scenarios <em className="text-gold italic">We Handle Every Week</em>
             </h2>
             <p className="text-muted-foreground text-base leading-relaxed mb-6">
               If any of these sound familiar, you're not alone. We've seen every version of these problems across 500+ campaigns — and we know exactly how each one plays out if you wait versus if you act now.
@@ -68,7 +68,7 @@ const ProblemsSection = () => {
             <div className="bg-primary rounded-2xl p-[clamp(20px,3vw,32px)] shadow-lg-custom overflow-hidden relative">
               <div className="absolute -top-[60px] -right-[60px] w-[180px] h-[180px] bg-[radial-gradient(circle,rgba(196,146,62,0.09),transparent)] rounded-full pointer-events-none" aria-hidden="true" />
               <div className="text-[9px] tracking-[0.18em] uppercase text-gold font-bold mb-2.5">Anonymised campaign data</div>
-              <h3 className="font-display text-lg text-primary-foreground font-bold mb-1.5">Google Page One: Before & After</h3>
+              <h3 className="font-display text-lg text-primary-foreground font-bold mb-1.5">Celebrity Reputation Management: Google Page One Before & After</h3>
               <p className="text-sm text-primary-foreground/35 mb-4 leading-relaxed">Composite from actual client campaigns. Individual timelines depend on source authority and volume.</p>
 
               <div className="bg-primary-foreground/[0.03] border border-primary-foreground/[0.05] rounded-lg overflow-hidden">
@@ -109,7 +109,7 @@ const ProblemsSection = () => {
             </div>
 
             <div className="bg-background rounded-2xl p-5 mt-4 border border-border">
-              <h3 className="font-display text-lg font-bold mb-2">What to Expect, Realistically</h3>
+              <h3 className="font-display text-lg font-bold mb-2">What to Expect From Reputation Management</h3>
               <div className="grid grid-cols-2 gap-2">
                 {[
                   { days: "Week 1", label: "Audit complete, strategy agreed, first takedowns filed" },

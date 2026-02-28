@@ -24,7 +24,7 @@ const ServicesSection = () => {
             <div className="w-6 h-px bg-gold" />
           </div>
           <h2 className="font-display text-[clamp(1.625rem,2.8vw,2.5rem)] tracking-tight mb-4">
-            Full-Service Online Reputation Management for <em className="text-gold italic">Celebrities & Public Figures</em>
+            Celebrity Reputation Management <em className="text-gold italic">Services</em> — Full-Service Online Protection
           </h2>
           <p className="text-muted-foreground text-[17px] leading-relaxed">
             Nine specialised services covering every surface where your reputation lives — from Google search results and Wikipedia to AI-generated summaries and social media platforms.

@@ -42,7 +42,7 @@ const BlogPreview = () => {
               <span className="text-[11px] tracking-[0.14em] uppercase text-gold font-bold">From the Team</span>
             </div>
             <h2 className="font-display text-[clamp(1.625rem,2.8vw,2.5rem)] tracking-tight">
-              Guides & Insights on Reputation Management for Public Figures
+              Celebrity Reputation Management <em className="text-gold italic">Guides & Insights</em>
             </h2>
           </header>
           <Link to="/blog" className="inline-flex items-center gap-2 border border-primary text-primary px-4 py-2 rounded text-sm font-bold hover:bg-primary hover:text-primary-foreground transition-all">
