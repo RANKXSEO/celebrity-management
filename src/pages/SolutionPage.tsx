@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
+import ContentRenderer from "@/components/ContentRenderer";
 import { solutionPages } from "@/data/solutionPages";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 
@@ -86,7 +87,7 @@ const SolutionPage = () => {
           {page.sections.map((sec, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
               <h2 className="font-display text-[clamp(1.5rem,2.5vw,2rem)] tracking-tight mb-3">{sec.title}</h2>
-              <p className="text-muted-foreground text-base leading-relaxed whitespace-pre-line">{sec.content}</p>
+              <ContentRenderer content={sec.content} className="text-muted-foreground text-base leading-relaxed whitespace-pre-line" />
             </motion.div>
           ))}
 

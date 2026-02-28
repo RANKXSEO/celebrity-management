@@ -19,10 +19,10 @@ export const audiencePages: AudiencePageData[] = [
     emoji: "🎬",
     heroDesc: "Your career depends on public perception. One tabloid story, one viral moment, one misleading Wikipedia edit can cost you roles, endorsements, and the career you've built over decades. We protect what matters.",
     challenges: [
-      { title: "Tabloid & Paparazzi Coverage", desc: "Old stories that accumulate search authority and follow you into every audition, meeting, and partnership discussion." },
-      { title: "Cancel Culture & Social Media Mobs", desc: "Coordinated pile-ons that can move from Twitter thread to industry blacklist in days." },
-      { title: "Wikipedia Inaccuracies", desc: "Vandalism, biased framing, and unsourced claims sitting at the top of your Google results." },
-      { title: "Post-Scandal Career Recovery", desc: "Rebuilding public perception and search results after a controversy so your next chapter isn't defined by your worst moment." },
+      { title: "Tabloid & Paparazzi Coverage", desc: "Old stories accumulate search authority and follow you into every audition, meeting, and partnership discussion. We specialise in [suppressing tabloid content from Google](/solutions/paparazzi-tabloid-content)." },
+      { title: "Cancel Culture & Social Media Mobs", desc: "Coordinated pile-ons can move from Twitter thread to industry blacklist in days. Our [cancel culture recovery](/solutions/cancel-culture-reputation-repair) process is built for exactly this." },
+      { title: "Wikipedia Inaccuracies", desc: "Vandalism, biased framing, and unsourced claims sitting at the top of your Google results. Our [Wikipedia management service](/services/wikipedia-for-celebrities) fixes and protects your page." },
+      { title: "Post-Scandal Career Recovery", desc: "Rebuilding public perception after a controversy so your next chapter isn't defined by your worst moment. Read about our [scandal recovery process](/solutions/scandal-recovery)." },
     ],
     relevantServices: [
       { slug: "celebrity-crisis-management", title: "Celebrity Crisis Management", anchor: "emergency crisis management for entertainers" },
@@ -39,10 +39,10 @@ export const audiencePages: AudiencePageData[] = [
     emoji: "🎵",
     heroDesc: "Your brand is your music, your story, and your name. We protect all three from negative press, social media backlash, and the AI assistants that millions now use to learn about you.",
     challenges: [
-      { title: "Social Media Controversy", desc: "A single tweet or Instagram post taken out of context can trigger industry-wide backlash and streaming drops." },
-      { title: "Label & Industry Disputes", desc: "When business conflicts become public, they dominate search results and colour public perception of your artistry." },
-      { title: "Fan Community Management", desc: "Passionate fanbases can turn hostile quickly. Managing community sentiment is a 24/7 operation." },
-      { title: "Streaming & Review Platform Ratings", desc: "Ratings on Spotify, Apple Music, and review sites directly impact playlist placement and discovery." },
+      { title: "Social Media Controversy", desc: "A single tweet or Instagram post taken out of context can trigger industry-wide backlash. Our [social media reputation defense](/services/social-media-reputation) catches threats before they escalate." },
+      { title: "Label & Industry Disputes", desc: "When business conflicts become public, they dominate search results. [Content suppression](/services/content-suppression) pushes those stories off page one." },
+      { title: "Fan Community Management", desc: "Passionate fanbases can turn hostile quickly. [24/7 social media monitoring](/services/social-media-reputation) is essential for managing community sentiment." },
+      { title: "AI Search Vulnerability", desc: "What [ChatGPT and Gemini say about you](/blog/what-chatgpt-says-about-you) is becoming as important as what Google shows. Our [AI search reputation service](/services/ai-search-reputation) addresses this directly." },
     ],
     relevantServices: [
       { slug: "social-media-reputation", title: "Social Media Defense", anchor: "social media reputation management for musicians" },
@@ -59,10 +59,10 @@ export const audiencePages: AudiencePageData[] = [
     emoji: "🏆",
     heroDesc: "Your endorsement deals, broadcasting opportunities, and post-career legacy depend on public perception. We protect athletes from off-field controversies, false allegations, and the permanent damage of unchecked search results.",
     challenges: [
-      { title: "Off-Field Controversies", desc: "Personal matters that become public and define your search results for years, overshadowing your athletic achievements." },
-      { title: "Endorsement & Sponsorship Risk", desc: "Brands perform due diligence before signing. If your Google results tell the wrong story, deals die quietly." },
-      { title: "Post-Career Narrative", desc: "When the game ends, your search results become your primary public identity. What story do they tell?" },
-      { title: "False Allegations & Legal Matters", desc: "Allegations made public before resolution. Even when cleared, the articles remain forever without intervention." },
+      { title: "Off-Field Controversies", desc: "Personal matters that become public and define your search results for years. Professional [negative search result suppression](/services/negative-search-results) replaces them with what actually matters." },
+      { title: "Endorsement & Sponsorship Risk", desc: "Brands perform due diligence before signing. If your Google results tell the wrong story, deals die quietly. A clean [Knowledge Panel](/services/knowledge-panel-management) and first page matter." },
+      { title: "Post-Career Narrative", desc: "When the game ends, your search results become your primary public identity. Building that narrative early through [proactive reputation protection](/services/reputation-protection) is the smartest investment." },
+      { title: "Old Arrest Records", desc: "Even resolved or expunged cases can haunt your search results indefinitely. Our [arrest record removal service](/solutions/old-arrest-records-online) handles this specifically." },
     ],
     relevantServices: [
       { slug: "negative-search-results", title: "Search Result Suppression", anchor: "suppress negative press for athletes" },
@@ -79,10 +79,10 @@ export const audiencePages: AudiencePageData[] = [
     emoji: "📲",
     heroDesc: "Your income depends entirely on your personal brand. One viral controversy can cost you sponsorships, brand deals, and the audience you've spent years building. We keep that from happening.",
     challenges: [
-      { title: "Cancel Culture & Deplatforming", desc: "Coordinated campaigns to cancel creators can escalate from a single clip to platform bans within days." },
-      { title: "Sponsorship Due Diligence", desc: "Brands Google you before signing. What they find determines whether deals happen or die." },
-      { title: "Cross-Platform Reputation", desc: "Your reputation spans YouTube, TikTok, Instagram, Twitter, and Reddit simultaneously. One platform's controversy spreads to all." },
-      { title: "AI Search Vulnerability", desc: "AI assistants now summarize creator controversies for millions of users, amplifying negative narratives exponentially." },
+      { title: "Cancel Culture & Deplatforming", desc: "Coordinated campaigns can escalate from a single clip to platform bans within days. Our [cancel culture reputation repair](/solutions/cancel-culture-reputation-repair) process has recovered dozens of creators." },
+      { title: "Sponsorship Due Diligence", desc: "Brands Google you before signing. What they find determines whether deals happen or die. [Negative search result suppression](/services/negative-search-results) ensures page one tells the right story." },
+      { title: "Cross-Platform Reputation", desc: "Your reputation spans YouTube, TikTok, Instagram, Twitter, and Reddit simultaneously. Our [social media reputation service](/services/social-media-reputation) covers every surface." },
+      { title: "AI Search Vulnerability", desc: "AI assistants summarise creator controversies for millions of users. [AI search reputation management](/services/ai-search-reputation) is becoming essential for creators with large audiences." },
     ],
     relevantServices: [
       { slug: "social-media-reputation", title: "Social Media Reputation", anchor: "social media reputation defense for creators" },
@@ -99,10 +99,10 @@ export const audiencePages: AudiencePageData[] = [
     emoji: "💼",
     heroDesc: "Your personal reputation directly impacts shareholder value, board confidence, and corporate brand perception. We protect both your personal and professional digital presence.",
     challenges: [
-      { title: "Activist & Media Scrutiny", desc: "Activist campaigns and investigative journalism targeting leadership can cascade into stock price impacts and board pressure." },
-      { title: "Personal vs Corporate Separation", desc: "When personal matters bleed into corporate search results, both suffer. We create clear separation and protect each independently." },
-      { title: "Glassdoor & Employee Reviews", desc: "Former employee reviews and workplace culture allegations that appear when investors and partners search your name." },
-      { title: "Political & Social Positions", desc: "Public statements on divisive issues that generate backlash and become permanent search fixtures." },
+      { title: "Activist & Media Scrutiny", desc: "Activist campaigns and investigative journalism targeting leadership can cascade into stock price impacts. Our [crisis management team](/services/celebrity-crisis-management) responds within 60 minutes." },
+      { title: "Personal vs Corporate Separation", desc: "When personal matters bleed into corporate search results, both suffer. We create clear separation through strategic [content suppression](/services/content-suppression) and entity SEO." },
+      { title: "Glassdoor & Employee Reviews", desc: "Former employee reviews and workplace allegations that surface when investors search your name. Our [review management service](/services/review-management) addresses this directly." },
+      { title: "Defamation & Competitor Attacks", desc: "False claims planted by competitors or disgruntled associates. Our [defamation removal service](/solutions/defamation-fake-news-removal) pursues every legal avenue available." },
     ],
     relevantServices: [
       { slug: "google-results-removal", title: "Google Content Removal", anchor: "remove damaging Google results for executives" },
@@ -119,10 +119,10 @@ export const audiencePages: AudiencePageData[] = [
     emoji: "🏛️",
     heroDesc: "Political life means permanent scrutiny. Opposition research, media investigations, and social media attacks are constant. We help you control the digital narrative so your record speaks louder than your opponents.",
     challenges: [
-      { title: "Opposition Research", desc: "Opponents systematically surface and amplify negative content. We ensure your digital presence is resilient to these attacks." },
-      { title: "Media Investigations", desc: "Journalistic investigations that produce lasting search results. We manage the aftermath and protect your narrative." },
-      { title: "Social Media Attacks", desc: "Coordinated campaigns, bot networks, and manufactured controversies designed to damage public trust." },
-      { title: "Legacy & Historical Narrative", desc: "What Google says about you becomes the historical record. We ensure it reflects your actual record and achievements." },
+      { title: "Opposition Research", desc: "Opponents systematically surface and amplify negative content. [Proactive reputation protection](/services/reputation-protection) ensures your digital presence is resilient to these attacks." },
+      { title: "Media Investigations", desc: "Journalistic investigations produce lasting search results. [Negative search result suppression](/services/negative-search-results) manages the aftermath and protects your narrative." },
+      { title: "Social Media Attacks", desc: "Coordinated campaigns, bot networks, and manufactured controversies. Our [social media reputation defense](/services/social-media-reputation) detects and neutralises these patterns." },
+      { title: "Legacy & Historical Narrative", desc: "What Google says about you becomes the historical record. Ensuring your [Knowledge Panel](/services/knowledge-panel-management) and [Wikipedia page](/services/wikipedia-for-celebrities) reflect your actual record is essential." },
     ],
     relevantServices: [
       { slug: "celebrity-crisis-management", title: "Crisis Management", anchor: "political crisis management" },
@@ -139,10 +139,10 @@ export const audiencePages: AudiencePageData[] = [
     emoji: "📺",
     heroDesc: "Reality TV creates a narrative you don't control — and it follows you forever. We help reality stars take back their story, suppress produced controversy, and build a lasting personal brand beyond the show.",
     challenges: [
-      { title: "Produced Narratives", desc: "Editors shape your story for entertainment value, not accuracy. Those moments become your permanent Google results." },
-      { title: "Post-Show Reputation", desc: "Long after cameras stop rolling, search results keep telling the produced version of your story to everyone who looks." },
-      { title: "Social Media Pile-Ons", desc: "Reality TV audiences can be relentless. Comment sections, Reddit threads, and Twitter mobs create lasting search damage." },
-      { title: "Brand Building Beyond TV", desc: "Transitioning from 'reality star' to entrepreneur, actor, or brand requires a search presence that tells your chosen story." },
+      { title: "Produced Narratives", desc: "Editors shape your story for entertainment, not accuracy. Those moments become permanent Google results. [Content suppression](/services/content-suppression) replaces them with your real story." },
+      { title: "Post-Show Reputation", desc: "Long after cameras stop, search results keep telling the produced version of your story. [Negative search result suppression](/services/negative-search-results) changes what people find." },
+      { title: "Social Media Pile-Ons", desc: "Reality TV audiences can be relentless. Our [social media reputation defense](/services/social-media-reputation) monitors and neutralises pile-ons before they create lasting search damage." },
+      { title: "Brand Building Beyond TV", desc: "Transitioning from 'reality star' to entrepreneur or actor requires search results that tell your chosen story. [Wikipedia management](/services/wikipedia-for-celebrities) and [Knowledge Panel optimization](/services/knowledge-panel-management) establish your professional identity." },
     ],
     relevantServices: [
       { slug: "negative-search-results", title: "Search Result Suppression", anchor: "suppress reality TV negative search results" },

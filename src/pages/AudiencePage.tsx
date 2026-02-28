@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
+import ContentRenderer from "@/components/ContentRenderer";
 import { audiencePages } from "@/data/audiencePages";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 
@@ -72,7 +73,7 @@ const AudiencePage = () => {
             {page.challenges.map((c, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="bg-card border border-border rounded-xl p-5">
                 <h3 className="font-body text-[15px] font-bold text-foreground mb-1.5">{c.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
+                <ContentRenderer content={c.desc} className="text-sm text-muted-foreground leading-relaxed" />
               </motion.div>
             ))}
           </div>
