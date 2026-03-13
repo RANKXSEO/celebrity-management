@@ -70,7 +70,9 @@ const ServicesSection = () => {
         </div>
 
         <div className="text-center mt-10">
-          <p className="text-muted-foreground text-sm mb-3">Not sure where to start? That's normal — most clients aren't.</p>
+          <p className="text-muted-foreground text-sm mb-3">
+            Not sure where to start? That's normal — most clients aren't. See our <Link to="/reviews" className="text-gold hover:text-gold-light transition-colors font-medium">celebrity reputation management reviews</Link>.
+          </p>
           <Link
             to="/free-consultation"
             className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-6 py-3 rounded text-sm font-bold shadow-gold hover:bg-gold-light hover:-translate-y-0.5 transition-all"

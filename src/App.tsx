@@ -70,6 +70,8 @@ const App = () => (
             <Route path="/resources/celebrity-reputation-guide" element={<ResourcesPage />} />
             <Route path="/resources/crisis-management-checklist" element={<ResourcesPage />} />
             <Route path="/resources/faq" element={<ResourcesPage />} />
+            {/* Reviews */}
+            <Route path="/reviews" element={<ReviewsPage />} />
             {/* Conversion pages */}
             <Route path="/free-consultation" element={<FreeConsultation />} />
             <Route path="/contact" element={<ContactPage />} />
