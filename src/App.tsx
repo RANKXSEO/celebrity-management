@@ -23,6 +23,7 @@ const ResourcesPage = lazy(() => import("./pages/ResourcesPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
+const ReviewsPage = lazy(() => import("./pages/ReviewsPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -69,6 +70,8 @@ const App = () => (
             <Route path="/resources/celebrity-reputation-guide" element={<ResourcesPage />} />
             <Route path="/resources/crisis-management-checklist" element={<ResourcesPage />} />
             <Route path="/resources/faq" element={<ResourcesPage />} />
+            {/* Reviews */}
+            <Route path="/reviews" element={<ReviewsPage />} />
             {/* Conversion pages */}
             <Route path="/free-consultation" element={<FreeConsultation />} />
             <Route path="/contact" element={<ContactPage />} />

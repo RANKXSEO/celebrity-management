@@ -64,7 +64,8 @@ const Footer = () => {
               <Link to="/resources" className="text-sm text-primary-foreground/35 hover:text-primary-foreground/70 transition-colors">Frequently Asked Questions</Link>
               <Link to="/blog" className="text-sm text-primary-foreground/35 hover:text-primary-foreground/70 transition-colors">Expert Blog & Guides</Link>
               <Link to="/about" className="text-sm text-primary-foreground/35 hover:text-primary-foreground/70 transition-colors">About the Agency</Link>
-              <Link to="/solutions" className="text-sm text-primary-foreground/35 hover:text-primary-foreground/70 transition-colors">Solutions</Link>
+              <Link to="/reviews" className="text-sm text-primary-foreground/35 hover:text-primary-foreground/70 transition-colors">Client Reviews (4.76/5)</Link>
+              <Link to="/solutions" className="text-sm text-primary-foreground/35 hover:text-primary-foreground/70 transition-colors">Reputation Solutions</Link>
               <Link to="/contact" className="text-sm text-primary-foreground/35 hover:text-primary-foreground/70 transition-colors">Contact Us</Link>
               <Link to="/free-consultation" className="text-sm text-gold hover:text-gold-light transition-colors font-medium">Free Reputation Audit</Link>
             </div>

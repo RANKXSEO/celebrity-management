@@ -81,13 +81,23 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="text-center mt-10">
-          <p className="text-muted-foreground text-sm mb-3">Wondering what's possible in your situation?</p>
-          <Link
-            to="/free-consultation"
-            className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-6 py-3 rounded text-sm font-bold shadow-gold hover:bg-gold-light hover:-translate-y-0.5 transition-all"
-          >
-            Talk to Us — It's Free and Confidential
-          </Link>
+          <p className="text-muted-foreground text-sm mb-3">
+            <Link to="/reviews" className="text-gold hover:text-gold-light transition-colors font-medium">Rated 4.76/5 by 181 clients</Link> — wondering what's possible in your situation?
+          </p>
+          <div className="flex items-center justify-center gap-3 flex-wrap">
+            <Link
+              to="/free-consultation"
+              className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-6 py-3 rounded text-sm font-bold shadow-gold hover:bg-gold-light hover:-translate-y-0.5 transition-all"
+            >
+              Talk to Us — It's Free and Confidential
+            </Link>
+            <Link
+              to="/reviews"
+              className="inline-flex items-center gap-2 border border-border text-foreground px-6 py-3 rounded text-sm font-medium hover:border-gold hover:text-gold transition-all"
+            >
+              Read All Reviews
+            </Link>
+          </div>
         </div>
       </div>
     </section>
