@@ -23,6 +23,7 @@ const ResourcesPage = lazy(() => import("./pages/ResourcesPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
+const ReviewsPage = lazy(() => import("./pages/ReviewsPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
