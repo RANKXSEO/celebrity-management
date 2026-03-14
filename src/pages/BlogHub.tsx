@@ -22,6 +22,17 @@ const blogPosts = [
   { slug: "reddit-celebrity-reputation", title: "How Reddit Can Destroy a Celebrity's Reputation (And What to Do)", tag: "Social", date: "Oct 28, 2025", read: "8 min" },
   { slug: "10-celebrity-reputation-disasters", title: "10 Celebrity Reputation Disasters (And What They Did Wrong)", tag: "Education", date: "Oct 21, 2025", read: "12 min" },
   { slug: "signs-you-need-reputation-management", title: "Do You Need a Reputation Manager? 10 Warning Signs", tag: "Education", date: "Oct 14, 2025", read: "7 min" },
+  { slug: "does-reputation-management-work", title: "Does Reputation Management Actually Work? Evidence & Case Studies", tag: "Education", date: "Oct 7, 2025", read: "9 min" },
+  { slug: "how-to-remove-negative-articles-from-google", title: "How to Remove Negative Articles From Google: Every Method Explained", tag: "Google", date: "Sep 30, 2025", read: "11 min" },
+  { slug: "can-you-sue-for-online-defamation", title: "Can You Sue for Online Defamation? A Celebrity's Legal Guide", tag: "Legal", date: "Sep 23, 2025", read: "10 min" },
+  { slug: "how-to-fix-bad-reputation", title: "How to Fix a Bad Reputation as a Public Figure (Step-by-Step)", tag: "Education", date: "Sep 16, 2025", read: "12 min" },
+  { slug: "why-is-reputation-management-important", title: "Why Is Reputation Management Important for Celebrities in 2026?", tag: "Education", date: "Sep 9, 2025", read: "8 min" },
+  { slug: "what-do-reputation-management-companies-do", title: "What Do Reputation Management Companies Do? (Behind the Scenes)", tag: "Education", date: "Sep 2, 2025", read: "9 min" },
+  { slug: "how-to-respond-to-negative-press", title: "How to Respond to Negative Press Coverage as a Celebrity", tag: "Crisis", date: "Aug 26, 2025", read: "8 min" },
+  { slug: "online-reputation-management-strategies", title: "Online Reputation Management Strategies That Actually Work in 2026", tag: "Education", date: "Aug 19, 2025", read: "13 min" },
+  { slug: "how-to-protect-your-online-reputation", title: "How to Protect Your Online Reputation Before a Crisis Hits", tag: "Education", date: "Aug 12, 2025", read: "9 min" },
+  { slug: "reputation-management-for-high-profile-individuals", title: "Reputation Management for High-Profile Individuals: What's Different?", tag: "Education", date: "Aug 5, 2025", read: "10 min" },
+  { slug: "how-to-remove-mugshots-from-google", title: "How to Remove Mugshots and Arrest Records From Google Search Results", tag: "Google", date: "Jul 29, 2025", read: "8 min" },
 ];
 
 const tagColors: Record<string, string> = {
