@@ -42,7 +42,7 @@ const tagColors: Record<string, string> = {
   Google: "bg-yellow-500/10 text-yellow-600",
   Education: "bg-purple-500/10 text-purple-400",
   Social: "bg-pink-500/10 text-pink-400",
-};
+  Legal: "bg-amber-500/10 text-amber-400",
 
 const BlogHub = () => {
   const jsonLd = useMemo(() => ({
