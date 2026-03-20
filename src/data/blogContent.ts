@@ -362,7 +362,11 @@ export const blogContent: Record<string, BlogContent> = {
       "A reputable firm will provide honest expectations and transparent reporting",
     ],
     relatedServiceSlugs: ["negative-search-results", "reputation-protection", "celebrity-crisis-management"],
-  },
+    faqs: [
+      { q: "Does online reputation management actually work?", a: "Yes. Data from 500+ campaigns shows a 94% page-one clearance rate within 6 months. Results are measurable through monthly SERP tracking reports." },
+      { q: "How long does reputation management take to show results?", a: "First measurable movement typically occurs within 30 days. Material page-one improvement by 60–90 days. Full page-one transformation in 90–180 days." },
+      { q: "What's the difference between suppression and removal?", a: "Removal permanently deletes content from the web or search results. Suppression pushes content to page two and beyond where fewer than 6% of searchers ever look. Both are effective strategies used in combination." },
+    ],
   "how-to-remove-negative-articles-from-google": {
     intro: "Negative articles on Google can destroy careers, relationships, and mental health. Whether it's a tabloid hit piece, an outdated scandal, or outright defamation, there are legitimate methods to remove or suppress negative articles from Google search results. This guide covers every available approach — from direct removal to long-term suppression.",
     sections: [
