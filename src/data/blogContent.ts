@@ -159,6 +159,11 @@ export const blogContent: Record<string, BlogContent> = {
       "Professional management ensures consistency across all data sources",
     ],
     relatedServiceSlugs: ["knowledge-panel-management", "wikipedia-for-celebrities", "ai-search-reputation"],
+    faqs: [
+      { q: "What is a Google Knowledge Panel?", a: "It's the prominent info box on the right side of Google search results that displays your photo, biography, social links, and key facts. It's often the first and only information people see about you." },
+      { q: "How do you claim a Google Knowledge Panel?", a: "Google allows verified entities to claim their Knowledge Panels through a verification process that proves your identity. Once claimed, you can suggest edits to correct errors, update photos, and add official links. The process typically takes 2–4 weeks." },
+      { q: "Where does the Knowledge Panel get its information?", a: "Primarily from Wikipedia, Wikidata, and your verified entity profile. Errors in any of these sources propagate directly to your Knowledge Panel." },
+    ],
   },
   "old-tabloid-articles-ranking": {
     intro: "That Daily Mail article from 2017. The TMZ clip from 2019. The Page Six piece from a decade ago. They're still the first things people find when they Google your name — and you've probably wondered why. The answer lies in how search authority works, and once you understand it, you'll understand why professional intervention is the only reliable solution.",
