@@ -253,6 +253,11 @@ export const blogContent: Record<string, BlogContent> = {
       "Reputable firms provide monthly reporting so you can verify results yourself",
     ],
     relatedServiceSlugs: ["negative-search-results", "celebrity-crisis-management", "reputation-protection"],
+    faqs: [
+      { q: "How much does reputation management cost for a celebrity?", a: "Monthly retainers typically range from $3,500 to $20,000. Factors that affect cost include the number of negative results, authority of source domains, scope of services needed, and whether crisis management with 24/7 availability is required." },
+      { q: "Is celebrity reputation management worth the cost?", a: "For public figures whose income depends on their public image, yes. A single negative Google result can cost far more in lost sponsorships, cancelled projects, and damaged relationships than a year of reputation management." },
+      { q: "Do reputation management agencies charge upfront?", a: "Reputable firms typically charge a monthly retainer with transparent pricing and clear deliverables. Be wary of agencies demanding large upfront payments with vague promises. The initial audit should always be free." },
+    ],
   },
   "reputation-management-vs-pr": {
     intro: "Reputation management and public relations are frequently confused — even by industry professionals. They're complementary disciplines that serve different functions, operate on different timelines, and require different expertise. Understanding the difference helps you hire the right help for the right problem.",
