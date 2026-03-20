@@ -274,6 +274,10 @@ export const blogContent: Record<string, BlogContent> = {
       "During a crisis, PR handles media while ORM handles digital — both are essential",
     ],
     relatedServiceSlugs: ["negative-search-results", "celebrity-crisis-management", "reputation-protection"],
+    faqs: [
+      { q: "What is the difference between reputation management and PR?", a: "PR manages media relationships and shapes today's news cycle. Online reputation management (ORM) controls what appears in search engines, on Wikipedia, in AI answers, and in Knowledge Panels — often for years. PR shapes today's headlines; ORM shapes the permanent digital record." },
+      { q: "Do celebrities need both PR and reputation management?", a: "Yes. PR and ORM are complementary disciplines. During a crisis, PR handles journalist inquiries and places statements while ORM manages Google results, Wikipedia, AI answers, and social media — channels that PR typically doesn't address." },
+    ],
   },
   "social-media-crisis-guide": {
     intro: "Social media crises move faster than any other type of reputation threat. A tweet can go viral in minutes, a TikTok clip in hours. By the time traditional media picks it up, the narrative is already set. This guide provides a step-by-step framework for managing social media crises as a public figure.",
