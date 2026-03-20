@@ -383,6 +383,11 @@ export const blogContent: Record<string, BlogContent> = {
       "Professional celebrity reputation management campaigns combine all methods simultaneously",
     ],
     relatedServiceSlugs: ["google-results-removal", "negative-search-results", "celebrity-crisis-management"],
+    faqs: [
+      { q: "Can you remove negative articles from Google?", a: "Some content can be permanently removed through publisher contact, Google's removal policies, DMCA takedowns, or legal action. Content that can't be removed can be suppressed to page two through professional reputation management." },
+      { q: "How long does it take to remove an article from Google?", a: "Direct removal through Google's policies takes 2–6 weeks. Publisher negotiation varies from days to months. Search result suppression shows first movement in 30 days with full results in 90–180 days." },
+      { q: "What types of content will Google remove?", a: "Google removes involuntary explicit imagery, financial fraud information, doxxing content, content from exploitative removal sites, and certain private personal information. EU/UK residents have additional rights under the Right to Be Forgotten." },
+    ],
   },
   "can-you-sue-for-online-defamation": {
     intro: "When someone publishes false, damaging statements about you online, your first instinct may be to sue. But defamation law is complex, expensive, and not always the right strategy. This guide explains when suing for online defamation makes sense for celebrities and public figures — and when other reputation management approaches are more effective.",
