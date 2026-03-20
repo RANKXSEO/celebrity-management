@@ -428,6 +428,11 @@ export const blogContent: Record<string, BlogContent> = {
       "Ongoing monitoring prevents repeat crises and costs 10x less than recovery",
     ],
     relatedServiceSlugs: ["negative-search-results", "reputation-protection", "celebrity-crisis-management", "ai-search-reputation"],
+    faqs: [
+      { q: "How do you fix a bad reputation as a celebrity?", a: "Follow a systematic five-step process: conduct a complete reputation audit, remove content that can be removed, suppress what can't be removed, shape the AI narrative, and implement ongoing monitoring and protection." },
+      { q: "How long does it take to fix a bad reputation?", a: "First improvements are visible within 30 days. Material page-one changes by 60–90 days. A full reputation transformation typically takes 90–180 days depending on the severity and number of negative results." },
+      { q: "Can a damaged reputation be fully repaired?", a: "In most cases, yes. 94% of campaigns achieve page-one clearance within 6 months. The original content may remain online, but its visibility is reduced to where fewer than 1% of searchers will find it." },
+    ],
   },
   "why-is-reputation-management-important": {
     intro: "In 2026, your online reputation is your first impression — and for celebrities and public figures, it's often the only impression that matters. Here's why reputation management has become essential, not optional, for anyone in the public eye.",
