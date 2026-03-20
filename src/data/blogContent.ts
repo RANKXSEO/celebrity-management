@@ -3,6 +3,7 @@ interface BlogContent {
   sections: { heading: string; body: string }[];
   takeaways: string[];
   relatedServiceSlugs: string[];
+  faqs?: { q: string; a: string }[];
 }
 
 export const blogContent: Record<string, BlogContent> = {
@@ -22,6 +23,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Professional help in the first hours saves months of recovery time and significant cost",
     ],
     relatedServiceSlugs: ["celebrity-crisis-management", "negative-search-results", "social-media-reputation"],
+    faqs: [
+      { q: "What should you do in the first 48 hours of a celebrity crisis?", a: "Assess the situation without reacting publicly, develop a multi-channel strategy covering media, digital, legal and stakeholders, deploy your first response by hour 6–24, and expand suppression and counter-narrative efforts by hour 24–48." },
+      { q: "What is the biggest mistake celebrities make during a reputation crisis?", a: "Responding emotionally on social media. Every word posted during a crisis becomes permanent content that Google indexes, generating its own search results and extending the crisis beyond the original story." },
+      { q: "How quickly should you hire a reputation management agency during a crisis?", a: "Within the first 2 hours if possible. Clients who engage professional celebrity crisis management within the first hours consistently achieve better outcomes than those who wait days." },
+      { q: "Can negative crisis coverage be removed from Google?", a: "Content that is defamatory, privacy-violating, or breaches Google's policies can often be removed. Factually accurate but unflattering coverage can be suppressed to page two and beyond through professional negative search result suppression." },
+    ],
   },
   "what-chatgpt-says-about-you": {
     intro: "Open ChatGPT right now and type your name. What comes back? For a growing number of public figures, the answer is deeply concerning. AI assistants don't show you ten links to choose from — they synthesise a single, definitive narrative about you. And if your web presence is dominated by negative coverage, that narrative leads with the worst moments of your career.",
@@ -39,6 +46,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Start by auditing what every major AI assistant says about you today",
     ],
     relatedServiceSlugs: ["ai-search-reputation", "wikipedia-for-celebrities", "knowledge-panel-management"],
+    faqs: [
+      { q: "What does ChatGPT say about celebrities?", a: "ChatGPT synthesises a single narrative about public figures from their entire web footprint — Wikipedia, news coverage, social media, and Reddit threads. If negative coverage dominates, the AI leads with the worst moments of their career." },
+      { q: "Can you control what AI says about you?", a: "Yes, to a meaningful degree. Generative Engine Optimisation (GEO) shapes the source material AI models draw from — improving Wikipedia accuracy, building authoritative positive content, and correcting factual errors across the web." },
+      { q: "What is Generative Engine Optimisation (GEO)?", a: "GEO is the practice of shaping web content that AI systems like ChatGPT, Gemini, and Perplexity draw from. It focuses on source credibility and narrative coherence rather than traditional keyword rankings." },
+      { q: "What is the most important source for AI answers about celebrities?", a: "Wikipedia is the single most influential source. It's heavily represented in AI training data and frequently retrieved during real-time queries, making it the highest-impact target for GEO." },
+    ],
   },
   "how-to-get-wikipedia-page": {
     intro: "A Wikipedia page is the most valuable piece of digital real estate a public figure can own. It ranks #1 in Google for virtually every name, feeds directly into Knowledge Panels, and serves as the primary source for AI assistants. But getting one isn't straightforward — Wikipedia has strict notability requirements that many public figures don't initially understand.",
@@ -56,6 +69,11 @@ export const blogContent: Record<string, BlogContent> = {
       "After creation, ongoing monitoring prevents vandalism and biased editing",
     ],
     relatedServiceSlugs: ["wikipedia-for-celebrities", "knowledge-panel-management", "ai-search-reputation"],
+    faqs: [
+      { q: "How do you get a Wikipedia page as a celebrity?", a: "You need 3–5 substantial articles in established, independent media where you are the primary subject. Press releases, your own website, and paid promotional articles don't count toward Wikipedia's notability requirements." },
+      { q: "Why do Wikipedia pages get deleted?", a: "The top three reasons are promotional tone (reads like marketing), insufficient sourcing (claims not backed by reliable independent sources), and undisclosed conflict-of-interest editing." },
+      { q: "How long does it take to get a Wikipedia page?", a: "If you already meet notability requirements with sufficient independent media coverage, the page creation and review process typically takes 2–6 weeks. If you need to build media coverage first, that can take several months." },
+    ],
   },
   "surviving-cancel-culture": {
     intro: "Cancel culture isn't going away. If you're a public figure in 2026, the question isn't whether you'll face a pile-on — it's when. The good news is that cancellation is rarely permanent. The vast majority of public figures who were 'cancelled' in recent years have recovered — but only the ones who responded strategically rather than emotionally.",
@@ -120,6 +138,11 @@ export const blogContent: Record<string, BlogContent> = {
       "White-hat suppression results are permanent; black-hat results are fragile and risky",
     ],
     relatedServiceSlugs: ["negative-search-results", "content-suppression"],
+    faqs: [
+      { q: "How long does it take to suppress negative Google results?", a: "First measurable movement typically occurs within 30 days. Material page-one improvement happens by 60–90 days. A full page-one transformation usually takes 90–180 days depending on the number and authority of negative sources." },
+      { q: "Can you permanently remove negative search results?", a: "Defamatory, privacy-violating, or policy-breaching content can often be permanently removed. Factually accurate content cannot be deleted but can be suppressed to page two and beyond where fewer than 6% of searchers look." },
+      { q: "How much does negative search result suppression cost?", a: "Monthly retainers typically range from $3,500 to $20,000 depending on the complexity of the situation, the number of negative results, and the authority of the source domains." },
+    ],
   },
   "google-knowledge-panel-guide": {
     intro: "The Google Knowledge Panel — that prominent info box on the right side of search results — is the single most visible piece of information about you on the internet. If it's wrong, incomplete, or missing, you're losing credibility before anyone even reads a search result.",
@@ -136,6 +159,11 @@ export const blogContent: Record<string, BlogContent> = {
       "Professional management ensures consistency across all data sources",
     ],
     relatedServiceSlugs: ["knowledge-panel-management", "wikipedia-for-celebrities", "ai-search-reputation"],
+    faqs: [
+      { q: "What is a Google Knowledge Panel?", a: "It's the prominent info box on the right side of Google search results that displays your photo, biography, social links, and key facts. It's often the first and only information people see about you." },
+      { q: "How do you claim a Google Knowledge Panel?", a: "Google allows verified entities to claim their Knowledge Panels through a verification process that proves your identity. Once claimed, you can suggest edits to correct errors, update photos, and add official links. The process typically takes 2–4 weeks." },
+      { q: "Where does the Knowledge Panel get its information?", a: "Primarily from Wikipedia, Wikidata, and your verified entity profile. Errors in any of these sources propagate directly to your Knowledge Panel." },
+    ],
   },
   "old-tabloid-articles-ranking": {
     intro: "That Daily Mail article from 2017. The TMZ clip from 2019. The Page Six piece from a decade ago. They're still the first things people find when they Google your name — and you've probably wondered why. The answer lies in how search authority works, and once you understand it, you'll understand why professional intervention is the only reliable solution.",
@@ -203,6 +231,12 @@ export const blogContent: Record<string, BlogContent> = {
       "A free reputation audit provides specific, honest guidance about your situation",
     ],
     relatedServiceSlugs: ["negative-search-results", "celebrity-crisis-management", "wikipedia-for-celebrities", "ai-search-reputation"],
+    faqs: [
+      { q: "What is celebrity reputation management?", a: "Celebrity reputation management is a specialised discipline that controls what appears when someone searches a public figure's name on Google, Wikipedia, AI assistants, and social media. It includes suppressing negative search results, managing crises, editing Wikipedia, and shaping AI answers." },
+      { q: "How does celebrity reputation management work?", a: "It works through a combination of search result suppression (pushing negative content off page one), content removal (legal and platform-based), Wikipedia and Knowledge Panel management, AI search optimisation (GEO), social media defence, and ongoing monitoring." },
+      { q: "Who needs celebrity reputation management?", a: "Any public figure whose Google results, Wikipedia page, or AI search answers don't accurately represent who they are today. This includes actors, musicians, athletes, influencers, executives, politicians, and reality TV personalities." },
+      { q: "How much does celebrity reputation management cost?", a: "Monthly retainers typically range from $3,500 to $20,000 depending on the situation's complexity. Crisis management sits at the higher end due to 24/7 availability. The initial audit is always free." },
+    ],
   },
   "celebrity-reputation-management-cost": {
     intro: "Pricing transparency is rare in the reputation management industry — most firms won't tell you what things cost until you're on a sales call. We think that's wrong. Here's what celebrity reputation management actually costs, based on our experience across 500+ engagements.",
@@ -219,6 +253,11 @@ export const blogContent: Record<string, BlogContent> = {
       "Reputable firms provide monthly reporting so you can verify results yourself",
     ],
     relatedServiceSlugs: ["negative-search-results", "celebrity-crisis-management", "reputation-protection"],
+    faqs: [
+      { q: "How much does reputation management cost for a celebrity?", a: "Monthly retainers typically range from $3,500 to $20,000. Factors that affect cost include the number of negative results, authority of source domains, scope of services needed, and whether crisis management with 24/7 availability is required." },
+      { q: "Is celebrity reputation management worth the cost?", a: "For public figures whose income depends on their public image, yes. A single negative Google result can cost far more in lost sponsorships, cancelled projects, and damaged relationships than a year of reputation management." },
+      { q: "Do reputation management agencies charge upfront?", a: "Reputable firms typically charge a monthly retainer with transparent pricing and clear deliverables. Be wary of agencies demanding large upfront payments with vague promises. The initial audit should always be free." },
+    ],
   },
   "reputation-management-vs-pr": {
     intro: "Reputation management and public relations are frequently confused — even by industry professionals. They're complementary disciplines that serve different functions, operate on different timelines, and require different expertise. Understanding the difference helps you hire the right help for the right problem.",
@@ -235,6 +274,10 @@ export const blogContent: Record<string, BlogContent> = {
       "During a crisis, PR handles media while ORM handles digital — both are essential",
     ],
     relatedServiceSlugs: ["negative-search-results", "celebrity-crisis-management", "reputation-protection"],
+    faqs: [
+      { q: "What is the difference between reputation management and PR?", a: "PR manages media relationships and shapes today's news cycle. Online reputation management (ORM) controls what appears in search engines, on Wikipedia, in AI answers, and in Knowledge Panels — often for years. PR shapes today's headlines; ORM shapes the permanent digital record." },
+      { q: "Do celebrities need both PR and reputation management?", a: "Yes. PR and ORM are complementary disciplines. During a crisis, PR handles journalist inquiries and places statements while ORM manages Google results, Wikipedia, AI answers, and social media — channels that PR typically doesn't address." },
+    ],
   },
   "social-media-crisis-guide": {
     intro: "Social media crises move faster than any other type of reputation threat. A tweet can go viral in minutes, a TikTok clip in hours. By the time traditional media picks it up, the narrative is already set. This guide provides a step-by-step framework for managing social media crises as a public figure.",
@@ -298,6 +341,10 @@ export const blogContent: Record<string, BlogContent> = {
       "A free reputation audit tells you exactly where you stand — no obligation, no pressure",
     ],
     relatedServiceSlugs: ["negative-search-results", "reputation-protection", "celebrity-crisis-management"],
+    faqs: [
+      { q: "How do I know if I need a reputation manager?", a: "Key warning signs include negative articles on Google page one for your name, an incorrect Wikipedia page, damaging AI search answers, trending negative social media, declining business opportunities, or old scandals still ranking prominently." },
+      { q: "When should a celebrity hire a reputation management agency?", a: "Ideally before a crisis hits — proactive monitoring costs far less than reactive recovery. If you're already seeing damage, the sooner you engage professional help, the faster and less expensive the recovery." },
+    ],
   },
   "does-reputation-management-work": {
     intro: "It's the question every potential client asks — and the one most reputation management companies dodge with vague promises. Does online reputation management actually work? The evidence from over 500 celebrity reputation management campaigns says yes, but with important caveats about what 'working' actually means.",
@@ -315,6 +362,11 @@ export const blogContent: Record<string, BlogContent> = {
       "A reputable firm will provide honest expectations and transparent reporting",
     ],
     relatedServiceSlugs: ["negative-search-results", "reputation-protection", "celebrity-crisis-management"],
+    faqs: [
+      { q: "Does online reputation management actually work?", a: "Yes. Data from 500+ campaigns shows a 94% page-one clearance rate within 6 months. Results are measurable through monthly SERP tracking reports." },
+      { q: "How long does reputation management take to show results?", a: "First measurable movement typically occurs within 30 days. Material page-one improvement by 60–90 days. Full page-one transformation in 90–180 days." },
+      { q: "What's the difference between suppression and removal?", a: "Removal permanently deletes content from the web or search results. Suppression pushes content to page two and beyond where fewer than 6% of searchers ever look. Both are effective strategies used in combination." },
+    ],
   },
   "how-to-remove-negative-articles-from-google": {
     intro: "Negative articles on Google can destroy careers, relationships, and mental health. Whether it's a tabloid hit piece, an outdated scandal, or outright defamation, there are legitimate methods to remove or suppress negative articles from Google search results. This guide covers every available approach — from direct removal to long-term suppression.",
@@ -332,6 +384,11 @@ export const blogContent: Record<string, BlogContent> = {
       "Professional celebrity reputation management campaigns combine all methods simultaneously",
     ],
     relatedServiceSlugs: ["google-results-removal", "negative-search-results", "celebrity-crisis-management"],
+    faqs: [
+      { q: "Can you remove negative articles from Google?", a: "Some content can be permanently removed through publisher contact, Google's removal policies, DMCA takedowns, or legal action. Content that can't be removed can be suppressed to page two through professional reputation management." },
+      { q: "How long does it take to remove an article from Google?", a: "Direct removal through Google's policies takes 2–6 weeks. Publisher negotiation varies from days to months. Search result suppression shows first movement in 30 days with full results in 90–180 days." },
+      { q: "What types of content will Google remove?", a: "Google removes involuntary explicit imagery, financial fraud information, doxxing content, content from exploitative removal sites, and certain private personal information. EU/UK residents have additional rights under the Right to Be Forgotten." },
+    ],
   },
   "can-you-sue-for-online-defamation": {
     intro: "When someone publishes false, damaging statements about you online, your first instinct may be to sue. But defamation law is complex, expensive, and not always the right strategy. This guide explains when suing for online defamation makes sense for celebrities and public figures — and when other reputation management approaches are more effective.",
@@ -349,6 +406,11 @@ export const blogContent: Record<string, BlogContent> = {
       "Combined reputation management and legal strategy usually outperforms litigation alone",
     ],
     relatedServiceSlugs: ["celebrity-crisis-management", "negative-search-results", "google-results-removal"],
+    faqs: [
+      { q: "Can a celebrity sue for online defamation?", a: "Yes, but public figures must prove 'actual malice' — that the publisher knew the statement was false or acted with reckless disregard for truth. This is a higher legal bar than for private individuals." },
+      { q: "How much does a defamation lawsuit cost?", a: "In the US, defamation litigation typically costs $100,000–$500,000+ through trial and takes 1–3 years. UK costs are lower at £50,000–£200,000+ with a more plaintiff-friendly framework." },
+      { q: "Is reputation management better than suing for defamation?", a: "In most cases, combined reputation management and legal strategy outperforms litigation alone. Reputation management costs $3,500–$10,000/month and achieves faster results without the publicity risk of a lawsuit." },
+    ],
   },
   "how-to-fix-bad-reputation": {
     intro: "A bad reputation doesn't have to be permanent. Whether you're dealing with negative Google search results, damaging Wikipedia content, unflattering AI search answers, or lingering public perception from past controversies, there is a systematic, proven process for fixing a damaged reputation as a public figure.",
@@ -367,6 +429,11 @@ export const blogContent: Record<string, BlogContent> = {
       "Ongoing monitoring prevents repeat crises and costs 10x less than recovery",
     ],
     relatedServiceSlugs: ["negative-search-results", "reputation-protection", "celebrity-crisis-management", "ai-search-reputation"],
+    faqs: [
+      { q: "How do you fix a bad reputation as a celebrity?", a: "Follow a systematic five-step process: conduct a complete reputation audit, remove content that can be removed, suppress what can't be removed, shape the AI narrative, and implement ongoing monitoring and protection." },
+      { q: "How long does it take to fix a bad reputation?", a: "First improvements are visible within 30 days. Material page-one changes by 60–90 days. A full reputation transformation typically takes 90–180 days depending on the severity and number of negative results." },
+      { q: "Can a damaged reputation be fully repaired?", a: "In most cases, yes. 94% of campaigns achieve page-one clearance within 6 months. The original content may remain online, but its visibility is reduced to where fewer than 1% of searchers will find it." },
+    ],
   },
   "why-is-reputation-management-important": {
     intro: "In 2026, your online reputation is your first impression — and for celebrities and public figures, it's often the only impression that matters. Here's why reputation management has become essential, not optional, for anyone in the public eye.",

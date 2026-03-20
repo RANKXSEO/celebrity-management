@@ -12,9 +12,9 @@ const BlogPost = () => {
   const post = blogPosts.find((p) => p.slug === slug);
   const content = slug ? blogContent[slug] : undefined;
 
-  const jsonLd = useMemo(() => post ? {
-    "@context": "https://schema.org",
-    "@graph": [
+  const jsonLd = useMemo(() => {
+    if (!post) return undefined;
+    const graph: Record<string, unknown>[] = [
       {
         "@type": "Article",
         "headline": post.title,
@@ -33,8 +33,25 @@ const BlogPost = () => {
           { "@type": "ListItem", "position": 3, "name": post.title, "item": `${BASE_URL}/blog/${post.slug}` },
         ],
       },
-    ],
-  } : undefined, [post]);
+    ];
+
+    // Add FAQPage schema when the blog post has FAQs
+    if (content?.faqs && content.faqs.length > 0) {
+      graph.push({
+        "@type": "FAQPage",
+        "mainEntity": content.faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a,
+          },
+        })),
+      });
+    }
+
+    return { "@context": "https://schema.org", "@graph": graph };
+  }, [post, content]);
 
   // Strip markdown link syntax from intro for clean meta description
   const cleanDesc = content?.intro?.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').slice(0, 155) + "..." || post?.title || "";
@@ -98,6 +115,20 @@ const BlogPost = () => {
                     ))}
                   </motion.div>
                 ))}
+
+                {content.faqs && content.faqs.length > 0 && (
+                  <div className="bg-card border border-border rounded-2xl p-6 mb-10">
+                    <h2 className="font-display text-xl font-bold mb-4">Frequently Asked Questions</h2>
+                    <div className="space-y-5">
+                      {content.faqs.map((faq, i) => (
+                        <div key={i}>
+                          <h3 className="font-body text-[15px] font-bold text-foreground mb-1.5">{faq.q}</h3>
+                          <p className="text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {content.relatedServiceSlugs.length > 0 && (
                   <div className="bg-card border border-border rounded-2xl p-6 mb-10">
