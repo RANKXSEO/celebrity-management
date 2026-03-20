@@ -69,6 +69,11 @@ export const blogContent: Record<string, BlogContent> = {
       "After creation, ongoing monitoring prevents vandalism and biased editing",
     ],
     relatedServiceSlugs: ["wikipedia-for-celebrities", "knowledge-panel-management", "ai-search-reputation"],
+    faqs: [
+      { q: "How do you get a Wikipedia page as a celebrity?", a: "You need 3–5 substantial articles in established, independent media where you are the primary subject. Press releases, your own website, and paid promotional articles don't count toward Wikipedia's notability requirements." },
+      { q: "Why do Wikipedia pages get deleted?", a: "The top three reasons are promotional tone (reads like marketing), insufficient sourcing (claims not backed by reliable independent sources), and undisclosed conflict-of-interest editing." },
+      { q: "How long does it take to get a Wikipedia page?", a: "If you already meet notability requirements with sufficient independent media coverage, the page creation and review process typically takes 2–6 weeks. If you need to build media coverage first, that can take several months." },
+    ],
   },
   "surviving-cancel-culture": {
     intro: "Cancel culture isn't going away. If you're a public figure in 2026, the question isn't whether you'll face a pile-on — it's when. The good news is that cancellation is rarely permanent. The vast majority of public figures who were 'cancelled' in recent years have recovered — but only the ones who responded strategically rather than emotionally.",
