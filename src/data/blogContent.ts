@@ -3,6 +3,7 @@ interface BlogContent {
   sections: { heading: string; body: string }[];
   takeaways: string[];
   relatedServiceSlugs: string[];
+  faqs?: { q: string; a: string }[];
 }
 
 export const blogContent: Record<string, BlogContent> = {
