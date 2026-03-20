@@ -341,6 +341,10 @@ export const blogContent: Record<string, BlogContent> = {
       "A free reputation audit tells you exactly where you stand — no obligation, no pressure",
     ],
     relatedServiceSlugs: ["negative-search-results", "reputation-protection", "celebrity-crisis-management"],
+    faqs: [
+      { q: "How do I know if I need a reputation manager?", a: "Key warning signs include negative articles on Google page one for your name, an incorrect Wikipedia page, damaging AI search answers, trending negative social media, declining business opportunities, or old scandals still ranking prominently." },
+      { q: "When should a celebrity hire a reputation management agency?", a: "Ideally before a crisis hits — proactive monitoring costs far less than reactive recovery. If you're already seeing damage, the sooner you engage professional help, the faster and less expensive the recovery." },
+    ],
   },
   "does-reputation-management-work": {
     intro: "It's the question every potential client asks — and the one most reputation management companies dodge with vague promises. Does online reputation management actually work? The evidence from over 500 celebrity reputation management campaigns says yes, but with important caveats about what 'working' actually means.",
