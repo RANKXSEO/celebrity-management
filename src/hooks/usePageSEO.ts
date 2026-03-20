@@ -52,6 +52,7 @@ const usePageSEO = ({ title, description, canonical, type = "website", jsonLd }:
     setMeta("og:description", description);
     setMeta("og:url", canonicalUrl);
     setMeta("og:type", type);
+    setMeta("og:image", `${BASE_URL}/og-image.png`);
 
     // Twitter
     const setName = (name: string, content: string) => {
