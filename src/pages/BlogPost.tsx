@@ -116,6 +116,20 @@ const BlogPost = () => {
                   </motion.div>
                 ))}
 
+                {content.faqs && content.faqs.length > 0 && (
+                  <div className="bg-card border border-border rounded-2xl p-6 mb-10">
+                    <h2 className="font-display text-xl font-bold mb-4">Frequently Asked Questions</h2>
+                    <div className="space-y-5">
+                      {content.faqs.map((faq, i) => (
+                        <div key={i}>
+                          <h3 className="font-body text-[15px] font-bold text-foreground mb-1.5">{faq.q}</h3>
+                          <p className="text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {content.relatedServiceSlugs.length > 0 && (
                   <div className="bg-card border border-border rounded-2xl p-6 mb-10">
                     <h3 className="font-display text-lg font-bold mb-3">Related Services</h3>
