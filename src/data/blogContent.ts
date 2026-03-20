@@ -405,6 +405,11 @@ export const blogContent: Record<string, BlogContent> = {
       "Combined reputation management and legal strategy usually outperforms litigation alone",
     ],
     relatedServiceSlugs: ["celebrity-crisis-management", "negative-search-results", "google-results-removal"],
+    faqs: [
+      { q: "Can a celebrity sue for online defamation?", a: "Yes, but public figures must prove 'actual malice' — that the publisher knew the statement was false or acted with reckless disregard for truth. This is a higher legal bar than for private individuals." },
+      { q: "How much does a defamation lawsuit cost?", a: "In the US, defamation litigation typically costs $100,000–$500,000+ through trial and takes 1–3 years. UK costs are lower at £50,000–£200,000+ with a more plaintiff-friendly framework." },
+      { q: "Is reputation management better than suing for defamation?", a: "In most cases, combined reputation management and legal strategy outperforms litigation alone. Reputation management costs $3,500–$10,000/month and achieves faster results without the publicity risk of a lawsuit." },
+    ],
   },
   "how-to-fix-bad-reputation": {
     intro: "A bad reputation doesn't have to be permanent. Whether you're dealing with negative Google search results, damaging Wikipedia content, unflattering AI search answers, or lingering public perception from past controversies, there is a systematic, proven process for fixing a damaged reputation as a public figure.",
