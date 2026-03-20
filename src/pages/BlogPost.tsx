@@ -36,9 +36,12 @@ const BlogPost = () => {
     ],
   } : undefined, [post]);
 
+  // Strip markdown link syntax from intro for clean meta description
+  const cleanDesc = content?.intro?.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').slice(0, 155) + "..." || post?.title || "";
+
   usePageSEO({
     title: post ? `${post.title} | Celebrity Reputation Management Agency` : "Post Not Found",
-    description: content?.intro?.slice(0, 155) + "..." || post?.title || "",
+    description: cleanDesc,
     type: "article",
     jsonLd,
   });
