@@ -23,6 +23,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Professional help in the first hours saves months of recovery time and significant cost",
     ],
     relatedServiceSlugs: ["celebrity-crisis-management", "negative-search-results", "social-media-reputation"],
+    faqs: [
+      { q: "What should you do in the first 48 hours of a celebrity crisis?", a: "Assess the situation without reacting publicly, develop a multi-channel strategy covering media, digital, legal and stakeholders, deploy your first response by hour 6–24, and expand suppression and counter-narrative efforts by hour 24–48." },
+      { q: "What is the biggest mistake celebrities make during a reputation crisis?", a: "Responding emotionally on social media. Every word posted during a crisis becomes permanent content that Google indexes, generating its own search results and extending the crisis beyond the original story." },
+      { q: "How quickly should you hire a reputation management agency during a crisis?", a: "Within the first 2 hours if possible. Clients who engage professional celebrity crisis management within the first hours consistently achieve better outcomes than those who wait days." },
+      { q: "Can negative crisis coverage be removed from Google?", a: "Content that is defamatory, privacy-violating, or breaches Google's policies can often be removed. Factually accurate but unflattering coverage can be suppressed to page two and beyond through professional negative search result suppression." },
+    ],
   },
   "what-chatgpt-says-about-you": {
     intro: "Open ChatGPT right now and type your name. What comes back? For a growing number of public figures, the answer is deeply concerning. AI assistants don't show you ten links to choose from — they synthesise a single, definitive narrative about you. And if your web presence is dominated by negative coverage, that narrative leads with the worst moments of your career.",
