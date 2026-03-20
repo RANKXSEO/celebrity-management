@@ -231,6 +231,12 @@ export const blogContent: Record<string, BlogContent> = {
       "A free reputation audit provides specific, honest guidance about your situation",
     ],
     relatedServiceSlugs: ["negative-search-results", "celebrity-crisis-management", "wikipedia-for-celebrities", "ai-search-reputation"],
+    faqs: [
+      { q: "What is celebrity reputation management?", a: "Celebrity reputation management is a specialised discipline that controls what appears when someone searches a public figure's name on Google, Wikipedia, AI assistants, and social media. It includes suppressing negative search results, managing crises, editing Wikipedia, and shaping AI answers." },
+      { q: "How does celebrity reputation management work?", a: "It works through a combination of search result suppression (pushing negative content off page one), content removal (legal and platform-based), Wikipedia and Knowledge Panel management, AI search optimisation (GEO), social media defence, and ongoing monitoring." },
+      { q: "Who needs celebrity reputation management?", a: "Any public figure whose Google results, Wikipedia page, or AI search answers don't accurately represent who they are today. This includes actors, musicians, athletes, influencers, executives, politicians, and reality TV personalities." },
+      { q: "How much does celebrity reputation management cost?", a: "Monthly retainers typically range from $3,500 to $20,000 depending on the situation's complexity. Crisis management sits at the higher end due to 24/7 availability. The initial audit is always free." },
+    ],
   },
   "celebrity-reputation-management-cost": {
     intro: "Pricing transparency is rare in the reputation management industry — most firms won't tell you what things cost until you're on a sales call. We think that's wrong. Here's what celebrity reputation management actually costs, based on our experience across 500+ engagements.",
