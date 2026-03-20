@@ -46,6 +46,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Start by auditing what every major AI assistant says about you today",
     ],
     relatedServiceSlugs: ["ai-search-reputation", "wikipedia-for-celebrities", "knowledge-panel-management"],
+    faqs: [
+      { q: "What does ChatGPT say about celebrities?", a: "ChatGPT synthesises a single narrative about public figures from their entire web footprint — Wikipedia, news coverage, social media, and Reddit threads. If negative coverage dominates, the AI leads with the worst moments of their career." },
+      { q: "Can you control what AI says about you?", a: "Yes, to a meaningful degree. Generative Engine Optimisation (GEO) shapes the source material AI models draw from — improving Wikipedia accuracy, building authoritative positive content, and correcting factual errors across the web." },
+      { q: "What is Generative Engine Optimisation (GEO)?", a: "GEO is the practice of shaping web content that AI systems like ChatGPT, Gemini, and Perplexity draw from. It focuses on source credibility and narrative coherence rather than traditional keyword rankings." },
+      { q: "What is the most important source for AI answers about celebrities?", a: "Wikipedia is the single most influential source. It's heavily represented in AI training data and frequently retrieved during real-time queries, making it the highest-impact target for GEO." },
+    ],
   },
   "how-to-get-wikipedia-page": {
     intro: "A Wikipedia page is the most valuable piece of digital real estate a public figure can own. It ranks #1 in Google for virtually every name, feeds directly into Knowledge Panels, and serves as the primary source for AI assistants. But getting one isn't straightforward — Wikipedia has strict notability requirements that many public figures don't initially understand.",
