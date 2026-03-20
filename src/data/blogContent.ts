@@ -138,6 +138,11 @@ export const blogContent: Record<string, BlogContent> = {
       "White-hat suppression results are permanent; black-hat results are fragile and risky",
     ],
     relatedServiceSlugs: ["negative-search-results", "content-suppression"],
+    faqs: [
+      { q: "How long does it take to suppress negative Google results?", a: "First measurable movement typically occurs within 30 days. Material page-one improvement happens by 60–90 days. A full page-one transformation usually takes 90–180 days depending on the number and authority of negative sources." },
+      { q: "Can you permanently remove negative search results?", a: "Defamatory, privacy-violating, or policy-breaching content can often be permanently removed. Factually accurate content cannot be deleted but can be suppressed to page two and beyond where fewer than 6% of searchers look." },
+      { q: "How much does negative search result suppression cost?", a: "Monthly retainers typically range from $3,500 to $20,000 depending on the complexity of the situation, the number of negative results, and the authority of the source domains." },
+    ],
   },
   "google-knowledge-panel-guide": {
     intro: "The Google Knowledge Panel — that prominent info box on the right side of search results — is the single most visible piece of information about you on the internet. If it's wrong, incomplete, or missing, you're losing credibility before anyone even reads a search result.",
