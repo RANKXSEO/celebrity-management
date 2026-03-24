@@ -41,7 +41,9 @@ const ProcessSection = () => {
               <div className="w-[62px] h-[62px] rounded-full bg-card border-2 border-border flex items-center justify-center mx-auto mb-5 font-display text-xl font-bold text-gold shadow-md-custom relative z-10 group-hover:bg-gold group-hover:text-primary-foreground group-hover:border-gold group-hover:shadow-gold transition-all" aria-hidden="true">
                 {step.num}
               </div>
-              <h3 className="font-body text-[15px] font-bold text-primary mb-1.5">{step.title}</h3>
+              <h3 className="font-body text-[15px] font-bold text-primary mb-1.5">
+                <data value={step.num}>Step {step.num}:</data> {step.title}
+              </h3>
               <p className="text-[13px] text-ink-muted leading-relaxed mb-2">{step.desc}</p>
               {step.cta && (
                 <Link to="/free-consultation" className="text-[12px] font-bold text-gold hover:text-gold-light transition-colors">
