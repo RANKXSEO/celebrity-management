@@ -77,31 +77,31 @@ const HeroSection = () => {
           Free · Confidential · NDA available · We respond within 2 hours
         </motion.p>
 
-        <motion.div
+        <motion.dl
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           className="flex items-center gap-[clamp(18px,3vw,42px)] flex-wrap pt-[clamp(30px,4vw,50px)] border-t border-primary-foreground/[0.07]"
         >
           {[
-            { num: "500+", label: "Celebrity Campaigns" },
-            { num: "15+", label: "Years in the Industry" },
-            { num: "94%", label: "Page-One Results Cleared" },
-            { num: "< 48hr", label: "Crisis Response Window" },
+            { num: "500+", value: 500, label: "Celebrity Campaigns" },
+            { num: "15+", value: 15, label: "Years in the Industry" },
+            { num: "94%", value: 94, label: "Page-One Results Cleared" },
+            { num: "< 48hr", value: 48, label: "Crisis Response Window" },
           ].map((stat, i) => (
             <div key={stat.label} className="flex items-center gap-[clamp(18px,3vw,42px)]">
               {i > 0 && <div className="w-px h-[30px] bg-primary-foreground/[0.08] flex-shrink-0 hidden sm:block" aria-hidden="true" />}
               <div className="flex flex-col">
-                <span className="font-display text-[clamp(1.375rem,2.2vw,2rem)] font-bold text-gold-light leading-none">
-                  {stat.num}
-                </span>
-                <span className="text-[10px] text-primary-foreground/30 tracking-[0.07em] mt-1 uppercase">
+                <dd className="font-display text-[clamp(1.375rem,2.2vw,2rem)] font-bold text-gold-light leading-none">
+                  <data value={stat.value}>{stat.num}</data>
+                </dd>
+                <dt className="text-[10px] text-primary-foreground/30 tracking-[0.07em] mt-1 uppercase">
                   {stat.label}
-                </span>
+                </dt>
               </div>
             </div>
           ))}
-        </motion.div>
+        </motion.dl>
       </div>
 
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-primary-foreground/20 pointer-events-none" aria-hidden="true">
