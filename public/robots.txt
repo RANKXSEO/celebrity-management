@@ -36,3 +36,8 @@ Disallow: /404
 
 Sitemap: https://celebrity-reputation-management.com/sitemap.xml
 Host: https://celebrity-reputation-management.com
+
+# LLM-readable site information
+# See https://llmstxt.org for the specification
+LLMs-Txt: https://celebrity-reputation-management.com/llms.txt
+LLMs-Full-Txt: https://celebrity-reputation-management.com/llms-full.txt
