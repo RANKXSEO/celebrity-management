@@ -35,7 +35,7 @@ const SolutionPage = () => {
   } : undefined, [page]);
 
   usePageSEO({
-    title: page ? `${page.title} | Celebrity Reputation Management Agency` : "Solution Not Found",
+    title: page ? page.title : "Solution Not Found",
     description: page?.metaDesc || "",
     jsonLd,
   });
@@ -52,12 +52,12 @@ const SolutionPage = () => {
               <li aria-hidden="true">/</li>
               <li><Link to="/solutions" className="hover:text-gold-light transition-colors">Solutions</Link></li>
               <li aria-hidden="true">/</li>
-              <li className="text-primary-foreground/50">{page.h1}</li>
+              <li className="text-primary-foreground/85">{page.h1}</li>
             </ol>
           </nav>
           <div className="text-4xl mb-4">{page.icon}</div>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] text-primary-foreground font-bold tracking-tight mb-4">{page.h1}</h1>
-          <p className="text-primary-foreground/50 text-lg leading-relaxed mb-8">{page.heroDesc}</p>
+          <p className="text-primary-foreground/85 text-lg leading-relaxed mb-8">{page.heroDesc}</p>
           <div className="flex gap-3 flex-wrap">
             <Link to="/free-consultation" className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-6 py-3 rounded text-sm font-bold shadow-gold hover:bg-gold-light transition-all">
               Get Emergency Help Now →
@@ -98,7 +98,7 @@ const SolutionPage = () => {
               <div className="font-display text-4xl text-gold/40 mb-2">"</div>
               <blockquote className="font-display text-lg italic text-primary-foreground leading-relaxed mb-4">{page.testimonial.quote}</blockquote>
               <div className="text-sm font-bold text-gold-light">{page.testimonial.name}</div>
-              <div className="text-[11px] text-primary-foreground/30 mt-0.5">{page.testimonial.role}</div>
+              <div className="text-[11px] text-primary-foreground/65 mt-0.5">{page.testimonial.role}</div>
             </div>
           )}
 
@@ -163,12 +163,12 @@ const SolutionPage = () => {
 
           <div className="bg-primary rounded-2xl p-8 text-center">
             <h3 className="font-display text-2xl text-primary-foreground font-bold mb-3">Don't Wait — Every Day Matters</h3>
-            <p className="text-primary-foreground/40 mb-5">Get a free, confidential audit. We'll tell you exactly what's achievable and how long it takes.</p>
+            <p className="text-primary-foreground/75 mb-5">Get a free, confidential audit. We'll tell you exactly what's achievable and how long it takes.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link to="/free-consultation" className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-7 py-3.5 rounded text-base font-bold shadow-gold hover:bg-gold-light transition-all">
                 Get Your Free Reputation Audit →
               </Link>
-              <a href="tel:+16462224346" className="text-sm text-primary-foreground/50 hover:text-gold-light transition-colors">
+              <a href="tel:+16462224346" className="text-sm text-primary-foreground/85 hover:text-gold-light transition-colors">
                 or call (646) 222-4346 (24/7)
               </a>
             </div>

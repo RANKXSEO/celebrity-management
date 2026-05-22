@@ -29,7 +29,7 @@ const NotFound = () => {
           <h1 className="font-display text-[clamp(2.5rem,5vw,4rem)] text-primary-foreground font-bold tracking-tight mb-4">
             404
           </h1>
-          <p className="text-primary-foreground/50 text-lg leading-relaxed mb-8">
+          <p className="text-primary-foreground/85 text-lg leading-relaxed mb-8">
             The page you're looking for doesn't exist or has been moved.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

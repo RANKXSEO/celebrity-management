@@ -14,7 +14,7 @@ const FreeConsultation = () => {
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] text-primary-foreground font-bold tracking-tight mb-4">
             Get Your Free <em className="text-gold-light italic">Reputation Audit</em>
           </h1>
-          <p className="text-primary-foreground/50 text-lg leading-relaxed">
+          <p className="text-primary-foreground/85 text-lg leading-relaxed">
             Tell us about your situation. We'll audit your complete digital presence and tell you exactly where things stand — with zero obligation.
           </p>
         </div>

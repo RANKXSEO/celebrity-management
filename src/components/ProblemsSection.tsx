@@ -69,11 +69,11 @@ const ProblemsSection = () => {
               <div className="absolute -top-[60px] -right-[60px] w-[180px] h-[180px] bg-[radial-gradient(circle,rgba(196,146,62,0.09),transparent)] rounded-full pointer-events-none" aria-hidden="true" />
               <div className="text-[9px] tracking-[0.18em] uppercase text-gold font-bold mb-2.5">Anonymised campaign data</div>
               <h3 className="font-display text-lg text-primary-foreground font-bold mb-1.5">Celebrity Reputation Management: Google Page One Before & After</h3>
-              <p className="text-sm text-primary-foreground/35 mb-4 leading-relaxed">Composite from actual client campaigns. Individual timelines depend on source authority and volume.</p>
+              <p className="text-sm text-primary-foreground/70 mb-4 leading-relaxed">Composite from actual client campaigns. Individual timelines depend on source authority and volume.</p>
 
               <div className="bg-primary-foreground/[0.03] border border-primary-foreground/[0.05] rounded-lg overflow-hidden">
                 <div className="px-3 py-2 bg-primary-foreground/[0.025] border-b border-primary-foreground/[0.04]">
-                  <span className="text-[9px] tracking-[0.14em] uppercase text-primary-foreground/20 font-bold">Before — what people were finding</span>
+                  <span className="text-[9px] tracking-[0.14em] uppercase text-primary-foreground/85 font-bold">Before — what people were finding</span>
                 </div>
                 {[
                   { num: "1", color: "bg-red-500", text: "[Name] scandal — TMZ exclusive", bad: true },
@@ -83,7 +83,7 @@ const ProblemsSection = () => {
                   <div key={row.num + "b"} className="flex items-center gap-2 px-3 py-2 border-b border-primary-foreground/[0.04] text-[13px]">
                     <span className="w-3.5 text-primary-foreground/15 text-[9px] font-bold flex-shrink-0">{row.num}</span>
                     <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${row.color}`} />
-                    <span className={row.bad ? "text-red-400 line-through decoration-red-400/40 flex-1" : "text-primary-foreground/40 flex-1"}>
+                    <span className={row.bad ? "text-red-400 line-through decoration-red-400/40 flex-1" : "text-primary-foreground/75 flex-1"}>
                       {row.text}
                     </span>
                   </div>

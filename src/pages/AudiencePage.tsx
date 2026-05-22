@@ -34,7 +34,7 @@ const AudiencePage = () => {
   } : undefined, [page]);
 
   usePageSEO({
-    title: page ? `${page.title} | Celebrity Reputation Management Agency` : "Page Not Found",
+    title: page ? page.title : "Page Not Found",
     description: page?.metaDesc || "",
     jsonLd,
   });
@@ -51,12 +51,12 @@ const AudiencePage = () => {
               <li aria-hidden="true">/</li>
               <li><Link to="/who-we-serve" className="hover:text-gold-light transition-colors">Who We Serve</Link></li>
               <li aria-hidden="true">/</li>
-              <li className="text-primary-foreground/50">{page.h1}</li>
+              <li className="text-primary-foreground/85">{page.h1}</li>
             </ol>
           </nav>
           <div className="text-4xl mb-4">{page.emoji}</div>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] text-primary-foreground font-bold tracking-tight mb-4">{page.h1}</h1>
-          <p className="text-primary-foreground/50 text-lg leading-relaxed mb-8">{page.heroDesc}</p>
+          <p className="text-primary-foreground/85 text-lg leading-relaxed mb-8">{page.heroDesc}</p>
           <div className="flex gap-3 flex-wrap">
             <Link to="/free-consultation" className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-6 py-3 rounded text-sm font-bold shadow-gold hover:bg-gold-light transition-all">
               Get a Free Reputation Assessment →
@@ -125,7 +125,7 @@ const AudiencePage = () => {
             <div className="font-display text-4xl text-gold/40 mb-2">"</div>
             <blockquote className="font-display text-lg italic text-primary-foreground leading-relaxed mb-4">{page.testimonial.quote}</blockquote>
             <div className="text-sm font-bold text-gold-light">{page.testimonial.name}</div>
-            <div className="text-[11px] text-primary-foreground/30 mt-0.5">{page.testimonial.role}</div>
+            <div className="text-[11px] text-primary-foreground/65 mt-0.5">{page.testimonial.role}</div>
           </div>
 
           {/* Cross-hub: Other Audiences */}

@@ -25,7 +25,7 @@ const WhoWeServeSection = () => {
           <h2 className="font-display text-[clamp(1.625rem,2.8vw,2.5rem)] tracking-tight text-primary-foreground mb-4">
             Reputation Management for <em className="text-gold-light italic">Celebrities & Public Figures</em>
           </h2>
-          <p className="text-primary-foreground/45 text-[17px] leading-relaxed">
+          <p className="text-primary-foreground/80 text-[17px] leading-relaxed">
             We don't take on local businesses or small brands. Every client is a public figure with real media exposure and career-level stakes. That narrow focus is why we're good at this.
           </p>
         </header>
@@ -45,7 +45,7 @@ const WhoWeServeSection = () => {
               >
                 <div className="text-2xl mb-2.5" aria-hidden="true">{aud.emoji}</div>
                 <h3 className="font-body text-[15px] font-bold text-primary-foreground mb-1">{aud.title}</h3>
-                <p className="text-[13px] text-primary-foreground/35 leading-snug">{aud.desc}</p>
+                <p className="text-[13px] text-primary-foreground/70 leading-snug">{aud.desc}</p>
                 <span className="block mt-2.5 text-[10px] font-bold text-gold tracking-[0.07em] uppercase group-hover:tracking-[0.12em] transition-all">
                   Learn more
                 </span>

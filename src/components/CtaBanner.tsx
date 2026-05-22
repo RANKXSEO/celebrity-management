@@ -23,11 +23,11 @@ const CtaBanner = () => {
         <h2 className="font-display text-[clamp(1.625rem,3vw,2.5rem)] text-primary-foreground font-bold mb-3 tracking-tight">
           The Longer You Wait, <em className="text-gold-light italic">the Harder It Gets.</em>
         </h2>
-        <p className="text-primary-foreground/40 text-base leading-relaxed mb-4 max-w-[520px] mx-auto">
+        <p className="text-primary-foreground/75 text-base leading-relaxed mb-4 max-w-[520px] mx-auto">
           A reputation audit takes about 20 minutes and costs nothing. We'll show you exactly what's ranking, what's fixable, and what a realistic timeline looks like.
         </p>
 
-        <div className="flex items-center justify-center gap-4 text-[11px] text-primary-foreground/25 mb-7 flex-wrap">
+        <div className="flex items-center justify-center gap-4 text-[11px] text-primary-foreground/60 mb-7 flex-wrap">
           <span>Measurable ranking shifts in 30 days</span>
           <span>NDA before we start talking</span>
           <span>No long-term contracts required</span>
@@ -47,7 +47,7 @@ const CtaBanner = () => {
             Call Now: (646) 222-4346
           </a>
         </div>
-        <p className="text-[11px] text-primary-foreground/20 mt-4 tracking-[0.04em]">
+        <p className="text-[11px] text-primary-foreground/85 mt-4 tracking-[0.04em]">
           Confidential · No obligation · Response within 2 hours · NDA available
         </p>
       </div>

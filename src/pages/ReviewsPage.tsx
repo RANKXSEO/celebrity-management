@@ -24,8 +24,8 @@ const avgRating = (reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.lengt
 
 const ReviewsPage = () => {
   usePageSEO({
-    title: "Client Reviews — Celebrity Reputation Management Agency | Rated 4.76/5",
-    description: "Read verified client reviews of our celebrity reputation management services. Rated 4.76 out of 5 by 181 clients. Reputation management for celebrities, athletes, influencers, and public figures.",
+    title: "Client Reviews — Rated 4.76/5 by 181 Clients",
+    description: "Verified reviews of our celebrity reputation management services. Rated 4.76/5 by 181 celebrities, athletes, influencers, and public figures.",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
@@ -69,7 +69,7 @@ const ReviewsPage = () => {
           <h1 className="font-display text-[clamp(2rem,4.5vw,3.25rem)] text-primary-foreground font-bold tracking-tight mb-4">
             Celebrity Reputation Management <em className="text-gold-light italic">Reviews</em>
           </h1>
-          <p className="text-primary-foreground/50 text-lg leading-relaxed mb-6 max-w-[600px] mx-auto">
+          <p className="text-primary-foreground/85 text-lg leading-relaxed mb-6 max-w-[600px] mx-auto">
             Rated <strong className="text-gold-light">4.76 out of 5</strong> by <strong className="text-gold-light">181 clients</strong>. Read what celebrities, athletes, influencers, and public figures say about our <Link to="/services" className="text-gold hover:text-gold-light underline-offset-2 hover:underline transition-colors">online reputation management services</Link>.
           </p>
           <div className="flex items-center justify-center gap-1 mb-2">
@@ -77,7 +77,7 @@ const ReviewsPage = () => {
               <svg key={s} className={`w-6 h-6 ${s <= 4 ? 'text-gold' : 'text-gold/60'}`} fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
             ))}
           </div>
-          <p className="text-primary-foreground/25 text-xs">Based on 181 verified client engagements · Identities protected under NDA</p>
+          <p className="text-primary-foreground/60 text-xs">Based on 181 verified client engagements · Identities protected under NDA</p>
         </div>
       </section>
 
@@ -128,7 +128,7 @@ const ReviewsPage = () => {
           <h2 className="font-display text-[clamp(1.5rem,3vw,2.25rem)] text-primary-foreground font-bold tracking-tight mb-3">
             Ready to Take Control of <em className="text-gold-light italic">Your Online Reputation?</em>
           </h2>
-          <p className="text-primary-foreground/40 text-base leading-relaxed mb-6">
+          <p className="text-primary-foreground/75 text-base leading-relaxed mb-6">
             Join 500+ celebrities, athletes, and public figures who trust our <Link to="/services" className="text-gold hover:text-gold-light transition-colors">celebrity reputation management services</Link> to protect their name. Start with a free, confidential <Link to="/free-consultation" className="text-gold hover:text-gold-light transition-colors">reputation audit</Link>.
           </p>
           <div className="flex items-center justify-center gap-3 flex-wrap">
@@ -143,19 +143,19 @@ const ReviewsPage = () => {
           <div className="mt-10 pt-8 border-t border-primary-foreground/[0.07]">
             <h3 className="font-display text-lg text-primary-foreground/60 font-bold mb-3">Explore Our Reputation Management Services</h3>
             <div className="flex flex-wrap justify-center gap-2">
-              <Link to="/services/negative-search-results" className="text-xs text-primary-foreground/30 hover:text-gold transition-colors">Negative Result Suppression</Link>
+              <Link to="/services/negative-search-results" className="text-xs text-primary-foreground/65 hover:text-gold transition-colors">Negative Result Suppression</Link>
               <span className="text-primary-foreground/10">·</span>
-              <Link to="/services/celebrity-crisis-management" className="text-xs text-primary-foreground/30 hover:text-gold transition-colors">Celebrity Crisis Management</Link>
+              <Link to="/services/celebrity-crisis-management" className="text-xs text-primary-foreground/65 hover:text-gold transition-colors">Celebrity Crisis Management</Link>
               <span className="text-primary-foreground/10">·</span>
-              <Link to="/services/wikipedia-for-celebrities" className="text-xs text-primary-foreground/30 hover:text-gold transition-colors">Wikipedia Management</Link>
+              <Link to="/services/wikipedia-for-celebrities" className="text-xs text-primary-foreground/65 hover:text-gold transition-colors">Wikipedia Management</Link>
               <span className="text-primary-foreground/10">·</span>
-              <Link to="/services/ai-search-reputation" className="text-xs text-primary-foreground/30 hover:text-gold transition-colors">AI Search Reputation</Link>
+              <Link to="/services/ai-search-reputation" className="text-xs text-primary-foreground/65 hover:text-gold transition-colors">AI Search Reputation</Link>
               <span className="text-primary-foreground/10">·</span>
-              <Link to="/services/google-review-removal" className="text-xs text-primary-foreground/30 hover:text-gold transition-colors">Google Review Removal</Link>
+              <Link to="/services/google-review-removal" className="text-xs text-primary-foreground/65 hover:text-gold transition-colors">Google Review Removal</Link>
               <span className="text-primary-foreground/10">·</span>
-              <Link to="/who-we-serve/actors-entertainers" className="text-xs text-primary-foreground/30 hover:text-gold transition-colors">Reputation Management for Actors</Link>
+              <Link to="/who-we-serve/actors-entertainers" className="text-xs text-primary-foreground/65 hover:text-gold transition-colors">Reputation Management for Actors</Link>
               <span className="text-primary-foreground/10">·</span>
-              <Link to="/who-we-serve/athletes-sports-stars" className="text-xs text-primary-foreground/30 hover:text-gold transition-colors">Reputation Management for Athletes</Link>
+              <Link to="/who-we-serve/athletes-sports-stars" className="text-xs text-primary-foreground/65 hover:text-gold transition-colors">Reputation Management for Athletes</Link>
             </div>
           </div>
         </div>

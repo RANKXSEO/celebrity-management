@@ -30,13 +30,13 @@ const FaqSection = () => {
                 <span className="text-[11px] tracking-[0.14em] uppercase text-gold font-bold">Available 24/7</span>
               </div>
               <h3 className="font-display text-xl text-primary-foreground font-bold mb-2">Need to talk right now?</h3>
-              <p className="text-sm text-primary-foreground/35 leading-relaxed mb-4">
+              <p className="text-sm text-primary-foreground/70 leading-relaxed mb-4">
                 If something is happening right now, skip the form. Call the crisis line — someone picks up, day or night.
               </p>
               <a href="tel:+16462224346" className="font-display text-2xl font-bold text-gold-light block">
                 (646) 222-4346
               </a>
-              <div className="text-[9px] text-primary-foreground/20 mt-1 tracking-[0.04em]">Typical response: under 15 minutes</div>
+              <div className="text-[9px] text-primary-foreground/85 mt-1 tracking-[0.04em]">Typical response: under 15 minutes</div>
               <Link
                 to="/free-consultation"
                 className="flex justify-center items-center w-full bg-gold text-primary-foreground py-3 rounded font-bold mt-5 hover:bg-gold-light transition-colors"
@@ -45,13 +45,13 @@ const FaqSection = () => {
               </Link>
 
               <div className="mt-5 pt-4 border-t border-primary-foreground/[0.06] space-y-2">
-                <div className="flex items-center gap-2 text-[11px] text-primary-foreground/25">
+                <div className="flex items-center gap-2 text-[11px] text-primary-foreground/60">
                   <span className="text-gold">✓</span> 500+ campaigns delivered
                 </div>
-                <div className="flex items-center gap-2 text-[11px] text-primary-foreground/25">
+                <div className="flex items-center gap-2 text-[11px] text-primary-foreground/60">
                   <span className="text-gold">✓</span> 94% page-one clearance rate
                 </div>
-                <div className="flex items-center gap-2 text-[11px] text-primary-foreground/25">
+                <div className="flex items-center gap-2 text-[11px] text-primary-foreground/60">
                   <span className="text-gold">✓</span> 15+ years serving public figures
                 </div>
               </div>

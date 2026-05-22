@@ -67,8 +67,8 @@ const BlogHub = () => {
   }), []);
 
   usePageSEO({
-    title: "Celebrity Reputation Management Blog | Expert Guides & Insights",
-    description: "Expert guides on celebrity crisis management, negative search result suppression, Wikipedia management, AI search reputation, and more. From the team at Celebrity Reputation Management Agency.",
+    title: "Celebrity Reputation Management Blog & Guides",
+    description: "Expert guides on celebrity crisis management, negative result suppression, Wikipedia, and AI search reputation.",
     jsonLd,
   });
 
@@ -79,7 +79,7 @@ const BlogHub = () => {
           <h1 className="font-display text-[clamp(2rem,4vw,3.5rem)] text-primary-foreground font-bold tracking-tight mb-4">
             Celebrity Reputation <em className="text-gold-light italic">Insights</em>
           </h1>
-          <p className="text-primary-foreground/50 text-lg leading-relaxed">
+          <p className="text-primary-foreground/85 text-lg leading-relaxed">
             Expert guides on <Link to="/services/celebrity-crisis-management" className="text-gold-light hover:underline">crisis management</Link>, <Link to="/services/negative-search-results" className="text-gold-light hover:underline">search result suppression</Link>, <Link to="/services/wikipedia-for-celebrities" className="text-gold-light hover:underline">Wikipedia management</Link>, and <Link to="/services/ai-search-reputation" className="text-gold-light hover:underline">AI search reputation</Link>.
           </p>
         </div>
