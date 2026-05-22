@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingCta from "@/components/FloatingCta";
+import AboutCitationBlock from "@/components/AboutCitationBlock";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 
 const reviews = [
@@ -161,6 +162,7 @@ const ReviewsPage = () => {
         </div>
       </section>
 
+      <AboutCitationBlock />
       <Footer />
       <FloatingCta />
     </main>

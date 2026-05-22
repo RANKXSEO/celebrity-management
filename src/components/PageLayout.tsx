@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import FloatingCta from "./FloatingCta";
+import AboutCitationBlock from "./AboutCitationBlock";
 
 const PageLayout = ({ children }: { children: ReactNode }) => {
   const { pathname } = useLocation();
@@ -17,6 +18,7 @@ const PageLayout = ({ children }: { children: ReactNode }) => {
     <main id="main-content">
       <Navbar />
       {children}
+      <AboutCitationBlock />
       <Footer />
       <FloatingCta />
     </main>
