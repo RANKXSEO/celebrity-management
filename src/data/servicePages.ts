@@ -159,7 +159,7 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "wikipedia-for-celebrities",
-    title: "Wikipedia Editing "Wikipedia Editing & Creation for Celebrities and Public Figures" Creation for Public Figures",
+    title: "Wikipedia Editing & Creation for Public Figures",
     h1: "Wikipedia Page Management for Celebrities & Public Figures",
     metaDesc: "Professional Wikipedia editing, creation & monitoring for celebrities. Fix inaccuracies, create new pages, defend against vandalism. Ethical, policy-compliant approach.",
     heroDesc: "Your Wikipedia page feeds directly into your Google Knowledge Panel and every AI assistant's answer about you. Inaccuracies, vandalism, or a missing page cost you credibility with everyone who searches your name.",
