@@ -19,8 +19,8 @@ import usePageSEO from "@/hooks/usePageSEO";
 
 const Index = () => {
   usePageSEO({
-    title: "Celebrity Reputation Management for Public Figures",
-    description: "Specialist ORM for celebrities, athletes, and public figures. Suppress negative Google results, manage Wikipedia, 24/7 crisis response. Free audit.",
+    title: "Celebrity Reputation Management Agency — Rated 4.76/5",
+    description: "Specialist ORM for celebrities, athletes and public figures since 2009. Suppress negative Google results, manage Wikipedia, 24/7 crisis line. 94% page-one clearance. Free audit.",
     canonical: "https://celebrity-reputation-management.com/",
   });
 
