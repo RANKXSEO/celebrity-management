@@ -43,7 +43,7 @@ const ServicePage = () => {
   } : undefined, [page]);
 
   usePageSEO({
-    title: page ? `${page.title} | Celebrity Reputation Management Agency` : "Service Not Found",
+    title: page ? page.title : "Service Not Found",
     description: page?.metaDesc || "",
     jsonLd,
   });
