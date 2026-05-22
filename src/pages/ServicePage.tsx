@@ -3,10 +3,14 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import ContentRenderer from "@/components/ContentRenderer";
+import TableOfContents from "@/components/TableOfContents";
+import AuthorByline, { DEFAULT_UPDATED } from "@/components/AuthorByline";
 import { servicePages } from "@/data/servicePages";
 import { solutionPages } from "@/data/solutionPages";
 import { audiencePages } from "@/data/audiencePages";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
+import { slugifyHeading } from "@/lib/slugify";
+
 
 const ServicePage = () => {
   const { slug } = useParams();
@@ -21,6 +25,8 @@ const ServicePage = () => {
         "name": page.h1,
         "description": page.metaDesc,
         "provider": { "@id": `${BASE_URL}/#organization` },
+        "areaServed": { "@type": "Country", "name": "Worldwide" },
+        "serviceType": page.h1,
         "url": `${BASE_URL}/services/${page.slug}`,
       },
       {
@@ -31,6 +37,17 @@ const ServicePage = () => {
           { "@type": "ListItem", "position": 3, "name": page.h1, "item": `${BASE_URL}/services/${page.slug}` },
         ],
       },
+      ...(page.process && page.process.length > 0 ? [{
+        "@type": "HowTo",
+        "name": `How ${page.h1} Works`,
+        "description": page.metaDesc,
+        "step": page.process.map((s, i) => ({
+          "@type": "HowToStep",
+          "position": i + 1,
+          "name": s.step,
+          "text": s.desc,
+        })),
+      }] : []),
       ...(page.faqs.length > 0 ? [{
         "@type": "FAQPage",
         "mainEntity": page.faqs.map(f => ({
@@ -42,11 +59,6 @@ const ServicePage = () => {
     ],
   } : undefined, [page]);
 
-  usePageSEO({
-    title: page ? page.title : "Service Not Found",
-    description: page?.metaDesc || "",
-    jsonLd,
-  });
 
   if (!page) return <PageLayout><div className="pt-32 pb-20 text-center"><h1 className="font-display text-3xl">Service not found</h1><Link to="/services" className="text-gold mt-4 inline-block">← Back to all services</Link></div></PageLayout>;
 
