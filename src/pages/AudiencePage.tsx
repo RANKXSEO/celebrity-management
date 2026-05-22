@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import ContentRenderer from "@/components/ContentRenderer";
+import AuthorByline, { DEFAULT_UPDATED } from "@/components/AuthorByline";
 import { audiencePages } from "@/data/audiencePages";
 import { servicePages } from "@/data/servicePages";
 import { solutionPages } from "@/data/solutionPages";
@@ -70,6 +71,7 @@ const AudiencePage = () => {
 
       <section className="py-[clamp(52px,7vw,80px)] bg-background">
         <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8">
+          <AuthorByline updated={DEFAULT_UPDATED} />
           <h2 className="font-display text-2xl font-bold mb-6">The Reputation Challenges You Face</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
             {page.challenges.map((c, i) => (

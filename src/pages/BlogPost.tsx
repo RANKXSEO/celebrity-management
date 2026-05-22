@@ -3,9 +3,12 @@ import { useMemo } from "react";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import ContentRenderer from "@/components/ContentRenderer";
+import TableOfContents from "@/components/TableOfContents";
+import AuthorByline, { DEFAULT_AUTHOR, DEFAULT_UPDATED } from "@/components/AuthorByline";
 import { blogPosts } from "@/pages/BlogHub";
 import { blogContent } from "@/data/blogContent";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
+import { slugifyHeading } from "@/lib/slugify";
 
 const BlogPost = () => {
   const { slug } = useParams();
