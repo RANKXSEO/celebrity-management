@@ -15,8 +15,8 @@ const SolutionsHub = () => {
   }), []);
 
   usePageSEO({
-    title: "Reputation Solutions by Problem | Cancel Culture, Defamation, Tabloid Content & More",
-    description: "Find solutions for your specific reputation problem: cancel culture recovery, defamation removal, tabloid suppression, leaked content removal, scandal recovery, and arrest record removal.",
+    title: "Reputation Solutions: Cancel Culture, Defamation & More",
+    description: "Solutions for specific reputation problems: cancel culture recovery, defamation removal, tabloid suppression, leaked content, scandal recovery.",
     jsonLd,
   });
   return (

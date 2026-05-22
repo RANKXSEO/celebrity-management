@@ -24,8 +24,8 @@ const avgRating = (reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.lengt
 
 const ReviewsPage = () => {
   usePageSEO({
-    title: "Client Reviews — Celebrity Reputation Management Agency | Rated 4.76/5",
-    description: "Read verified client reviews of our celebrity reputation management services. Rated 4.76 out of 5 by 181 clients. Reputation management for celebrities, athletes, influencers, and public figures.",
+    title: "Client Reviews — Rated 4.76/5 by 181 Clients",
+    description: "Verified reviews of our celebrity reputation management services. Rated 4.76/5 by 181 celebrities, athletes, influencers, and public figures.",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",

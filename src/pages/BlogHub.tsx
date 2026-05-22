@@ -67,8 +67,8 @@ const BlogHub = () => {
   }), []);
 
   usePageSEO({
-    title: "Celebrity Reputation Management Blog | Expert Guides & Insights",
-    description: "Expert guides on celebrity crisis management, negative search result suppression, Wikipedia management, AI search reputation, and more. From the team at Celebrity Reputation Management Agency.",
+    title: "Celebrity Reputation Management Blog & Guides",
+    description: "Expert guides on celebrity crisis management, negative result suppression, Wikipedia, and AI search reputation.",
     jsonLd,
   });
 

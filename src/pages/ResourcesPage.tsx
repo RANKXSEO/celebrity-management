@@ -5,8 +5,8 @@ import usePageSEO from "@/hooks/usePageSEO";
 
 const ResourcesPage = () => {
   usePageSEO({
-    title: "Celebrity Reputation Management Resources | Free Guides & Checklists",
-    description: "Free guides, checklists, and expert insights on celebrity reputation management. Crisis playbooks, pricing transparency, and self-assessment tools from 500+ campaigns.",
+    title: "Reputation Management Resources & Free Guides",
+    description: "Free guides, checklists, and expert insights on celebrity reputation management. Crisis playbooks, pricing, and self-assessment tools.",
   });
   return (
     <PageLayout>

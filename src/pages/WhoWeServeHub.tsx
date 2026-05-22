@@ -15,8 +15,8 @@ const WhoWeServeHub = () => {
   }), []);
 
   usePageSEO({
-    title: "Who We Serve | Reputation Management for Actors, Athletes, Musicians, Executives & More",
-    description: "We serve exclusively high-profile individuals: actors, musicians, athletes, influencers, CEOs, politicians, and reality TV stars. Industry-specific reputation management expertise.",
+    title: "Who We Serve: Actors, Athletes, Musicians & Execs",
+    description: "We serve high-profile individuals exclusively: actors, musicians, athletes, influencers, CEOs, politicians, and reality TV stars.",
     jsonLd,
   });
   return (

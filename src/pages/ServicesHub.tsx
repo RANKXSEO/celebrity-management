@@ -15,8 +15,8 @@ const ServicesHub = () => {
   }), []);
 
   usePageSEO({
-    title: "Celebrity Reputation Management Services | Full-Service ORM for Public Figures",
-    description: "Comprehensive reputation management services for celebrities: negative result suppression, Google content removal, crisis management, Wikipedia editing, AI search reputation (GEO), and more.",
+    title: "Celebrity Reputation Management Services",
+    description: "Full-service ORM for celebrities: negative result suppression, Google content removal, crisis response, Wikipedia editing, and AI search (GEO).",
     jsonLd,
   });
   return (
