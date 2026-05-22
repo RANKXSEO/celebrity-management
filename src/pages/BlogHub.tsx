@@ -50,11 +50,17 @@ const BlogHub = () => {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "CollectionPage",
+        "@type": "Blog",
         "name": "Celebrity Reputation Management Blog & Expert Guides",
         "description": "Expert guides on crisis management, search result suppression, Wikipedia management, and AI search reputation for celebrities and public figures.",
         "url": `${BASE_URL}/blog`,
-        "isPartOf": { "@id": `${BASE_URL}/#website` },
+        "publisher": { "@id": `${BASE_URL}/#organization` },
+        "blogPost": blogPosts.slice(0, 12).map((p) => ({
+          "@type": "BlogPosting",
+          "headline": p.title,
+          "url": `${BASE_URL}/blog/${p.slug}`,
+          "datePublished": p.date,
+        })),
       },
       {
         "@type": "BreadcrumbList",
@@ -67,8 +73,8 @@ const BlogHub = () => {
   }), []);
 
   usePageSEO({
-    title: "Celebrity Reputation Management Blog & Guides",
-    description: "Expert guides on celebrity crisis management, negative result suppression, Wikipedia, and AI search reputation.",
+    title: `${blogPosts.length}+ Celebrity Reputation Guides & Blog (2026)`,
+    description: `Expert guides on celebrity crisis management, negative Google result suppression, Wikipedia management, and AI search reputation. ${blogPosts.length} in-depth articles, updated for 2026.`,
     jsonLd,
   });
 

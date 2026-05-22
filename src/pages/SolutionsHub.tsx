@@ -10,13 +10,23 @@ const SolutionsHub = () => {
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "CollectionPage", "name": "Reputation Solutions by Problem", "url": `${BASE_URL}/solutions`, "isPartOf": { "@id": `${BASE_URL}/#website` } },
+      {
+        "@type": "ItemList",
+        "name": "Reputation Problems We Solve",
+        "itemListElement": solutionPages.map((s, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "url": `${BASE_URL}/solutions/${s.slug}`,
+          "name": s.h1,
+        })),
+      },
       { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL }, { "@type": "ListItem", "position": 2, "name": "Solutions", "item": `${BASE_URL}/solutions` }] },
     ],
   }), []);
 
   usePageSEO({
-    title: "Reputation Solutions: Cancel Culture, Defamation & More",
-    description: "Solutions for specific reputation problems: cancel culture recovery, defamation removal, tabloid suppression, leaked content, scandal recovery.",
+    title: "Reputation Solutions: Cancel Culture, Defamation & More (2026)",
+    description: `${solutionPages.length} proven solutions for celebrity reputation problems: cancel culture recovery, defamation removal, tabloid suppression, leaked content, scandal recovery. Rated 4.76/5.`,
     jsonLd,
   });
   return (
