@@ -22,7 +22,12 @@ const BlogPost = () => {
         "@type": "Article",
         "headline": post.title,
         "datePublished": post.date,
-        "author": { "@id": `${BASE_URL}/#organization` },
+        "dateModified": DEFAULT_UPDATED,
+        "author": {
+          "@type": "Person",
+          "name": DEFAULT_AUTHOR,
+          "url": `${BASE_URL}/about`,
+        },
         "publisher": { "@id": `${BASE_URL}/#organization` },
         "url": `${BASE_URL}/blog/${post.slug}`,
         "mainEntityOfPage": `${BASE_URL}/blog/${post.slug}`,
