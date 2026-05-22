@@ -60,7 +60,7 @@ const BlogPost = () => {
     : post?.title || "";
 
   usePageSEO({
-    title: post ? `${post.title} | Celebrity Reputation Management Agency` : "Post Not Found",
+    title: post ? post.title : "Post Not Found",
     description: cleanDesc,
     type: "article",
     jsonLd,
