@@ -3,9 +3,12 @@ import { useMemo } from "react";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import ContentRenderer from "@/components/ContentRenderer";
+import TableOfContents from "@/components/TableOfContents";
+import AuthorByline, { DEFAULT_AUTHOR, DEFAULT_UPDATED } from "@/components/AuthorByline";
 import { blogPosts } from "@/pages/BlogHub";
 import { blogContent } from "@/data/blogContent";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
+import { slugifyHeading } from "@/lib/slugify";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -19,7 +22,12 @@ const BlogPost = () => {
         "@type": "Article",
         "headline": post.title,
         "datePublished": post.date,
-        "author": { "@id": `${BASE_URL}/#organization` },
+        "dateModified": DEFAULT_UPDATED,
+        "author": {
+          "@type": "Person",
+          "name": DEFAULT_AUTHOR,
+          "url": `${BASE_URL}/about`,
+        },
         "publisher": { "@id": `${BASE_URL}/#organization` },
         "url": `${BASE_URL}/blog/${post.slug}`,
         "mainEntityOfPage": `${BASE_URL}/blog/${post.slug}`,
@@ -97,12 +105,14 @@ const BlogPost = () => {
 
             {content ? (
               <>
+                <AuthorByline published={post.date} updated={DEFAULT_UPDATED} />
+
                 <p className="text-muted-foreground leading-relaxed text-[17px] mb-8 font-body">
                   {content.intro}
                 </p>
 
                 <div className="bg-card border border-border rounded-2xl p-6 mb-10">
-                  <h3 className="font-display text-xl font-bold mb-3">Key Takeaways</h3>
+                  <h2 id={slugifyHeading("Key Takeaways")} className="font-display text-xl font-bold mb-3 scroll-mt-24">Key Takeaways</h2>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     {content.takeaways.map((t, i) => (
                       <li key={i} className="flex items-start gap-2"><span className="text-gold flex-shrink-0 mt-0.5">✓</span>{t}</li>
@@ -110,9 +120,16 @@ const BlogPost = () => {
                   </ul>
                 </div>
 
+                <TableOfContents
+                  headings={[
+                    ...content.sections.map((s) => s.heading),
+                    ...(content.faqs && content.faqs.length > 0 ? ["Frequently Asked Questions"] : []),
+                  ]}
+                />
+
                 {content.sections.map((sec, i) => (
                   <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
-                    <h2 className="font-display text-[clamp(1.4rem,2.5vw,1.875rem)] tracking-tight mb-4">{sec.heading}</h2>
+                    <h2 id={slugifyHeading(sec.heading)} className="font-display text-[clamp(1.4rem,2.5vw,1.875rem)] tracking-tight mb-4 scroll-mt-24">{sec.heading}</h2>
                     {sec.body.split('\n\n').map((para, j) => (
                       <ContentRenderer key={j} content={para} className="text-muted-foreground text-base leading-relaxed mb-4 font-body" />
                     ))}
@@ -121,7 +138,7 @@ const BlogPost = () => {
 
                 {content.faqs && content.faqs.length > 0 && (
                   <div className="bg-card border border-border rounded-2xl p-6 mb-10">
-                    <h2 className="font-display text-xl font-bold mb-4">Frequently Asked Questions</h2>
+                    <h2 id={slugifyHeading("Frequently Asked Questions")} className="font-display text-xl font-bold mb-4 scroll-mt-24">Frequently Asked Questions</h2>
                     <div className="space-y-5">
                       {content.faqs.map((faq, i) => (
                         <div key={i}>

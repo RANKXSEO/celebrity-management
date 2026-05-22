@@ -9,14 +9,24 @@ const ServicesHub = () => {
   const jsonLd = useMemo(() => ({
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "CollectionPage", "name": "Celebrity Reputation Management Services", "description": "Comprehensive reputation management services for celebrities and public figures. Suppression, removal, crisis management, Wikipedia, AI search.", "url": `${BASE_URL}/services`, "isPartOf": { "@id": `${BASE_URL}/#website` } },
+      { "@type": "CollectionPage", "name": "Celebrity Reputation Management Services", "description": "Ten specialised reputation management services for celebrities, athletes, and high-profile public figures.", "url": `${BASE_URL}/services`, "isPartOf": { "@id": `${BASE_URL}/#website` } },
+      {
+        "@type": "ItemList",
+        "name": "Celebrity Reputation Management Services",
+        "itemListElement": servicePages.map((s, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "url": `${BASE_URL}/services/${s.slug}`,
+          "name": s.h1,
+        })),
+      },
       { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL }, { "@type": "ListItem", "position": 2, "name": "Services", "item": `${BASE_URL}/services` }] },
     ],
   }), []);
 
   usePageSEO({
-    title: "Celebrity Reputation Management Services",
-    description: "Full-service ORM for celebrities: negative result suppression, Google content removal, crisis response, Wikipedia editing, and AI search (GEO).",
+    title: `${servicePages.length} Celebrity Reputation Management Services (2026)`,
+    description: `Full-service ORM for celebrities since 2009. ${servicePages.length} specialised services: Google suppression, content removal, 24/7 crisis, Wikipedia, AI search (GEO). 94% page-one clearance.`,
     jsonLd,
   });
   return (

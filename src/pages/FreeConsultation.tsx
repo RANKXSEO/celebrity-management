@@ -1,11 +1,29 @@
 import { Link } from "react-router-dom";
+import { useMemo } from "react";
 import PageLayout from "@/components/PageLayout";
-import usePageSEO from "@/hooks/usePageSEO";
+import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 
 const FreeConsultation = () => {
+  const jsonLd = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "name": "Free Celebrity Reputation Audit",
+        "url": `${BASE_URL}/free-consultation`,
+        "description": "Request a free, confidential reputation audit from Celebrity Reputation Management. Response within 2 hours.",
+      },
+      { "@type": "BreadcrumbList", "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
+        { "@type": "ListItem", "position": 2, "name": "Free Consultation", "item": `${BASE_URL}/free-consultation` },
+      ]},
+    ],
+  }), []);
+
   usePageSEO({
-    title: "Free Celebrity Reputation Audit | Confidential Assessment",
-    description: "Get a free, confidential reputation audit. We'll analyse your Google results, Wikipedia, Knowledge Panel, AI search answers, and social media — with zero obligation. Response within 2 hours.",
+    title: "Free Celebrity Reputation Audit (Confidential, 2-Hour Reply)",
+    description: "Get a free, confidential celebrity reputation audit. We analyse your Google results, Wikipedia, Knowledge Panel, AI search answers and social — no obligation. Reply within 2 hours.",
+    jsonLd,
   });
   return (
     <PageLayout>

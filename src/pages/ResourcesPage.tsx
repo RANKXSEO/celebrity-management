@@ -1,12 +1,30 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useMemo } from "react";
 import PageLayout from "@/components/PageLayout";
-import usePageSEO from "@/hooks/usePageSEO";
+import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 
 const ResourcesPage = () => {
+  const jsonLd = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "name": "Celebrity Reputation Management Resources & Free Guides",
+        "url": `${BASE_URL}/resources`,
+        "isPartOf": { "@id": `${BASE_URL}/#website` },
+      },
+      { "@type": "BreadcrumbList", "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
+        { "@type": "ListItem", "position": 2, "name": "Resources", "item": `${BASE_URL}/resources` },
+      ]},
+    ],
+  }), []);
+
   usePageSEO({
-    title: "Reputation Management Resources & Free Guides",
-    description: "Free guides, checklists, and expert insights on celebrity reputation management. Crisis playbooks, pricing, and self-assessment tools.",
+    title: "Free Celebrity Reputation Management Resources & Guides",
+    description: "Free expert guides, crisis checklists, pricing transparency, and self-assessment tools — built from 15+ years and 500+ celebrity reputation campaigns.",
+    jsonLd,
   });
   return (
     <PageLayout>

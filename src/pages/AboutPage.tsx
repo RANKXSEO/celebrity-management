@@ -1,12 +1,54 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useMemo } from "react";
 import PageLayout from "@/components/PageLayout";
-import usePageSEO from "@/hooks/usePageSEO";
+import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 
 const AboutPage = () => {
+  const jsonLd = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "name": "About Celebrity Reputation Management",
+        "url": `${BASE_URL}/about`,
+        "isPartOf": { "@id": `${BASE_URL}/#website` },
+        "mainEntity": { "@id": `${BASE_URL}/#organization` },
+      },
+      {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        "name": "Celebrity Reputation Management",
+        "alternateName": "CRM Agency",
+        "url": BASE_URL,
+        "foundingDate": "2009",
+        "areaServed": ["US", "GB", "EU", "Worldwide"],
+        "knowsAbout": [
+          "Online Reputation Management",
+          "Search Result Suppression",
+          "Wikipedia Editing",
+          "Crisis Management",
+          "Generative Engine Optimization",
+          "Knowledge Panel Management",
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.76",
+          "reviewCount": "181",
+          "bestRating": "5",
+        },
+      },
+      { "@type": "BreadcrumbList", "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
+        { "@type": "ListItem", "position": 2, "name": "About", "item": `${BASE_URL}/about` },
+      ]},
+    ],
+  }), []);
+
   usePageSEO({
-    title: "About Our Celebrity Reputation Agency | Since 2009",
-    description: "White-glove reputation management for celebrities, athletes, and public figures since 2009. 500+ campaigns, 94% page-one clearance rate.",
+    title: "About Our Celebrity ORM Agency | Since 2009, 4.76/5",
+    description: "Specialist celebrity reputation management since 2009. 500+ campaigns, 94% page-one clearance, 4.76/5 from 181 clients. Offices in Los Angeles & London.",
+    jsonLd,
   });
   return (
     <PageLayout>

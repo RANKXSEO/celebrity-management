@@ -10,13 +10,23 @@ const WhoWeServeHub = () => {
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "CollectionPage", "name": "Who We Serve — Celebrity Reputation Management by Industry", "url": `${BASE_URL}/who-we-serve`, "isPartOf": { "@id": `${BASE_URL}/#website` } },
+      {
+        "@type": "ItemList",
+        "name": "Industries We Serve",
+        "itemListElement": audiencePages.map((a, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "url": `${BASE_URL}/who-we-serve/${a.slug}`,
+          "name": a.h1,
+        })),
+      },
       { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL }, { "@type": "ListItem", "position": 2, "name": "Who We Serve", "item": `${BASE_URL}/who-we-serve` }] },
     ],
   }), []);
 
   usePageSEO({
-    title: "Who We Serve: Actors, Athletes, Musicians & Execs",
-    description: "We serve high-profile individuals exclusively: actors, musicians, athletes, influencers, CEOs, politicians, and reality TV stars.",
+    title: "Who We Serve: Actors, Athletes, Musicians & Execs (2026)",
+    description: `Reputation management for ${audiencePages.length} industries — actors, musicians, athletes, influencers, CEOs, politicians, and reality TV. Trusted by 500+ public figures since 2009.`,
     jsonLd,
   });
   return (

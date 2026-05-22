@@ -3,10 +3,13 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import ContentRenderer from "@/components/ContentRenderer";
+import TableOfContents from "@/components/TableOfContents";
+import AuthorByline, { DEFAULT_UPDATED } from "@/components/AuthorByline";
 import { solutionPages } from "@/data/solutionPages";
 import { servicePages } from "@/data/servicePages";
 import { audiencePages } from "@/data/audiencePages";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
+import { slugifyHeading } from "@/lib/slugify";
 
 const SolutionPage = () => {
   const { slug } = useParams();
@@ -86,9 +89,12 @@ const SolutionPage = () => {
 
       <section className="py-[clamp(52px,7vw,80px)] bg-background">
         <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8">
+          <AuthorByline updated={DEFAULT_UPDATED} />
+          <TableOfContents headings={page.sections.map((s) => s.title)} />
+
           {page.sections.map((sec, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
-              <h2 className="font-display text-[clamp(1.5rem,2.5vw,2rem)] tracking-tight mb-3">{sec.title}</h2>
+              <h2 id={slugifyHeading(sec.title)} className="font-display text-[clamp(1.5rem,2.5vw,2rem)] tracking-tight mb-3 scroll-mt-24">{sec.title}</h2>
               <ContentRenderer content={sec.content} className="text-muted-foreground text-base leading-relaxed whitespace-pre-line" />
             </motion.div>
           ))}
