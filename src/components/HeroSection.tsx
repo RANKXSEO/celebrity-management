@@ -43,7 +43,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-          className="text-[clamp(1rem,1.5vw,1.125rem)] text-primary-foreground/55 leading-[1.74] max-w-[560px] mb-10"
+          className="text-[clamp(1rem,1.5vw,1.125rem)] text-primary-foreground/85 leading-[1.74] max-w-[560px] mb-10"
         >
           We work exclusively with celebrities, athletes, and public figures to take back control of Google, Wikipedia, social media, and AI search results. When someone looks you up, they should find the truth — not a tabloid narrative from five years ago.
         </motion.p>
@@ -72,7 +72,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.65, duration: 0.6 }}
-          className="text-[11px] text-primary-foreground/25 mb-16 lg:mb-20 tracking-[0.03em]"
+          className="text-[11px] text-primary-foreground/60 mb-16 lg:mb-20 tracking-[0.03em]"
         >
           Free · Confidential · NDA available · We respond within 2 hours
         </motion.p>
@@ -95,7 +95,7 @@ const HeroSection = () => {
                 <dd className="font-display text-[clamp(1.375rem,2.2vw,2rem)] font-bold text-gold-light leading-none">
                   <data value={stat.value}>{stat.num}</data>
                 </dd>
-                <dt className="text-[10px] text-primary-foreground/30 tracking-[0.07em] mt-1 uppercase">
+                <dt className="text-[10px] text-primary-foreground/65 tracking-[0.07em] mt-1 uppercase">
                   {stat.label}
                 </dt>
               </div>
@@ -104,7 +104,7 @@ const HeroSection = () => {
         </motion.dl>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-primary-foreground/20 pointer-events-none" aria-hidden="true">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-primary-foreground/85 pointer-events-none" aria-hidden="true">
         <span className="text-[9px] tracking-[0.22em] uppercase">Scroll</span>
         <div className="w-px h-9 bg-gradient-to-b from-gold/40 to-transparent animate-scroll-line" />
       </div>

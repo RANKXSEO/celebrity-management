@@ -14,7 +14,7 @@ const ContactPage = () => {
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] text-primary-foreground font-bold tracking-tight mb-4">
             Contact Us
           </h1>
-          <p className="text-primary-foreground/50 text-lg leading-relaxed">
+          <p className="text-primary-foreground/85 text-lg leading-relaxed">
             Whether you're facing an active crisis or planning ahead, we're here. Every conversation starts confidentially and without obligation.
           </p>
         </div>
@@ -84,7 +84,7 @@ const ContactPage = () => {
           {/* CTA */}
           <div className="bg-primary rounded-2xl p-8 text-center">
             <h3 className="font-display text-2xl text-primary-foreground font-bold mb-3">Ready for a Free Reputation Audit?</h3>
-            <p className="text-primary-foreground/40 mb-5">Fill out our secure form and get a complete analysis of your digital reputation — free, confidential, no obligation.</p>
+            <p className="text-primary-foreground/75 mb-5">Fill out our secure form and get a complete analysis of your digital reputation — free, confidential, no obligation.</p>
             <Link to="/free-consultation" className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-7 py-3.5 rounded text-base font-bold shadow-gold hover:bg-gold-light transition-all">
               Get Your Free Reputation Audit →
             </Link>

@@ -26,7 +26,7 @@ const ServicesHub = () => {
           <h1 className="font-display text-[clamp(2rem,4vw,3.5rem)] text-primary-foreground font-bold tracking-tight mb-4">
             Celebrity Reputation Management <em className="text-gold-light italic">Services</em>
           </h1>
-          <p className="text-primary-foreground/50 text-lg leading-relaxed mb-6">
+          <p className="text-primary-foreground/85 text-lg leading-relaxed mb-6">
             Comprehensive reputation management services designed exclusively for celebrities, athletes, and high-profile public figures. From <Link to="/services/negative-search-results" className="text-gold-light hover:underline">negative content suppression</Link> to <Link to="/services/celebrity-crisis-management" className="text-gold-light hover:underline">24/7 crisis management</Link>.
           </p>
           <div className="flex items-center justify-center gap-3 flex-wrap">

@@ -26,7 +26,7 @@ const WhoWeServeHub = () => {
           <h1 className="font-display text-[clamp(2rem,4vw,3.5rem)] text-primary-foreground font-bold tracking-tight mb-4">
             Reputation Management for <em className="text-gold-light italic">Every</em> Public Figure
           </h1>
-          <p className="text-primary-foreground/50 text-lg leading-relaxed">
+          <p className="text-primary-foreground/85 text-lg leading-relaxed">
             We serve exclusively high-profile individuals. From <Link to="/who-we-serve/actors-entertainers" className="text-gold-light hover:underline">actors and entertainers</Link> to <Link to="/who-we-serve/executives-ceos" className="text-gold-light hover:underline">CEOs and executives</Link> — whatever your industry, we understand the unique reputational threats you face.
           </p>
         </div>

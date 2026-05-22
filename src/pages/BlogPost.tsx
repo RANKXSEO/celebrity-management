@@ -81,12 +81,12 @@ const BlogPost = () => {
                 <li aria-hidden="true">/</li>
                 <li><Link to="/blog" className="hover:text-gold-light transition-colors">Blog</Link></li>
                 <li aria-hidden="true">/</li>
-                <li className="text-primary-foreground/50 truncate max-w-[200px]">{post.title}</li>
+                <li className="text-primary-foreground/85 truncate max-w-[200px]">{post.title}</li>
               </ol>
             </nav>
             <div className="flex items-center gap-2 mb-4">
               <span className="text-[9px] font-bold tracking-[0.1em] uppercase text-gold bg-gold/10 px-2 py-0.5 rounded-full">{post.tag}</span>
-              <span className="text-[11px] text-primary-foreground/30">{post.date} · {post.read}</span>
+              <span className="text-[11px] text-primary-foreground/65">{post.date} · {post.read}</span>
             </div>
             <h1 className="font-display text-[clamp(1.75rem,3.5vw,2.75rem)] text-primary-foreground font-bold tracking-tight leading-tight">{post.title}</h1>
           </div>
@@ -185,12 +185,12 @@ const BlogPost = () => {
             {/* Bottom CTA */}
             <div className="bg-primary rounded-2xl p-8 text-center mt-12">
               <h3 className="font-display text-2xl text-primary-foreground font-bold mb-3">Need Expert Help With Your Reputation?</h3>
-              <p className="text-primary-foreground/40 mb-5">Get a free, confidential reputation audit from our team. We'll tell you exactly where you stand and what's achievable.</p>
+              <p className="text-primary-foreground/75 mb-5">Get a free, confidential reputation audit from our team. We'll tell you exactly where you stand and what's achievable.</p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <Link to="/free-consultation" className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-7 py-3.5 rounded text-base font-bold shadow-gold hover:bg-gold-light transition-all">
                   Get Your Free Reputation Audit →
                 </Link>
-                <a href="tel:+16462224346" className="text-sm text-primary-foreground/50 hover:text-gold-light transition-colors">
+                <a href="tel:+16462224346" className="text-sm text-primary-foreground/85 hover:text-gold-light transition-colors">
                   or call (646) 222-4346 (24/7)
                 </a>
               </div>

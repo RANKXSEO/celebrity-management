@@ -58,7 +58,7 @@ const ServicesSection = () => {
               <h3 className={`font-body text-[15px] font-bold mb-1.5 leading-snug ${svc.featured ? "text-primary-foreground" : "text-primary"}`}>
                 {svc.title}
               </h3>
-              <p className={`text-sm leading-relaxed mb-3.5 ${svc.featured ? "text-primary-foreground/40" : "text-ink-muted"}`}>
+              <p className={`text-sm leading-relaxed mb-3.5 ${svc.featured ? "text-primary-foreground/75" : "text-ink-muted"}`}>
                 {svc.desc}
               </p>
               <Link to={`/services/${svc.slug}`} className={`text-sm font-semibold inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all ${svc.featured ? "text-gold-light" : "text-gold"}`}>

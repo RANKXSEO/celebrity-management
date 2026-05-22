@@ -67,7 +67,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center gap-3.5 flex-shrink-0">
-          <a href="tel:+16462224346" className="text-[13px] text-primary-foreground/40 hover:text-primary-foreground transition-colors">
+          <a href="tel:+16462224346" className="text-[13px] text-primary-foreground/75 hover:text-primary-foreground transition-colors">
             24/7: <strong className="text-gold-light font-bold">(646) 222-4346</strong>
           </a>
           <Link to="/free-consultation" className="bg-gold text-primary-foreground px-4 py-2 rounded text-sm font-bold hover:bg-gold-light transition-all hover:-translate-y-0.5">

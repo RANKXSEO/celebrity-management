@@ -26,12 +26,12 @@ const TrustBar = () => {
             <Link
               key={item.text + item.bold}
               to={item.link}
-              className="flex items-center gap-2 text-[13px] text-primary-foreground/45 font-medium whitespace-nowrap hover:text-gold-light transition-colors"
+              className="flex items-center gap-2 text-[13px] text-primary-foreground/80 font-medium whitespace-nowrap hover:text-gold-light transition-colors"
             >
               {content}
             </Link>
           ) : (
-            <div key={item.text + item.bold} className="flex items-center gap-2 text-[13px] text-primary-foreground/45 font-medium whitespace-nowrap">
+            <div key={item.text + item.bold} className="flex items-center gap-2 text-[13px] text-primary-foreground/80 font-medium whitespace-nowrap">
               {content}
             </div>
           );

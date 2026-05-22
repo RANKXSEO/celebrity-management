@@ -15,7 +15,7 @@ const AboutPage = () => {
           <h1 className="font-display text-[clamp(2rem,4vw,3.5rem)] text-primary-foreground font-bold tracking-tight mb-4">
             About Celebrity Reputation <em className="text-gold-light italic">Management</em>
           </h1>
-          <p className="text-primary-foreground/50 text-lg leading-relaxed">
+          <p className="text-primary-foreground/85 text-lg leading-relaxed">
             The premier white-glove ORM agency exclusively serving celebrities, athletes, entertainers, and high-profile public figures since 2009.
           </p>
         </div>
@@ -88,7 +88,7 @@ const AboutPage = () => {
               <div key={t.name} className="bg-primary rounded-xl p-6">
                 <blockquote className="font-display text-base italic text-primary-foreground leading-relaxed mb-3">"{t.quote}"</blockquote>
                 <div className="text-sm font-bold text-gold-light">{t.name}</div>
-                <div className="text-[11px] text-primary-foreground/30 mt-0.5">{t.role}</div>
+                <div className="text-[11px] text-primary-foreground/65 mt-0.5">{t.role}</div>
               </div>
             ))}
           </div>
@@ -110,12 +110,12 @@ const AboutPage = () => {
 
           <div className="bg-primary rounded-2xl p-8 text-center">
             <h3 className="font-display text-2xl text-primary-foreground font-bold mb-3">Ready to Work With Us?</h3>
-            <p className="text-primary-foreground/40 mb-5">Start with a free, confidential reputation audit. No obligation, no pressure — just honest answers about where you stand.</p>
+            <p className="text-primary-foreground/75 mb-5">Start with a free, confidential reputation audit. No obligation, no pressure — just honest answers about where you stand.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link to="/free-consultation" className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-7 py-3.5 rounded text-base font-bold shadow-gold hover:bg-gold-light transition-all">
                 Get Your Free Reputation Audit →
               </Link>
-              <a href="tel:+16462224346" className="text-sm text-primary-foreground/50 hover:text-gold-light transition-colors">
+              <a href="tel:+16462224346" className="text-sm text-primary-foreground/85 hover:text-gold-light transition-colors">
                 or call (646) 222-4346 (24/7)
               </a>
             </div>

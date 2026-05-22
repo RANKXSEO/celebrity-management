@@ -15,7 +15,7 @@ const ResourcesPage = () => {
           <h1 className="font-display text-[clamp(2rem,4vw,3.5rem)] text-primary-foreground font-bold tracking-tight mb-4">
             Celebrity Reputation <em className="text-gold-light italic">Resources</em>
           </h1>
-          <p className="text-primary-foreground/50 text-lg leading-relaxed">
+          <p className="text-primary-foreground/85 text-lg leading-relaxed">
             Free guides, checklists, and expert insights to help you understand and protect your online reputation. Built from 15+ years and 500+ celebrity campaigns.
           </p>
         </div>
@@ -107,7 +107,7 @@ const ResourcesPage = () => {
           {/* CTA */}
           <div className="bg-primary rounded-2xl p-8 text-center">
             <h3 className="font-display text-2xl text-primary-foreground font-bold mb-3">Want Personalised Advice?</h3>
-            <p className="text-primary-foreground/40 mb-5">Our free reputation audit goes deeper than any guide can. We'll analyse your specific situation and tell you exactly what needs attention.</p>
+            <p className="text-primary-foreground/75 mb-5">Our free reputation audit goes deeper than any guide can. We'll analyse your specific situation and tell you exactly what needs attention.</p>
             <Link to="/free-consultation" className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-7 py-3.5 rounded text-base font-bold shadow-gold hover:bg-gold-light transition-all">
               Get Your Free Reputation Audit →
             </Link>
