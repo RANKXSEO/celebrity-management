@@ -243,7 +243,7 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "ai-search-reputation",
-    title: "AI Search Reputation: Control ChatGPT "AI Search Reputation Management: Control What ChatGPT & Gemini Say About You" Gemini Answers",
+    title: "AI Search Reputation: Control ChatGPT & Gemini Answers",
     h1: "AI Search Reputation: Control What ChatGPT & Gemini Say About You",
     metaDesc: "Shape what AI assistants say about you. Generative Engine Optimization (GEO) for celebrities. Control ChatGPT, Gemini, Perplexity answers about your name.",
     heroDesc: "40% of people now research public figures using AI assistants. If your web presence is dominated by negative content, that's exactly what ChatGPT, Gemini, and Perplexity will say about you. We change the source material — so the answers change too.",
