@@ -111,7 +111,7 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "celebrity-crisis-management",
-    title: "Celebrity Crisis Management: 24/7 Emergency Reputation Response",
+    title: "Celebrity Crisis Management: 24/7 Emergency Response",
     h1: "Celebrity Crisis Management: Emergency Reputation Response",
     metaDesc: "24/7 celebrity crisis management. Immediate response to scandals, cancel culture, false allegations, viral backlash. Call now — the first 48 hours matter most.",
     heroDesc: "When a story breaks, the first 48 hours determine everything. Our crisis team is available 24/7/365 with a strategy-in-hand within 2–4 hours. Don't wait for business hours — call now.",
@@ -159,7 +159,7 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "wikipedia-for-celebrities",
-    title: "Wikipedia Editing & Creation for Celebrities and Public Figures",
+    title: "Wikipedia Editing "Wikipedia Editing & Creation for Celebrities and Public Figures" Creation for Public Figures",
     h1: "Wikipedia Page Management for Celebrities & Public Figures",
     metaDesc: "Professional Wikipedia editing, creation & monitoring for celebrities. Fix inaccuracies, create new pages, defend against vandalism. Ethical, policy-compliant approach.",
     heroDesc: "Your Wikipedia page feeds directly into your Google Knowledge Panel and every AI assistant's answer about you. Inaccuracies, vandalism, or a missing page cost you credibility with everyone who searches your name.",
@@ -243,7 +243,7 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "ai-search-reputation",
-    title: "AI Search Reputation Management: Control What ChatGPT & Gemini Say About You",
+    title: "AI Search Reputation: Control ChatGPT "AI Search Reputation Management: Control What ChatGPT & Gemini Say About You" Gemini Answers",
     h1: "AI Search Reputation: Control What ChatGPT & Gemini Say About You",
     metaDesc: "Shape what AI assistants say about you. Generative Engine Optimization (GEO) for celebrities. Control ChatGPT, Gemini, Perplexity answers about your name.",
     heroDesc: "40% of people now research public figures using AI assistants. If your web presence is dominated by negative content, that's exactly what ChatGPT, Gemini, and Perplexity will say about you. We change the source material — so the answers change too.",
@@ -389,7 +389,7 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "reputation-protection",
-    title: "Proactive Reputation Protection & Monitoring for Celebrities",
+    title: "Reputation Protection "Proactive Reputation Protection & Monitoring for Celebrities" Monitoring for Celebrities",
     h1: "Proactive Reputation Protection for Public Figures",
     metaDesc: "24/7 reputation monitoring and early-warning systems for celebrities. Catch threats before they go viral. Prevention costs 10x less than recovery.",
     heroDesc: "The best reputation crisis is the one that never happens. Our 24/7 monitoring and early-warning systems catch threats before they gain traction — because prevention costs 10x less than recovery.",
@@ -432,7 +432,7 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "google-review-removal",
-    title: "Google Review Removal Service — Delete Fake & Defamatory Reviews",
+    title: "Google Review Removal: Delete Fake "Google Review Removal Service — Delete Fake & Defamatory Reviews" Defamatory Reviews",
     h1: "Google Review Removal Service for Celebrities & Public Figures",
     metaDesc: "Professional Google review removal service. We flag, report, and remove fake, defamatory, and policy-violating Google reviews for celebrities, businesses, and public figures. Free audit.",
     heroDesc: "Fake one-star reviews, competitor attacks, and disgruntled ex-employees can tank your Google Business Profile overnight. We identify policy-violating reviews and pursue every available removal channel — from Google's own reporting tools to legal escalation — so your public rating reflects reality, not manipulation.",
