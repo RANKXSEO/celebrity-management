@@ -34,7 +34,7 @@ const AudiencePage = () => {
   } : undefined, [page]);
 
   usePageSEO({
-    title: page ? `${page.title} | Celebrity Reputation Management Agency` : "Page Not Found",
+    title: page ? page.title : "Page Not Found",
     description: page?.metaDesc || "",
     jsonLd,
   });
