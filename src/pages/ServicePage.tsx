@@ -206,7 +206,7 @@ const ServicePage = () => {
           {/* FAQ */}
           {page.faqs.length > 0 && (
             <div className="mb-10">
-              <h3 className="font-display text-xl font-bold mb-4">Frequently Asked Questions</h3>
+              <h2 id={slugifyHeading("Frequently Asked Questions")} className="font-display text-xl font-bold mb-4 scroll-mt-24">Frequently Asked Questions</h2>
               {page.faqs.map((faq, i) => (
                 <div key={i} className="border-b border-border">
                   <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="flex items-start justify-between gap-3 py-4 w-full text-left font-body text-[15px] font-semibold text-foreground hover:text-gold transition-colors" aria-expanded={openFaq === i}>
