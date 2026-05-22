@@ -4,8 +4,8 @@ import usePageSEO from "@/hooks/usePageSEO";
 
 const ContactPage = () => {
   usePageSEO({
-    title: "Contact Celebrity Reputation Management Agency | 24/7 Crisis Line",
-    description: "Contact our celebrity reputation management team. 24/7 crisis line: (646) 222-4346. Email: contact@celebrity-reputation-management.com. NDA-protected, confidential, and discreet.",
+    title: "Contact Our 24/7 Celebrity Crisis Line",
+    description: "Contact our celebrity reputation team. 24/7 crisis line: (646) 222-4346. NDA-protected, confidential, and discreet.",
   });
   return (
     <PageLayout>
