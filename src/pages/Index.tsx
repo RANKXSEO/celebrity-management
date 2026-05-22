@@ -14,6 +14,7 @@ import FaqSection from "@/components/FaqSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingCta from "@/components/FloatingCta";
+import AboutCitationBlock from "@/components/AboutCitationBlock";
 import usePageSEO from "@/hooks/usePageSEO";
 
 const Index = () => {
@@ -44,6 +45,7 @@ const Index = () => {
       <BlogPreview />
       <FaqSection />
       <ContactSection />
+      <AboutCitationBlock />
       <Footer />
       <FloatingCta />
     </main>
