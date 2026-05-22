@@ -5,8 +5,8 @@ import usePageSEO from "@/hooks/usePageSEO";
 
 const AboutPage = () => {
   usePageSEO({
-    title: "About Celebrity Reputation Management Agency | 15+ Years, 500+ Campaigns",
-    description: "The premier white-glove reputation management agency exclusively serving celebrities, athletes, entertainers, and public figures since 2009. 500+ campaigns, 94% page-one clearance rate.",
+    title: "About Our Celebrity Reputation Agency | Since 2009",
+    description: "White-glove reputation management for celebrities, athletes, and public figures since 2009. 500+ campaigns, 94% page-one clearance rate.",
   });
   return (
     <PageLayout>
