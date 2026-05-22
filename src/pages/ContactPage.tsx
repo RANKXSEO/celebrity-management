@@ -1,11 +1,45 @@
 import { Link } from "react-router-dom";
+import { useMemo } from "react";
 import PageLayout from "@/components/PageLayout";
-import usePageSEO from "@/hooks/usePageSEO";
+import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 
 const ContactPage = () => {
+  const jsonLd = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "name": "Contact Celebrity Reputation Management",
+        "url": `${BASE_URL}/contact`,
+        "isPartOf": { "@id": `${BASE_URL}/#website` },
+      },
+      {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        "name": "Celebrity Reputation Management",
+        "url": BASE_URL,
+        "telephone": "+1-646-222-4346",
+        "email": "contact@celebrity-reputation-management.com",
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "telephone": "+1-646-222-4346",
+          "contactType": "24/7 Crisis Line",
+          "email": "contact@celebrity-reputation-management.com",
+          "availableLanguage": ["English"],
+          "areaServed": ["US", "GB", "EU", "Worldwide"],
+        }],
+      },
+      { "@type": "BreadcrumbList", "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": `${BASE_URL}/contact` },
+      ]},
+    ],
+  }), []);
+
   usePageSEO({
-    title: "Contact Our 24/7 Celebrity Crisis Line",
-    description: "Contact our celebrity reputation team. 24/7 crisis line: (646) 222-4346. NDA-protected, confidential, and discreet.",
+    title: "Contact 24/7 Celebrity Crisis Line | (646) 222-4346",
+    description: "Reach our celebrity reputation management team 24/7. Crisis line answered in under 60 seconds by senior strategists. NDA-protected. Rated 4.76/5 by 181 clients.",
+    jsonLd,
   });
   return (
     <PageLayout>
