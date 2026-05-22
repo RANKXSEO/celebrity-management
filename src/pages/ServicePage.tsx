@@ -59,8 +59,22 @@ const ServicePage = () => {
     ],
   } : undefined, [page]);
 
+  usePageSEO({
+    title: page ? page.title : "Service Not Found",
+    description: page?.metaDesc || "",
+    jsonLd,
+  });
+
+  const tocHeadings = page
+    ? [
+        ...page.sections.map((s) => s.title),
+        ...(page.process && page.process.length > 0 ? ["Our Process"] : []),
+        ...(page.faqs.length > 0 ? ["Frequently Asked Questions"] : []),
+      ]
+    : [];
 
   if (!page) return <PageLayout><div className="pt-32 pb-20 text-center"><h1 className="font-display text-3xl">Service not found</h1><Link to="/services" className="text-gold mt-4 inline-block">← Back to all services</Link></div></PageLayout>;
+
 
   return (
     <PageLayout>
@@ -109,9 +123,12 @@ const ServicePage = () => {
       {/* Content sections */}
       <section className="py-[clamp(52px,7vw,80px)] bg-background">
         <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8">
+          <AuthorByline updated={DEFAULT_UPDATED} />
+          <TableOfContents headings={tocHeadings} />
+
           {page.sections.map((sec, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
-              <h2 className="font-display text-[clamp(1.5rem,2.5vw,2rem)] tracking-tight mb-3">{sec.title}</h2>
+              <h2 id={slugifyHeading(sec.title)} className="font-display text-[clamp(1.5rem,2.5vw,2rem)] tracking-tight mb-3 scroll-mt-24">{sec.title}</h2>
               <ContentRenderer content={sec.content} className="text-muted-foreground text-base leading-relaxed" />
             </motion.div>
           ))}
@@ -119,7 +136,8 @@ const ServicePage = () => {
           {/* Process steps */}
           {page.process && (
             <div className="mb-12">
-              <h2 className="font-display text-[clamp(1.5rem,2.5vw,2rem)] tracking-tight mb-6">Our Process</h2>
+              <h2 id={slugifyHeading("Our Process")} className="font-display text-[clamp(1.5rem,2.5vw,2rem)] tracking-tight mb-6 scroll-mt-24">Our Process</h2>
+
               <div className="space-y-4">
                 {page.process.map((step, i) => (
                   <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="flex items-start gap-4 bg-card border border-border rounded-xl p-5">
