@@ -35,7 +35,7 @@ const SolutionPage = () => {
   } : undefined, [page]);
 
   usePageSEO({
-    title: page ? `${page.title} | Celebrity Reputation Management Agency` : "Solution Not Found",
+    title: page ? page.title : "Solution Not Found",
     description: page?.metaDesc || "",
     jsonLd,
   });
