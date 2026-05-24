@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import ContentRenderer from "@/components/ContentRenderer";
 import AuthorByline, { DEFAULT_UPDATED } from "@/components/AuthorByline";
+import KeyTakeaways from "@/components/KeyTakeaways";
+import TableOfContents from "@/components/TableOfContents";
 import { audiencePages } from "@/data/audiencePages";
 import { servicePages } from "@/data/servicePages";
 import { solutionPages } from "@/data/solutionPages";
@@ -72,7 +74,9 @@ const AudiencePage = () => {
       <section className="py-[clamp(52px,7vw,80px)] bg-background">
         <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8">
           <AuthorByline updated={DEFAULT_UPDATED} />
-          <h2 className="font-display text-2xl font-bold mb-6">The Reputation Challenges You Face</h2>
+          <KeyTakeaways items={page.challenges.slice(0, 5).map((c) => c.title)} title="What this page covers" />
+          <TableOfContents headings={["The Reputation Challenges You Face", "How We Help", "Recommended Reading", "Why Clients Trust Us"]} />
+          <h2 id="the-reputation-challenges-you-face" className="font-display text-2xl font-bold mb-6 scroll-mt-24">The Reputation Challenges You Face</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
             {page.challenges.map((c, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="bg-card border border-border rounded-xl p-5">
@@ -82,7 +86,7 @@ const AudiencePage = () => {
             ))}
           </div>
 
-          <h2 className="font-display text-2xl font-bold mb-4">How We Help</h2>
+          <h2 id="how-we-help" className="font-display text-2xl font-bold mb-4 scroll-mt-24">How We Help</h2>
           <div className="space-y-4 mb-12">
             {page.relevantServices.map((rs) => (
               <div key={rs.slug} className="flex items-start gap-3 bg-card border border-border rounded-xl p-5">

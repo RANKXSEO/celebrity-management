@@ -5,6 +5,7 @@ import PageLayout from "@/components/PageLayout";
 import ContentRenderer from "@/components/ContentRenderer";
 import TableOfContents from "@/components/TableOfContents";
 import AuthorByline, { DEFAULT_UPDATED } from "@/components/AuthorByline";
+import KeyTakeaways from "@/components/KeyTakeaways";
 import { servicePages } from "@/data/servicePages";
 import { solutionPages } from "@/data/solutionPages";
 import { audiencePages } from "@/data/audiencePages";
@@ -124,6 +125,9 @@ const ServicePage = () => {
       <section className="py-[clamp(52px,7vw,80px)] bg-background">
         <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8">
           <AuthorByline updated={DEFAULT_UPDATED} />
+          {page.stats && page.stats.length > 0 && (
+            <KeyTakeaways items={page.stats.map(s => `${s.num} — ${s.label}`)} title="At a glance" />
+          )}
           <TableOfContents headings={tocHeadings} />
 
           {page.sections.map((sec, i) => (

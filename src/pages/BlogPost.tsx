@@ -5,6 +5,7 @@ import PageLayout from "@/components/PageLayout";
 import ContentRenderer from "@/components/ContentRenderer";
 import TableOfContents from "@/components/TableOfContents";
 import AuthorByline, { DEFAULT_AUTHOR, DEFAULT_UPDATED } from "@/components/AuthorByline";
+import KeyTakeaways from "@/components/KeyTakeaways";
 import { blogPosts } from "@/pages/BlogHub";
 import { blogContent } from "@/data/blogContent";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
@@ -111,14 +112,7 @@ const BlogPost = () => {
                   {content.intro}
                 </p>
 
-                <div className="bg-card border border-border rounded-2xl p-6 mb-10">
-                  <h2 id={slugifyHeading("Key Takeaways")} className="font-display text-xl font-bold mb-3 scroll-mt-24">Key Takeaways</h2>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    {content.takeaways.map((t, i) => (
-                      <li key={i} className="flex items-start gap-2"><span className="text-gold flex-shrink-0 mt-0.5">✓</span>{t}</li>
-                    ))}
-                  </ul>
-                </div>
+                <KeyTakeaways items={content.takeaways} />
 
                 <TableOfContents
                   headings={[
