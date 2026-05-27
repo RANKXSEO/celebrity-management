@@ -581,11 +581,11 @@ export const servicePages: ServicePageData[] = [
     ],
   },
   {
-    slug: "website-content-takedown",
-    title: "Website Content Takedown Services — Remove Online Content at the Source",
-    h1: "Website Content Takedown Services",
-    metaDesc: "Permanent content takedown from websites, news sites, blogs, forums, and databases. DMCA, defamation, privacy, and Google de-indexing — handled end to end. Free assessment.",
-    heroDesc: "When the goal is to delete content — not just suppress it — we go directly to the source. Our takedown team combines DMCA, defamation law, privacy statutes (GDPR, CCPA, UK DPA), platform policies, and direct publisher negotiation to permanently remove harmful URLs from the open web and from Google's index.",
+    slug: "website-takedown-service",
+    title: "Website Takedown Service — Permanently Remove Online Content at the Source",
+    h1: "Website Takedown Service",
+    metaDesc: "Professional website takedown service: permanently remove harmful content from websites, news sites, blogs, forums, and Google search. DMCA, defamation, privacy & GDPR. 72% source-level removal rate. Free assessment.",
+    heroDesc: "When the goal is to delete content — not just suppress it — our website takedown service goes directly to the source. We combine DMCA, defamation law, privacy statutes (GDPR, CCPA, UK DPA), platform policies, and direct publisher negotiation to permanently remove harmful URLs from the open web and from Google's index.",
     icon: "🧹",
     stats: [
       { num: "72%", label: "Source-level removal rate" },
@@ -601,7 +601,7 @@ export const servicePages: ServicePageData[] = [
       { step: "Verification & Monitoring", desc: "We confirm every removal across Google, Bing, DuckDuckGo, and the major AI engines, then monitor for reposts, mirrors, and re-indexation." },
     ],
     sections: [
-      { title: "What Counts as a Takedown (and What Doesn't)", content: "A genuine takedown means the content itself is removed at the source — the URL stops returning the offending material. That's different from suppression (pushing it off page one) and different from a Google delisting (the page still exists but is hidden from search). All three are valuable; takedowns are the most durable because once a page is dead, it cannot drift back into the index. For a layered defence — takedown where possible, suppression where not — pair this service with [search result suppression](/services/negative-search-results) and [strategic content suppression](/services/content-suppression)." },
+      { title: "What a Website Takedown Service Actually Does", content: "A website takedown service removes harmful content at the source — the URL itself stops returning the offending material. That's different from suppression (pushing it off page one) and different from a Google delisting (the page still exists but is hidden from search). All three are valuable; a true website takedown is the most durable because once a page is dead, it cannot drift back into the index. For a layered defence — takedown where possible, suppression where not — pair this service with [search result suppression](/services/negative-search-results) and [strategic content suppression](/services/content-suppression)." },
       { title: "The Five Legal Levers We Use", content: "First, copyright via the DMCA — the fastest tool when our client owns the image, video, or text being misused. Second, defamation — provably false statements of fact, escalated through counsel. Third, privacy — non-consensual intimate imagery, doxxing, leaked private records, and the EU/UK 'right to be forgotten'. Fourth, platform policy — almost every platform forbids harassment, impersonation, or fabricated content under its own terms of service. Fifth, commercial pressure — many small sites quietly comply once a credible legal letter arrives. We pick the lever each URL is most vulnerable to, not the one we use by default." },
       { title: "How We Handle Websites That Won't Cooperate", content: "Bad-faith sites — extortion blogs, mugshot databases, complaint mills, anonymous Tumblr-style forums — exist precisely to monetise refusal. We have a separate playbook for them. Identify the host and registrar, file abuse complaints with both, target advertising networks (Google AdSense, Mediavine) that fund the site, hit payment processors when there's a 'pay to remove' angle (often an FTC violation in itself), and where there's a clear legal cause of action we work with our network of media-law firms in the US, UK, and EU. When source removal genuinely isn't possible, we transition the URL into our [content suppression](/services/content-suppression) workflow so it never reaches a real searcher." },
       { title: "Specific Takedown Categories We Cover", content: "We operate dedicated playbooks for the highest-volume problem categories: [mugshot and arrest-record removal](/services/mugshot-removal), [people-search and data-broker delisting](/services/people-search-removal) (Spokeo, Whitepages, BeenVerified, Radaris, MyLife and 100+ others), [court-record and public-records removal](/services/court-records-removal) (FindLaw, Casetext, Justia, Docket Alarm, UniCourt), [YouTube video takedowns](/services/youtube-video-removal), [news article unpublishing](/services/news-article-removal), and [complaint and scam-site removal](/services/complaint-site-removal) (Ripoff Report, PissedConsumer, Scamadviser, ComplaintsBoard). Each category has its own legal vector and success rate — outlined on the individual pages above." },
@@ -650,13 +650,13 @@ export const servicePages: ServicePageData[] = [
     ],
     sections: [
       { title: "Why Mugshots Rank So Aggressively", content: "Mugshot websites are SEO machines. They scrape entire county booking feeds, publish a templated page for every arrest with the person's full name in the title tag, and aim that page directly at Google. Because arrest photos are technically public records, the sites enjoy Section 230 liability protection in most US states. The result is that an arrest from a decade ago — even one that ended in dismissal — can dominate page one of Google for the rest of someone's life. Our job is to break that ranking permanently." },
-      { title: "Google's Personal-Information Policy Changed Everything", content: "In April 2022 Google quietly added 'images of personal/sensitive content' to its removal policy, with mugshots and arrest records explicitly named in 2023 updates. We now file structured removal requests that delist mugshot URLs from Google search even when the underlying website refuses to cooperate. The page still exists, but a search for the person's name no longer surfaces it. Combined with source-level [website takedowns](/services/website-content-takedown), this is the most effective combination available today." },
+      { title: "Google's Personal-Information Policy Changed Everything", content: "In April 2022 Google quietly added 'images of personal/sensitive content' to its removal policy, with mugshots and arrest records explicitly named in 2023 updates. We now file structured removal requests that delist mugshot URLs from Google search even when the underlying website refuses to cooperate. The page still exists, but a search for the person's name no longer surfaces it. Combined with source-level [website takedowns](/services/website-takedown-service), this is the most effective combination available today." },
       { title: "Why Paying the Site Is Almost Always a Mistake", content: "Most mugshot sites offer a 'priority removal' fee of $399–$1,800 per URL. Paying it does three bad things. First, it funds an extortion model that targets you and everyone like you. Second, removal from one site triggers a quiet relisting on a sister site — same operator, new domain, new $399 demand. Third, in California, Illinois, Texas, Florida, and 15+ other states, charging a fee to remove a mugshot is itself illegal — meaning the demand is leverage we use against the site, not money we send to it." },
       { title: "The 40+ Sites We Handle", content: "Mugshots.com, BustedNewspaper.com, JailBase, Arrests.org, MugshotsOnline, FloridaArrests, TexasArrest, ArrestFacts, LocalCrimeNews, OffenderRadar, Cellblock-legends, and every regional copycat. Each one has a different removal vector. We maintain an internal playbook with the contact path, the legal lever, and the average resolution time for each — refreshed quarterly as new sites emerge and old ones fold under FTC pressure. For broader background-check site removal beyond mugshots, see [people-search removal](/services/people-search-removal)." },
       { title: "Sealed, Expunged, or Dismissed Cases", content: "If the underlying case was expunged, sealed, dismissed, or no-charges-filed, our success rate climbs above 95%. We obtain certified court documents proving the disposition, attach them to every removal request, and (when needed) escalate via state attorney-general consumer-protection divisions — particularly effective in states with mugshot-extortion statutes. We can also coordinate with your criminal-defence attorney's office on the underlying record." },
     ],
     relatedServices: [
-      { slug: "website-content-takedown", title: "Website content takedown services" },
+      { slug: "website-takedown-service", title: "Website content takedown services" },
       { slug: "google-results-removal", title: "Google content removal" },
       { slug: "people-search-removal", title: "People-search & data-broker removal" },
       { slug: "court-records-removal", title: "Court-record removal" },
@@ -701,7 +701,7 @@ export const servicePages: ServicePageData[] = [
       { title: "Why DIY Opt-Outs Usually Fail", content: "Doing this yourself is technically possible but functionally pointless. Each site has its own form, ID-verification flow, postal address, and 30–60-day processing window. Most people get through 5–10 sites before burning out — and within 90 days those listings repopulate from the aggregators they never touched. A continuous, multi-broker, aggregator-aware programme is the only thing that actually works long term. Pairs naturally with our [reputation protection](/services/reputation-protection) retainer." },
     ],
     relatedServices: [
-      { slug: "website-content-takedown", title: "Website content takedown services" },
+      { slug: "website-takedown-service", title: "Website content takedown services" },
       { slug: "mugshot-removal", title: "Mugshot removal" },
       { slug: "court-records-removal", title: "Court-record removal" },
       { slug: "reputation-protection", title: "Ongoing reputation monitoring" },
@@ -746,7 +746,7 @@ export const servicePages: ServicePageData[] = [
       { title: "Integration With Mugshots and Background Checks", content: "Court records, mugshots, and people-search results form a connected ecosystem — many background-check sites aggregate all three. We handle the full sweep together: [mugshot removal](/services/mugshot-removal), [people-search opt-outs](/services/people-search-removal), and court-record takedowns — so a search for your name returns the curated version, not the litigation footprint." },
     ],
     relatedServices: [
-      { slug: "website-content-takedown", title: "Website content takedown services" },
+      { slug: "website-takedown-service", title: "Website content takedown services" },
       { slug: "mugshot-removal", title: "Mugshot removal" },
       { slug: "people-search-removal", title: "People-search & data-broker removal" },
       { slug: "negative-search-results", title: "Suppress what can't be removed" },
@@ -791,7 +791,7 @@ export const servicePages: ServicePageData[] = [
       { title: "TikTok, Instagram Reels, and Cross-Platform Video", content: "The same video often appears on TikTok, Instagram Reels, X, Facebook, and Rumble. Our takedown coverage extends to all of them — each platform has its own policy stack and removal velocity. For coordinated cross-platform attacks, this falls into our [crisis management](/services/celebrity-crisis-management) workflow with rapid simultaneous filings across every channel within hours." },
     ],
     relatedServices: [
-      { slug: "website-content-takedown", title: "Website content takedown services" },
+      { slug: "website-takedown-service", title: "Website content takedown services" },
       { slug: "celebrity-crisis-management", title: "24/7 crisis management" },
       { slug: "social-media-reputation", title: "Social media reputation defence" },
       { slug: "ai-search-reputation", title: "AI search reputation (GEO)" },
@@ -836,7 +836,7 @@ export const servicePages: ServicePageData[] = [
       { title: "Combining Removal With Suppression", content: "Complaint sites rarely beat strong owned media in Google rankings — they have moderate domain authority but very weak topical authority around personal names. A focused suppression campaign typically pushes a Ripoff Report or PissedConsumer URL off page one within 60–90 days even when removal genuinely isn't possible. For business owners and executives, this is usually paired with [reputation protection monitoring](/services/reputation-protection) to catch new complaints as they appear." },
     ],
     relatedServices: [
-      { slug: "website-content-takedown", title: "Website content takedown services" },
+      { slug: "website-takedown-service", title: "Website content takedown services" },
       { slug: "google-results-removal", title: "Google content removal" },
       { slug: "review-management", title: "Review & ratings management" },
       { slug: "negative-search-results", title: "Suppress what can't be removed" },
@@ -881,7 +881,7 @@ export const servicePages: ServicePageData[] = [
       { title: "Coordinating With Legal Counsel", content: "Where defamation, malicious falsehood, or privacy claims are viable, we work alongside media-law counsel in the US (First Amendment-aware), UK (Defamation Act 2013), and EU jurisdictions. The combination of professional editorial outreach plus a credible legal escalation path produces the highest removal rates in the industry. For active legal crises, this folds into [24/7 crisis management](/services/celebrity-crisis-management)." },
     ],
     relatedServices: [
-      { slug: "website-content-takedown", title: "Website content takedown services" },
+      { slug: "website-takedown-service", title: "Website content takedown services" },
       { slug: "google-results-removal", title: "Google content removal" },
       { slug: "negative-search-results", title: "Search result suppression" },
       { slug: "digital-pr-tier-one-placements", title: "Tier-1 digital PR placements" },
