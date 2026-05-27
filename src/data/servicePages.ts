@@ -582,10 +582,10 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "website-takedown-service",
-    title: "Website Content Takedown Services — Remove Online Content at the Source",
-    h1: "Website Content Takedown Services",
-    metaDesc: "Permanent content takedown from websites, news sites, blogs, forums, and databases. DMCA, defamation, privacy, and Google de-indexing — handled end to end. Free assessment.",
-    heroDesc: "When the goal is to delete content — not just suppress it — we go directly to the source. Our takedown team combines DMCA, defamation law, privacy statutes (GDPR, CCPA, UK DPA), platform policies, and direct publisher negotiation to permanently remove harmful URLs from the open web and from Google's index.",
+    title: "Website Takedown Service — Permanently Remove Online Content at the Source",
+    h1: "Website Takedown Service",
+    metaDesc: "Professional website takedown service: permanently remove harmful content from websites, news sites, blogs, forums, and Google search. DMCA, defamation, privacy & GDPR. 72% source-level removal rate. Free assessment.",
+    heroDesc: "When the goal is to delete content — not just suppress it — our website takedown service goes directly to the source. We combine DMCA, defamation law, privacy statutes (GDPR, CCPA, UK DPA), platform policies, and direct publisher negotiation to permanently remove harmful URLs from the open web and from Google's index.",
     icon: "🧹",
     stats: [
       { num: "72%", label: "Source-level removal rate" },
