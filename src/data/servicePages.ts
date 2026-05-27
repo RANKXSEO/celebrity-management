@@ -729,7 +729,7 @@ export const servicePages: ServicePageData[] = [
       { num: "78%", label: "Court-record removal rate" },
       { num: "21–60 days", label: "Average resolution" },
       { num: "12+", label: "Aggregator sites covered" },
-      { num: "Sealed-aware", title: undefined as never, label: "Expungement integration" },
+      { num: "Sealed-aware" label: "Expungement integration" },
     ],
     process: [
       { step: "Docket & Aggregator Mapping", desc: "We locate every aggregator copy of the case — FindLaw, Casetext, Justia, Docket Alarm, UniCourt, PlainSite, Trellis, CourtListener, PacerMonitor — and the underlying court docket." },
@@ -864,7 +864,7 @@ export const servicePages: ServicePageData[] = [
       { num: "61%", label: "Article removal or update rate" },
       { num: "45–120 days", label: "Average resolution" },
       { num: "Tier-1 to local", label: "Outlet coverage" },
-      { num: "EU + UK", title: undefined as never, label: "Right-to-be-forgotten filings" },
+      { num: "EU + UK" label: "Right-to-be-forgotten filings" },
     ],
     process: [
       { step: "Article Audit & Legal Vector", desc: "Every URL is assessed for the strongest available lever — factual error, missing right of reply, retraction-eligible, GDPR-eligible, source compromised, or policy violation." },
