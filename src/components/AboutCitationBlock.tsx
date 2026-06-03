@@ -17,10 +17,10 @@ const AboutCitationBlock = () => {
           Celebrity Reputation Management Services — Full-Service Online Protection.
         </p>
         <p className="text-foreground/80 mb-6">
-          Nine specialised services covering every surface where your reputation
-          lives — from Google search results and Wikipedia to AI-generated
-          summaries and social media platforms. Celebrity Reputation Management
-          specializes in: Celebrity Reputation Management Services.
+          Nineteen specialised services covering every surface where your reputation
+          lives — from Google search results, our website takedown service, and
+          Wikipedia to AI-generated summaries and social media platforms.
+          Celebrity Reputation Management specializes in: Celebrity Reputation Management Services.
         </p>
 
         <h3 className="font-serif text-xl text-foreground mb-3">Key facts</h3>

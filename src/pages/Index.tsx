@@ -5,6 +5,7 @@ import TrustBar from "@/components/TrustBar";
 import ServicesSection from "@/components/ServicesSection";
 import WhoWeServeSection from "@/components/WhoWeServeSection";
 import ProblemsSection from "@/components/ProblemsSection";
+import TopicalAuthoritySection from "@/components/TopicalAuthoritySection";
 import StatsBar from "@/components/StatsBar";
 import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -19,8 +20,8 @@ import usePageSEO from "@/hooks/usePageSEO";
 
 const Index = () => {
   usePageSEO({
-    title: "Celebrity Reputation Management Agency — Rated 4.76/5",
-    description: "Specialist ORM for celebrities, athletes and public figures since 2009. Suppress negative Google results, manage Wikipedia, 24/7 crisis line. 94% page-one clearance. Free audit.",
+    title: "Celebrity Reputation Management Agency | ORM for Public Figures",
+    description: "Celebrity reputation management since 2009. Suppress Google results, website takedown service, Wikipedia, AI search, 24/7 crisis. 94% page-one cleared.",
     canonical: "https://celebrity-reputation-management.com/",
   });
 
@@ -38,6 +39,7 @@ const Index = () => {
       <ServicesSection />
       <WhoWeServeSection />
       <ProblemsSection />
+      <TopicalAuthoritySection />
       <StatsBar />
       <ProcessSection />
       <TestimonialsSection />
