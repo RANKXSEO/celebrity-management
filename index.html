@@ -239,7 +239,8 @@
     </noscript>
     <script type="module" src="/src/main.tsx"></script>
     <script defer>
-      if ('serviceWorker' in navigator && location.protocol === 'https:' && !location.hostname.endsWith('.lovableproject.com')) {
+      const productionHosts = ['celebrity-reputation-management.com', 'www.celebrity-reputation-management.com'];
+      if ('serviceWorker' in navigator && location.protocol === 'https:' && productionHosts.includes(location.hostname)) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js').catch(() => {});
         });
