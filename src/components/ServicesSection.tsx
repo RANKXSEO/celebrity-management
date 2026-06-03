@@ -28,7 +28,7 @@ const ServicesSection = () => {
             Celebrity Reputation Management <em className="text-gold italic">Services</em> — Full-Service Online Protection
           </h2>
           <p className="text-muted-foreground text-[17px] leading-relaxed">
-            Nine specialised services covering every surface where your reputation lives — from Google search results and Wikipedia to AI-generated summaries and social media platforms.
+            Nineteen specialised services covering every surface where your reputation lives — Google search, our <Link to="/services/website-takedown-service" className="text-gold hover:text-gold-light underline">website takedown service</Link>, <Link to="/services/wikipedia-for-celebrities" className="text-gold hover:text-gold-light underline">Wikipedia</Link>, <Link to="/services/ai-search-reputation" className="text-gold hover:text-gold-light underline">AI-generated summaries</Link>, and social media.
           </p>
         </header>
 
