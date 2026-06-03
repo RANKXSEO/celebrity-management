@@ -239,10 +239,15 @@
     </noscript>
     <script type="module" src="/src/main.tsx"></script>
     <script defer>
-      if ('serviceWorker' in navigator) {
+      const productionHosts = ['celebrity-reputation-management.com', 'www.celebrity-reputation-management.com'];
+      if ('serviceWorker' in navigator && location.protocol === 'https:' && productionHosts.includes(location.hostname)) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js').catch(() => {});
         });
+      } else if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then((registrations) => {
+          registrations.forEach((registration) => registration.unregister());
+        }).catch(() => {});
       }
     </script>
   </body>
