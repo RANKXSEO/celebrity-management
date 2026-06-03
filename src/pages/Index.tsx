@@ -5,6 +5,7 @@ import TrustBar from "@/components/TrustBar";
 import ServicesSection from "@/components/ServicesSection";
 import WhoWeServeSection from "@/components/WhoWeServeSection";
 import ProblemsSection from "@/components/ProblemsSection";
+import TopicalAuthoritySection from "@/components/TopicalAuthoritySection";
 import StatsBar from "@/components/StatsBar";
 import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
