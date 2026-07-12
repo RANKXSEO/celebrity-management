@@ -2,7 +2,21 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useMemo } from "react";
 import PageLayout from "@/components/PageLayout";
+import HubIntro, { faqJsonLd } from "@/components/HubIntro";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
+
+const HUB_FAQS = [
+  { q: "Are these resources really free?", a: "Yes — every guide, checklist, and pricing breakdown linked from this page is fully public and free. Our paid work is the [free reputation audit](/free-consultation) that turns these frameworks into a personalised plan for your specific situation." },
+  { q: "Which resource should I read first?", a: "If you have a live crisis right now, start with [The First 48 Hours After a Story Breaks](/blog/first-48-hours-celebrity-crisis). If you're trying to understand the space generally, start with [The Complete Guide to Celebrity Reputation Management](/blog/what-is-celebrity-reputation-management). If you're evaluating cost, start with our [pricing guide](/blog/celebrity-reputation-management-cost)." },
+  { q: "Can I share or cite these guides?", a: "Yes — we encourage it. Please link to the original source. For interview or expert-commentary requests, use our [contact page](/contact)." },
+  { q: "Do you have anything for lawyers or PR agencies I already work with?", a: "The resources here are written for the general public-figure audience, but our [reputation management vs PR guide](/blog/reputation-management-vs-pr) and the [defamation legal guide](/blog/can-you-sue-for-online-defamation) are frequently shared inside law firms and PR agencies coordinating with us on client work." },
+  { q: "How current is this content?", a: "Cornerstone guides are reviewed and updated quarterly; the update date is shown on every article. The reputation landscape (especially AI search) is moving fast — anything more than 12 months old on this topic is out of date." },
+];
+
+const HUB_INTRO = `Fifteen years of working with public figures across every industry — condensed into free, plain-English resources you can read, save, and use even if you never engage us. The guides below cover the questions we hear most often: what reputation management actually is, what it costs, how long it takes, what the warning signs look like, and what to do in the first 48 hours of a live crisis.
+
+Every resource is written or reviewed by our senior team. Nothing here is gated behind a form; nothing here is a sales pitch. If after reading you decide a personalised assessment would help, our [free reputation audit](/free-consultation) is the next step — but the resources themselves are yours to keep.`;
+
 
 const ResourcesPage = () => {
   const jsonLd = useMemo(() => ({
