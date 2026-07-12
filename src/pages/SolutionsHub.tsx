@@ -78,6 +78,7 @@ const SolutionsHub = () => {
               </motion.article>
             ))}
           </div>
+          <HubCrossLinks current="/solutions" />
         </div>
       </section>
     </PageLayout>

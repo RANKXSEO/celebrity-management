@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import PageLayout from "@/components/PageLayout";
 import HubIntro, { faqJsonLd } from "@/components/HubIntro";
+import HubCrossLinks from "@/components/HubCrossLinks";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 import { useMemo } from "react";
 
@@ -126,7 +127,8 @@ const BlogHub = () => {
               </Link>
             ))}
           </div>
-        </div>
+          </div>
+          <HubCrossLinks current="/blog" />
       </section>
     </PageLayout>
   );
