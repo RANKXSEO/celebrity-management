@@ -140,36 +140,22 @@ const SolutionPage = () => {
             </div>
           )}
 
-          {/* Cross-hub: Other Solutions */}
-          <div className="mb-10">
-            <h3 className="font-display text-lg font-bold mb-3">Other Reputation Solutions</h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {solutionPages.filter(s => s.slug !== page.slug).map(sol => (
-                <li key={sol.slug}><Link to={`/solutions/${sol.slug}`} className="text-sm text-gold hover:text-gold-light transition-colors font-medium">{sol.icon} {sol.h1} →</Link></li>
-              ))}
-            </ul>
-          </div>
+          {/* Reverse-silo: same-silo siblings + equity up to hub */}
+          <RelatedLinks
+            title="Other Reputation Solutions We Handle"
+            siblings={solutionPages
+              .filter(s => s.slug !== page.slug)
+              .slice(0, 3)
+              .map(s => `/solutions/${s.slug}`)}
+            hubUp={{ to: "/solutions", label: "Browse every reputation solution" }}
+          />
 
-          {/* Cross-hub: Services */}
-          <div className="bg-card border border-border rounded-2xl p-6 mb-10">
-            <h3 className="font-display text-lg font-bold mb-3">Our Reputation Management Services</h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {servicePages.slice(0, 6).map(svc => (
-                <li key={svc.slug}><Link to={`/services/${svc.slug}`} className="text-sm text-gold hover:text-gold-light transition-colors font-medium">{svc.icon} {svc.h1} →</Link></li>
-              ))}
-            </ul>
-            <Link to="/services" className="text-sm text-gold hover:text-gold-light transition-colors font-bold mt-3 inline-block">View all services →</Link>
-          </div>
-
-          {/* Cross-hub: Audiences */}
-          <div className="bg-card border border-border rounded-2xl p-6 mb-10">
-            <h3 className="font-display text-lg font-bold mb-3">Who We Serve</h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {audiencePages.map(aud => (
-                <li key={aud.slug}><Link to={`/who-we-serve/${aud.slug}`} className="text-sm text-gold hover:text-gold-light transition-colors font-medium">{aud.emoji} {aud.h1} →</Link></li>
-              ))}
-            </ul>
-          </div>
+          {/* Reverse-silo: contextual services bridge (from relatedServices data) */}
+          <RelatedLinks
+            title="Services Powering This Solution"
+            siblings={page.relatedServices.slice(0, 3).map(rs => `/services/${rs.slug}`)}
+            hubUp={{ to: "/services", label: "See the full service catalogue" }}
+          />
 
           <div className="bg-primary rounded-2xl p-8 text-center">
             <h3 className="font-display text-2xl text-primary-foreground font-bold mb-3">Don't Wait — Every Day Matters</h3>

@@ -6,6 +6,7 @@ import ContentRenderer from "@/components/ContentRenderer";
 import AuthorByline, { DEFAULT_UPDATED } from "@/components/AuthorByline";
 import KeyTakeaways from "@/components/KeyTakeaways";
 import TableOfContents from "@/components/TableOfContents";
+import RelatedLinks from "@/components/RelatedLinks";
 import { audiencePages } from "@/data/audiencePages";
 import { servicePages } from "@/data/servicePages";
 import { solutionPages } from "@/data/solutionPages";
