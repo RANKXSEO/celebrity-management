@@ -64,6 +64,17 @@ const ServicesHub = () => {
 
       <section className="py-[clamp(52px,7vw,80px)] bg-background">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          <HubIntro
+            intro={HUB_INTRO}
+            stats={[
+              { num: "500+", label: "Client campaigns" },
+              { num: "94%", label: "Page-one clearance" },
+              { num: "Since 2009", label: "Founded" },
+              { num: "24/7", label: "Crisis desk" },
+            ]}
+            faqs={HUB_FAQS}
+          />
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {servicePages.map((svc, i) => (
               <motion.article key={svc.slug} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}>
