@@ -59,6 +59,12 @@ const SolutionsHub = () => {
 
       <section className="py-[clamp(52px,7vw,80px)] bg-background">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          <HubIntro intro={HUB_INTRO} faqs={HUB_FAQS} stats={[
+            { num: "6", label: "Solution frameworks" },
+            { num: "94%", label: "Page-one clearance" },
+            { num: "60 min", label: "Crisis SLA" },
+            { num: "4.76/5", label: "Client rating" },
+          ]} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {solutionPages.map((sol, i) => (
               <motion.article key={sol.slug} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}>
