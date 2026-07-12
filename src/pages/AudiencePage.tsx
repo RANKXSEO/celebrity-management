@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
@@ -10,10 +10,12 @@ import { audiencePages } from "@/data/audiencePages";
 import { servicePages } from "@/data/servicePages";
 import { solutionPages } from "@/data/solutionPages";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
+import { slugifyHeading } from "@/lib/slugify";
 
 const AudiencePage = () => {
   const { slug } = useParams();
   const page = audiencePages.find((p) => p.slug === slug);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const jsonLd = useMemo(() => page ? {
     "@context": "https://schema.org",
@@ -24,6 +26,17 @@ const AudiencePage = () => {
         "description": page.metaDesc,
         "url": `${BASE_URL}/who-we-serve/${page.slug}`,
         "isPartOf": { "@id": `${BASE_URL}/#website` },
+        "about": { "@type": "Thing", "name": page.h1 },
+      },
+      {
+        "@type": "Service",
+        "name": page.h1,
+        "description": page.metaDesc,
+        "provider": { "@id": `${BASE_URL}/#organization` },
+        "areaServed": { "@type": "Country", "name": "Worldwide" },
+        "serviceType": "Reputation Management",
+        "url": `${BASE_URL}/who-we-serve/${page.slug}`,
+        "audience": { "@type": "Audience", "audienceType": page.h1.replace(/^Reputation Management for /, "") },
       },
       {
         "@type": "BreadcrumbList",
@@ -33,6 +46,14 @@ const AudiencePage = () => {
           { "@type": "ListItem", "position": 3, "name": page.h1, "item": `${BASE_URL}/who-we-serve/${page.slug}` },
         ],
       },
+      ...(page.faqs && page.faqs.length > 0 ? [{
+        "@type": "FAQPage",
+        "mainEntity": page.faqs.map(f => ({
+          "@type": "Question",
+          "name": f.q,
+          "acceptedAnswer": { "@type": "Answer", "text": f.a },
+        })),
+      }] : []),
     ],
   } : undefined, [page]);
 
@@ -41,6 +62,14 @@ const AudiencePage = () => {
     description: page?.metaDesc || "",
     jsonLd,
   });
+
+  const tocHeadings = page ? [
+    ...page.sections.map(s => s.title),
+    "The Reputation Challenges You Face",
+    "How We Help",
+    ...(page.caseStudy ? ["Client Case Study"] : []),
+    ...(page.faqs && page.faqs.length > 0 ? ["Frequently Asked Questions"] : []),
+  ] : [];
 
   if (!page) return <PageLayout><div className="pt-32 pb-20 text-center"><h1 className="font-display text-3xl">Page not found</h1><Link to="/who-we-serve" className="text-gold mt-4 inline-block">← Back to who we serve</Link></div></PageLayout>;
 
@@ -71,12 +100,38 @@ const AudiencePage = () => {
         </div>
       </section>
 
+      {page.stats && page.stats.length > 0 && (
+        <section className="bg-card border-y border-border">
+          <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              {page.stats.map((s) => (
+                <div key={s.label} className="text-center">
+                  <div className="font-display text-xl sm:text-2xl font-bold text-gold">{s.num}</div>
+                  <div className="text-[11px] text-muted-foreground mt-0.5">{s.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="py-[clamp(52px,7vw,80px)] bg-background">
         <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8">
           <AuthorByline updated={DEFAULT_UPDATED} />
-          <KeyTakeaways items={page.challenges.slice(0, 5).map((c) => c.title)} title="What this page covers" />
-          <TableOfContents headings={["The Reputation Challenges You Face", "How We Help", "Recommended Reading", "Why Clients Trust Us"]} />
-          <h2 id="the-reputation-challenges-you-face" className="font-display text-2xl font-bold mb-6 scroll-mt-24">The Reputation Challenges You Face</h2>
+          {page.keyTakeaways && page.keyTakeaways.length > 0 && (
+            <KeyTakeaways items={page.keyTakeaways} title="Key takeaways" />
+          )}
+          <TableOfContents headings={tocHeadings} />
+
+          {/* Long-form SEO sections */}
+          {page.sections.map((sec, i) => (
+            <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
+              <h2 id={slugifyHeading(sec.title)} className="font-display text-[clamp(1.5rem,2.5vw,2rem)] tracking-tight mb-3 scroll-mt-24">{sec.title}</h2>
+              <ContentRenderer content={sec.content} className="text-muted-foreground text-base leading-relaxed" />
+            </motion.div>
+          ))}
+
+          <h2 id={slugifyHeading("The Reputation Challenges You Face")} className="font-display text-2xl font-bold mb-6 scroll-mt-24">The Reputation Challenges You Face</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
             {page.challenges.map((c, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="bg-card border border-border rounded-xl p-5">
@@ -86,7 +141,7 @@ const AudiencePage = () => {
             ))}
           </div>
 
-          <h2 id="how-we-help" className="font-display text-2xl font-bold mb-4 scroll-mt-24">How We Help</h2>
+          <h2 id={slugifyHeading("How We Help")} className="font-display text-2xl font-bold mb-4 scroll-mt-24">How We Help</h2>
           <div className="space-y-4 mb-12">
             {page.relevantServices.map((rs) => (
               <div key={rs.slug} className="flex items-start gap-3 bg-card border border-border rounded-xl p-5">
@@ -100,7 +155,64 @@ const AudiencePage = () => {
             ))}
           </div>
 
-          {/* Cross-link to related blog content */}
+          {/* Case study */}
+          {page.caseStudy && (
+            <div className="mb-12">
+              <h2 id={slugifyHeading("Client Case Study")} className="font-display text-2xl font-bold mb-4 scroll-mt-24">Client Case Study</h2>
+              <div className="bg-card border border-gold/30 rounded-2xl p-6">
+                <div className="text-[11px] tracking-[0.14em] uppercase text-gold font-bold mb-2">Anonymised composite — protected by NDA</div>
+                <h3 className="font-display text-xl font-bold mb-4">{page.caseStudy.headline}</h3>
+                <dl className="space-y-3 text-sm">
+                  <div>
+                    <dt className="font-bold text-foreground">Situation</dt>
+                    <dd className="text-muted-foreground leading-relaxed">{page.caseStudy.situation}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-bold text-foreground">Action</dt>
+                    <dd className="text-muted-foreground leading-relaxed">{page.caseStudy.action}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-bold text-foreground">Outcome</dt>
+                    <dd className="text-muted-foreground leading-relaxed">{page.caseStudy.outcome}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-bold text-foreground">Timeframe</dt>
+                    <dd className="text-muted-foreground leading-relaxed">{page.caseStudy.timeframe}</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          )}
+
+          {/* Testimonial */}
+          <div className="bg-primary rounded-2xl p-8 mb-12">
+            <div className="font-display text-4xl text-gold/40 mb-2">"</div>
+            <blockquote className="font-display text-lg italic text-primary-foreground leading-relaxed mb-4">{page.testimonial.quote}</blockquote>
+            <div className="text-sm font-bold text-gold-light">{page.testimonial.name}</div>
+            <div className="text-[11px] text-primary-foreground/65 mt-0.5">{page.testimonial.role}</div>
+          </div>
+
+          {/* FAQ */}
+          {page.faqs && page.faqs.length > 0 && (
+            <div className="mb-12">
+              <h2 id={slugifyHeading("Frequently Asked Questions")} className="font-display text-2xl font-bold mb-4 scroll-mt-24">Frequently Asked Questions</h2>
+              {page.faqs.map((faq, i) => (
+                <div key={i} className="border-b border-border">
+                  <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="flex items-start justify-between gap-3 py-4 w-full text-left font-body text-[15px] font-semibold text-foreground hover:text-gold transition-colors" aria-expanded={openFaq === i}>
+                    {faq.q}
+                    <span className={`w-[22px] h-[22px] rounded-full border border-border flex items-center justify-center flex-shrink-0 text-gold text-sm mt-0.5 transition-all ${openFaq === i ? "bg-gold border-gold text-primary-foreground rotate-45" : ""}`}>+</span>
+                  </button>
+                  <div className={`grid transition-all duration-300 ${openFaq === i ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+                    <div className="overflow-hidden">
+                      <ContentRenderer content={faq.a} className="text-[15px] text-muted-foreground leading-relaxed pb-4" />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Recommended reading */}
           <div className="bg-card border border-border rounded-2xl p-6 mb-12">
             <h3 className="font-display text-lg font-bold mb-3">Recommended Reading</h3>
             <ul className="space-y-2">
@@ -108,30 +220,6 @@ const AudiencePage = () => {
               <li><Link to="/blog/signs-you-need-reputation-management" className="text-gold hover:text-gold-light transition-colors font-medium text-sm">10 warning signs you need a reputation manager →</Link></li>
               <li><Link to="/blog/celebrity-reputation-management-cost" className="text-gold hover:text-gold-light transition-colors font-medium text-sm">How much does celebrity reputation management cost? →</Link></li>
             </ul>
-          </div>
-
-          <div className="bg-card border border-border rounded-2xl p-6 mb-12">
-            <h3 className="font-display text-lg font-bold mb-4">Why Clients Trust Us</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-              {[
-                { num: "500+", label: "Campaigns completed" },
-                { num: "94%", label: "Page-one clearance" },
-                { num: "15+ yrs", label: "Industry experience" },
-                { num: "24/7", label: "Crisis availability" },
-              ].map((s) => (
-                <div key={s.label}>
-                  <div className="font-display text-xl font-bold text-gold">{s.num}</div>
-                  <div className="text-[11px] text-muted-foreground mt-0.5">{s.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-primary rounded-2xl p-8 mb-12">
-            <div className="font-display text-4xl text-gold/40 mb-2">"</div>
-            <blockquote className="font-display text-lg italic text-primary-foreground leading-relaxed mb-4">{page.testimonial.quote}</blockquote>
-            <div className="text-sm font-bold text-gold-light">{page.testimonial.name}</div>
-            <div className="text-[11px] text-primary-foreground/65 mt-0.5">{page.testimonial.role}</div>
           </div>
 
           {/* Cross-hub: Other Audiences */}
@@ -167,15 +255,10 @@ const AudiencePage = () => {
 
           <div className="bg-card border-2 border-gold/20 rounded-2xl p-8 text-center">
             <h3 className="font-display text-2xl font-bold mb-3">Ready to Protect Your Reputation?</h3>
-            <p className="text-muted-foreground mb-5">Every situation is unique. Start with a <Link to="/free-consultation" className="text-gold hover:underline">free, confidential audit</Link> — we'll tell you exactly where you stand and what's achievable.</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link to="/free-consultation" className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-7 py-3.5 rounded text-base font-bold shadow-gold hover:bg-gold-light transition-all">
-                Get Your Free Reputation Audit →
-              </Link>
-              <a href="tel:+16462224346" className="text-sm text-muted-foreground hover:text-gold transition-colors">
-                or call (646) 222-4346 (24/7)
-              </a>
-            </div>
+            <p className="text-muted-foreground mb-5">Every situation is different. Start with a free, confidential audit — we'll tell you exactly what you need.</p>
+            <Link to="/free-consultation" className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-7 py-3.5 rounded text-base font-bold shadow-gold hover:bg-gold-light transition-all">
+              Get Your Free Reputation Audit →
+            </Link>
           </div>
         </div>
       </section>

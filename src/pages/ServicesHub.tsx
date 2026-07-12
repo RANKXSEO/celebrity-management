@@ -1,9 +1,23 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
+import HubIntro, { faqJsonLd } from "@/components/HubIntro";
 import { servicePages } from "@/data/servicePages";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 import { useMemo } from "react";
+
+const HUB_FAQS = [
+  { q: "What is celebrity reputation management?", a: "Celebrity reputation management (ORM for public figures) is the strategic practice of shaping what Google, Bing, Wikipedia, and AI assistants like ChatGPT return when someone searches your name. It combines [negative search-result suppression](/services/negative-search-results), [Wikipedia stewardship](/services/wikipedia-for-celebrities), [Knowledge Panel control](/services/knowledge-panel-management), 24/7 [crisis response](/services/celebrity-crisis-management), and increasingly [AI-answer correction](/services/ai-search-reputation)." },
+  { q: "How is celebrity reputation management different from PR?", a: "PR shapes what journalists write today; reputation management shapes what search engines and AI assistants return years from now. The two are complementary — most of our engagements coordinate with the client's existing PR team. Read our detailed [reputation management vs PR breakdown](/blog/reputation-management-vs-pr)." },
+  { q: "Which service do I actually need?", a: "Start with a [free reputation audit](/free-consultation) — we'll review your Google, Wikipedia, Knowledge Panel, and AI-assistant footprint and tell you exactly which of our services (if any) will move the needle. Many clients need only one or two, not the full stack." },
+  { q: "How long until I see results?", a: "Crisis response begins inside 60 minutes. Wikipedia corrections typically resolve in 14–45 days. Full page-one suppression campaigns typically show meaningful movement inside 30 days and full clearance inside 60–90 days. See [how long suppression takes](/blog/how-long-suppress-negative-google) for a detailed breakdown." },
+  { q: "Do you work with anyone or only established celebrities?", a: "We work with public figures across the spectrum — from legacy A-list talent to emerging creators, athletes, executives, and officials. What matters is whether search and AI-answer results are materially affecting your career or business." },
+];
+
+const HUB_INTRO = `Since 2009 we have delivered every reputation service a public figure realistically needs — under one retainer, with one senior team, and one accountable outcome. Ten specialised offerings, from same-day [24/7 crisis response](/services/celebrity-crisis-management) to long-cycle [Wikipedia](/services/wikipedia-for-celebrities) and [Knowledge Panel](/services/knowledge-panel-management) stewardship, plus the newest reputation surface most agencies still don't cover: [AI search reputation](/services/ai-search-reputation) across ChatGPT, Gemini, Perplexity, and Claude.
+
+Every engagement begins the same way: a free, confidential [reputation audit](/free-consultation) across Google, Bing, Wikipedia, Knowledge Panel, YouTube, Reddit, and the four major AI assistants — delivered as a written triage document ranking each threat by SEO authority and career impact. Nothing is billed until the audit is delivered and a written 30/60/90-day plan is approved.`;
+
 
 const ServicesHub = () => {
   const jsonLd = useMemo(() => ({
@@ -21,6 +35,7 @@ const ServicesHub = () => {
         })),
       },
       { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL }, { "@type": "ListItem", "position": 2, "name": "Services", "item": `${BASE_URL}/services` }] },
+      faqJsonLd(HUB_FAQS),
     ],
   }), []);
 
@@ -49,6 +64,17 @@ const ServicesHub = () => {
 
       <section className="py-[clamp(52px,7vw,80px)] bg-background">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          <HubIntro
+            intro={HUB_INTRO}
+            stats={[
+              { num: "500+", label: "Client campaigns" },
+              { num: "94%", label: "Page-one clearance" },
+              { num: "Since 2009", label: "Founded" },
+              { num: "24/7", label: "Crisis desk" },
+            ]}
+            faqs={HUB_FAQS}
+          />
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {servicePages.map((svc, i) => (
               <motion.article key={svc.slug} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}>
