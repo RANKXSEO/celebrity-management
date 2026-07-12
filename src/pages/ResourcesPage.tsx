@@ -32,6 +32,7 @@ const ResourcesPage = () => {
         { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
         { "@type": "ListItem", "position": 2, "name": "Resources", "item": `${BASE_URL}/resources` },
       ]},
+      faqJsonLd(HUB_FAQS),
     ],
   }), []);
 
