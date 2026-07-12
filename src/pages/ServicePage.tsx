@@ -6,6 +6,7 @@ import ContentRenderer from "@/components/ContentRenderer";
 import TableOfContents from "@/components/TableOfContents";
 import AuthorByline, { DEFAULT_UPDATED } from "@/components/AuthorByline";
 import KeyTakeaways from "@/components/KeyTakeaways";
+import RelatedLinks from "@/components/RelatedLinks";
 import { servicePages } from "@/data/servicePages";
 import { solutionPages } from "@/data/solutionPages";
 import { audiencePages } from "@/data/audiencePages";
@@ -225,42 +226,23 @@ const ServicePage = () => {
             </div>
           )}
 
-          {/* Cross-hub: Other Services */}
-          <div className="mb-10">
-            <h3 className="font-display text-xl font-bold mb-4">Explore Other Reputation Management Services</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {servicePages.filter(s => s.slug !== page.slug).slice(0, 6).map(s => (
-                <Link key={s.slug} to={`/services/${s.slug}`} className="flex items-start gap-3 bg-card border border-border rounded-xl p-4 hover:-translate-y-0.5 transition-all group">
-                  <span className="text-xl">{s.icon}</span>
-                  <div>
-                    <span className="text-sm font-bold text-foreground group-hover:text-gold transition-colors">{s.h1}</span>
-                    <p className="text-xs text-muted-foreground mt-0.5 line-clamp-2">{s.heroDesc.slice(0, 90)}…</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
+          {/* Reverse-silo: same-silo siblings + equity up to hub */}
+          <RelatedLinks
+            title="Other Reputation Management Services"
+            siblings={servicePages
+              .filter(s => s.slug !== page.slug)
+              .slice(0, 3)
+              .map(s => `/services/${s.slug}`)}
+            hubUp={{ to: "/services", label: "Browse every celebrity ORM service" }}
+          />
 
-          {/* Cross-hub: Solutions */}
-          <div className="bg-card border border-border rounded-2xl p-6 mb-10">
-            <h3 className="font-display text-lg font-bold mb-3">Reputation Solutions by Problem</h3>
-            <p className="text-sm text-muted-foreground mb-3">Facing a specific reputation crisis? Find the right solution:</p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {solutionPages.slice(0, 6).map(sol => (
-                <li key={sol.slug}><Link to={`/solutions/${sol.slug}`} className="text-sm text-gold hover:text-gold-light transition-colors font-medium">{sol.icon} {sol.h1} →</Link></li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Cross-hub: Audiences */}
-          <div className="bg-card border border-border rounded-2xl p-6 mb-10">
-            <h3 className="font-display text-lg font-bold mb-3">Reputation Management by Industry</h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {audiencePages.map(aud => (
-                <li key={aud.slug}><Link to={`/who-we-serve/${aud.slug}`} className="text-sm text-gold hover:text-gold-light transition-colors font-medium">{aud.emoji} {aud.h1} →</Link></li>
-              ))}
-            </ul>
-          </div>
+          {/* Reverse-silo: contextual cross-silo bridge to solutions */}
+          <RelatedLinks
+            title="Reputation Problems This Service Solves"
+            siblings={page.relatedServices.slice(0, 2).map(rs => `/services/${rs.slug}`)}
+            bridges={["/solutions/defamation-fake-news-removal", "/solutions/scandal-recovery"]}
+            hubUp={{ to: "/solutions", label: "Browse every reputation solution" }}
+          />
 
           {/* Bottom CTA */}
           <div className="bg-primary rounded-2xl p-8 text-center">

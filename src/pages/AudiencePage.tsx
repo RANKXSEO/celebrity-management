@@ -6,6 +6,7 @@ import ContentRenderer from "@/components/ContentRenderer";
 import AuthorByline, { DEFAULT_UPDATED } from "@/components/AuthorByline";
 import KeyTakeaways from "@/components/KeyTakeaways";
 import TableOfContents from "@/components/TableOfContents";
+import RelatedLinks from "@/components/RelatedLinks";
 import { audiencePages } from "@/data/audiencePages";
 import { servicePages } from "@/data/servicePages";
 import { solutionPages } from "@/data/solutionPages";
@@ -212,46 +213,22 @@ const AudiencePage = () => {
             </div>
           )}
 
-          {/* Recommended reading */}
-          <div className="bg-card border border-border rounded-2xl p-6 mb-12">
-            <h3 className="font-display text-lg font-bold mb-3">Recommended Reading</h3>
-            <ul className="space-y-2">
-              <li><Link to="/blog/what-is-celebrity-reputation-management" className="text-gold hover:text-gold-light transition-colors font-medium text-sm">What is celebrity reputation management? (Complete guide) →</Link></li>
-              <li><Link to="/blog/signs-you-need-reputation-management" className="text-gold hover:text-gold-light transition-colors font-medium text-sm">10 warning signs you need a reputation manager →</Link></li>
-              <li><Link to="/blog/celebrity-reputation-management-cost" className="text-gold hover:text-gold-light transition-colors font-medium text-sm">How much does celebrity reputation management cost? →</Link></li>
-            </ul>
-          </div>
+          {/* Reverse-silo: same-silo siblings + equity up to hub */}
+          <RelatedLinks
+            title="Reputation Management for Similar Public Figures"
+            siblings={audiencePages
+              .filter(a => a.slug !== page.slug)
+              .slice(0, 3)
+              .map(a => `/who-we-serve/${a.slug}`)}
+            hubUp={{ to: "/who-we-serve", label: "See every industry we serve" }}
+          />
 
-          {/* Cross-hub: Other Audiences */}
-          <div className="mb-10">
-            <h3 className="font-display text-lg font-bold mb-3">We Also Serve</h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {audiencePages.filter(a => a.slug !== page.slug).map(aud => (
-                <li key={aud.slug}><Link to={`/who-we-serve/${aud.slug}`} className="text-sm text-gold hover:text-gold-light transition-colors font-medium">{aud.emoji} {aud.h1} →</Link></li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Cross-hub: Solutions */}
-          <div className="bg-card border border-border rounded-2xl p-6 mb-10">
-            <h3 className="font-display text-lg font-bold mb-3">Reputation Solutions by Problem</h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {solutionPages.slice(0, 6).map(sol => (
-                <li key={sol.slug}><Link to={`/solutions/${sol.slug}`} className="text-sm text-gold hover:text-gold-light transition-colors font-medium">{sol.icon} {sol.h1} →</Link></li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Cross-hub: Key Services */}
-          <div className="bg-card border border-border rounded-2xl p-6 mb-10">
-            <h3 className="font-display text-lg font-bold mb-3">Our Reputation Management Services</h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {servicePages.slice(0, 6).map(svc => (
-                <li key={svc.slug}><Link to={`/services/${svc.slug}`} className="text-sm text-gold hover:text-gold-light transition-colors font-medium">{svc.icon} {svc.h1} →</Link></li>
-              ))}
-            </ul>
-            <Link to="/services" className="text-sm text-gold hover:text-gold-light transition-colors font-bold mt-3 inline-block">View all services →</Link>
-          </div>
+          {/* Reverse-silo: contextual cross-silo bridge to service silo */}
+          <RelatedLinks
+            title="Core Services This Audience Uses Most"
+            siblings={page.relevantServices.slice(0, 3).map(rs => `/services/${rs.slug}`)}
+            hubUp={{ to: "/services", label: "Browse the full service catalogue" }}
+          />
 
           <div className="bg-card border-2 border-gold/20 rounded-2xl p-8 text-center">
             <h3 className="font-display text-2xl font-bold mb-3">Ready to Protect Your Reputation?</h3>
