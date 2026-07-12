@@ -1,9 +1,23 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
+import HubIntro, { faqJsonLd } from "@/components/HubIntro";
 import { audiencePages } from "@/data/audiencePages";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 import { useMemo } from "react";
+
+const HUB_FAQS = [
+  { q: "Who exactly do you work with?", a: "Public figures across seven core audiences: [actors and entertainers](/who-we-serve/actors-entertainers), [musicians and recording artists](/who-we-serve/musicians-artists), [professional athletes](/who-we-serve/athletes-sports-stars), [influencers and creators](/who-we-serve/influencers-content-creators), [CEOs and executives](/who-we-serve/executives-ceos), [politicians and public officials](/who-we-serve/politicians-public-officials), and [reality TV personalities](/who-we-serve/reality-tv-personalities). Each has a dedicated page with the specific reputation threats we solve for that industry." },
+  { q: "Why hire an industry-specialised firm instead of a general PR agency?", a: "Reputation surfaces (Google, Wikipedia, Knowledge Panel, AI assistants) behave differently across industries — a musician's Wikipedia is edited by different communities than a Fortune 500 CEO's, and a reality star's produced-narrative problem is nothing like an athlete's endorsement-diligence problem. Specialised playbooks produce measurably better outcomes than generalist ones." },
+  { q: "Do you work internationally?", a: "Yes. Most engagements involve English-language search and Wikipedia, but we work across US, UK, EU, and APAC markets and coordinate with local counsel where jurisdiction-specific removal rights (right to be forgotten, GDPR erasure, etc.) apply." },
+  { q: "Will my industry peers or team find out?", a: "Only if you want them to. Every engagement is covered by mutual NDA and we routinely work directly with the client while liaising with legal counsel or a designated representative." },
+  { q: "How do I know which audience page applies to me?", a: "Pick the one closest to your primary public identity. Most engagements touch multiple categories (a musician who is also an entrepreneur, an athlete who is also an influencer) — your audit will identify all relevant surfaces regardless of which page you start from." },
+];
+
+const HUB_INTRO = `The reputation problem an [actor](/who-we-serve/actors-entertainers) faces is not the reputation problem a [CEO](/who-we-serve/executives-ceos) faces — and treating them the same is the single most common reason a generalist agency fails a celebrity client. Casting directors, brand-partnership diligence teams, board members, opposition researchers, and reality-TV audiences all consume search and AI-assistant results differently, and each demands a different defensive strategy.
+
+We serve seven industry-specialised audiences with playbooks refined over 15+ years and 500+ engagements. Every audience page below covers the specific threats that category faces, the exact services we deploy, an anonymised client case study, and answers to the questions we hear most often from that industry.`;
+
 
 const WhoWeServeHub = () => {
   const jsonLd = useMemo(() => ({
