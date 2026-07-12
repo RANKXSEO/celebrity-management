@@ -1,7 +1,21 @@
 import { Link } from "react-router-dom";
 import PageLayout from "@/components/PageLayout";
+import HubIntro, { faqJsonLd } from "@/components/HubIntro";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 import { useMemo } from "react";
+
+const HUB_FAQS = [
+  { q: "How often is the blog updated?", a: "We publish a new in-depth guide roughly every 7–10 days, and refresh evergreen cornerstone guides quarterly (updated dates are shown on each article). Every post is written or reviewed by senior members of our celebrity reputation management team." },
+  { q: "Are these articles written by AI?", a: "No. Every guide is authored or reviewed by our senior team — strategists, former journalists, and Wikipedia specialists with 15+ years working with celebrity clients. AI tools are used only for research and formatting assistance, never as the source of substantive analysis." },
+  { q: "Where should a first-time reader start?", a: "Start with three cornerstone pieces: [What is celebrity reputation management?](/blog/what-is-celebrity-reputation-management), [How much does it cost?](/blog/celebrity-reputation-management-cost), and [10 warning signs you need a reputation manager](/blog/signs-you-need-reputation-management). Together they cover most of what a new client typically needs to know." },
+  { q: "Can I cite these articles in my own reporting?", a: "Yes — every article is written with the expectation that journalists, academics, and other reputation professionals may cite it. We ask only that you link to the original source. For interview requests, use our [contact page](/contact)." },
+  { q: "Do you cover AI-search reputation, not just Google?", a: "Extensively. Our AI-search coverage (ChatGPT, Perplexity, Gemini, Claude) has become one of the most-read sections on the blog — see [what ChatGPT says about you](/blog/what-chatgpt-says-about-you) as a starting point." },
+];
+
+const HUB_INTRO = `Everything we've learned over 15+ years and 500+ celebrity reputation engagements — written down and updated for how reputation actually works in 2026. These aren't marketing posts. They're the guides we wish existed when a new client asks 'how does this actually work, and how long will it take?'.
+
+Coverage spans the four surfaces that determine a public figure's digital reputation today: Google organic results, Wikipedia, Google Knowledge Panel, and the AI assistants (ChatGPT, Perplexity, Gemini, Claude) that increasingly answer 'who is [your name]?' for millions of users. Every post is written or reviewed by senior members of our team and linked back to the [services](/services) and [solutions](/solutions) they discuss, so you can go from reading to action in one click.`;
+
 
 const blogPosts = [
   { slug: "first-48-hours-celebrity-crisis", title: "The First 48 Hours After a Story Breaks: What Actually Works in a Celebrity Reputation Crisis", tag: "Crisis", date: "Feb 10, 2026", read: "8 min" },
