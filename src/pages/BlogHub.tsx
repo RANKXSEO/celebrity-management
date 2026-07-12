@@ -108,6 +108,12 @@ const BlogHub = () => {
 
       <section className="py-[clamp(52px,7vw,80px)] bg-background">
         <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
+          <HubIntro intro={HUB_INTRO} faqs={HUB_FAQS} stats={[
+            { num: `${blogPosts.length}`, label: "In-depth guides" },
+            { num: "Weekly", label: "New content cadence" },
+            { num: "Quarterly", label: "Cornerstone refresh" },
+            { num: "Since 2009", label: "Industry experience" },
+          ]} />
           <div className="space-y-4">
             {blogPosts.map((post) => (
               <Link key={post.slug} to={`/blog/${post.slug}`} className="block bg-card border border-border rounded-xl p-5 hover:-translate-y-0.5 hover:shadow-md-custom transition-all group">
