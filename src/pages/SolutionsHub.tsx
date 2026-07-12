@@ -1,9 +1,23 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
+import HubIntro, { faqJsonLd } from "@/components/HubIntro";
 import { solutionPages } from "@/data/solutionPages";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 import { useMemo } from "react";
+
+const HUB_FAQS = [
+  { q: "What kinds of reputation problems can you actually solve?", a: "We handle six well-defined problem categories — cancel-culture recovery, defamation and fake-news removal, leaked or non-consensual content, old arrest records, paparazzi / tabloid legacy coverage, and scandal recovery. Each has its own [dedicated solution page](/solutions) with our exact framework." },
+  { q: "Can content actually be removed from Google — or only suppressed?", a: "Both, depending on the situation. Removal is preferred where a legal or platform-policy basis exists (defamation judgment, copyright, non-consensual imagery, terms-of-service violation). Where removal isn't available, [suppression](/services/negative-search-results) reliably pushes content off page one within 60–90 days." },
+  { q: "How fast can you respond to an active crisis?", a: "Our 24/7 crisis desk has a 60-minute SLA and is staffed by senior strategists, not a call centre. First-hour actions typically include evidence preservation, velocity analysis, and platform-report / legal triage." },
+  { q: "Do you work with lawyers on defamation cases?", a: "Yes — regularly. Our [defamation and fake-news removal](/solutions/defamation-fake-news-removal) work often runs in parallel with outside counsel, handling the platform-side removal and search-suppression track while lawyers pursue takedowns and damages." },
+  { q: "How much does a solution engagement cost?", a: "Retainers scale with surface coverage, crisis SLA, and campaign length. See our [detailed cost breakdown](/blog/celebrity-reputation-management-cost) or request a written quote after the free reputation audit." },
+];
+
+const HUB_INTRO = `Reputation problems come in patterns — and every pattern has a proven playbook. Whether you're facing a coordinated cancel campaign, a defamatory piece that outranks your own name, a leaked file circulating on aggregator sites, an old arrest record that won't age off Google, or the multi-year tail of tabloid coverage, this hub maps every problem type we handle to the exact solution framework we deploy.
+
+Each [solution page](/solutions) walks through the specific mechanics — how we assess damage, what we remove versus suppress, realistic timelines, and what success looks like. Not sure which one fits? A free [reputation audit](/free-consultation) will tell you which solution — if any — actually applies to your situation, before you commit to anything.`;
+
 
 const SolutionsHub = () => {
   const jsonLd = useMemo(() => ({
