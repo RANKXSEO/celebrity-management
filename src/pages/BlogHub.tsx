@@ -83,6 +83,7 @@ const BlogHub = () => {
           { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${BASE_URL}/blog` },
         ],
       },
+      faqJsonLd(HUB_FAQS),
     ],
   }), []);
 
