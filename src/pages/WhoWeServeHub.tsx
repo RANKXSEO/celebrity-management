@@ -59,6 +59,12 @@ const WhoWeServeHub = () => {
 
       <section className="py-[clamp(52px,7vw,80px)] bg-background">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          <HubIntro intro={HUB_INTRO} faqs={HUB_FAQS} stats={[
+            { num: "7", label: "Audience specialisations" },
+            { num: "500+", label: "Public-figure clients" },
+            { num: "Since 2009", label: "Founded" },
+            { num: "24/7", label: "Crisis coverage" },
+          ]} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {audiencePages.map((aud, i) => (
               <motion.article key={aud.slug} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}>
