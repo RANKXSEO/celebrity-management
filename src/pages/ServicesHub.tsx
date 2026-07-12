@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import HubIntro, { faqJsonLd } from "@/components/HubIntro";
+import HubCrossLinks from "@/components/HubCrossLinks";
 import { servicePages } from "@/data/servicePages";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 import { useMemo } from "react";
@@ -90,19 +91,7 @@ const ServicesHub = () => {
             ))}
           </div>
 
-          {/* Internal links to other hubs */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div className="bg-card border border-border rounded-2xl p-6">
-              <h3 className="font-display text-xl font-bold mb-3">Who We Serve</h3>
-              <p className="text-sm text-muted-foreground mb-3">We serve exclusively high-profile individuals across every industry.</p>
-              <Link to="/who-we-serve" className="text-gold font-bold text-sm">Explore reputation management by industry →</Link>
-            </div>
-            <div className="bg-card border border-border rounded-2xl p-6">
-              <h3 className="font-display text-xl font-bold mb-3">Common Problems We Solve</h3>
-              <p className="text-sm text-muted-foreground mb-3">From cancel culture to old arrest records — see solutions for your specific situation.</p>
-              <Link to="/solutions" className="text-gold font-bold text-sm">View reputation management solutions →</Link>
-            </div>
-          </div>
+          <HubCrossLinks current="/services" />
         </div>
       </section>
     </PageLayout>

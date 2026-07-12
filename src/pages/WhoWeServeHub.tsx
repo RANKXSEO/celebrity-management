@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import HubIntro, { faqJsonLd } from "@/components/HubIntro";
+import HubCrossLinks from "@/components/HubCrossLinks";
 import { audiencePages } from "@/data/audiencePages";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 import { useMemo } from "react";
@@ -78,18 +79,7 @@ const WhoWeServeHub = () => {
             ))}
           </div>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div className="bg-card border border-border rounded-2xl p-6">
-              <h3 className="font-display text-xl font-bold mb-3">Our Services</h3>
-              <p className="text-sm text-muted-foreground mb-3">From <Link to="/services/negative-search-results" className="text-gold hover:underline">search result suppression</Link> to <Link to="/services/celebrity-crisis-management" className="text-gold hover:underline">24/7 crisis management</Link>.</p>
-              <Link to="/services" className="text-gold font-bold text-sm">View all reputation management services →</Link>
-            </div>
-            <div className="bg-card border border-border rounded-2xl p-6">
-              <h3 className="font-display text-xl font-bold mb-3">Common Problems</h3>
-              <p className="text-sm text-muted-foreground mb-3">Dealing with <Link to="/solutions/cancel-culture-reputation-repair" className="text-gold hover:underline">cancel culture</Link>, <Link to="/solutions/defamation-fake-news-removal" className="text-gold hover:underline">defamation</Link>, or <Link to="/solutions/old-arrest-records-online" className="text-gold hover:underline">old arrest records</Link>?</p>
-              <Link to="/solutions" className="text-gold font-bold text-sm">Explore solutions by problem →</Link>
-            </div>
-          </div>
+          <HubCrossLinks current="/who-we-serve" />
         </div>
       </section>
     </PageLayout>

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import HubIntro, { faqJsonLd } from "@/components/HubIntro";
+import HubCrossLinks from "@/components/HubCrossLinks";
 import { solutionPages } from "@/data/solutionPages";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 import { useMemo } from "react";
@@ -77,6 +78,7 @@ const SolutionsHub = () => {
               </motion.article>
             ))}
           </div>
+          <HubCrossLinks current="/solutions" />
         </div>
       </section>
     </PageLayout>

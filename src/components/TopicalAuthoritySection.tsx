@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SmartLink from "@/components/SmartLink";
 
 const pillars = [
   {
@@ -57,7 +58,7 @@ const TopicalAuthoritySection = () => {
             Specialist <em className="text-gold italic">Celebrity Reputation Management</em> Across Every Surface
           </h2>
           <p className="text-muted-foreground text-[17px] leading-relaxed">
-            We cover the full reputation stack — from a source-level <Link to="/services/website-takedown-service" className="text-gold hover:text-gold-light underline">website takedown service</Link> and <Link to="/services/google-results-removal" className="text-gold hover:text-gold-light underline">Google content removal</Link> to <Link to="/services/ai-search-reputation" className="text-gold hover:text-gold-light underline">AI search reputation management</Link> and <Link to="/services/celebrity-crisis-management" className="text-gold hover:text-gold-light underline">24/7 crisis response</Link>. Every service is built around one outcome: when someone searches your name, they find the truth.
+            We cover the full reputation stack — from a source-level <SmartLink to="/services/website-takedown-service" className="text-gold hover:text-gold-light underline" /> and <SmartLink to="/services/google-results-removal" className="text-gold hover:text-gold-light underline" /> to <SmartLink to="/services/ai-search-reputation" className="text-gold hover:text-gold-light underline" /> and <SmartLink to="/services/celebrity-crisis-management" className="text-gold hover:text-gold-light underline" />. Every service is built around one outcome: when someone searches your name, they find the truth.
           </p>
         </header>
 
@@ -83,7 +84,7 @@ const TopicalAuthoritySection = () => {
             Looking for a Specific Reputation Solution?
           </h3>
           <p className="text-sm text-muted-foreground leading-relaxed max-w-[680px] mx-auto mb-4">
-            Browse every service in our <Link to="/services" className="text-gold hover:text-gold-light underline">reputation management services hub</Link>, explore real-world <Link to="/solutions" className="text-gold hover:text-gold-light underline">reputation problems we solve</Link>, or see who we serve by industry across <Link to="/who-we-serve" className="text-gold hover:text-gold-light underline">actors, musicians, athletes, executives, and influencers</Link>.
+            Browse every service in our <SmartLink to="/services" className="text-gold hover:text-gold-light underline" />, explore real-world <SmartLink to="/solutions" className="text-gold hover:text-gold-light underline" />, or see who we serve across <SmartLink to="/who-we-serve" className="text-gold hover:text-gold-light underline" />.
           </p>
           <Link
             to="/free-consultation"
