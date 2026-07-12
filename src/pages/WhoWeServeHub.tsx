@@ -35,6 +35,7 @@ const WhoWeServeHub = () => {
         })),
       },
       { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL }, { "@type": "ListItem", "position": 2, "name": "Who We Serve", "item": `${BASE_URL}/who-we-serve` }] },
+      faqJsonLd(HUB_FAQS),
     ],
   }), []);
 
