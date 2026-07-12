@@ -56,8 +56,15 @@ const ResourcesPage = () => {
 
       <section className="py-[clamp(52px,7vw,80px)] bg-background">
         <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
+          <HubIntro intro={HUB_INTRO} faqs={HUB_FAQS} stats={[
+            { num: "30+", label: "Free guides" },
+            { num: "500+", label: "Campaigns behind them" },
+            { num: "Quarterly", label: "Cornerstone updates" },
+            { num: "Since 2009", label: "Industry experience" },
+          ]} />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-12">
+
             {[
               {
                 to: "/blog/what-is-celebrity-reputation-management",
