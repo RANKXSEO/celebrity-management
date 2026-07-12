@@ -90,6 +90,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Most cancellations are recoverable within 6–12 months with the right strategy",
     ],
     relatedServiceSlugs: ["celebrity-crisis-management", "negative-search-results", "social-media-reputation"],
+    faqs: [
+      { q: "Can you actually recover from being cancelled as a celebrity?", a: "Yes. We've managed dozens of successful cancel-culture recoveries — most see meaningful search-result improvement within 3–6 months when the response is strategic rather than reactive. Full career recovery typically follows within 6–18 months depending on the severity of the original campaign." },
+      { q: "Should you apologise publicly during a cancel campaign?", a: "Only after assessing the facts, understanding what's actually being alleged, and consulting legal counsel. A rushed apology often ratifies false claims and creates permanent search results that outlive the original campaign. Silence is not the answer either — a considered, evidence-based response usually is." },
+      { q: "How long does cancel culture last for a public figure?", a: "The Twitter/X news cycle typically peaks within 72 hours and fades within 7–10 days. The Google search damage, however, is permanent without professional intervention — negative content continues to accumulate authority and outrank positive content for years." },
+      { q: "Can you sue the people who cancelled you?", a: "Sometimes — where specific individuals made provably false statements of fact (not opinion). Our [defamation legal guide](/blog/can-you-sue-for-online-defamation) covers what's actionable and what isn't. Most successful recoveries involve a mix of legal action, content removal, and long-cycle search suppression." },
+    ],
   },
   "celebrity-scandal-48-hour-playbook": {
     intro: "You're reading this because something happened — or because you're smart enough to prepare before it does. Either way, this playbook distills what we've learned from managing hundreds of celebrity scandals into a step-by-step action plan for the most critical 48-hour window.",
@@ -106,6 +112,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Professional teams reduce recovery time from years to months",
     ],
     relatedServiceSlugs: ["celebrity-crisis-management", "negative-search-results"],
+    faqs: [
+      { q: "What should you do first when a celebrity scandal breaks?", a: "Assess before you react. Map where the story is, how fast it's spreading, and what the factual basis is — before issuing any public statement. Emotional or premature responses create more content than the original story." },
+      { q: "Is it better to stay silent or respond to a scandal?", a: "Neither extreme works. A considered, evidence-based response within the first 24 hours typically outperforms both silence (which allows the narrative to solidify) and reactive responses (which generate new controversies)." },
+      { q: "How much does professional scandal management cost?", a: "Retainer-based, scaled to severity and duration. See our [detailed pricing guide](/blog/celebrity-reputation-management-cost) — most 48-hour crisis engagements begin at project rates and transition to monthly retainers for long-cycle suppression work." },
+      { q: "Can old scandal coverage be removed from Google entirely?", a: "Sometimes — where legal or platform-policy grounds exist. More commonly, [suppression](/services/negative-search-results) reliably moves scandal coverage off page one within 60–90 days." },
+    ],
   },
   "right-to-be-forgotten-celebrities": {
     intro: "The 'Right to Be Forgotten' allows individuals to request that search engines remove links to content about them under certain conditions. For celebrities, it's a powerful but often misunderstood tool — and it works differently in the US, UK, and EU.",
@@ -122,6 +134,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Delisting works best as part of a broader multi-channel strategy, not in isolation",
     ],
     relatedServiceSlugs: ["google-results-removal", "negative-search-results"],
+    faqs: [
+      { q: "Do celebrities have the right to be forgotten under GDPR?", a: "Public figures have significantly narrower right-to-be-forgotten rights than private individuals under EU GDPR and UK data protection law. Requests are evaluated against the public interest in the information; for genuinely public matters, delisting requests are usually refused." },
+      { q: "Does the right to be forgotten exist in the United States?", a: "No federal equivalent exists in the US. Some state laws (California, Illinois, Washington) provide narrower rights around specific data types, but there is no general US right to have content delisted from search engines." },
+      { q: "How long does a right-to-be-forgotten request take?", a: "Google's initial evaluation typically takes 30–90 days. Appeals of refused requests can extend the timeline to 6–12 months. Success rates for public figures are low — professional [negative search-result suppression](/services/negative-search-results) is usually the more reliable path." },
+      { q: "Can you remove news articles about yourself from Google?", a: "Only rarely, and only where the article is inaccurate, outdated, or was reported without adequate factual basis. For accurate news coverage — even about resolved matters — suppression rather than removal is almost always the realistic strategy." },
+    ],
   },
   "how-long-suppress-negative-google": {
     intro: "It's the first question every client asks: how long until those results are gone? The honest answer depends on several factors — but after 500+ suppression campaigns, we can give you realistic timelines based on real data, not marketing promises.",
@@ -180,6 +198,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Professional suppression achieves results in 60–180 days that time alone never will",
     ],
     relatedServiceSlugs: ["negative-search-results", "content-suppression"],
+    faqs: [
+      { q: "Why do old tabloid articles keep ranking for my name?", a: "Tabloid publishers accumulate high domain authority over decades of publishing, and Google treats older articles about newsworthy people as authoritative. Without competing high-authority content targeting your name, tabloid pieces will continue to dominate — often for a decade or more after publication." },
+      { q: "How do you push down old tabloid articles?", a: "By publishing higher-authority owned and earned content that specifically targets the searches your name generates — professional bios, current interviews, structured-data-rich career pages, and Wikipedia. This is the core of [negative search-result suppression](/services/negative-search-results)." },
+      { q: "Can tabloid articles be removed from Google entirely?", a: "Only in specific cases (defamation judgment, privacy law violation, factual error corrected by the publisher, or non-consensual content). For accurate coverage of newsworthy events, removal is almost never available — suppression is the reliable path." },
+      { q: "How long does it take to suppress an old tabloid story?", a: "Typically 60–120 days for meaningful movement off page one, with continued improvement over 6–12 months. Older, higher-authority pieces take longer than recent low-authority ones. Read our full [suppression timeline guide](/blog/how-long-suppress-negative-google)." },
+    ],
   },
   "wikipedia-notability-explained": {
     intro: "You want a Wikipedia page. You think you deserve one. But Wikipedia has a very specific definition of 'notability' that doesn't care about your follower count, your net worth, or your personal accomplishments. Understanding what notability actually requires is the first step toward getting — and keeping — a Wikipedia page.",
@@ -196,6 +220,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Attempting to create a page without sufficient notability usually results in deletion",
     ],
     relatedServiceSlugs: ["wikipedia-for-celebrities", "knowledge-panel-management"],
+    faqs: [
+      { q: "What qualifies a public figure for a Wikipedia page?", a: "Wikipedia's biographical notability standard requires either significant coverage in multiple independent, reliable secondary sources over time — or specific criteria being met (e.g. actors with 'significant roles in multiple notable films', athletes competing at the highest professional level). Coverage must be substantive, not passing mentions." },
+      { q: "Can I create my own Wikipedia page?", a: "Wikipedia strongly discourages autobiographical pages and self-created pages by public figures, and pages created this way are frequently deleted. The compliant path is either being written about by an independent editor, or engaging a specialist to prepare a compliant draft submitted through Articles for Creation." },
+      { q: "What happens if I don't meet Wikipedia notability standards?", a: "Your page will be nominated for deletion (Articles for Deletion, or AfD) and usually removed within 7 days if the community consensus is that notability isn't established. Attempts to recreate the page will be blocked. Wait until independent, substantive coverage exists — then have the page created properly." },
+      { q: "Can I pay to get a Wikipedia page created?", a: "Paid editing is permitted only with mandatory disclosure under Wikipedia policy, and even disclosed paid edits are heavily scrutinised. Our [Wikipedia service](/services/wikipedia-for-celebrities) operates within Wikipedia's paid-editing rules — preparing sourced drafts and Talk-page submissions rather than editing pages directly." },
+    ],
   },
   "celebrity-wikipedia-mistakes": {
     intro: "After reviewing thousands of celebrity Wikipedia pages, we've identified five mistakes that appear again and again — each one costing the subject credibility, accuracy, and control over their public narrative. Here's what they are and how to fix them.",
@@ -214,6 +244,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Regular updates with proper sourcing keep your page current and balanced",
     ],
     relatedServiceSlugs: ["wikipedia-for-celebrities", "knowledge-panel-management"],
+    faqs: [
+      { q: "What's the most common mistake on celebrity Wikipedia pages?", a: "Unsourced or poorly-sourced negative claims that sit uncorrected because the subject doesn't know they can be challenged. Wikipedia's biographies-of-living-persons (BLP) policy requires stringent sourcing — unsourced negative content should be removed on sight." },
+      { q: "Can I edit my own Wikipedia page?", a: "You can, but you shouldn't. Direct edits by the subject or their representatives create a conflict-of-interest situation and are usually reverted. The compliant path is filing Talk-page requests with sourced evidence, which neutral editors action." },
+      { q: "How do you get Wikipedia to correct an error about you?", a: "File a Talk-page request that (1) identifies the specific inaccurate content, (2) provides reliable secondary sources supporting the correction, and (3) proposes the exact edit. Neutral editors typically respond within days when the request is well-formed." },
+      { q: "Can a Wikipedia page be made private or removed?", a: "Only in narrow circumstances — usually where the subject fails notability standards or where a BLP-based deletion request succeeds. Notable public figures generally cannot have their pages removed at will." },
+    ],
   },
   "what-is-celebrity-reputation-management": {
     intro: "Celebrity reputation management is the practice of monitoring, protecting, and improving what appears when people search a public figure's name online. This complete guide covers what it involves, how it works, what it costs, and how to evaluate whether you need it.",
@@ -294,6 +330,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Social media crises create search results — start suppression early",
     ],
     relatedServiceSlugs: ["social-media-reputation", "celebrity-crisis-management"],
+    faqs: [
+      { q: "What is a social media crisis for a public figure?", a: "Any coordinated or organic negative attention on social platforms that risks becoming permanent search-engine, Wikipedia, or AI-answer content. The distinguishing feature: the social event will fade in days; the search-result and AI-answer consequences won't fade without intervention." },
+      { q: "How fast should you respond to a social media crisis?", a: "Assessment inside the first hour; first considered public response typically inside 6–24 hours. Faster than 6 hours is often reactive; slower than 24 hours allows the narrative to solidify. Our [24/7 crisis desk](/services/celebrity-crisis-management) operates on a 60-minute SLA." },
+      { q: "Should you delete social media posts during a crisis?", a: "Almost never — deletion is documented (screenshots), triggers 'what are they hiding' framing, and creates a second-order story. Corrections, contextual clarifications, or added statements usually outperform deletion." },
+      { q: "How do you stop a social media pile-on?", a: "You usually can't stop the social event itself — but you can prevent it from becoming permanent search damage through rapid response, evidence preservation, and immediate [search-suppression campaign kickoff](/services/negative-search-results)." },
+    ],
   },
   "reddit-celebrity-reputation": {
     intro: "Reddit is the most dangerous platform for celebrity reputations that most public figures don't monitor. Its anonymous user base, culture of investigation, and enormous domain authority make it a unique and serious threat — and one that requires specialised management.",
@@ -310,6 +352,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Search suppression and ongoing monitoring are the most reliable long-term strategies",
     ],
     relatedServiceSlugs: ["social-media-reputation", "negative-search-results", "content-suppression"],
+    faqs: [
+      { q: "Why does Reddit rank so highly for celebrity names?", a: "Reddit has exceptional domain authority, dense internal linking, and content structure that Google favours. A high-engagement thread can reach Google page one within days and stay there for years — often outranking official sources." },
+      { q: "Can you remove a Reddit thread about a celebrity?", a: "Rarely — only where the thread violates Reddit's content policy (doxxing, illegal content, targeted harassment, non-consensual imagery). Content criticism, opinion, and speculation are permitted under Reddit rules." },
+      { q: "How do you push down Reddit threads in Google results?", a: "Through [negative search-result suppression](/services/negative-search-results): building higher-authority owned and earned content that outranks the Reddit thread for your name and related queries. Typical timeline: 60–120 days." },
+      { q: "Do Reddit threads affect AI-assistant answers about me?", a: "Yes — significantly. Reddit is heavily represented in training data for ChatGPT, Perplexity, and other assistants, which frequently quote Reddit consensus as biographical fact. Our [AI search reputation service](/services/ai-search-reputation) addresses this specifically." },
+    ],
   },
   "10-celebrity-reputation-disasters": {
     intro: "Every reputation disaster teaches a lesson — if you're paying attention. We've anonymised ten real cases from public record to illustrate the most common mistakes celebrities make when their reputation is under attack, and what they should have done differently.",
@@ -326,6 +374,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Prevention costs roughly 10x less than recovery — monitoring is the best investment",
     ],
     relatedServiceSlugs: ["celebrity-crisis-management", "reputation-protection", "negative-search-results"],
+    faqs: [
+      { q: "What's the most common cause of celebrity reputation disasters?", a: "Reactive rather than strategic response in the first 48 hours — usually emotional social-media posts that create more permanent content than the original story. See our [48-hour crisis playbook](/blog/first-48-hours-celebrity-crisis) for the alternative framework." },
+      { q: "Can a celebrity reputation ever fully recover from a scandal?", a: "Yes, in most cases — with strategic long-cycle reputation work. Full [scandal recovery](/solutions/scandal-recovery) typically takes 6–24 months and requires suppression, narrative reset, and often legal action against provably false claims." },
+      { q: "What separates disasters that recover from ones that don't?", a: "Speed of professional engagement (within hours, not weeks), honesty in response (fabricated denials always unravel), and multi-channel strategy (media + search + Wikipedia + AI + legal running in parallel rather than sequentially)." },
+      { q: "How do you prevent a reputation disaster before it happens?", a: "Through [proactive reputation protection](/services/reputation-protection): continuous monitoring, hardened Wikipedia and Knowledge Panel, authoritative owned properties that outrank speculative content, and pre-agreed crisis-response protocols with a dedicated team." },
+    ],
   },
   "signs-you-need-reputation-management": {
     intro: "Not sure if you need professional reputation management? These ten warning signs — drawn from 500+ client consultations — help you assess whether your digital reputation is costing you opportunities, relationships, and peace of mind.",
@@ -451,6 +505,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Every successful A-list celebrity has a reputation management team",
     ],
     relatedServiceSlugs: ["reputation-protection", "negative-search-results", "ai-search-reputation"],
+    faqs: [
+      { q: "Why is reputation management important for celebrities in 2026?", a: "Because reputation now lives across four distinct surfaces — Google, Wikipedia, Knowledge Panel, and AI assistants — and every professional decision-maker (agents, brands, casting directors, journalists) consults all four. Any surface left unmanaged becomes the one that defines you." },
+      { q: "What's the cost of not managing your reputation as a public figure?", a: "Measurable: lost brand deals, quietly declined offers, negative media framing that repeats itself, and AI assistants quoting your worst coverage as fact to millions of users. Most public figures underestimate the compounding cost." },
+      { q: "How much does professional reputation management cost?", a: "Retainers scale with surface coverage and SLA. See our [detailed pricing guide](/blog/celebrity-reputation-management-cost) — the range is wide but always transparent." },
+      { q: "Can I manage my own reputation as a celebrity?", a: "You can manage some of it — refreshing your official site, correcting factual errors, and posting on your own channels. What you generally cannot do effectively is Wikipedia stewardship (conflict-of-interest rules), Knowledge Panel restructuring, or AI-answer correction — those require specialist experience." },
+    ],
   },
   "what-do-reputation-management-companies-do": {
     intro: "Reputation management companies are often misunderstood — some people think they 'delete the internet,' others think they're glorified PR firms. The reality is more nuanced and more sophisticated. Here's what professional celebrity reputation management companies actually do behind the scenes.",
@@ -468,6 +528,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Ongoing monitoring catches threats before they escalate — prevention is 10x cheaper than recovery",
     ],
     relatedServiceSlugs: ["negative-search-results", "celebrity-crisis-management", "wikipedia-for-celebrities", "ai-search-reputation"],
+    faqs: [
+      { q: "What exactly do celebrity reputation management companies do?", a: "Five categories of work: (1) [suppress negative search results](/services/negative-search-results) by building higher-authority content; (2) manage [Wikipedia](/services/wikipedia-for-celebrities) and [Knowledge Panel](/services/knowledge-panel-management); (3) run 24/7 [crisis response](/services/celebrity-crisis-management); (4) correct [AI-assistant answers](/services/ai-search-reputation); (5) monitor and remove policy-violating content across platforms." },
+      { q: "How do they differ from PR agencies?", a: "PR agencies shape what journalists write today; reputation management firms shape what search engines, Wikipedia, and AI assistants return years from now. See our full [PR vs reputation management breakdown](/blog/reputation-management-vs-pr) — the two are complementary, not overlapping." },
+      { q: "What can't reputation management companies do?", a: "They can't guarantee removal of factually accurate news coverage, can't edit Wikipedia directly on your behalf (against policy), can't stop journalism from happening, and can't erase social-media history that has been archived. Any firm promising otherwise is misrepresenting the discipline." },
+      { q: "How do you evaluate a reputation management company?", a: "Track record with named client categories (even if anonymised), transparent methodology, realistic timelines (60–90 days for meaningful movement, not 'overnight'), pricing clarity, and Wikipedia-compliance in their approach. See our [10 warning signs guide](/blog/signs-you-need-reputation-management) for the assessment framework." },
+    ],
   },
   "how-to-respond-to-negative-press": {
     intro: "Negative press coverage is inevitable for public figures. How you respond determines whether the story dies in a day or dominates your Google results for years. Drawing on hundreds of celebrity crisis management campaigns, here's the professional framework for responding to negative press coverage.",
@@ -484,6 +550,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Professional crisis management coordinates media, digital, legal, and stakeholder response simultaneously",
     ],
     relatedServiceSlugs: ["celebrity-crisis-management", "negative-search-results", "social-media-reputation"],
+    faqs: [
+      { q: "Should you respond to every piece of negative press?", a: "No — responding elevates minor coverage into a bigger story via the Streisand Effect. Respond when: the coverage is factually wrong, is spreading rapidly, is being cited by other outlets, or is being asked about by decision-makers who matter to you." },
+      { q: "How quickly should you respond to a negative article?", a: "Assessment inside hours; formal response typically inside 24–48 hours when a response is warranted. Faster than 6 hours is usually reactive; slower than 48 hours allows the narrative to solidify." },
+      { q: "Where should you publish your response?", a: "On your own owned properties (site, official channels) first — you control the framing and it becomes long-term SEO content that outranks the original story. Second, direct-to-outlet correction requests where factual errors exist. Third, coordinated placement in a friendly outlet where appropriate." },
+      { q: "Does responding to negative press make it worse?", a: "Only when the response is emotional, factually inaccurate, or elevates coverage that would otherwise fade. A considered, evidence-based response almost always improves search-result framing over the long term." },
+    ],
   },
   "online-reputation-management-strategies": {
     intro: "Online reputation management (ORM) is the practice of shaping what people find when they search your name on Google, AI assistants, Wikipedia, and social media. For celebrities and public figures, effective ORM requires a sophisticated, multi-channel strategy. Here are the strategies that actually work in 2026.",
@@ -501,6 +573,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Every strategy works best as part of a coordinated, multi-channel campaign",
     ],
     relatedServiceSlugs: ["negative-search-results", "ai-search-reputation", "reputation-protection", "wikipedia-for-celebrities"],
+    faqs: [
+      { q: "What is the most effective online reputation management strategy?", a: "A multi-surface strategy: [Google suppression](/services/negative-search-results) + [Wikipedia stewardship](/services/wikipedia-for-celebrities) + [Knowledge Panel management](/services/knowledge-panel-management) + [AI-answer correction](/services/ai-search-reputation) running in parallel. Single-surface strategies leave gaps that undermine each other." },
+      { q: "How long do reputation management strategies take to work?", a: "Meaningful movement on Google typically within 30 days; full page-one clearance in 60–90 days; Wikipedia corrections in 14–45 days; AI-answer updates in 4–12 weeks after upstream changes. See our [suppression timeline guide](/blog/how-long-suppress-negative-google)." },
+      { q: "Which reputation strategies actually work in 2026?", a: "Content-authority-based suppression (still the highest-leverage tactic), Wikipedia and Knowledge Panel stewardship, AI-answer correction via source updates, and proactive monitoring. Tactics that don't work: mass-posted low-quality profiles, reciprocal-link schemes, and DMCA abuse." },
+      { q: "Can I implement reputation management strategies myself?", a: "Some — like refreshing your owned properties and structured-data updates. Most — like Wikipedia, Knowledge Panel restructuring, and multi-outlet earned-content placement — require specialist relationships and experience most individuals don't have access to." },
+    ],
   },
   "how-to-protect-your-online-reputation": {
     intro: "The best time to protect your online reputation is before you need to repair it. For celebrities and public figures, proactive reputation protection is dramatically cheaper and more effective than crisis response. Here's how to build a defensive reputation infrastructure that catches threats early and minimises damage when they arrive.",
@@ -518,6 +596,12 @@ export const blogContent: Record<string, BlogContent> = {
       "Proactive protection costs 10x less than reactive crisis management",
     ],
     relatedServiceSlugs: ["reputation-protection", "celebrity-crisis-management", "negative-search-results"],
+    faqs: [
+      { q: "How do you protect your online reputation before a crisis?", a: "Build a hardened baseline: authoritative owned properties that dominate your brand search, an accurate Wikipedia page (if notable), a correctly-structured Knowledge Panel, monitored social presence, and pre-agreed crisis-response protocols with a specialist team. Read our [proactive protection guide](/services/reputation-protection)." },
+      { q: "What's the biggest reputation risk for public figures?", a: "AI-assistant answers becoming the primary way people learn about you — with content you've never seen or approved. Our [AI search reputation service](/services/ai-search-reputation) is built specifically for this rapidly-growing risk category." },
+      { q: "Do I need reputation management if nothing has happened yet?", a: "That's the ideal time to start. Prevention is dramatically cheaper and more effective than post-crisis recovery — and the reputation infrastructure you build during quiet periods is what protects you when the crisis eventually happens." },
+      { q: "How often should you audit your online reputation?", a: "Quarterly for high-profile individuals; monthly during active periods (album releases, film premieres, IPOs, campaigns, contract negotiations). Our monitoring service handles this continuously with alerts on material changes." },
+    ],
   },
   "reputation-management-for-high-profile-individuals": {
     intro: "Reputation management for high-profile individuals — celebrities, executives, politicians, athletes, and public figures — is fundamentally different from reputation management for businesses or private individuals. The stakes are higher, the threats are more sophisticated, and the strategies must match.",
@@ -534,6 +618,12 @@ export const blogContent: Record<string, BlogContent> = {
       "A free reputation audit is the best way to evaluate any firm's capabilities",
     ],
     relatedServiceSlugs: ["negative-search-results", "celebrity-crisis-management", "reputation-protection", "ai-search-reputation"],
+    faqs: [
+      { q: "What's different about reputation management for high-profile individuals?", a: "Scale (more surfaces to defend, more actors trying to affect them), stakes (career-defining consequences), and specialist requirements (Wikipedia, Knowledge Panel, AI-answer surfaces most agencies don't cover). See our [service overview](/services) for the specialist stack." },
+      { q: "Do high-profile individuals get preferential treatment on removals?", a: "The opposite, generally — public-figure status makes removal harder under privacy law, right-to-be-forgotten frameworks, and platform policies. Suppression rather than removal is usually the reliable path." },
+      { q: "How much does reputation management cost for a public figure?", a: "Retainers scale with surface coverage and crisis SLA. See our [pricing guide](/blog/celebrity-reputation-management-cost) for the range and structure — always transparent, never open-ended." },
+      { q: "Who should manage a public figure's reputation — an agency, PR firm, or in-house?", a: "For the search / Wikipedia / Knowledge Panel / AI surfaces, a specialist agency. For traditional media relations, a PR firm. For coordination, often an in-house comms lead. Most effective high-profile setups use all three." },
+    ],
   },
   "how-to-remove-mugshots-from-google": {
     intro: "Arrest records and mugshot photos appearing in Google search results can devastate a career — especially when the charges were dropped, the case was dismissed, or the incident happened years ago. For celebrities and public figures, mugshot removal requires a specialised approach that addresses both the source sites and Google directly.",
@@ -550,5 +640,11 @@ export const blogContent: Record<string, BlogContent> = {
       "Even decades-old arrest records can be removed or suppressed with the right strategy",
     ],
     relatedServiceSlugs: ["google-results-removal", "negative-search-results", "reputation-protection"],
+    faqs: [
+      { q: "Can you remove a mugshot from Google search results?", a: "Sometimes — through direct removal requests where the mugshot site violates the individual's rights (extortion-model mugshot sites), where post-expungement removal rights apply in the relevant jurisdiction, or where Google's own delisting policies cover the content. When removal isn't available, suppression reliably clears page one." },
+      { q: "How long does it take to remove or suppress a mugshot?", a: "Direct removal from mugshot aggregator sites: 30–90 days when successful. Full [Google-page-one suppression](/services/negative-search-results): 60–120 days depending on how many mugshot URLs are competing for your name." },
+      { q: "Do expunged records automatically disappear from Google?", a: "No — expungement affects the court record, not the third-party publications that reported it. Post-expungement removal requires either the publisher's cooperation, a jurisdiction-specific removal right, or the suppression approach." },
+      { q: "How much does mugshot removal cost?", a: "Varies dramatically. Extortion-style mugshot sites often demand hundreds to thousands per URL; specialist agencies including us pursue legitimate removal channels first, then suppression for the remainder. See our [arrest-record solution page](/solutions/old-arrest-records-online) for the full framework." },
+    ],
   },
 };
