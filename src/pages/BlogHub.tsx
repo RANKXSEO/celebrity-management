@@ -5,6 +5,13 @@ import HubCrossLinks from "@/components/HubCrossLinks";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 import { useMemo } from "react";
 
+import imgDefamationTrial from "@/assets/blog/defamation-trial.jpg";
+import imgAwardsStage from "@/assets/blog/awards-stage-crisis.jpg";
+import imgFashionBacklash from "@/assets/blog/fashion-brand-backlash.jpg";
+import imgBrandBoycott from "@/assets/blog/brand-boycott.jpg";
+import imgDeepfake from "@/assets/blog/deepfake-reputation.jpg";
+import imgPrWar from "@/assets/blog/pr-war.jpg";
+
 const HUB_FAQS = [
   { q: "How often is the blog updated?", a: "We publish a new in-depth guide roughly every 7–10 days, and refresh evergreen cornerstone guides quarterly (updated dates are shown on each article). Every post is written or reviewed by senior members of our celebrity reputation management team." },
   { q: "Are these articles written by AI?", a: "No. Every guide is authored or reviewed by our senior team — strategists, former journalists, and Wikipedia specialists with 15+ years working with celebrity clients. AI tools are used only for research and formatting assistance, never as the source of substantive analysis." },
@@ -18,7 +25,13 @@ const HUB_INTRO = `Everything we've learned over 15+ years and 500+ celebrity re
 Coverage spans the four surfaces that determine a public figure's digital reputation today: Google organic results, Wikipedia, Google Knowledge Panel, and the AI assistants (ChatGPT, Perplexity, Gemini, Claude) that increasingly answer 'who is [your name]?' for millions of users. Every post is written or reviewed by senior members of our team and linked back to the [services](/services) and [solutions](/solutions) they discuss, so you can go from reading to action in one click.`;
 
 
-const blogPosts = [
+const blogPosts: { slug: string; title: string; tag: string; date: string; read: string; image?: string; imageAlt?: string }[] = [
+  { slug: "depp-heard-defamation-trial-reputation-lessons", title: "Depp v. Heard: What the Defamation Trial Taught Us About Reputation Recovery", tag: "Case Study", date: "Sep 2, 2026", read: "13 min", image: imgDefamationTrial, imageAlt: "Empty courtroom witness stand lit by a spotlight with press cameras in silhouette" },
+  { slug: "will-smith-oscars-slap-crisis-management-case-study", title: "The Oscars Slap: A Crisis Management Case Study in Apology Sequencing", tag: "Case Study", date: "Aug 26, 2026", read: "11 min", image: imgAwardsStage, imageAlt: "Empty awards show stage with a single gold microphone under a spotlight" },
+  { slug: "celebrity-deepfake-scandal-reputation-management", title: "Celebrity Deepfake Scandals: The 72-Hour Response Playbook (2026 Law Update)", tag: "Case Study", date: "Aug 20, 2026", read: "12 min", image: imgDeepfake, imageAlt: "Digital portrait dissolving into pixel fragments representing AI deepfake media" },
+  { slug: "hollywood-pr-war-litigation-reputation-lessons", title: "When the PR Campaign Becomes the Lawsuit: Lessons From Hollywood's Public Reputation Wars", tag: "Case Study", date: "Aug 13, 2026", read: "12 min", image: imgPrWar, imageAlt: "Two smartphones colliding above a film clapperboard, representing duelling PR campaigns" },
+  { slug: "luxury-brand-campaign-backlash-case-study", title: "Luxury Brand Campaign Backlash: Why Suing Your Vendor Made It Worse", tag: "Case Study", date: "Aug 6, 2026", read: "11 min", image: imgFashionBacklash, imageAlt: "Cracked luxury boutique window at night with blank campaign posters" },
+  { slug: "consumer-boycott-brand-reputation-case-study", title: "Anatomy of a Consumer Boycott: How One Post Cost a Brand the Number One Spot", tag: "Case Study", date: "Jul 30, 2026", read: "12 min", image: imgBrandBoycott, imageAlt: "Descending gold line chart over rows of unbranded beverage cans in a dark warehouse" },
   { slug: "online-reputation-management-complete-guide", title: "Online Reputation Management: The Complete 2026 Guide (Frameworks, Timelines, Costs)", tag: "Education", date: "Sep 1, 2026", read: "15 min" },
   { slug: "business-reputation-management-guide", title: "Business Reputation Management: Protecting Brands, Founders & Revenue", tag: "Education", date: "Aug 18, 2026", read: "12 min" },
   { slug: "crisis-communication-plan-guide", title: "Crisis Communication Plan: The Framework We Build Before Anything Goes Wrong", tag: "Crisis", date: "Aug 4, 2026", read: "11 min" },
