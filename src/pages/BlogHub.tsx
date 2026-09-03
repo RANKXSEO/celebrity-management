@@ -82,6 +82,8 @@ const tagColors: Record<string, string> = {
   Social: "bg-pink-500/10 text-pink-400",
   Legal: "bg-amber-500/10 text-amber-400",
   "Digital PR": "bg-indigo-500/10 text-indigo-400",
+  "Case Study": "bg-gold/15 text-gold",
+
 };
 
 const BlogHub = () => {
@@ -141,14 +143,27 @@ const BlogHub = () => {
           ]} />
           <div className="space-y-4">
             {blogPosts.map((post) => (
-              <Link key={post.slug} to={`/blog/${post.slug}`} className="block bg-card border border-border rounded-xl p-5 hover:-translate-y-0.5 hover:shadow-md-custom transition-all group">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className={`text-[9px] font-bold tracking-[0.1em] uppercase px-2 py-0.5 rounded-full ${tagColors[post.tag] || "bg-muted text-muted-foreground"}`}>{post.tag}</span>
-                  <span className="text-[11px] text-ink-muted">{post.date}</span>
-                  <span className="text-[11px] text-ink-muted">· {post.read}</span>
+              <Link key={post.slug} to={`/blog/${post.slug}`} className="flex gap-4 items-start bg-card border border-border rounded-xl p-5 hover:-translate-y-0.5 hover:shadow-md-custom transition-all group">
+                {post.image && (
+                  <img
+                    src={post.image}
+                    alt={post.imageAlt || post.title}
+                    loading="lazy"
+                    width={1280}
+                    height={720}
+                    className="hidden sm:block w-[140px] h-[79px] object-cover rounded-md border border-border shrink-0"
+                  />
+                )}
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className={`text-[9px] font-bold tracking-[0.1em] uppercase px-2 py-0.5 rounded-full ${tagColors[post.tag] || "bg-muted text-muted-foreground"}`}>{post.tag}</span>
+                    <span className="text-[11px] text-ink-muted">{post.date}</span>
+                    <span className="text-[11px] text-ink-muted">· {post.read}</span>
+                  </div>
+                  <h2 className="font-body text-[16px] font-bold text-primary group-hover:text-gold transition-colors">{post.title}</h2>
                 </div>
-                <h2 className="font-body text-[16px] font-bold text-primary group-hover:text-gold transition-colors">{post.title}</h2>
               </Link>
+
             ))}
           </div>
           </div>
