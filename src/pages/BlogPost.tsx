@@ -108,9 +108,7 @@ const BlogPost = () => {
               <>
                 <AuthorByline published={post.date} updated={DEFAULT_UPDATED} />
 
-                <p className="text-muted-foreground leading-relaxed text-[17px] mb-8 font-body">
-                  {content.intro}
-                </p>
+                <ContentRenderer content={content.intro} className="text-muted-foreground leading-relaxed text-[17px] mb-8 font-body" />
 
                 <KeyTakeaways items={content.takeaways} />
 

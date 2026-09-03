@@ -19,6 +19,10 @@ Coverage spans the four surfaces that determine a public figure's digital reputa
 
 
 const blogPosts = [
+  { slug: "digital-pr-for-reputation-management", title: "Digital PR for Reputation Management: How Tier-1 Placements Rebuild a Search Profile", tag: "Digital PR", date: "Mar 3, 2026", read: "11 min" },
+  { slug: "how-to-get-featured-in-forbes", title: "How to Get Featured in Forbes (And Which Coverage Actually Counts)", tag: "Digital PR", date: "Feb 24, 2026", read: "9 min" },
+  { slug: "website-takedown-service-guide", title: "Website Takedown Service: Every Legal Route to Removing Content at the Source", tag: "Legal", date: "Feb 17, 2026", read: "10 min" },
+  { slug: "generative-engine-optimization-guide", title: "Generative Engine Optimization (GEO): How to Get Cited by ChatGPT, Perplexity & Gemini", tag: "AI Search", date: "Feb 12, 2026", read: "10 min" },
   { slug: "first-48-hours-celebrity-crisis", title: "The First 48 Hours After a Story Breaks: What Actually Works in a Celebrity Reputation Crisis", tag: "Crisis", date: "Feb 10, 2026", read: "8 min" },
   { slug: "what-chatgpt-says-about-you", title: "What Does ChatGPT Say About You? How AI Is Changing Celebrity Reputation Management in 2026", tag: "AI Search", date: "Feb 3, 2026", read: "10 min" },
   { slug: "how-to-get-wikipedia-page", title: "Getting a Wikipedia Page as a Public Figure: What Notability Actually Requires in 2026", tag: "Wikipedia", date: "Jan 27, 2026", read: "11 min" },
@@ -58,6 +62,7 @@ const tagColors: Record<string, string> = {
   Education: "bg-purple-500/10 text-purple-400",
   Social: "bg-pink-500/10 text-pink-400",
   Legal: "bg-amber-500/10 text-amber-400",
+  "Digital PR": "bg-indigo-500/10 text-indigo-400",
 };
 
 const BlogHub = () => {
