@@ -143,19 +143,20 @@ const BlogPost = () => {
                 )}
 
                 {content.relatedServiceSlugs.length > 0 && (
-                  <div className="bg-card border border-border rounded-2xl p-6 mb-10">
-                    <h3 className="font-display text-lg font-bold mb-3">Related Services</h3>
-                    <ul className="space-y-2">
-                      {content.relatedServiceSlugs.map((s) => (
-                        <li key={s}>
-                          <Link to={`/services/${s}`} className="text-gold hover:text-gold-light transition-colors font-medium text-sm">
-                            {s.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())} →
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <RelatedLinks
+                    title="Related Services"
+                    siblings={content.relatedServiceSlugs.map((s) => `/services/${s}`)}
+                    hubUp={{ to: "/services" }}
+                  />
                 )}
+
+                <RelatedLinks
+                  title="Continue With Our Pillar Guides"
+                  siblings={PILLAR_GUIDES.filter((p) => p !== `/blog/${slug}`).slice(0, 3)}
+                  hubUp={{ to: "/blog" }}
+                  bridges={["/free-consultation"]}
+                />
+
               </>
             ) : (
               <div className="prose prose-lg max-w-none">
