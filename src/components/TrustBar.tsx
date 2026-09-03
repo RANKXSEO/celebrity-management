@@ -1,41 +1,38 @@
 import { Link } from "react-router-dom";
 
+const items = [
+  { text: "Rated 4.76/5 by 181 clients", link: "/reviews" },
+  { text: "NDA-first engagements", link: "" },
+  { text: "Crisis team 24/7/365", link: "/services/celebrity-crisis-management" },
+  { text: "500+ campaigns", link: "/about" },
+  { text: "Results in 30 days", link: "/services/negative-search-results" },
+  { text: "US, UK & global", link: "/who-we-serve" },
+];
+
 const TrustBar = () => {
-  const items = [
-    { icon: "⭐", text: "", bold: "Rated 4.76/5 by 181 clients", link: "/reviews" },
-    { icon: "🔒", text: "NDA-first engagements", bold: "", link: "" },
-    { icon: "⚡", text: "Crisis team:", bold: "24/7/365", link: "/services/celebrity-crisis-management" },
-    { icon: "🏆", text: "", bold: "500+ campaigns", link: "/about" },
-    { icon: "📊", text: "Results in", bold: "30 days", link: "/services/negative-search-results" },
-    { icon: "🌍", text: "", bold: "US, UK & global", link: "/who-we-serve" },
-  ];
-
   return (
-    <div className="bg-navy-mid border-y border-gold/10 py-4" aria-label="Trust indicators">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center gap-[clamp(18px,3.5vw,50px)] flex-wrap">
-        {items.map((item) => {
-          const content = (
-            <>
-              <span className="text-gold" aria-hidden="true">{item.icon}</span>
-              {item.text && <span>{item.text}</span>}
-              {item.bold && <strong className="text-primary-foreground/75">{item.bold}</strong>}
-            </>
-          );
-
-          return item.link ? (
-            <Link
-              key={item.text + item.bold}
-              to={item.link}
-              className="flex items-center gap-2 text-[13px] text-primary-foreground/80 font-medium whitespace-nowrap hover:text-gold-light transition-colors"
-            >
-              {content}
-            </Link>
-          ) : (
-            <div key={item.text + item.bold} className="flex items-center gap-2 text-[13px] text-primary-foreground/80 font-medium whitespace-nowrap">
-              {content}
-            </div>
-          );
-        })}
+    <div className="bg-navy-mid border-y border-gold/15" aria-label="Trust indicators">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+        <ul className="flex flex-wrap items-stretch divide-x divide-primary-foreground/10 border-x border-primary-foreground/10">
+          {items.map((item) => {
+            const inner = (
+              <span className="block px-5 py-4 text-[10px] uppercase tracking-[0.2em] text-primary-foreground/60 whitespace-nowrap">
+                {item.text}
+              </span>
+            );
+            return (
+              <li key={item.text} className="flex-1">
+                {item.link ? (
+                  <Link to={item.link} className="block hover:text-gold-light transition-colors">
+                    {inner}
+                  </Link>
+                ) : (
+                  inner
+                )}
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );
