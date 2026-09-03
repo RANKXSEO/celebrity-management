@@ -6,56 +6,57 @@
 
 @layer base {
   :root {
-    /* Core palette */
-    --background: 40 33% 97%;
-    --foreground: 216 28% 15%;
+    /* Core palette — midnight & brass editorial */
+    --background: 40 24% 95%;
+    --foreground: 210 22% 11%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 216 28% 15%;
+    --card: 40 30% 98%;
+    --card-foreground: 210 22% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 216 28% 15%;
+    --popover-foreground: 210 22% 11%;
 
-    /* Navy primary */
-    --primary: 213 53% 14%;
-    --primary-foreground: 0 0% 100%;
+    /* Midnight primary */
+    --primary: 214 33% 6%;
+    --primary-foreground: 40 26% 90%;
 
-    /* Gold accent */
-    --accent: 35 52% 50%;
-    --accent-foreground: 0 0% 100%;
+    /* Brass accent */
+    --accent: 38 41% 49%;
+    --accent-foreground: 214 33% 6%;
 
-    --secondary: 40 33% 97%;
-    --secondary-foreground: 213 53% 14%;
+    --secondary: 40 24% 95%;
+    --secondary-foreground: 214 33% 6%;
 
-    --muted: 220 14% 90%;
-    --muted-foreground: 213 17% 47%;
+    --muted: 36 12% 88%;
+    --muted-foreground: 210 10% 40%;
 
-    --destructive: 0 72% 51%;
+    --destructive: 0 62% 42%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 14% 90%;
-    --input: 220 14% 90%;
-    --ring: 35 52% 50%;
+    --border: 36 14% 85%;
+    --input: 36 14% 85%;
+    --ring: 38 41% 49%;
 
-    --radius: 0.5rem;
+    --radius: 0.125rem;
 
     /* Extended palette */
-    --navy: 213 53% 14%;
-    --navy-mid: 213 48% 16%;
-    --navy-light: 213 42% 20%;
-    --gold: 35 52% 50%;
-    --gold-light: 35 52% 61%;
-    --gold-pale: 38 70% 93%;
-    --cream: 40 33% 97%;
-    --ink: 216 28% 15%;
-    --ink-muted: 213 17% 47%;
-    --ink-light: 213 12% 66%;
+    --navy: 214 33% 6%;
+    --navy-mid: 213 27% 11%;
+    --navy-light: 213 22% 17%;
+    --gold: 38 41% 49%;
+    --gold-light: 38 45% 62%;
+    --gold-pale: 38 40% 88%;
+    --cream: 40 26% 90%;
+    --ink: 210 22% 11%;
+    --ink-muted: 210 10% 40%;
+    --ink-light: 210 8% 62%;
 
-    /* Shadows */
-    --shadow-sm: 0 2px 12px rgba(0,0,0,0.07);
-    --shadow-md: 0 8px 32px rgba(0,0,0,0.1);
-    --shadow-lg: 0 20px 60px rgba(0,0,0,0.13);
-    --shadow-gold: 0 8px 28px rgba(196,146,62,0.26);
+    /* Shadows — restrained, no glow */
+    --shadow-sm: 0 1px 0 rgba(20,17,12,0.06);
+    --shadow-md: 0 12px 40px -20px rgba(10,14,20,0.45);
+    --shadow-lg: 0 30px 80px -40px rgba(10,14,20,0.6);
+    --shadow-gold: 0 14px 40px -22px rgba(176,138,74,0.65);
+
 
     /* Sidebar */
     --sidebar-background: 213 53% 14%;
