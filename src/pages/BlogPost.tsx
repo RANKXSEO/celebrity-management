@@ -44,6 +44,7 @@ const BlogPost = () => {
         "url": `${BASE_URL}/blog/${post.slug}`,
         "mainEntityOfPage": `${BASE_URL}/blog/${post.slug}`,
         "articleSection": post.tag,
+        ...(post.image ? { "image": `${BASE_URL}${post.image}` } : {}),
       },
       {
         "@type": "BreadcrumbList",
@@ -114,6 +115,18 @@ const BlogPost = () => {
 
         <section className="py-[clamp(40px,5vw,60px)] bg-background">
           <div className="max-w-[720px] mx-auto px-4 sm:px-6 lg:px-8">
+
+            {post.image && (
+              <figure className="mb-8">
+                <img
+                  src={post.image}
+                  alt={post.imageAlt || post.title}
+                  width={1280}
+                  height={720}
+                  className="w-full rounded-xl border border-border"
+                />
+              </figure>
+            )}
 
             {content ? (
               <>
