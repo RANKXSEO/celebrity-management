@@ -99,10 +99,28 @@
 
   h1, h2, h3, h4, h5 {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    line-height: 1.12;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
     @apply text-primary font-bold;
   }
+
+  ::selection {
+    background: hsl(var(--gold));
+    color: hsl(var(--navy));
+  }
 }
+
+@layer components {
+  /* Editorial small-caps label used across sections */
+  .label-rule {
+    @apply inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.32em] font-medium;
+  }
+  .label-rule::before {
+    content: "";
+    @apply block h-px w-10 bg-gold;
+  }
+}
+
 
 /* Custom animations */
 @keyframes float-slow {
