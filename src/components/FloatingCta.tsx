@@ -14,7 +14,7 @@ const FloatingCta = () => {
   return (
     <Link
       to="/free-consultation"
-      className="fixed bottom-7 right-7 z-50 bg-gold text-primary rounded-full px-6 py-3.5 text-sm font-bold shadow-gold animate-pulse-gold hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_16px_48px_rgba(196,146,62,0.4)] transition-all hover:animate-none flex items-center gap-2"
+      className="fixed bottom-6 right-6 z-50 bg-gold text-primary px-6 py-3.5 text-[10px] font-bold uppercase tracking-[0.22em] shadow-gold border border-gold-light/40 hover:bg-gold-light hover:-translate-y-0.5 transition-all"
       aria-label="Request a free reputation audit"
     >
       Free Reputation Audit

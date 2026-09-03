@@ -50,30 +50,31 @@ const Navbar = () => {
     <nav
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 border-b ${
         scrolled
-          ? "bg-primary/[0.97] backdrop-blur-xl border-gold/15 shadow-lg"
-          : "bg-transparent border-transparent"
+          ? "bg-primary/95 backdrop-blur-xl border-gold/20"
+          : "bg-transparent border-primary-foreground/10"
       }`}
       aria-label="Main navigation"
     >
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[70px]">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[70px]">
         <Link to="/" aria-label="Celebrity Reputation Management Agency — Home">
           <Logo light />
         </Link>
 
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) =>
-            renderLink(link, "text-sm font-medium text-primary-foreground/70 hover:text-primary-foreground transition-colors relative group")
+            renderLink(link, "text-[10px] uppercase tracking-[0.18em] font-medium text-primary-foreground/60 hover:text-gold-light transition-colors relative group")
           )}
         </div>
 
-        <div className="hidden lg:flex items-center gap-3.5 flex-shrink-0">
-          <a href="tel:+16462224346" className="text-[13px] text-primary-foreground/75 hover:text-primary-foreground transition-colors">
-            24/7: <strong className="text-gold-light font-bold">(646) 222-4346</strong>
+        <div className="hidden lg:flex items-center gap-5 flex-shrink-0">
+          <a href="tel:+16462224346" className="text-[11px] uppercase tracking-[0.14em] text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+            <strong className="text-gold-light font-bold">(646) 222-4346</strong>
           </a>
-          <Link to="/free-consultation" className="bg-gold text-primary-foreground px-4 py-2 rounded text-sm font-bold hover:bg-gold-light transition-all hover:-translate-y-0.5">
+          <Link to="/free-consultation" className="border border-gold text-gold-light px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-gold hover:text-primary transition-all">
             Free Audit
           </Link>
         </div>
+
 
         <button
           className="lg:hidden flex flex-col gap-[5px] p-1.5"

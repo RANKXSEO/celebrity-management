@@ -32,7 +32,7 @@ const ServicesSection = () => {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0.5 bg-border border border-border rounded-2xl overflow-hidden shadow-md-custom">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border overflow-hidden">
           {services.map((svc, i) => (
             <motion.article
               key={svc.title}
@@ -40,34 +40,33 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05, duration: 0.5 }}
-              className={`p-[clamp(22px,3vw,36px)] relative group transition-colors ${
-                svc.featured ? "bg-primary" : "bg-card hover:bg-background"
+              className={`p-[clamp(24px,3vw,38px)] relative group transition-colors ${
+                svc.featured ? "bg-primary" : "bg-card hover:bg-secondary"
               }`}
             >
-              <div className="absolute top-0 inset-x-0 h-0.5 bg-gold scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300" aria-hidden="true" />
+              <div className="absolute top-0 inset-x-0 h-px bg-gold scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500" aria-hidden="true" />
               <div
-                className={`w-11 h-11 rounded-lg flex items-center justify-center text-lg mb-3.5 flex-shrink-0 border ${
-                  svc.featured
-                    ? "bg-gold/[0.12] border-gold/20"
-                    : "bg-gold-pale border-gold/15"
+                className={`font-display text-sm tracking-[0.2em] mb-5 ${
+                  svc.featured ? "text-gold-light" : "text-gold"
                 }`}
                 aria-hidden="true"
               >
-                {svc.icon}
+                {String(i + 1).padStart(2, "0")}
               </div>
-              <h3 className={`font-body text-[15px] font-bold mb-1.5 leading-snug ${svc.featured ? "text-primary-foreground" : "text-primary"}`}>
+              <h3 className={`font-display text-[1.35rem] font-normal mb-2.5 leading-[1.2] ${svc.featured ? "text-primary-foreground" : "text-primary"}`}>
                 {svc.title}
               </h3>
-              <p className={`text-sm leading-relaxed mb-3.5 ${svc.featured ? "text-primary-foreground/75" : "text-ink-muted"}`}>
+              <p className={`text-sm leading-[1.75] mb-5 ${svc.featured ? "text-primary-foreground/70" : "text-ink-muted"}`}>
                 {svc.desc}
               </p>
-              <Link to={`/services/${svc.slug}`} className={`text-sm font-semibold inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all ${svc.featured ? "text-gold-light" : "text-gold"}`}>
+              <Link to={`/services/${svc.slug}`} className={`text-[10px] uppercase tracking-[0.2em] font-bold inline-flex items-center gap-2 group-hover:gap-3 transition-all ${svc.featured ? "text-gold-light" : "text-gold"}`}>
                 Learn more
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </Link>
             </motion.article>
           ))}
         </div>
+
 
         <div className="text-center mt-10">
           <p className="text-muted-foreground text-sm mb-3">
