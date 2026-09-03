@@ -109,7 +109,7 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.9, ease }}
-              className="lg:col-span-5 grid grid-cols-2 lg:grid-cols-1 border-t lg:border-t-0 lg:border-l border-primary-foreground/10"
+              className="lg:col-span-5 grid grid-cols-2 lg:grid-cols-1 lg:content-end border-t lg:border-t-0 lg:border-l border-primary-foreground/10"
             >
               {stats.map((stat, i) => (
                 <div
