@@ -277,6 +277,56 @@ export const anchorMap: Record<string, AnchorTarget> = {
     branded: ["how we work with reality TV talent", "our reality-TV practice"],
     generic: ["for reality TV stars", "reality TV reputation help"],
   }),
+
+  // ---------------- BLOG PILLARS ----------------
+  "/blog/online-reputation-management-complete-guide": t("/blog/online-reputation-management-complete-guide", "blog", {
+    exact: ["online reputation management guide"],
+    partial: ["the complete ORM playbook", "how online reputation management works end to end"],
+    branded: ["our full ORM guide", "our practitioner guide to ORM"],
+    generic: ["read the complete guide", "the long-form version"],
+  }),
+  "/blog/business-reputation-management-guide": t("/blog/business-reputation-management-guide", "blog", {
+    exact: ["business reputation management"],
+    partial: ["brand and founder reputation guide", "corporate reputation management explained"],
+    branded: ["our guide for companies and founders", "our corporate reputation guide"],
+    generic: ["guide for businesses", "read the business guide"],
+  }),
+  "/blog/crisis-communication-plan-guide": t("/blog/crisis-communication-plan-guide", "blog", {
+    exact: ["crisis communication plan"],
+    partial: ["how to build a crisis response plan", "crisis readiness framework"],
+    branded: ["our crisis plan framework", "the plan we build for clients"],
+    generic: ["plan ahead for a crisis", "read the crisis planning guide"],
+  }),
+  "/blog/remove-personal-information-from-internet": t("/blog/remove-personal-information-from-internet", "blog", {
+    exact: ["remove personal information from the internet"],
+    partial: ["how to delete your data from people-search sites", "data-broker opt-out guide"],
+    branded: ["our personal data removal guide", "how we clear personal records"],
+    generic: ["clean up your personal data", "read the privacy guide"],
+  }),
+  "/blog/personal-brand-authority-building": t("/blog/personal-brand-authority-building", "blog", {
+    exact: ["personal brand authority building"],
+    partial: ["EEAT asset stack for public figures", "how to build online authority"],
+    branded: ["our authority-building framework", "how we build authority assets"],
+    generic: ["build lasting authority", "read the authority guide"],
+  }),
+  "/blog/digital-pr-for-reputation-management": t("/blog/digital-pr-for-reputation-management", "blog", {
+    exact: ["digital PR for reputation management"],
+    partial: ["how Tier-1 placements rebuild a search profile", "earned media for reputation repair"],
+    branded: ["our digital PR guide", "how our PR desk works"],
+    generic: ["read the digital PR guide", "more on earned coverage"],
+  }),
+  "/blog/generative-engine-optimization-guide": t("/blog/generative-engine-optimization-guide", "blog", {
+    exact: ["generative engine optimization guide"],
+    partial: ["how to get cited by ChatGPT and Perplexity", "GEO for public figures"],
+    branded: ["our GEO guide", "how we approach AI citations"],
+    generic: ["read the GEO guide", "more on AI search"],
+  }),
+  "/blog/website-takedown-service-guide": t("/blog/website-takedown-service-guide", "blog", {
+    exact: ["website takedown guide"],
+    partial: ["every legal route to content removal", "how takedowns work in practice"],
+    branded: ["our takedown guide", "how our takedown desk operates"],
+    generic: ["read the takedown guide", "more on removals"],
+  }),
 };
 
 /**

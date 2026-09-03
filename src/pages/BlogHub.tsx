@@ -19,7 +19,13 @@ Coverage spans the four surfaces that determine a public figure's digital reputa
 
 
 const blogPosts = [
+  { slug: "online-reputation-management-complete-guide", title: "Online Reputation Management: The Complete 2026 Guide (Frameworks, Timelines, Costs)", tag: "Education", date: "Sep 1, 2026", read: "15 min" },
+  { slug: "business-reputation-management-guide", title: "Business Reputation Management: Protecting Brands, Founders & Revenue", tag: "Education", date: "Aug 18, 2026", read: "12 min" },
+  { slug: "crisis-communication-plan-guide", title: "Crisis Communication Plan: The Framework We Build Before Anything Goes Wrong", tag: "Crisis", date: "Aug 4, 2026", read: "11 min" },
+  { slug: "remove-personal-information-from-internet", title: "How to Remove Your Personal Information From the Internet (Step-by-Step)", tag: "Legal", date: "Jul 21, 2026", read: "12 min" },
+  { slug: "personal-brand-authority-building", title: "Authority Building for Public Figures: The EEAT Asset Stack That Outranks Bad Press", tag: "Education", date: "Jul 7, 2026", read: "12 min" },
   { slug: "digital-pr-for-reputation-management", title: "Digital PR for Reputation Management: How Tier-1 Placements Rebuild a Search Profile", tag: "Digital PR", date: "Mar 3, 2026", read: "11 min" },
+
   { slug: "how-to-get-featured-in-forbes", title: "How to Get Featured in Forbes (And Which Coverage Actually Counts)", tag: "Digital PR", date: "Feb 24, 2026", read: "9 min" },
   { slug: "website-takedown-service-guide", title: "Website Takedown Service: Every Legal Route to Removing Content at the Source", tag: "Legal", date: "Feb 17, 2026", read: "10 min" },
   { slug: "generative-engine-optimization-guide", title: "Generative Engine Optimization (GEO): How to Get Cited by ChatGPT, Perplexity & Gemini", tag: "AI Search", date: "Feb 12, 2026", read: "10 min" },
