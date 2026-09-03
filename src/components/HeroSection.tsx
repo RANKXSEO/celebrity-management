@@ -1,112 +1,136 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
+const stats = [
+  { num: "500+", value: 500, label: "Celebrity Campaigns" },
+  { num: "15+", value: 15, label: "Years in the Industry" },
+  { num: "94%", value: 94, label: "Page-One Results Cleared" },
+  { num: "< 48hr", value: 48, label: "Crisis Response Window" },
+];
+
+const ease = [0.16, 1, 0.3, 1] as const;
+
 const HeroSection = () => {
   return (
-    <section className="min-h-screen bg-primary flex flex-col justify-center relative overflow-hidden pt-[70px]" aria-label="Hero">
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_88%_68%_at_66%_38%,rgba(196,146,62,0.07)_0%,transparent_64%),linear-gradient(158deg,#050d1a_0%,#0b1d35_45%,#0f2545_100%)]" />
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(196,146,62,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(196,146,62,0.035) 1px, transparent 1px)",
-            backgroundSize: "52px 52px",
-          }}
-        />
-        <div className="absolute w-[700px] h-[700px] rounded-full bg-[radial-gradient(circle,rgba(196,146,62,0.08)_0%,transparent_64%)] -top-[180px] -right-[180px] animate-float-slow" />
+    <section
+      className="relative bg-primary overflow-hidden pt-[70px]"
+      aria-label="Hero"
+    >
+      {/* Lamp-glow, no gradient wash */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div className="absolute -top-[22rem] left-1/2 -translate-x-1/3 w-[46rem] h-[46rem] rounded-full bg-[radial-gradient(circle,hsl(var(--gold)/0.10)_0%,transparent_65%)] animate-float-slow" />
+        <div className="absolute inset-y-0 left-1/2 w-px bg-gold/10 hidden lg:block" />
       </div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-          className="inline-flex items-center gap-2.5 bg-gold/10 border border-gold/20 rounded-full px-3.5 py-1 mb-7"
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-gold animate-dot-pulse" aria-hidden="true" />
-          <span className="text-[11px] tracking-[0.12em] uppercase text-gold-light font-bold">
-            500+ Public Figures Protected · Established 2009
-          </span>
-        </motion.div>
+      <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="border-x border-primary-foreground/10">
+          <div className="grid lg:grid-cols-12 gap-x-10">
+            {/* Statement column */}
+            <div className="lg:col-span-7 px-5 sm:px-8 lg:px-10 pt-14 pb-10 lg:pt-24 lg:pb-16">
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.7, ease }}
+                className="label-rule text-gold-light mb-9"
+              >
+                500+ Public Figures Protected · Est. 2009
+              </motion.p>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.25, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-          className="font-display text-primary-foreground font-bold text-[clamp(2.75rem,6vw,5rem)] leading-[1.06] tracking-tight max-w-[720px] mb-5"
-        >
-          Celebrity Reputation Management for Public Figures. <em className="text-gold-light italic">One Bad Headline Shouldn't Define Your Legacy.</em>
-        </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1, duration: 0.9, ease }}
+                className="font-display text-primary-foreground font-light text-[clamp(2.9rem,6.4vw,5.6rem)] leading-[0.94] tracking-[-0.02em]"
+              >
+                Celebrity Reputation Management
+                <span className="block mt-3 italic font-normal text-gold-light">
+                  for Public Figures.
+                </span>
+              </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-          className="text-[clamp(1rem,1.5vw,1.125rem)] text-primary-foreground/85 leading-[1.74] max-w-[560px] mb-10"
-        >
-          We work exclusively with celebrities, athletes, and public figures to take back control of Google, Wikipedia, social media, and AI search results. When someone looks you up, they should find the truth — not a tabloid narrative from five years ago.
-        </motion.p>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 0.8, ease }}
+                className="h-px bg-gold/40 my-9 animate-rule-draw"
+              />
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.55, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-          className="flex items-center gap-3 flex-wrap mb-5"
-        >
-          <Link
-            to="/free-consultation"
-            className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-7 py-3.5 rounded text-base font-bold shadow-gold hover:bg-gold-light hover:-translate-y-0.5 transition-all"
-          >
-            Get a Free Reputation Audit
-          </Link>
-          <a
-            href="tel:+16462224346"
-            className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground px-7 py-3.5 rounded text-base font-medium hover:border-gold-light hover:text-gold-light transition-all"
-          >
-            24/7 Crisis Line: (646) 222-4346
-          </a>
-        </motion.div>
+              <motion.p
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.8, ease }}
+                className="text-[clamp(1rem,1.4vw,1.125rem)] text-primary-foreground/70 leading-[1.8] max-w-[38rem]"
+              >
+                One bad headline shouldn't define a legacy. We work exclusively with
+                celebrities, athletes, and public figures to take back control of Google,
+                Wikipedia, social media, and AI search results — so that when someone looks
+                you up, they find the truth, not a tabloid narrative from five years ago.
+              </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.65, duration: 0.6 }}
-          className="text-[11px] text-primary-foreground/60 mb-16 lg:mb-20 tracking-[0.03em]"
-        >
-          Free · Confidential · NDA available · We respond within 2 hours
-        </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.45, duration: 0.8, ease }}
+                className="mt-11 flex flex-col sm:flex-row sm:items-center gap-7"
+              >
+                <Link
+                  to="/free-consultation"
+                  className="group inline-flex items-center justify-center gap-3 bg-gold text-primary px-9 py-4 text-[11px] font-bold uppercase tracking-[0.22em] hover:bg-gold-light transition-colors"
+                >
+                  Get a Free Reputation Audit
+                  <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
 
-        <motion.dl
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-          className="flex items-center gap-[clamp(18px,3vw,42px)] flex-wrap pt-[clamp(30px,4vw,50px)] border-t border-primary-foreground/[0.07]"
-        >
-          {[
-            { num: "500+", value: 500, label: "Celebrity Campaigns" },
-            { num: "15+", value: 15, label: "Years in the Industry" },
-            { num: "94%", value: 94, label: "Page-One Results Cleared" },
-            { num: "< 48hr", value: 48, label: "Crisis Response Window" },
-          ].map((stat, i) => (
-            <div key={stat.label} className="flex items-center gap-[clamp(18px,3vw,42px)]">
-              {i > 0 && <div className="w-px h-[30px] bg-primary-foreground/[0.08] flex-shrink-0 hidden sm:block" aria-hidden="true" />}
-              <div className="flex flex-col">
-                <dd className="font-display text-[clamp(1.375rem,2.2vw,2rem)] font-bold text-gold-light leading-none">
-                  <data value={stat.value}>{stat.num}</data>
-                </dd>
-                <dt className="text-[10px] text-primary-foreground/65 tracking-[0.07em] mt-1 uppercase">
-                  {stat.label}
-                </dt>
-              </div>
+                <div>
+                  <span className="block text-[9px] uppercase tracking-[0.3em] text-primary-foreground/45 mb-1.5">
+                    24/7 Crisis Line
+                  </span>
+                  <a
+                    href="tel:+16462224346"
+                    className="font-display text-2xl text-primary-foreground border-b border-gold/40 hover:border-gold transition-colors"
+                  >
+                    (646) 222-4346
+                  </a>
+                </div>
+              </motion.div>
+
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6, duration: 0.7 }}
+                className="mt-8 text-[10px] uppercase tracking-[0.2em] text-primary-foreground/40"
+              >
+                Free · Confidential · NDA available · Response within 2 hours
+              </motion.p>
             </div>
-          ))}
-        </motion.dl>
-      </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-primary-foreground/85 pointer-events-none" aria-hidden="true">
-        <span className="text-[9px] tracking-[0.22em] uppercase">Scroll</span>
-        <div className="w-px h-9 bg-gradient-to-b from-gold/40 to-transparent animate-scroll-line" />
+            {/* Ledger column */}
+            <motion.dl
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.9, ease }}
+              className="lg:col-span-5 grid grid-cols-2 lg:grid-cols-1 border-t lg:border-t-0 lg:border-l border-primary-foreground/10"
+            >
+              {stats.map((stat, i) => (
+                <div
+                  key={stat.label}
+                  className={`px-5 sm:px-8 lg:px-10 py-8 lg:py-9 ${
+                    i % 2 === 0 ? "border-r lg:border-r-0" : ""
+                  } ${i > 1 ? "border-t" : "lg:border-t"} ${
+                    i === 1 ? "lg:border-t" : ""
+                  } border-primary-foreground/10 flex lg:items-baseline lg:justify-between flex-col lg:flex-row gap-1.5`}
+                >
+                  <dd className="font-display text-[clamp(1.9rem,3vw,2.6rem)] font-light italic text-gold-light leading-none">
+                    <data value={stat.value}>{stat.num}</data>
+                  </dd>
+                  <dt className="text-[9px] uppercase tracking-[0.24em] text-primary-foreground/50 lg:text-right lg:max-w-[9rem]">
+                    {stat.label}
+                  </dt>
+                </div>
+              ))}
+            </motion.dl>
+          </div>
+        </div>
       </div>
     </section>
   );
