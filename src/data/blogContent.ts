@@ -6,7 +6,9 @@ interface BlogContent {
   faqs?: { q: string; a: string }[];
 }
 
-export const blogContent: Record<string, BlogContent> = {
+import { caseStudyContent } from "./blogCaseStudies";
+
+const coreBlogContent: Record<string, BlogContent> = {
   "first-48-hours-celebrity-crisis": {
     intro: "When a negative story breaks about a public figure, the clock starts immediately. Based on our experience managing over 200 [celebrity reputation management](/services) crises, the actions taken — or not taken — in the first 48 hours determine whether the incident becomes a footnote or a permanent feature of your Google results for years to come.",
     sections: [
@@ -865,3 +867,5 @@ export const blogContent: Record<string, BlogContent> = {
     ],
   },
 };
+
+export const blogContent: Record<string, BlogContent> = { ...coreBlogContent, ...caseStudyContent };
