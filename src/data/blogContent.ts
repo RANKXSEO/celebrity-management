@@ -8,6 +8,8 @@ interface BlogContent {
 
 import { caseStudyContent } from "./blogCaseStudies";
 import { pillarContent } from "./blogPillars";
+import { clusterSpokeContent } from "./blogPillars2";
+import { platformSpokeContent } from "./blogPillars3";
 
 const coreBlogContent: Record<string, BlogContent> = {
   "first-48-hours-celebrity-crisis": {
@@ -869,4 +871,4 @@ const coreBlogContent: Record<string, BlogContent> = {
   },
 };
 
-export const blogContent: Record<string, BlogContent> = { ...coreBlogContent, ...caseStudyContent, ...pillarContent };
+export const blogContent: Record<string, BlogContent> = { ...coreBlogContent, ...caseStudyContent, ...pillarContent, ...clusterSpokeContent, ...platformSpokeContent };

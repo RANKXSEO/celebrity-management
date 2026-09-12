@@ -351,6 +351,54 @@ export const anchorMap: Record<string, AnchorTarget> = {
     branded: ["our view on litigation and search", "how we work alongside counsel"],
     generic: ["read the comparison guide", "weighing your options"],
   }),
+  "/blog/brand-reputation-management": t("/blog/brand-reputation-management", "blog", {
+    exact: ["brand reputation management"],
+    partial: ["how brands protect search and review surfaces", "company reputation operating model"],
+    branded: ["our brand reputation programme", "how we run brand reputation work"],
+    generic: ["read the brand guide", "more for companies"],
+  }),
+  "/blog/personal-reputation-management": t("/blog/personal-reputation-management", "blog", {
+    exact: ["personal reputation management"],
+    partial: ["how to clean up your name on Google", "reputation management for individuals"],
+    branded: ["our personal reputation guide", "how we handle individual profiles"],
+    generic: ["read the personal guide", "guide for individuals"],
+  }),
+  "/blog/how-to-choose-a-reputation-management-company": t("/blog/how-to-choose-a-reputation-management-company", "blog", {
+    exact: ["how to choose a reputation management company"],
+    partial: ["what to ask a reputation agency", "vetting reputation providers"],
+    branded: ["our buyer's guide", "how we would vet a provider"],
+    generic: ["read the buyer's guide", "before you sign anything"],
+  }),
+  "/blog/reputation-management-software-vs-agency": t("/blog/reputation-management-software-vs-agency", "blog", {
+    exact: ["reputation management software vs agency"],
+    partial: ["do monitoring tools replace remediation", "software or agency for reputation work"],
+    branded: ["our take on tools versus teams", "how we combine software and service"],
+    generic: ["read the comparison", "weigh the two options"],
+  }),
+  "/blog/ai-reputation-management": t("/blog/ai-reputation-management", "blog", {
+    exact: ["AI reputation management"],
+    partial: ["controlling what ChatGPT says about you", "managing AI assistant answers"],
+    branded: ["our AI reputation programme", "how we correct AI answers"],
+    generic: ["read the AI guide", "more on AI answers"],
+  }),
+  "/blog/ripoff-report-removal": t("/blog/ripoff-report-removal", "blog", {
+    exact: ["Ripoff Report removal"],
+    partial: ["what to do about a Ripoff Report page", "complaint-site suppression"],
+    branded: ["our Ripoff Report guide", "how our complaint desk handles it"],
+    generic: ["read the guide", "dealing with complaint sites"],
+  }),
+  "/blog/glassdoor-review-removal": t("/blog/glassdoor-review-removal", "blog", {
+    exact: ["Glassdoor review removal"],
+    partial: ["flagging employer reviews that breach guidelines", "fixing a low employer rating"],
+    branded: ["our Glassdoor guide", "how we handle employer reviews"],
+    generic: ["read the employer-review guide", "more on employer reviews"],
+  }),
+  "/blog/yelp-review-removal": t("/blog/yelp-review-removal", "blog", {
+    exact: ["Yelp review removal"],
+    partial: ["how Yelp's review filter works", "handling a Yelp review attack"],
+    branded: ["our Yelp guide", "how we approach Yelp listings"],
+    generic: ["read the Yelp guide", "more on local reviews"],
+  }),
 };
 
 /**
