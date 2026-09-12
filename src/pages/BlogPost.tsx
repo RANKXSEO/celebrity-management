@@ -177,6 +177,37 @@ const BlogPost = () => {
                   />
                 )}
 
+                {(() => {
+                  const placement = clusterFor(`/blog/${slug}`);
+                  if (!placement) return null;
+                  return (
+                    <section aria-label="Topic cluster" className="bg-card border border-border rounded-2xl p-6 mb-10">
+                      <h2 className="font-display text-lg font-bold mb-1">
+                        {placement.isPillar
+                          ? `More in this cluster: ${placement.cluster.label}`
+                          : `Part of our ${placement.cluster.label} cluster`}
+                      </h2>
+                      <p className="text-sm text-muted-foreground mb-4">
+                        {placement.isPillar
+                          ? "Supporting guides that go deeper on each part of this topic."
+                          : "Start with the main guide, then read the companion pieces."}
+                      </p>
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
+                        {placement.links.map((path, i) => (
+                          <li key={path}>
+                            <SmartLink
+                              to={path}
+                              role={!placement.isPillar && i === 0 ? "exact" : undefined}
+                              className="text-sm text-gold hover:text-gold-light transition-colors font-medium"
+                              suffix=" →"
+                            />
+                          </li>
+                        ))}
+                      </ul>
+                    </section>
+                  );
+                })()}
+
                 <RelatedLinks
                   title="Continue With Our Pillar Guides"
                   siblings={(() => {
