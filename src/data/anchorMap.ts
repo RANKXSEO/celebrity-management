@@ -327,6 +327,30 @@ export const anchorMap: Record<string, AnchorTarget> = {
     branded: ["our takedown guide", "how our takedown desk operates"],
     generic: ["read the takedown guide", "more on removals"],
   }),
+  "/blog/executive-reputation-management": t("/blog/executive-reputation-management", "blog", {
+    exact: ["executive reputation management"],
+    partial: ["reputation management for CEOs and founders", "C-suite reputation guide"],
+    branded: ["our executive reputation program", "how we protect named executives"],
+    generic: ["read the executive guide", "guide for company leaders"],
+  }),
+  "/blog/remove-negative-google-reviews": t("/blog/remove-negative-google-reviews", "blog", {
+    exact: ["remove negative Google reviews"],
+    partial: ["how to get fake reviews taken down", "handling review bombing"],
+    branded: ["our review removal guide", "how our review desk works"],
+    generic: ["read the reviews guide", "more on review problems"],
+  }),
+  "/blog/reputation-repair-guide": t("/blog/reputation-repair-guide", "blog", {
+    exact: ["reputation repair"],
+    partial: ["how to repair a damaged online reputation", "reputation recovery timelines"],
+    branded: ["our reputation repair sequence", "the repair process we run"],
+    generic: ["read the repair guide", "start the recovery process"],
+  }),
+  "/blog/defamation-lawyer-vs-reputation-management": t("/blog/defamation-lawyer-vs-reputation-management", "blog", {
+    exact: ["defamation lawyer vs reputation management"],
+    partial: ["when to sue and when to suppress", "legal versus search remedies"],
+    branded: ["our view on litigation and search", "how we work alongside counsel"],
+    generic: ["read the comparison guide", "weighing your options"],
+  }),
 };
 
 /**
