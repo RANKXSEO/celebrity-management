@@ -13,6 +13,7 @@ import { slugifyHeading } from "@/lib/slugify";
 import RelatedLinks from "@/components/RelatedLinks";
 import SmartLink from "@/components/SmartLink";
 import { clusterFor } from "@/data/blogClusters";
+import { anchorMap } from "@/data/anchorMap";
 
 /** Pillar guides receive concentrated internal equity from every post. */
 const PILLAR_GUIDES = [
@@ -200,7 +201,11 @@ const BlogPost = () => {
                               role={!placement.isPillar && i === 0 ? "exact" : undefined}
                               className="text-sm text-gold hover:text-gold-light transition-colors font-medium"
                               suffix=" →"
-                            />
+                            >
+                              {anchorMap[path]
+                                ? undefined
+                                : blogPosts.find((p) => `/blog/${p.slug}` === path)?.title ?? path}
+                            </SmartLink>
                           </li>
                         ))}
                       </ul>
