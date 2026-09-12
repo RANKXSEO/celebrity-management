@@ -11,11 +11,14 @@ import { blogContent } from "@/data/blogContent";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 import { slugifyHeading } from "@/lib/slugify";
 import RelatedLinks from "@/components/RelatedLinks";
+import SmartLink from "@/components/SmartLink";
+import { clusterFor } from "@/data/blogClusters";
 
 /** Pillar guides receive concentrated internal equity from every post. */
 const PILLAR_GUIDES = [
   "/blog/online-reputation-management-complete-guide",
   "/blog/business-reputation-management-guide",
+  "/blog/executive-reputation-management",
   "/blog/crisis-communication-plan-guide",
   "/blog/remove-personal-information-from-internet",
   "/blog/personal-brand-authority-building",
