@@ -6,16 +6,16 @@ import HubIntro, { faqJsonLd } from "@/components/HubIntro";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 
 const HUB_FAQS = [
-  { q: "Are these resources really free?", a: "Yes — every guide, checklist, and pricing breakdown linked from this page is fully public and free. Our paid work is the [free reputation audit](/free-consultation) that turns these frameworks into a personalised plan for your specific situation." },
+  { q: "Are these resources really free?", a: "Yes — every guide, checklist, and pricing breakdown linked from this page is fully public and free. Start with the [free reputation audit](/free-consultation) that turns these frameworks into a personalised plan for your specific situation." },
   { q: "Which resource should I read first?", a: "If you have a live crisis right now, start with [The First 48 Hours After a Story Breaks](/blog/first-48-hours-celebrity-crisis). If you're trying to understand the space generally, start with [The Complete Guide to Celebrity Reputation Management](/blog/what-is-celebrity-reputation-management). If you're evaluating cost, start with our [pricing guide](/blog/celebrity-reputation-management-cost)." },
   { q: "Can I share or cite these guides?", a: "Yes — we encourage it. Please link to the original source. For interview or expert-commentary requests, use our [contact page](/contact)." },
   { q: "Do you have anything for lawyers or PR agencies I already work with?", a: "The resources here are written for the general public-figure audience, but our [reputation management vs PR guide](/blog/reputation-management-vs-pr) and the [defamation legal guide](/blog/can-you-sue-for-online-defamation) are frequently shared inside law firms and PR agencies coordinating with us on client work." },
   { q: "How current is this content?", a: "Cornerstone guides are reviewed and updated quarterly; the update date is shown on every article. The reputation landscape (especially AI search) is moving fast — anything more than 12 months old on this topic is out of date." },
 ];
 
-const HUB_INTRO = `Fifteen years of working with public figures across every industry — condensed into free, plain-English resources you can read, save, and use even if you never engage us. The guides below cover the questions we hear most often: what reputation management actually is, what it costs, how long it takes, what the warning signs look like, and what to do in the first 48 hours of a live crisis.
+const HUB_INTRO = `Reputation management questions organized into free, plain-English resources you can read, save, and use even if you never engage us. The guides below cover the questions we hear most often: what reputation management actually is, what it costs, how long it takes, what the warning signs look like, and what to do in the first 48 hours of a live crisis.
 
-Every resource is written or reviewed by our senior team. Nothing here is gated behind a form; nothing here is a sales pitch. If after reading you decide a personalised assessment would help, our [free reputation audit](/free-consultation) is the next step — but the resources themselves are yours to keep.`;
+Nothing here is gated behind a form; nothing here is a sales pitch. If after reading you decide a personalised assessment would help, our [free reputation audit](/free-consultation) is the next step — but the resources themselves are yours to keep.`;
 
 
 const ResourcesPage = () => {
@@ -38,7 +38,7 @@ const ResourcesPage = () => {
 
   usePageSEO({
     title: "Free Celebrity Reputation Management Resources & Guides",
-    description: "Free expert guides, crisis checklists, pricing transparency, and self-assessment tools — built from 15+ years and 500+ celebrity reputation campaigns.",
+    description: "Free expert guides, crisis checklists, pricing transparency, and self-assessment tools.",
     jsonLd,
   });
   return (
@@ -49,7 +49,7 @@ const ResourcesPage = () => {
             Celebrity Reputation <em className="text-gold-light italic">Resources</em>
           </h1>
           <p className="text-primary-foreground/85 text-lg leading-relaxed">
-            Free guides, checklists, and expert insights to help you understand and protect your online reputation. Built from 15+ years and 500+ celebrity campaigns.
+            Free guides, checklists, and expert insights to help you understand and protect your online reputation.
           </p>
         </div>
       </section>
@@ -58,9 +58,9 @@ const ResourcesPage = () => {
         <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
           <HubIntro intro={HUB_INTRO} faqs={HUB_FAQS} stats={[
             { num: "30+", label: "Free guides" },
-            { num: "500+", label: "Campaigns behind them" },
+            { num: "Search", label: "Visibility and removal" },
             { num: "Quarterly", label: "Cornerstone updates" },
-            { num: "Since 2009", label: "Industry experience" },
+            { num: "Privacy", label: "Personal information" },
           ]} />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-12">
@@ -84,7 +84,7 @@ const ResourcesPage = () => {
                 to: "/blog/celebrity-reputation-management-cost",
                 icon: "💰",
                 title: "How Much Does Celebrity Reputation Management Cost?",
-                desc: "Transparent pricing guidance based on 500+ engagements. What to expect for suppression, crisis management, Wikipedia work, and ongoing monitoring. No vague 'it depends' — real numbers.",
+                desc: "What to ask when comparing proposals. What to expect for suppression, crisis management, Wikipedia work, and ongoing monitoring. No vague 'it depends' — real numbers.",
                 tag: "Pricing Guide",
               },
               {

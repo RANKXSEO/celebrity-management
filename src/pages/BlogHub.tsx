@@ -4,6 +4,7 @@ import HubIntro, { faqJsonLd } from "@/components/HubIntro";
 import HubCrossLinks from "@/components/HubCrossLinks";
 import usePageSEO, { BASE_URL } from "@/hooks/usePageSEO";
 import { useMemo } from "react";
+import { clusters } from '@/data/blogClusters';
 
 import imgDefamationTrial from "@/assets/blog/defamation-trial.jpg";
 import imgAwardsStage from "@/assets/blog/awards-stage-crisis.jpg";
@@ -150,11 +151,15 @@ const BlogHub = () => {
         <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
           <HubIntro intro={HUB_INTRO} faqs={HUB_FAQS} stats={[
             { num: `${blogPosts.length}`, label: "In-depth guides" },
-            { num: "Weekly", label: "New content cadence" },
-            { num: "Quarterly", label: "Cornerstone refresh" },
-            { num: "Since 2009", label: "Industry experience" },
+            { num: "Search", label: "Removal and visibility" },
+            { num: "PR", label: "Editorial authority" },
+            { num: "Privacy", label: "Policy-based requests" },
           ]} />
           <div className="space-y-4">
+            <nav aria-label="Reputation management topics" className="border-y border-border py-6 mb-8">
+              <h2 className="font-display text-2xl mb-4">Browse by topic</h2>
+              <ul className="grid sm:grid-cols-2 gap-3">{clusters.map(cluster => <li key={cluster.pillar}><Link to={cluster.pillar} className="text-gold hover:underline">{cluster.label}</Link></li>)}</ul>
+            </nav>
             {blogPosts.map((post) => (
               <Link key={post.slug} to={`/blog/${post.slug}`} className="flex gap-4 items-start bg-card border border-border rounded-xl p-5 hover:-translate-y-0.5 hover:shadow-md-custom transition-all group">
                 {post.image && (

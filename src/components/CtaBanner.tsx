@@ -28,7 +28,7 @@ const CtaBanner = () => {
         </p>
 
         <div className="flex items-center justify-center gap-4 text-[11px] text-primary-foreground/60 mb-7 flex-wrap">
-          <span>Measurable ranking shifts in 30 days</span>
+          <span>Case-specific milestones</span>
           <span>NDA before we start talking</span>
           <span>No long-term contracts required</span>
         </div>
@@ -48,7 +48,7 @@ const CtaBanner = () => {
           </a>
         </div>
         <p className="text-[11px] text-primary-foreground/85 mt-4 tracking-[0.04em]">
-          Confidential · No obligation · Response within 2 hours · NDA available
+          Confidential · No obligation · NDA available
         </p>
       </div>
     </section>

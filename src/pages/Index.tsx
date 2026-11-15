@@ -8,7 +8,6 @@ import ProblemsSection from "@/components/ProblemsSection";
 import TopicalAuthoritySection from "@/components/TopicalAuthoritySection";
 import StatsBar from "@/components/StatsBar";
 import ProcessSection from "@/components/ProcessSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import CtaBanner from "@/components/CtaBanner";
 import BlogPreview from "@/components/BlogPreview";
 import FaqSection from "@/components/FaqSection";
