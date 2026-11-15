@@ -21,7 +21,7 @@ const AboutPage = () => {
         "name": "Celebrity Reputation Management",
         "alternateName": "CRM Agency",
         "url": BASE_URL,
-        "foundingDate": "2009",
+        
         "areaServed": ["US", "GB", "EU", "Worldwide"],
         "knowsAbout": [
           "Online Reputation Management",
@@ -31,12 +31,6 @@ const AboutPage = () => {
           "Generative Engine Optimization",
           "Knowledge Panel Management",
         ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.76",
-          "reviewCount": "181",
-          "bestRating": "5",
-        },
       },
       { "@type": "BreadcrumbList", "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
@@ -46,8 +40,8 @@ const AboutPage = () => {
   }), []);
 
   usePageSEO({
-    title: "About Our Celebrity ORM Agency | Since 2009, 4.76/5",
-    description: "Specialist celebrity reputation management since 2009. 500+ campaigns, 94% page-one clearance, 4.76/5 from 181 clients. Offices in Los Angeles & London.",
+    title: "About Celebrity Reputation Management | Our Approach",
+    description: "Reputation management and digital PR for public figures, executives and businesses. Our process, limits, disclosure policy and contact information.",
     jsonLd,
   });
   return (
@@ -58,7 +52,7 @@ const AboutPage = () => {
             About Celebrity Reputation <em className="text-gold-light italic">Management</em>
           </h1>
           <p className="text-primary-foreground/85 text-lg leading-relaxed">
-            The premier white-glove ORM agency exclusively serving celebrities, athletes, entertainers, and high-profile public figures since 2009.
+            Reputation management and digital PR for celebrities, public figures, executives, entrepreneurs and businesses. Our approach starts with evidence and separates eligible removals from search suppression.
           </p>
         </div>
       </section>
@@ -76,26 +70,11 @@ const AboutPage = () => {
             </p>
           </motion.div>
 
-          <h2 className="font-display text-2xl font-bold mb-4">Our Track Record</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-            {[
-              { num: "500+", label: "Campaigns completed" },
-              { num: "15+", label: "Years in operation" },
-              { num: "94%", label: "Page-one clearance" },
-              { num: "24/7", label: "Crisis response" },
-            ].map((s) => (
-              <motion.div key={s.label} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="bg-card border border-border rounded-xl p-4 text-center">
-                <div className="font-display text-2xl font-bold text-gold">{s.num}</div>
-                <div className="text-[12px] text-muted-foreground mt-1">{s.label}</div>
-              </motion.div>
-            ))}
-          </div>
-
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="font-display text-2xl font-bold mb-4">What Makes Us Different</h2>
             <div className="space-y-4 mb-8">
               {[
-                { title: "Celebrity-Only Focus", desc: "We don't work with local businesses, startups, or general professionals. Every strategy, every tool, every team member is focused entirely on celebrity and high-profile reputation management. This specialisation means we understand the challenges you face — because it's all we do." },
+                { title: "Public figures and business leaders", desc: "Public figures, executives and businesses can face overlapping search, privacy and editorial risks. We scope the work around the affected person or organization rather than using one plan for every situation." },
                 { title: "NDA-First Engagements", desc: "We maintain zero public client lists. Every engagement begins with a mutual NDA. Your competitors, the media, and the public will never know you work with us unless you choose to share it. Discretion isn't a feature — it's foundational to how we operate." },
                 { title: "Global Coverage", desc: "Google, Wikipedia, social media, AI assistants, international press — your reputation doesn't respect borders, and neither do we. We operate across every relevant platform and jurisdiction, with particular expertise in US, UK, and EU regulatory frameworks." },
                 { title: "Measurable Results", desc: "We send monthly SERP tracking reports with screenshots, position data, and trend analysis. You can see exactly what's changing, how fast, and what comes next. No vague promises — data you can verify yourself." },
@@ -109,31 +88,11 @@ const AboutPage = () => {
             </div>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="font-display text-2xl font-bold mb-4">Our Team</h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Our team includes former journalists who understand how media works from the inside. Search engine specialists with 10+ years of Google ranking experience. Wikipedia editors with thousands of policy-compliant edits. Media lawyers specialising in defamation, privacy, and content removal across multiple jurisdictions. Social media analysts who monitor sentiment across every major platform.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              What we don't have: junior staff handling senior-level problems. Every client works directly with experienced strategists who've managed hundreds of campaigns. There's no bait-and-switch where a senior person sells the engagement and a junior person runs it.
-            </p>
-          </motion.div>
-
-          {/* Client testimonials */}
-          <h2 className="font-display text-2xl font-bold mb-4">What Our Clients Say</h2>
-          <div className="space-y-4 mb-8">
-            {[
-              { quote: "Three articles I'd been dreading for six years were off page one in under 60 days. I can finally Google myself without anxiety.", name: "Emmy Award-winning actor", role: "Television — 2024" },
-              { quote: "When the story broke at 11pm, someone picked up immediately. By morning there was a clear plan. By the following week, the narrative had shifted entirely.", name: "Professional athlete, Hall of Fame", role: "Sports — 2023" },
-              { quote: "They corrected my Wikipedia page, claimed my Knowledge Panel, and changed what ChatGPT says about me. I didn't know any of that was even possible.", name: "International recording artist", role: "Music — 2024" },
-            ].map((t) => (
-              <div key={t.name} className="bg-primary rounded-xl p-6">
-                <blockquote className="font-display text-base italic text-primary-foreground leading-relaxed mb-3">"{t.quote}"</blockquote>
-                <div className="text-sm font-bold text-gold-light">{t.name}</div>
-                <div className="text-[11px] text-primary-foreground/65 mt-0.5">{t.role}</div>
-              </div>
-            ))}
-          </div>
+          <section className="mb-10">
+            <h2 className="font-display text-2xl font-bold mb-4">Evidence and editorial standards</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">A useful reputation plan identifies the exact URLs, the factual concern and the available policy or legal route. Reporting should distinguish work completed from decisions made by Google, publishers and courts. We do not publish client identities without consent or treat illustrative scenarios as proof of an actual campaign.</p>
+            <p className="text-muted-foreground leading-relaxed mb-4">Our <Link to="/wikipedia-policy" className="text-gold hover:underline">Wikipedia policy</Link> explains disclosure and editorial independence. Read the <Link to="/blog/how-long-does-reputation-management-take" className="text-gold hover:underline">timeline guide</Link> before comparing guarantees or fixed deadlines. For a named specialist or evidence relevant to your project, <Link to="/contact" className="text-gold hover:underline">contact the agency</Link>.</p>
+          </section>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
             <Link to="/services" className="bg-card border border-border rounded-xl p-5 hover:-translate-y-1 transition-all group">

@@ -13,19 +13,20 @@ import imgDeepfake from "@/assets/blog/deepfake-reputation.jpg";
 import imgPrWar from "@/assets/blog/pr-war.jpg";
 
 const HUB_FAQS = [
-  { q: "How often is the blog updated?", a: "We publish a new in-depth guide roughly every 7–10 days, and refresh evergreen cornerstone guides quarterly (updated dates are shown on each article). Every post is written or reviewed by senior members of our celebrity reputation management team." },
-  { q: "Are these articles written by AI?", a: "No. Every guide is authored or reviewed by our senior team — strategists, former journalists, and Wikipedia specialists with 15+ years working with celebrity clients. AI tools are used only for research and formatting assistance, never as the source of substantive analysis." },
+  { q: "How often is the blog updated?", a: "Article dates are displayed on each guide. Platform policies can change; check the linked primary sources before submitting a request." },
+  { q: "Who publishes these guides?", a: "The agency publishes these guides under an editorial-team byline. For a named specialist, an interview or a case-specific assessment, contact us. Guides are not a substitute for legal advice." },
   { q: "Where should a first-time reader start?", a: "Start with three cornerstone pieces: [What is celebrity reputation management?](/blog/what-is-celebrity-reputation-management), [How much does it cost?](/blog/celebrity-reputation-management-cost), and [10 warning signs you need a reputation manager](/blog/signs-you-need-reputation-management). Together they cover most of what a new client typically needs to know." },
   { q: "Can I cite these articles in my own reporting?", a: "Yes — every article is written with the expectation that journalists, academics, and other reputation professionals may cite it. We ask only that you link to the original source. For interview requests, use our [contact page](/contact)." },
   { q: "Do you cover AI-search reputation, not just Google?", a: "Extensively. Our AI-search coverage (ChatGPT, Perplexity, Gemini, Claude) has become one of the most-read sections on the blog — see [what ChatGPT says about you](/blog/what-chatgpt-says-about-you) as a starting point." },
 ];
 
-const HUB_INTRO = `Everything we've learned over 15+ years and 500+ celebrity reputation engagements — written down and updated for how reputation actually works in 2026. These aren't marketing posts. They're the guides we wish existed when a new client asks 'how does this actually work, and how long will it take?'.
-
-Coverage spans the four surfaces that determine a public figure's digital reputation today: Google organic results, Wikipedia, Google Knowledge Panel, and the AI assistants (ChatGPT, Perplexity, Gemini, Claude) that increasingly answer 'who is [your name]?' for millions of users. Every post is written or reviewed by senior members of our team and linked back to the [services](/services) and [solutions](/solutions) they discuss, so you can go from reading to action in one click.`;
+const HUB_INTRO = `Practical guides to reputation management for public figures, executives, entrepreneurs and businesses. Start with the problem you need to solve: exposed personal data, an inaccurate article, a review attack or a wider search-profile issue.\n\nThe guides distinguish eligible content removal from search suppression, explain platform processes and link to the relevant [services](/services). For a situation requiring a legal judgment, seek qualified counsel before submitting a complaint.`;
 
 
 const blogPosts: { slug: string; title: string; tag: string; date: string; read: string; image?: string; imageAlt?: string }[] = [
+  { slug: 'how-long-does-reputation-management-take', title: 'How Long Does Reputation Management Take?', tag: 'Education', date: 'Nov 15, 2026', read: '7 min' },
+  { slug: 'how-to-file-a-dmca-takedown', title: 'How to File a DMCA Takedown Notice (+ Template)', tag: 'Legal', date: 'Nov 15, 2026', read: '8 min' },
+  { slug: 'how-to-remove-a-google-review', title: 'How to Remove a Google Review: Reporting and Appeals', tag: 'Google', date: 'Nov 15, 2026', read: '7 min' },
   { slug: "depp-heard-defamation-trial-reputation-lessons", title: "Depp v. Heard: What the Defamation Trial Taught Us About Reputation Recovery", tag: "Case Study", date: "Sep 2, 2026", read: "13 min", image: imgDefamationTrial, imageAlt: "Empty courtroom witness stand lit by a spotlight with press cameras in silhouette" },
   { slug: "will-smith-oscars-slap-crisis-management-case-study", title: "The Oscars Slap: A Crisis Management Case Study in Apology Sequencing", tag: "Case Study", date: "Aug 26, 2026", read: "11 min", image: imgAwardsStage, imageAlt: "Empty awards show stage with a single gold microphone under a spotlight" },
   { slug: "celebrity-deepfake-scandal-reputation-management", title: "Celebrity Deepfake Scandals: The 72-Hour Response Playbook (2026 Law Update)", tag: "Case Study", date: "Aug 20, 2026", read: "12 min", image: imgDeepfake, imageAlt: "Digital portrait dissolving into pixel fragments representing AI deepfake media" },

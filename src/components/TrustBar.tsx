@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
 const items = [
-  { text: "Rated 4.76/5 by 181 clients", link: "/reviews" },
+  { text: "Evidence-led assessments", link: "/about" },
   { text: "NDA-first engagements", link: "" },
   { text: "Crisis team 24/7/365", link: "/services/celebrity-crisis-management" },
-  { text: "500+ campaigns", link: "/about" },
-  { text: "Results in 30 days", link: "/services/negative-search-results" },
+  { text: "Disclosure-first Wikipedia", link: "/wikipedia-policy" },
+  { text: "Case-specific timelines", link: "/blog/how-long-does-reputation-management-take" },
   { text: "US, UK & global", link: "/who-we-serve" },
 ];
 

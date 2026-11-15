@@ -1,9 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
+import usePageSEO from '@/hooks/usePageSEO';
 
 const NotFound = () => {
   const location = useLocation();
+  usePageSEO({ title: 'Page Not Found | Celebrity Reputation Management', description: 'This page does not exist. Browse reputation management services or contact our team.', noindex: true });
 
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);

@@ -1,5 +1,7 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { RenderContext } from '@/seo/RenderContext';
+import { pageIdentity, INDEX_ROBOTS } from '@/seo/policy';
 
 interface PageSEOProps {
   title: string;
@@ -7,17 +9,23 @@ interface PageSEOProps {
   canonical?: string;
   type?: string;
   jsonLd?: Record<string, unknown>;
+  noindex?: boolean;
 }
 
 const BASE_URL = "https://celebrity-reputation-management.com";
 
-const usePageSEO = ({ title, description, canonical, type = "website", jsonLd }: PageSEOProps) => {
+const usePageSEO = ({ title: suppliedTitle, description: suppliedDescription, canonical, type = "website", jsonLd, noindex = false }: PageSEOProps) => {
   const { pathname } = useLocation();
+  const { title, description } = pageIdentity(pathname, suppliedTitle, suppliedDescription);
+  const capture = useContext(RenderContext);
   const canonicalUrl = canonical || `${BASE_URL}${pathname}`;
+  capture?.({ title, description, canonical: canonicalUrl, type, jsonLd, noindex });
 
   useEffect(() => {
     // Title
     document.title = title;
+    const robots = document.querySelector('meta[name="robots"]');
+    robots?.setAttribute('content', noindex ? 'noindex, follow' : INDEX_ROBOTS);
 
     // Meta description
     let metaDesc = document.querySelector('meta[name="description"]');
@@ -84,7 +92,7 @@ const usePageSEO = ({ title, description, canonical, type = "website", jsonLd }:
       const pageScript = document.querySelector('script[data-page-jsonld]');
       if (pageScript) pageScript.remove();
     };
-  }, [title, description, canonicalUrl, type, jsonLd]);
+  }, [title, description, canonicalUrl, type, jsonLd, noindex]);
 };
 
 export default usePageSEO;

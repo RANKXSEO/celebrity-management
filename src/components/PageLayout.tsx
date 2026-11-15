@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import FloatingCta from "./FloatingCta";
 import AboutCitationBlock from "./AboutCitationBlock";
+import WorkbookLinks from './WorkbookLinks';
 
 const PageLayout = ({ children }: { children: ReactNode }) => {
   const { pathname } = useLocation();
@@ -18,6 +19,7 @@ const PageLayout = ({ children }: { children: ReactNode }) => {
     <main id="main-content">
       <Navbar />
       {children}
+      <WorkbookLinks />
       <AboutCitationBlock />
       <Footer />
       <FloatingCta />

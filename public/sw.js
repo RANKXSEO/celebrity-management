@@ -1,5 +1,5 @@
-const CACHE_NAME = 'crma-v2';
-const PRECACHE_URLS = ['/manifest.json', '/favicon.png', '/og-image.png'];
+const CACHE_NAME = 'crma-v3';
+const PRECACHE_URLS = ['/manifest.json', '/favicon.ico', '/og-image.png'];
 
 const isViteDevelopmentAsset = (url) =>
   url.pathname.startsWith('/node_modules/') ||
@@ -32,7 +32,7 @@ self.addEventListener('fetch', (event) => {
   if (url.origin !== self.location.origin || isViteDevelopmentAsset(url)) return;
 
   if (event.request.mode === 'navigate') {
-    event.respondWith(fetch(event.request).catch(() => caches.match('/')));
+    event.respondWith(fetch(event.request).catch(() => new Response('You are offline. Please reconnect to load this page.', { status: 503, headers: { 'Content-Type': 'text/plain' } })));
     return;
   }
 

@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <Link to="/"><Logo light /></Link>
             <p className="text-sm text-primary-foreground/65 leading-relaxed mt-4 mb-6">
-              Specialist <Link to="/services" className="text-primary-foreground/85 hover:text-gold-light transition-colors">online reputation management</Link> for celebrities, athletes, entertainers, influencers, executives, and public figures. Serving the <strong className="text-primary-foreground/80">United States</strong>, <strong className="text-primary-foreground/80">United Kingdom</strong>, and internationally since 2009.
+              Specialist <Link to="/services" className="text-primary-foreground/85 hover:text-gold-light transition-colors">online reputation management</Link> for celebrities, athletes, executives, entrepreneurs and businesses. Serving the <strong className="text-primary-foreground/80">United States</strong> and international clients.
             </p>
             <address className="not-italic flex flex-col gap-2">
               <a href="tel:+16462224346" className="flex items-center gap-2.5 text-[13px] text-primary-foreground/80 hover:text-gold-light transition-colors">
@@ -64,7 +64,8 @@ const Footer = () => {
               <Link to="/resources" className="text-sm text-primary-foreground/70 hover:text-primary-foreground/70 transition-colors">Frequently Asked Questions</Link>
               <Link to="/blog" className="text-sm text-primary-foreground/70 hover:text-primary-foreground/70 transition-colors">Expert Blog & Guides</Link>
               <Link to="/about" className="text-sm text-primary-foreground/70 hover:text-primary-foreground/70 transition-colors">About the Agency</Link>
-              <Link to="/reviews" className="text-sm text-primary-foreground/70 hover:text-primary-foreground/70 transition-colors">Client Reviews (4.76/5)</Link>
+              <Link to="/wikipedia-policy" className="text-sm text-primary-foreground/70 hover:text-gold transition-colors">Wikipedia Disclosure Policy</Link>
+              <Link to="/reviews" className="text-sm text-primary-foreground/70 hover:text-primary-foreground/70 transition-colors">Reviews and Evidence</Link>
               <Link to="/solutions" className="text-sm text-primary-foreground/70 hover:text-primary-foreground/70 transition-colors">Reputation Solutions</Link>
               <Link to="/contact" className="text-sm text-primary-foreground/70 hover:text-primary-foreground/70 transition-colors">Contact Us</Link>
               <Link to="/free-consultation" className="text-sm text-gold hover:text-gold-light transition-colors font-medium">Free Reputation Audit</Link>

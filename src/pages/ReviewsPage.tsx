@@ -25,35 +25,9 @@ const avgRating = (reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.lengt
 
 const ReviewsPage = () => {
   usePageSEO({
-    title: "Client Reviews — Rated 4.76/5 by 181 Clients",
-    description: "Verified reviews of our celebrity reputation management services. Rated 4.76/5 by 181 celebrities, athletes, influencers, and public figures.",
-    jsonLd: {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Celebrity Reputation Management Agency",
-      "url": `${BASE_URL}`,
-      "image": `${BASE_URL}/og-image.png`,
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.76",
-        "reviewCount": "181",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "review": reviews.slice(0, 6).map(r => ({
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": String(r.rating),
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": r.name
-        },
-        "reviewBody": r.quote
-      }))
-    }
+    title: "Reputation Management Reviews: How to Check Evidence",
+    description: "How to evaluate reputation management reviews, campaign evidence and provider promises. Ask for genuine references and inspect the scope before hiring.",
+
   });
 
   return (
@@ -71,55 +45,20 @@ const ReviewsPage = () => {
             Celebrity Reputation Management <em className="text-gold-light italic">Reviews</em>
           </h1>
           <p className="text-primary-foreground/85 text-lg leading-relaxed mb-6 max-w-[600px] mx-auto">
-            Rated <strong className="text-gold-light">4.76 out of 5</strong> by <strong className="text-gold-light">181 clients</strong>. Read what celebrities, athletes, influencers, and public figures say about our <Link to="/services" className="text-gold hover:text-gold-light underline-offset-2 hover:underline transition-colors">online reputation management services</Link>.
+            Evaluate the evidence behind claims about <Link to="/services" className="text-gold hover:text-gold-light underline-offset-2 hover:underline transition-colors">online reputation management services</Link>.
           </p>
-          <div className="flex items-center justify-center gap-1 mb-2">
-            {[1,2,3,4,5].map(s => (
-              <svg key={s} className={`w-6 h-6 ${s <= 4 ? 'text-gold' : 'text-gold/60'}`} fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            ))}
-          </div>
-          <p className="text-primary-foreground/60 text-xs">Based on 181 verified client engagements · Identities protected under NDA</p>
+          <p className="text-primary-foreground/60 text-xs">Client confidentiality does not replace verifiable evidence.</p>
         </div>
       </section>
 
       <section className="py-[clamp(52px,7vw,88px)] bg-background">
         <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {reviews.map((r, i) => (
-              <motion.article
-                key={r.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05, duration: 0.5 }}
-                className="bg-card border border-border rounded-2xl p-[clamp(20px,2.8vw,28px)] hover:-translate-y-1 hover:shadow-md-custom transition-all flex flex-col"
-              >
-                <div className="flex items-center gap-1 mb-3">
-                  {[1,2,3,4,5].map(s => (
-                    <svg key={s} className={`w-4 h-4 ${s <= r.rating ? 'text-gold' : 'text-border'}`} fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                  ))}
-                </div>
-
-                <div className="bg-gold/10 border border-gold/20 rounded-lg px-3 py-1.5 mb-3 inline-flex self-start">
-                  <span className="text-[10px] font-bold text-gold tracking-[0.05em] uppercase">{r.result}</span>
-                </div>
-
-                <blockquote className="font-display text-[15px] italic leading-relaxed text-foreground mb-4 flex-1">
-                  "{r.quote}"
-                </blockquote>
-
-                <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-navy-light flex items-center justify-center text-gold-light font-display text-base font-bold flex-shrink-0" aria-hidden="true">
-                    {r.name.charAt(0)}
-                  </div>
-                  <div>
-                    <div className="text-sm font-bold text-primary leading-tight">{r.name}</div>
-                    <div className="text-[11px] text-ink-muted mt-0.5">{r.role}</div>
-                  </div>
-                </div>
-              </motion.article>
-            ))}
-          </div>
+          <h2 className="font-display text-2xl mb-4">What should you verify before hiring?</h2>
+          <p className="text-muted-foreground leading-relaxed mb-6">Ask for genuine third-party references, a clear scope and an explanation of how results were measured. A success rate without a sample, period and definition is not enough. Confidential work can be discussed through consented references or redacted records, but an anonymous quote alone does not establish a result.</p>
+          <h2 className="font-display text-2xl mb-4">How do you assess a case result?</h2>
+          <p className="text-muted-foreground leading-relaxed mb-6">Check the baseline query set, the dates, the target URLs and whether the claimed outcome was removal, delisting or ranking change. Those are different outcomes. Ask what remains online, what can return and which decisions depend on another party.</p>
+          <h2 className="font-display text-2xl mb-4">What questions should a provider answer?</h2>
+          <p className="text-muted-foreground leading-relaxed mb-6">Who will handle the work? Which policies justify each removal request? What deliverables are included? How are rejected requests reported? Is Wikipedia work disclosed? Start with our <Link to="/blog/how-to-choose-a-reputation-management-company" className="text-gold hover:underline">provider selection guide</Link> and <Link to="/wikipedia-policy" className="text-gold hover:underline">Wikipedia policy</Link>, then <Link to="/contact" className="text-gold hover:underline">contact us</Link> for a case-specific assessment.</p>
         </div>
       </section>
 
@@ -130,7 +69,7 @@ const ReviewsPage = () => {
             Ready to Take Control of <em className="text-gold-light italic">Your Online Reputation?</em>
           </h2>
           <p className="text-primary-foreground/75 text-base leading-relaxed mb-6">
-            Join 500+ celebrities, athletes, and public figures who trust our <Link to="/services" className="text-gold hover:text-gold-light transition-colors">celebrity reputation management services</Link> to protect their name. Start with a free, confidential <Link to="/free-consultation" className="text-gold hover:text-gold-light transition-colors">reputation audit</Link>.
+            Assess our <Link to="/services" className="text-gold hover:text-gold-light transition-colors">celebrity reputation management services</Link> to protect their name. Start with a free, confidential <Link to="/free-consultation" className="text-gold hover:text-gold-light transition-colors">reputation audit</Link>.
           </p>
           <div className="flex items-center justify-center gap-3 flex-wrap">
             <Link to="/free-consultation" className="inline-flex items-center gap-2 bg-gold text-primary-foreground px-7 py-3.5 rounded text-base font-bold shadow-gold hover:bg-gold-light hover:-translate-y-0.5 transition-all">

@@ -25,6 +25,7 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const ReviewsPage = lazy(() => import("./pages/ReviewsPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const WikipediaPolicy = lazy(() => import('./pages/WikipediaPolicy'));
 
 const queryClient = new QueryClient();
 
@@ -59,6 +60,7 @@ const App = () => (
             <Route path="/solutions/:slug" element={<SolutionPage />} />
             {/* About */}
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/wikipedia-policy" element={<WikipediaPolicy />} />
             <Route path="/about/case-studies" element={<AboutPage />} />
             <Route path="/about/testimonials" element={<AboutPage />} />
             <Route path="/about/ethics-and-process" element={<AboutPage />} />

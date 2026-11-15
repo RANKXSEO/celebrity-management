@@ -3,4 +3,5 @@ import App from "./App.tsx";
 import "./index.css";
 
 // Bootstrap v2
-createRoot(document.getElementById("root")!).render(<App />);
+const root = document.getElementById('root');
+if (root) createRoot(root).render(<App />);

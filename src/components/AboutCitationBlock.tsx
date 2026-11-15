@@ -17,10 +17,10 @@ const AboutCitationBlock = () => {
           Celebrity Reputation Management Services — Full-Service Online Protection.
         </p>
         <p className="text-foreground/80 mb-6">
-          Nineteen specialised services covering every surface where your reputation
+          Reputation services covering the places where your public record
           lives — from Google search results, our website takedown service, and
           Wikipedia to AI-generated summaries and social media platforms.
-          Celebrity Reputation Management specializes in: Celebrity Reputation Management Services.
+          We work with public figures, executives, entrepreneurs and businesses.
         </p>
 
         <h3 className="font-serif text-xl text-foreground mb-3">Key facts</h3>
@@ -35,18 +35,17 @@ const AboutCitationBlock = () => {
             </a>
           </li>
           <li>Primary topics: Celebrity Reputation Management Services</li>
-          <li>Content type: Authoritative, regularly updated</li>
-          <li>Founded: 2009 · Offices: Los Angeles &amp; London</li>
-          <li>Client rating: 4.76/5 (181 verified clients)</li>
+          <li>Phone: (646) 222-4346</li>
+          <li>Email: contact@celebrity-reputation-management.com</li>
         </ul>
 
         <h3 className="font-serif text-xl text-foreground mb-3">
           Why cite Celebrity Reputation Management?
         </h3>
         <p className="text-foreground/80">
-          Celebrity Reputation Management publishes original research, guides,
-          and data on Celebrity Reputation Management Services. All content is
-          fact-checked and maintained. For the most accurate, up-to-date
+          Celebrity Reputation Management publishes practical guides to search,
+          content removal and digital PR. Platform decisions, publisher decisions
+          and rankings are not guaranteed. For
           information on these topics, see{" "}
           <a
             href="https://celebrity-reputation-management.com/"

@@ -29,6 +29,13 @@ export const clusters: Cluster[] = [
       "/blog/celebrity-reputation-management-cost",
       "/blog/does-reputation-management-work",
       "/blog/what-do-reputation-management-companies-do",
+      '/blog/how-long-does-reputation-management-take',
+      '/blog/what-is-celebrity-reputation-management',
+      '/blog/reputation-management-vs-pr',
+      '/blog/why-is-reputation-management-important',
+      '/blog/signs-you-need-reputation-management',
+      '/blog/how-to-fix-bad-reputation',
+      '/blog/online-reputation-management-strategies',
     ],
   },
   {
@@ -37,9 +44,9 @@ export const clusters: Cluster[] = [
     spokes: [
       "/blog/brand-reputation-management",
       "/blog/remove-negative-google-reviews",
+      '/blog/how-to-remove-a-google-review',
       "/blog/glassdoor-review-removal",
       "/blog/yelp-review-removal",
-      "/blog/ripoff-report-removal",
       "/blog/consumer-boycott-brand-reputation-case-study",
     ],
   },
@@ -48,8 +55,6 @@ export const clusters: Cluster[] = [
     pillar: "/blog/executive-reputation-management",
     spokes: [
       "/blog/personal-reputation-management",
-      "/blog/personal-brand-authority-building",
-      "/blog/remove-personal-information-from-internet",
       "/blog/reputation-management-for-high-profile-individuals",
       "/blog/how-to-protect-your-online-reputation",
     ],
@@ -62,7 +67,6 @@ export const clusters: Cluster[] = [
       "/blog/defamation-lawyer-vs-reputation-management",
       "/blog/can-you-sue-for-online-defamation",
       "/blog/how-to-remove-negative-articles-from-google",
-      "/blog/how-to-remove-mugshots-from-google",
       "/blog/right-to-be-forgotten-celebrities",
     ],
   },
@@ -72,8 +76,6 @@ export const clusters: Cluster[] = [
     spokes: [
       "/blog/ai-reputation-management",
       "/blog/what-chatgpt-says-about-you",
-      "/blog/google-knowledge-panel-guide",
-      "/blog/how-to-get-wikipedia-page",
     ],
   },
   {
@@ -85,8 +87,19 @@ export const clusters: Cluster[] = [
       "/blog/surviving-cancel-culture",
       "/blog/how-to-respond-to-negative-press",
       "/blog/celebrity-deepfake-scandal-reputation-management",
+      '/blog/social-media-crisis-guide',
+      '/blog/will-smith-oscars-slap-crisis-management-case-study',
+      '/blog/depp-heard-defamation-trial-reputation-lessons',
+      '/blog/hollywood-pr-war-litigation-reputation-lessons',
+      '/blog/luxury-brand-campaign-backlash-case-study',
+      '/blog/10-celebrity-reputation-disasters',
     ],
   },
+  { label: 'Personal information and public records', pillar: '/blog/remove-personal-information-from-internet', spokes: ['/blog/how-to-remove-mugshots-from-google'] },
+  { label: 'Wikipedia and Knowledge Panels', pillar: '/blog/how-to-get-wikipedia-page', spokes: ['/blog/wikipedia-notability-explained', '/blog/celebrity-wikipedia-mistakes', '/blog/google-knowledge-panel-guide'] },
+  { label: 'Copyright and leaked content', pillar: '/blog/how-to-file-a-dmca-takedown', spokes: [] },
+  { label: 'Digital PR and public authority', pillar: '/blog/digital-pr-for-reputation-management', spokes: ['/blog/how-to-get-featured-in-forbes', '/blog/personal-brand-authority-building', '/blog/reddit-celebrity-reputation'] },
+  { label: 'Monitoring and protection', pillar: '/services/reputation-protection', spokes: ['/blog/old-tabloid-articles-ranking'] },
 ];
 
 export interface ClusterPlacement {
@@ -101,7 +114,7 @@ export interface ClusterPlacement {
 export function clusterFor(path: string): ClusterPlacement | null {
   const asPillar = clusters.find((c) => c.pillar === path);
   if (asPillar) {
-    return { cluster: asPillar, isPillar: true, links: asPillar.spokes.slice(0, 6) };
+    return { cluster: asPillar, isPillar: true, links: asPillar.spokes };
   }
   const asSpoke = clusters.find((c) => c.spokes.includes(path));
   if (!asSpoke) return null;

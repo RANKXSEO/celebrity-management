@@ -62,13 +62,13 @@ const AudiencePage = () => {
     title: page ? page.title : "Page Not Found",
     description: page?.metaDesc || "",
     jsonLd,
+    noindex: !page,
   });
 
   const tocHeadings = page ? [
     ...page.sections.map(s => s.title),
     "The Reputation Challenges You Face",
     "How We Help",
-    ...(page.caseStudy ? ["Client Case Study"] : []),
     ...(page.faqs && page.faqs.length > 0 ? ["Frequently Asked Questions"] : []),
   ] : [];
 
@@ -101,7 +101,7 @@ const AudiencePage = () => {
         </div>
       </section>
 
-      {page.stats && page.stats.length > 0 && (
+      {false && page.stats && page.stats.length > 0 && (
         <section className="bg-card border-y border-border">
           <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -157,7 +157,7 @@ const AudiencePage = () => {
           </div>
 
           {/* Case study */}
-          {page.caseStudy && (
+          {false && page.caseStudy && (
             <div className="mb-12">
               <h2 id={slugifyHeading("Client Case Study")} className="font-display text-2xl font-bold mb-4 scroll-mt-24">Client Case Study</h2>
               <div className="bg-card border border-gold/30 rounded-2xl p-6">
@@ -186,12 +186,12 @@ const AudiencePage = () => {
           )}
 
           {/* Testimonial */}
-          <div className="bg-primary rounded-2xl p-8 mb-12">
+          {false && <div className="bg-primary rounded-2xl p-8 mb-12">
             <div className="font-display text-4xl text-gold/40 mb-2">"</div>
             <blockquote className="font-display text-lg italic text-primary-foreground leading-relaxed mb-4">{page.testimonial.quote}</blockquote>
             <div className="text-sm font-bold text-gold-light">{page.testimonial.name}</div>
             <div className="text-[11px] text-primary-foreground/65 mt-0.5">{page.testimonial.role}</div>
-          </div>
+          </div>}
 
           {/* FAQ */}
           {page.faqs && page.faqs.length > 0 && (

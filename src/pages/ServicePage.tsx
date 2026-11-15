@@ -65,6 +65,7 @@ const ServicePage = () => {
     title: page ? page.title : "Service Not Found",
     description: page?.metaDesc || "",
     jsonLd,
+    noindex: !page,
   });
 
   const tocHeadings = page
@@ -134,7 +135,7 @@ const ServicePage = () => {
           {page.sections.map((sec, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
               <h2 id={slugifyHeading(sec.title)} className="font-display text-[clamp(1.5rem,2.5vw,2rem)] tracking-tight mb-3 scroll-mt-24">{sec.title}</h2>
-              <ContentRenderer content={sec.content} className="text-muted-foreground text-base leading-relaxed" />
+              {sec.content.split('\n\n').map((paragraph, j) => <ContentRenderer key={j} content={paragraph} className="text-muted-foreground text-base leading-relaxed mb-4" />)}
             </motion.div>
           ))}
 

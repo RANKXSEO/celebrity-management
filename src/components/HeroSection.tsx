@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const stats = [
-  { num: "500+", value: 500, label: "Celebrity Campaigns" },
-  { num: "15+", value: 15, label: "Years in the Industry" },
-  { num: "94%", value: 94, label: "Page-One Results Cleared" },
-  { num: "< 48hr", value: 48, label: "Crisis Response Window" },
+  { num: "Audit", value: 'audit', label: "Your Search Profile" },
+  { num: "Assess", value: 'assess', label: "Removal Eligibility" },
+  { num: "Build", value: 'build', label: "Editorial Authority" },
+  { num: "Monitor", value: 'monitor', label: "Changing Results" },
 ];
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -33,7 +33,7 @@ const HeroSection = () => {
                 transition={{ duration: 0.7, ease }}
                 className="label-rule text-gold-light mb-9"
               >
-                500+ Public Figures Protected · Est. 2009
+                Public Figures · Executives · Businesses
               </motion.p>
 
               <motion.h1
@@ -61,10 +61,11 @@ const HeroSection = () => {
                 transition={{ delay: 0.3, duration: 0.8, ease }}
                 className="text-[clamp(1rem,1.4vw,1.125rem)] text-primary-foreground/70 leading-[1.8] max-w-[38rem]"
               >
-                One bad headline shouldn't define a legacy. We work exclusively with
-                celebrities, athletes, and public figures to take back control of Google,
-                Wikipedia, social media, and AI search results — so that when someone looks
-                you up, they find the truth, not a tabloid narrative from five years ago.
+                We help celebrities, athletes, executives, entrepreneurs and businesses
+                address inaccurate search results, exposed personal information and damaging coverage.
+                Our work combines eligible content removal, search suppression, digital PR
+                and AI-search reputation checks. Each plan starts with the evidence and
+                explains what can change, what cannot and how progress will be measured.
               </motion.p>
 
               <motion.div
@@ -100,7 +101,7 @@ const HeroSection = () => {
                 transition={{ delay: 0.6, duration: 0.7 }}
                 className="mt-8 text-[10px] uppercase tracking-[0.2em] text-primary-foreground/40"
               >
-                Free · Confidential · NDA available · Response within 2 hours
+                Free · Confidential · NDA available
               </motion.p>
             </div>
 

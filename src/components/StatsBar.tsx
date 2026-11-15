@@ -1,9 +1,9 @@
 const StatsBar = () => {
   const stats = [
-    { num: "500+", value: 500, label: "Celebrity reputation management campaigns completed" },
-    { num: "15 yrs", value: 15, label: "Years of reputation management expertise since 2009" },
-    { num: "94%", value: 94, label: "Negative page-one results successfully cleared" },
-    { num: "< 48 hr", value: 48, label: "Average crisis first-response time in hours" },
+    { num: "Search", value: 'search', label: "Evidence-led visibility checks" },
+    { num: "Privacy", value: 'privacy', label: "Source and search removal eligibility" },
+    { num: "PR", value: 'pr', label: "Credible editorial opportunities" },
+    { num: "AI", value: 'ai', label: "Source accuracy and answer monitoring" },
   ];
 
   return (

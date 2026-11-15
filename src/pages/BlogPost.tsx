@@ -14,6 +14,8 @@ import RelatedLinks from "@/components/RelatedLinks";
 import SmartLink from "@/components/SmartLink";
 import { clusterFor } from "@/data/blogClusters";
 import { anchorMap } from "@/data/anchorMap";
+import { cleanDescription } from '@/seo/policy';
+import overrides from '@/seo/pageOverrides.json';
 
 /** Pillar guides receive concentrated internal equity from every post. */
 const PILLAR_GUIDES = [
@@ -30,17 +32,18 @@ const BlogPost = () => {
   const { slug } = useParams();
   const post = blogPosts.find((p) => p.slug === slug);
   const content = slug ? blogContent[slug] : undefined;
+  const headline = (overrides as Record<string, { h1: string }>)[`/blog/${slug}`]?.h1 ?? post?.title;
 
   const jsonLd = useMemo(() => {
     if (!post) return undefined;
     const graph: Record<string, unknown>[] = [
       {
         "@type": "Article",
-        "headline": post.title,
-        "datePublished": post.date,
-        "dateModified": DEFAULT_UPDATED,
+        "headline": headline,
+        "datePublished": new Date(post.date).toISOString().slice(0, 10),
+        "dateModified": new Date(post.date).toISOString().slice(0, 10),
         "author": {
-          "@type": "Person",
+          "@type": "Organization",
           "name": DEFAULT_AUTHOR,
           "url": `${BASE_URL}/about`,
         },
@@ -76,19 +79,18 @@ const BlogPost = () => {
     }
 
     return { "@context": "https://schema.org", "@graph": graph };
-  }, [post, content]);
+  }, [post, content, headline]);
 
   // Strip markdown link syntax from intro for clean meta description
   const rawIntro = content?.intro ?? "";
-  const cleanDesc = rawIntro
-    ? rawIntro.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').slice(0, 155) + "..."
-    : post?.title || "";
+  const cleanDesc = cleanDescription(rawIntro || post?.title || '');
 
   usePageSEO({
     title: post ? post.title : "Post Not Found",
     description: cleanDesc,
     type: "article",
     jsonLd,
+    noindex: !post || !content,
   });
 
   if (!post) return <PageLayout><div className="pt-32 pb-20 text-center"><h1 className="font-display text-3xl">Post not found</h1><Link to="/blog" className="text-gold mt-4 inline-block">← Back to blog</Link></div></PageLayout>;
@@ -113,7 +115,7 @@ const BlogPost = () => {
               <span className="text-[9px] font-bold tracking-[0.1em] uppercase text-gold bg-gold/10 px-2 py-0.5 rounded-full">{post.tag}</span>
               <span className="text-[11px] text-primary-foreground/65">{post.date} · {post.read}</span>
             </div>
-            <h1 className="font-display text-[clamp(1.75rem,3.5vw,2.75rem)] text-primary-foreground font-bold tracking-tight leading-tight">{post.title}</h1>
+            <h1 className="font-display text-[clamp(1.75rem,3.5vw,2.75rem)] text-primary-foreground font-bold tracking-tight leading-tight">{headline}</h1>
           </div>
         </section>
 
@@ -134,7 +136,7 @@ const BlogPost = () => {
 
             {content ? (
               <>
-                <AuthorByline published={post.date} updated={DEFAULT_UPDATED} />
+                <AuthorByline published={post.date} updated={new Date(post.date).toISOString().slice(0, 10)} />
 
                 <ContentRenderer content={content.intro} className="text-muted-foreground leading-relaxed text-[17px] mb-8 font-body" />
 

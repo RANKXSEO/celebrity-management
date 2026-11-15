@@ -43,6 +43,7 @@ const SolutionPage = () => {
     title: page ? page.title : "Solution Not Found",
     description: page?.metaDesc || "",
     jsonLd,
+    noindex: !page,
   });
 
   if (!page) return <PageLayout><div className="pt-32 pb-20 text-center"><h1 className="font-display text-3xl">Page not found</h1><Link to="/solutions" className="text-gold mt-4 inline-block">← Back to solutions</Link></div></PageLayout>;
@@ -74,7 +75,7 @@ const SolutionPage = () => {
         </div>
       </section>
 
-      {page.stats && (
+      {false && page.stats && (
         <section className="bg-card border-y border-border">
           <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -92,7 +93,7 @@ const SolutionPage = () => {
       <section className="py-[clamp(52px,7vw,80px)] bg-background">
         <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8">
           <AuthorByline updated={DEFAULT_UPDATED} />
-          {page.stats && page.stats.length > 0 && (
+          {false && page.stats && page.stats.length > 0 && (
             <KeyTakeaways items={page.stats.map(s => `${s.num} — ${s.label}`)} title="At a glance" />
           )}
           <TableOfContents headings={page.sections.map((s) => s.title)} />
@@ -104,7 +105,7 @@ const SolutionPage = () => {
             </motion.div>
           ))}
 
-          {page.testimonial && (
+          {false && page.testimonial && (
             <div className="bg-primary rounded-2xl p-8 mb-12">
               <div className="font-display text-4xl text-gold/40 mb-2">"</div>
               <blockquote className="font-display text-lg italic text-primary-foreground leading-relaxed mb-4">{page.testimonial.quote}</blockquote>

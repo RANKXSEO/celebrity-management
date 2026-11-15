@@ -4,13 +4,13 @@ import SmartLink from "@/components/SmartLink";
 const pillars = [
   {
     h3: "Website Takedown Service for Permanent Source-Level Removal",
-    body: "Suppression alone won't end the problem if the source URL keeps republishing. Our website takedown service pursues defamation, DMCA, GDPR, and policy-based removals directly with publishers, hosts, and registrars — eliminating the URL at the source so it can never resurface in Google, Bing, or AI search.",
+    body: "A website takedown service assesses copyright, privacy and platform-policy routes at the source. Eligibility depends on the evidence and jurisdiction. Removing one page does not prevent copies appearing elsewhere.",
     link: "/services/website-takedown-service",
     cta: "Explore the website takedown service",
   },
   {
     h3: "Negative Search Result Suppression on Google",
-    body: "Old tabloid coverage and decade-old controversies that still rank for your name get pushed off page one with high-authority owned, earned, and editorial assets. 94% of campaigns achieve material page-one change within 90 days.",
+    body: "Accurate reporting often cannot be deleted. Search suppression builds relevant owned and earned assets to compete for your name. Rankings and timelines depend on the query and existing coverage; outcomes are not guaranteed.",
     link: "/services/negative-search-results",
     cta: "How Google suppression works",
   },
@@ -31,6 +31,31 @@ const pillars = [
     body: "Generative Engine Optimisation reshapes the source material that ChatGPT, Gemini, Perplexity, and Copilot draw from when answering questions about you. There is no 'page two' in AI search — the first paragraph is everything.",
     link: "/services/ai-search-reputation",
     cta: "Fix what AI says about you",
+  },
+  {
+    h3: 'Personal Reputation Management for Individuals',
+    body: 'Separate your personal search profile from a company controversy, correct factual errors and assess privacy exposure. A URL-by-URL plan distinguishes removal eligibility from authority building.',
+    link: '/services/personal-reputation-management', cta: 'Personal reputation services',
+  },
+  {
+    h3: 'Remove Personal Information From the Internet',
+    body: 'Data-broker opt-outs address source listings; Google privacy requests address eligible search results. Both need monitoring because information can be republished.',
+    link: '/services/people-search-removal', cta: 'Personal information removal',
+  },
+  {
+    h3: 'DMCA Takedown and Leaked Content Response',
+    body: 'Copyright notices require ownership or authorization. Privacy and nonconsensual-imagery policies may offer separate routes when copyright is not the right basis.',
+    link: '/solutions/leaked-content-removal', cta: 'Leaked content response',
+  },
+  {
+    h3: 'Digital PR for Executives and Businesses',
+    body: 'Build credible public coverage through sourced stories, interviews and expert commentary. Editors choose what to publish; paid features are not guaranteed earned media.',
+    link: '/services/digital-pr-tier-one-placements', cta: 'Digital PR and media outreach',
+  },
+  {
+    h3: 'Reputation Monitoring and Protection',
+    body: 'Track priority queries, new coverage and recurring privacy exposure. Compare a consistent baseline so reports distinguish completed work from actual visibility changes.',
+    link: '/services/reputation-protection', cta: 'Reputation monitoring',
   },
   {
     h3: "24/7 Celebrity Crisis Management",

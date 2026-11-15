@@ -17,11 +17,12 @@ import Footer from "@/components/Footer";
 import FloatingCta from "@/components/FloatingCta";
 import AboutCitationBlock from "@/components/AboutCitationBlock";
 import usePageSEO from "@/hooks/usePageSEO";
+import WorkbookLinks from '@/components/WorkbookLinks';
 
 const Index = () => {
   usePageSEO({
     title: "Celebrity Reputation Management Agency | ORM for Public Figures",
-    description: "Celebrity reputation management since 2009. Suppress Google results, website takedown service, Wikipedia, AI search, 24/7 crisis. 94% page-one cleared.",
+    description: "Reputation management for celebrities, executives and businesses. Content removal, search suppression, digital PR and AI search. Confidential audit.",
     canonical: "https://celebrity-reputation-management.com/",
   });
 
@@ -42,11 +43,11 @@ const Index = () => {
       <TopicalAuthoritySection />
       <StatsBar />
       <ProcessSection />
-      <TestimonialsSection />
       <CtaBanner />
       <BlogPreview />
       <FaqSection />
       <ContactSection />
+      <WorkbookLinks />
       <AboutCitationBlock />
       <Footer />
       <FloatingCta />

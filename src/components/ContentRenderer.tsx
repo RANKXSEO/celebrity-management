@@ -11,6 +11,12 @@ interface ContentRendererProps {
  * plus **bold** and *italic* emphasis.
  */
 const ContentRenderer = ({ content, className = "" }: ContentRendererProps) => {
+  if (content.trim().startsWith('|')) {
+    const blocks = content.split('\n\n');
+    const lines = blocks[0].trim().split('\n');
+    const cells = (line: string) => line.split('|').slice(1, -1).map(cell => cell.trim());
+    return <><div className="overflow-x-auto mb-6"><table className="w-full text-sm border-collapse"><thead><tr>{cells(lines[0]).map(cell => <th key={cell} scope="col" className="border-b border-border text-left p-3 font-semibold">{cell}</th>)}</tr></thead><tbody>{lines.slice(2).map((line, i) => <tr key={i}>{cells(line).map((cell, j) => <td key={j} className="border-b border-border p-3 align-top text-muted-foreground">{cell}</td>)}</tr>)}</tbody></table></div>{blocks.slice(1).map((block, i) => <ContentRenderer key={i} content={block} className={className} />)}</>;
+  }
   const tokenRegex = /\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*|\*([^*\n]+)\*/g;
   const parts: (string | { text: string; href?: string; bold?: boolean; italic?: boolean })[] = [];
   let lastIndex = 0;
@@ -36,7 +42,8 @@ const ContentRenderer = ({ content, className = "" }: ContentRendererProps) => {
         if (typeof part === "string") return <Fragment key={i}>{part}</Fragment>;
         if (part.bold) return <strong key={i} className="font-semibold text-foreground">{part.text}</strong>;
         if (part.italic) return <em key={i}>{part.text}</em>;
-        return part.href!.startsWith("http") ? (
+        if (!part.href) return <Fragment key={i}>{part.text}</Fragment>;
+        return part.href.startsWith("http") ? (
           <a
             key={i}
             href={part.href}
@@ -49,7 +56,7 @@ const ContentRenderer = ({ content, className = "" }: ContentRendererProps) => {
         ) : (
           <Link
             key={i}
-            to={part.href!}
+            to={part.href}
             className="text-gold hover:text-gold-light transition-colors underline-offset-2 hover:underline"
           >
             {part.text}
