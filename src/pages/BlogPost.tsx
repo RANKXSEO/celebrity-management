@@ -41,7 +41,7 @@ const BlogPost = () => {
         "@type": "Article",
         "headline": headline,
         "datePublished": new Date(post.date).toISOString().slice(0, 10),
-        "dateModified": new Date(post.date).toISOString().slice(0, 10),
+        "dateModified": content?.updated ?? new Date(post.date).toISOString().slice(0, 10),
         "author": {
           "@type": "Organization",
           "name": DEFAULT_AUTHOR,
@@ -136,7 +136,7 @@ const BlogPost = () => {
 
             {content ? (
               <>
-                <AuthorByline published={post.date} updated={new Date(post.date).toISOString().slice(0, 10)} />
+                <AuthorByline published={post.date} updated={content.updated ?? new Date(post.date).toISOString().slice(0, 10)} />
 
                 <ContentRenderer content={content.intro} className="text-muted-foreground leading-relaxed text-[17px] mb-8 font-body" />
 

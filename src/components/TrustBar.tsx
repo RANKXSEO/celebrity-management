@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const items = [
   { text: "Evidence-led assessments", link: "/about" },
-  { text: "NDA-first engagements", link: "" },
-  { text: "Crisis team 24/7/365", link: "/services/celebrity-crisis-management" },
+  { text: "Confidentiality planning", link: "/about" },
+  { text: "Crisis communications", link: "/services/celebrity-crisis-management" },
   { text: "Disclosure-first Wikipedia", link: "/wikipedia-policy" },
   { text: "Case-specific timelines", link: "/blog/how-long-does-reputation-management-take" },
   { text: "US, UK & global", link: "/who-we-serve" },

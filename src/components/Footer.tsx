@@ -13,7 +13,7 @@ const Footer = () => {
             </p>
             <address className="not-italic flex flex-col gap-2">
               <a href="tel:+16462224346" className="flex items-center gap-2.5 text-[13px] text-primary-foreground/80 hover:text-gold-light transition-colors">
-                <span className="text-gold text-sm" aria-hidden="true">📞</span> (646) 222-4346 (24/7)
+                <span className="text-gold text-sm" aria-hidden="true">📞</span> (646) 222-4346
               </a>
               <a href="mailto:contact@celebrity-reputation-management.com" className="flex items-center gap-2.5 text-[13px] text-primary-foreground/80 hover:text-gold-light transition-colors">
                 <span className="text-gold text-sm" aria-hidden="true">✉️</span> contact@celebrity-reputation-management.com

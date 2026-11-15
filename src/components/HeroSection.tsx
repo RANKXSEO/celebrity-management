@@ -84,7 +84,7 @@ const HeroSection = () => {
 
                 <div>
                   <span className="block text-[9px] uppercase tracking-[0.3em] text-primary-foreground/45 mb-1.5">
-                    24/7 Crisis Line
+                    Contact the Agency
                   </span>
                   <a
                     href="tel:+16462224346"

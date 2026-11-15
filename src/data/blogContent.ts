@@ -1,4 +1,5 @@
-interface BlogContent {
+export interface BlogContent {
+  updated?: string;
   intro: string;
   sections: { heading: string; body: string }[];
   takeaways: string[];
@@ -37,49 +38,107 @@ const coreBlogContent: Record<string, BlogContent> = {
     ],
   },
   "what-chatgpt-says-about-you": {
-    intro: "Open ChatGPT right now and type your name. What comes back? For a growing number of public figures, the answer is deeply concerning. AI assistants don't show you ten links to choose from — they synthesise a single, definitive narrative about you. And if your web presence is dominated by negative coverage, that narrative leads with the worst moments of your career.",
-    sections: [
-      { heading: "The Scale of the Problem", body: "As of 2026, approximately 40% of internet users have used an AI assistant to research a person. For younger demographics, that number exceeds 60%. When a talent agent, journalist, or brand partner asks ChatGPT about you, the AI constructs a narrative from your entire web footprint — [Wikipedia](/services/wikipedia-for-celebrities), news coverage, social media, [Reddit threads](/blog/reddit-celebrity-reputation), and everything in between.\n\nUnlike Google, there's no page two. There's no choice of which article to read. The AI tells one story, and hundreds of millions of users accept it as fact. If your Wikipedia page contains a misleading framing, if [old scandal coverage](/blog/old-tabloid-articles-ranking) outweighs your achievements, if Reddit threads are more prominent than your official bio — that's the story the AI tells." },
-      { heading: "How AI Models Build Answers About You", body: "Large language models construct answers about public figures from two sources: training data (the web content they were trained on, which may be months or years out of date) and retrieval-augmented generation (RAG), which pulls from live web sources in real-time.\n\n[Wikipedia](/services/wikipedia-for-celebrities) is the single most influential source for both. It's heavily represented in training data and frequently retrieved during real-time queries. After Wikipedia, high-authority news sites, official websites, Wikidata, and structured knowledge bases carry the most weight.\n\nThis means the same web content that determines your Google results also determines your AI search answers — but with a crucial difference: AI provides a single synthesised narrative rather than a list of links, making the framing even more important. Professional [celebrity reputation management](/services) addresses both channels simultaneously." },
-      { heading: "Generative Engine Optimization: The New Discipline", body: "GEO — Generative Engine Optimization — is the practice of shaping the web content that AI systems draw from. It's distinct from traditional SEO because it focuses on source credibility and narrative coherence rather than keyword rankings.\n\nEffective GEO for public figures includes: correcting [Wikipedia](/blog/celebrity-wikipedia-mistakes) inaccuracies (the highest-impact single action), building authoritative content on high-trust domains, ensuring entity consistency across structured data sources, creating FAQ-format content that AI systems preferentially cite, and [removing or suppressing](/services/negative-search-results) low-quality negative content that AI models might draw from.\n\nGEO isn't a one-time fix. As AI models update their training data and retrieval sources, ongoing [reputation protection](/services/reputation-protection) is required to maintain accurate answers." },
-      { heading: "What You Can Do Right Now", body: "Step 1: Audit what AI says about you. Query ChatGPT, Gemini, Perplexity, and Copilot with your name and common variations. Note any inaccuracies, negative framings, or missing information.\n\nStep 2: Check your [Wikipedia page](/blog/how-to-get-wikipedia-page). This is the single most impactful source. Are there inaccuracies? Unsourced claims? Biased framing that emphasises negatives? Outdated information?\n\nStep 3: Review your [Knowledge Panel](/services/knowledge-panel-management). Is the information correct? Is your photo current? Are your official links included?\n\nStep 4: Assess your overall web presence. Is positive, current content easily findable? Or does your web footprint lean negative?\n\nIf any of these checks reveal problems, professional [AI search reputation management](/services/ai-search-reputation) can make a measurable difference within 2–4 months. [Request a free reputation audit](/free-consultation) to understand your current AI exposure." },
+    updated: "2026-11-15",
+    "intro": "AI reputation work starts by checking what an assistant actually says and which sources it cites. Correcting source information and making accurate pages accessible can help, but no website owner can guarantee an AI citation, recommendation or rewritten answer.",
+    "sections": [
+      {
+        "heading": "Training and web search are different mechanisms",
+        "body": "An assistant may answer using learned model information, retrieved web pages or both. A correction to a live website does not directly edit a model’s training data. The retrieval behavior also varies by provider, settings and question.\n\nOpenAI’s [ChatGPT search documentation](https://help.openai.com/en/articles/9237897-chatgpt-search) explains search answers and citations. Do not assume every assistant searched the web or consulted every page about you."
+      },
+      {
+        "heading": "Create an audit you can repeat",
+        "body": "Use a consistent prompt set: who is this person, what is the company known for, and what happened in the specific matter you want checked. Record date, provider, model where available, search setting, complete answer and visible citations. Save factual errors separately from opinions or unfavorable but accurate reporting.\n\nRepeat with relevant name variations and distinguish identity confusion from an actual allegation. Different answers are observations, not proof that one response represents all users. Our [AI reputation guide](/blog/ai-reputation-management) discusses the wider monitoring workflow."
+      },
+      {
+        "heading": "Correct what the sources actually support",
+        "body": "If a cited page is wrong, identify the precise statement and provide documentary evidence to the publisher. If a Wikipedia statement is involved, follow [the disclosure and editorial process](/wikipedia-policy). Do not replace accurate criticism with promotional language.\n\nPublish clear official information where it helps: role, organization, relevant dates, verified biography and the documented outcome of a matter. Use [eligible removal routes](/services/google-results-removal) only when the content meets a real policy or legal threshold."
+      },
+      {
+        "heading": "Make accurate information accessible",
+        "body": "Google’s [AI features and your website guidance](https://developers.google.com/search/docs/appearance/ai-features) says normal SEO foundations apply and does not require special AI markup. Crawlable text, meaningful titles, useful internal links and factual structured data help discovery; they do not guarantee selection.\n\nAn llms.txt file can organize links for tools that choose to use it. It is not a Google indexing submission, a ranking factor established here, or a command that forces assistants to cite a site. Source-backed answers and original evidence matter more than a file alone."
+      },
+      {
+        "heading": "Measure changes without promising a deadline",
+        "body": "Track whether the same factual error persists, whether the citations change and whether corrected sources are discoverable. Record unresolved cases, including systems that do not display sources. Model updates and retrieval choices are outside an agency’s control.\n\nNo validated adoption percentage, source-weight ranking or universal correction timeline is supplied in this guide. [Request an AI search assessment](/free-consultation) with examples of the answers you want checked; consult [AI search reputation services](/services/ai-search-reputation) for scope."
+      }
     ],
-    takeaways: [
-      "40% of people now research public figures via AI assistants — and that number is growing rapidly",
-      "AI tells one synthesised story about you — there's no page two, no alternative version",
-      "Wikipedia is the single most influential source for AI answers about public figures",
-      "GEO (Generative Engine Optimization) is a new discipline specifically for shaping AI answers",
-      "Start by auditing what every major AI assistant says about you today",
+    "takeaways": [
+      "Audit the actual answer and citations, not assumptions about source weights",
+      "Changing a web page does not directly edit training data",
+      "Correct factual errors with evidence rather than removing accurate criticism",
+      "Normal search fundamentals also apply to Google AI features",
+      "llms.txt and structured data do not guarantee citations"
     ],
-    relatedServiceSlugs: ["ai-search-reputation", "wikipedia-for-celebrities", "knowledge-panel-management"],
-    faqs: [
-      { q: "What does ChatGPT say about celebrities?", a: "ChatGPT synthesises a single narrative about public figures from their entire web footprint — Wikipedia, news coverage, social media, and Reddit threads. If negative coverage dominates, the AI leads with the worst moments of their career." },
-      { q: "Can you control what AI says about you?", a: "Yes, to a meaningful degree. Generative Engine Optimisation (GEO) shapes the source material AI models draw from — improving Wikipedia accuracy, building authoritative positive content, and correcting factual errors across the web." },
-      { q: "What is Generative Engine Optimisation (GEO)?", a: "GEO is the practice of shaping web content that AI systems like ChatGPT, Gemini, and Perplexity draw from. It focuses on source credibility and narrative coherence rather than traditional keyword rankings." },
-      { q: "What is the most important source for AI answers about celebrities?", a: "Wikipedia is the single most influential source. It's heavily represented in AI training data and frequently retrieved during real-time queries, making it the highest-impact target for GEO." },
+    "relatedServiceSlugs": [
+      "ai-search-reputation",
+      "wikipedia-for-celebrities",
+      "digital-pr-tier-one-placements"
     ],
+    "faqs": [
+      {
+        "q": "Can you control what ChatGPT says about you?",
+        "a": "You can correct eligible source information and report errors, but you cannot guarantee a provider’s answer or directly edit its model."
+      },
+      {
+        "q": "Does llms.txt guarantee AI citations?",
+        "a": "No. It is an optional resource list for tools that use it, not a guaranteed citation or ranking mechanism."
+      },
+      {
+        "q": "How long does an AI correction take?",
+        "a": "There is no universal deadline. It depends on the provider, the source, retrieval behavior and model updates. Track observed changes across repeat checks."
+      }
+    ]
   },
   "how-to-get-wikipedia-page": {
-    intro: "A Wikipedia page is the most valuable piece of digital real estate a public figure can own. It ranks #1 in Google for virtually every name, feeds directly into Knowledge Panels, and serves as the primary source for AI assistants. But getting one isn't straightforward — Wikipedia has strict notability requirements that many public figures don't initially understand.",
-    sections: [
-      { heading: "What Wikipedia Notability Actually Means", body: "Wikipedia's General Notability Guideline (GNG) requires that a topic has received 'significant coverage in reliable, independent sources.' Each word in that definition matters:\n\n'Significant' means more than trivial or passing mentions. A sentence in someone else's article doesn't count. You need coverage where you are a primary subject.\n\n'Reliable' means sources that have editorial oversight — established newspapers, magazines, academic journals, and published books. Blog posts, press releases, and social media don't qualify.\n\n'Independent' means sources that aren't affiliated with you. Your own website, press releases, and paid promotional articles don't count. Neither do interviews you arranged.\n\nFor most public figures, the threshold is roughly 3–5 substantial articles in established media where you are the primary or significant subject. For a deeper dive into notability criteria, read our guide on [Wikipedia notability explained](/blog/wikipedia-notability-explained)." },
-      { heading: "Common Reasons Wikipedia Pages Get Rejected or Deleted", body: "Promotional tone is the number one killer. Wikipedia is an encyclopaedia, not a marketing platform. Articles that read like press releases — emphasising achievements without context, using superlatives, or lacking critical balance — are flagged immediately. Learn about the [5 common mistakes on celebrity Wikipedia pages](/blog/celebrity-wikipedia-mistakes).\n\nInsufficient sourcing is the second most common issue. Every claim on a Wikipedia page must be supported by a reliable, independent source. Pages with unsourced claims, or claims sourced only to primary sources (your own website, press releases), are marked for deletion.\n\nConflict of interest editing is the third. Wikipedia requires that anyone paid to edit about a subject disclose the conflict. Undisclosed paid editing can result in the page being deleted and the topic being banned from recreation." },
-      { heading: "The Right Way to Approach Wikipedia", body: "Step 1: Honestly assess your notability. Do you have 3–5 substantial articles in established, independent media? If not, the priority is generating that coverage before attempting a Wikipedia page.\n\nStep 2: Ensure existing sources are accessible. Wikipedia editors will verify every source. If your notable coverage is behind paywalls or in archives that are difficult to access, the page creation will be more difficult.\n\nStep 3: If you hire someone, ensure they work within Wikipedia's policies. Ethical [Wikipedia management for celebrities](/services/wikipedia-for-celebrities) consultants disclose their conflict of interest, write in encyclopaedic tone, and rely exclusively on verifiable, independent sources. The edits they create survive community review because they're indistinguishable from good-faith volunteer editing." },
-      { heading: "After the Page Exists: Maintenance Matters", body: "Getting a Wikipedia page is just the beginning. Without monitoring, pages are vulnerable to vandalism (false or embarrassing additions), biased editing (editors who emphasise negatives), and outdated information (missing recent achievements or developments).\n\nProfessional [celebrity reputation management](/services) monitoring systems detect changes to your Wikipedia page within minutes, allowing rapid response to problematic edits before they propagate to [Knowledge Panels](/services/knowledge-panel-management) and [AI search answers](/blog/what-chatgpt-says-about-you). This is a core component of [how to protect your online reputation](/blog/how-to-protect-your-online-reputation)." },
+    updated: "2026-11-15",
+    "intro": "A Wikipedia article requires evidence that the subject meets the applicable notability guideline. Neither payment, follower count nor a fixed number of press placements guarantees an article. The subject does not own or control the page.",
+    "sections": [
+      {
+        "heading": "What notability means",
+        "body": "The [general notability guideline](https://en.wikipedia.org/wiki/Wikipedia:Notability) looks for significant coverage in reliable sources independent of the subject. Coverage must discuss the person or organization meaningfully, not merely mention a name. A large collection of brief mentions does not automatically meet this standard.\n\nEditors also consider the applicable subject-specific guideline and whether a separate article is appropriate. A source-count checklist is not a substitute for that assessment."
+      },
+      {
+        "heading": "Evaluate sources individually",
+        "body": "Create a source inventory recording the author, publisher, date, relevant passage and relationship to the subject. Separate independent reporting from press releases, company pages, advertising and self-authored material. These do not all serve the same purpose.\n\nAn interview may contain useful information, but the subject’s own answers do not automatically establish independent secondary coverage. Paywalls do not by themselves make a source unacceptable. Reliability, independence and the depth of coverage remain the key questions."
+      },
+      {
+        "heading": "Paid assistance and disclosure",
+        "body": "Representatives have a conflict of interest. Wikimedia’s [paid-contribution disclosure guidance](https://en.wikipedia.org/wiki/Wikipedia:Paid-contribution_disclosure) requires disclosure of relevant employer, client and affiliation. Disclosure does not purchase approval or make a promotional draft acceptable.\n\nOur [Wikipedia policy](/wikipedia-policy) explains the disclosure and request process. A representative should propose sourced changes through appropriate discussion or draft-review channels rather than treating the encyclopedia as an agency-controlled asset."
+      },
+      {
+        "heading": "Draft review is not a guaranteed publication route",
+        "body": "A draft should use neutral language, avoid promotional claims and substantiate its contents. Independent editors decide whether it meets the standards. A review may lead to rejection, revision, merging or acceptance; there is no universal completion date.\n\nDo not repeatedly recreate rejected content or buy media solely to manufacture notability. Genuine independent coverage may support an assessment, but editorial decisions remain separate from [digital PR outreach](/services/digital-pr-tier-one-placements)."
+      },
+      {
+        "heading": "After publication: accuracy, not narrative control",
+        "body": "The [biographies of living persons policy](https://en.wikipedia.org/wiki/Wikipedia:Biographies_of_living_persons) requires careful sourcing, particularly for contentious material. Document an error with the exact passage and reliable supporting evidence. Relevant negative reporting cannot simply be removed because the subject dislikes it.\n\nArticle publication does not guarantee a [Knowledge Panel](/services/knowledge-panel-management) or a particular AI answer. For an assessment, [contact the agency](/contact) with existing sources rather than a request to buy a page."
+      }
     ],
-    takeaways: [
-      "Wikipedia requires significant coverage in reliable, independent sources — press releases and your own website don't count",
-      "Promotional tone is the #1 reason Wikipedia pages get deleted",
-      "Every claim must be verifiable through independent sources with editorial oversight",
-      "If you don't meet notability requirements yet, focus on generating independent media coverage first",
-      "After creation, ongoing monitoring prevents vandalism and biased editing",
+    "takeaways": [
+      "Notability is assessed through source quality, independence and depth",
+      "There is no guaranteed source-count shortcut",
+      "Paid representatives must disclose their relationships",
+      "Independent editors decide whether drafts and changes are accepted",
+      "A Wikipedia page is not owned by its subject"
     ],
-    relatedServiceSlugs: ["wikipedia-for-celebrities", "knowledge-panel-management", "ai-search-reputation"],
-    faqs: [
-      { q: "How do you get a Wikipedia page as a celebrity?", a: "You need 3–5 substantial articles in established, independent media where you are the primary subject. Press releases, your own website, and paid promotional articles don't count toward Wikipedia's notability requirements." },
-      { q: "Why do Wikipedia pages get deleted?", a: "The top three reasons are promotional tone (reads like marketing), insufficient sourcing (claims not backed by reliable independent sources), and undisclosed conflict-of-interest editing." },
-      { q: "How long does it take to get a Wikipedia page?", a: "If you already meet notability requirements with sufficient independent media coverage, the page creation and review process typically takes 2–6 weeks. If you need to build media coverage first, that can take several months." },
+    "relatedServiceSlugs": [
+      "wikipedia-for-celebrities",
+      "knowledge-panel-management"
     ],
+    "faqs": [
+      {
+        "q": "How many articles do I need for a Wikipedia page?",
+        "a": "There is no universal three-to-five-article rule. Review significant, reliable, independent coverage against the applicable guideline."
+      },
+      {
+        "q": "Can I pay for a guaranteed Wikipedia page?",
+        "a": "No legitimate consultant can guarantee community approval. Paid assistance requires disclosure and compliance with editorial policies."
+      },
+      {
+        "q": "How long does review take?",
+        "a": "Review depends on volunteer availability and the draft’s suitability. A fixed acceptance deadline cannot be promised."
+      }
+    ]
   },
   "surviving-cancel-culture": {
     intro: "Cancel culture isn't going away. If you're a public figure in 2026, the question isn't whether you'll face a pile-on — it's when. The good news is that cancellation is rarely permanent. The vast majority of public figures who were 'cancelled' in recent years have recovered — but only the ones who responded strategically rather than emotionally.",
@@ -148,25 +207,60 @@ const coreBlogContent: Record<string, BlogContent> = {
     ],
   },
   "how-long-suppress-negative-google": {
-    intro: "It's the first question every client asks: how long until those results are gone? The honest answer depends on several factors — but after 500+ suppression campaigns, we can give you realistic timelines based on real data, not marketing promises.",
-    sections: [
-      { heading: "The Typical Suppression Timeline", body: "Based on our campaign data across 500+ engagements:\n\nFirst measurable movement: 30 days. You'll see new positive content appearing in search results for your name, typically in the lower half of page one or the top of page two.\n\n60–90 days: Material page-one improvement. Most negative results have moved below position 5, and several may have moved to page two entirely.\n\n90–180 days: Full page-one transformation. The first page of Google results for your name is dominated by content you control or content that accurately represents your career.\n\nThese timelines assume a reasonably complex case with 3–5 negative results on page one from moderate-authority sources." },
-      { heading: "What Makes Some Cases Faster or Slower", body: "Faster: Few negative results (1–2), lower-authority source domains, content eligible for removal, client has existing positive web presence to build on.\n\nSlower: Many negative results (5+), high-authority sources (TMZ, Daily Mail, BBC), factually accurate content that can't be removed, client has minimal existing positive web presence.\n\nThe hardest cases involve multiple negative results from very high-authority news domains. Outranking the Daily Mail or TMZ requires substantially more effort than outranking a personal blog or niche gossip site." },
-      { heading: "Why Cheap/Fast Promises Are Red Flags", body: "Any company promising to 'clean up your Google results in two weeks' is either lying or using black-hat techniques that will eventually make your situation worse. Google's algorithms are sophisticated — they reward genuine authority built over time and penalise artificial manipulation.\n\nOur 94% success rate comes from doing it right: creating genuinely valuable content on genuinely authoritative domains. This takes time, but the results are permanent rather than fragile." },
+    updated: "2026-11-15",
+    "intro": "Reputation management can improve the accuracy and visibility of information about a person or business, but it cannot guarantee removal, a particular Google position, or a completion date. Evaluate it against a documented baseline rather than an agency’s unsupported success percentage.",
+    "sections": [
+      {
+        "heading": "What can change, and who decides",
+        "body": "Separate three outcomes before comparing proposals. A publisher can correct or delete a page it controls. Google can delist eligible results under its policies. Search suppression tries to improve competing pages so a damaging result becomes less prominent. These outcomes are not interchangeable: delisting does not delete the source, and a lower position can change again.\n\nStart with [negative search result suppression](/services/negative-search-results) for lawful content that remains online, or [Google results removal](/services/google-results-removal) when a specific policy may apply."
+      },
+      {
+        "heading": "Why there is no universal suppression deadline",
+        "body": "The starting search results, query, country, language, competing pages, fresh reporting, and existing official assets all affect the work. A publisher’s response time is also separate from Google’s next crawl. New developments can change the result set even while a campaign is running.\n\nAsk for an initial audit, an implementation schedule, and review checkpoints. Treat those as dates for work and reassessment, not promised dates for page-one clearance. The [reputation management timeline guide](/blog/how-long-does-reputation-management-take) separates these stages."
+      },
+      {
+        "heading": "Build a baseline that can be checked",
+        "body": "Record the exact query, date, location and device, along with the target URLs and visible positions. Save screenshots and classify results as official, independent reporting, user commentary or irrelevant identity matches. Private browsing reduces some personalization but does not remove location differences.\n\nTrack completed corrections and submissions separately from observed ranking movement. Include whether people can find an accurate official biography and whether inaccurate information persists on another URL. If AI answers matter, save the answer and its citations rather than treating one favorable response as a permanent change."
+      },
+      {
+        "heading": "Evidence to request from a provider",
+        "body": "Ask for authorized examples with a starting state, the work performed, dated observations and unresolved limits. A success percentage without sample size, exclusions, measurement method and follow-up period cannot establish the likely outcome for your case. We do not publish a campaign success rate here because a verified dataset has not been supplied.\n\n[Google’s ranking systems guide](https://developers.google.com/search/docs/appearance/ranking-systems-guide) describes multiple signals, not a purchasable position. Its [people-first content guidance](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) explains why useful original material matters."
+      },
+      {
+        "heading": "When the objective should change",
+        "body": "Accurate public-interest reporting, ongoing proceedings and repeated new incidents can make complete displacement unrealistic. Correction, clear outcome coverage, privacy protection and better access to current facts may be more useful than a clean-results promise.\n\nFor a specific problem, [request a consultation](/free-consultation) with the affected URLs. Use the [provider selection checklist](/blog/how-to-choose-a-reputation-management-company) to compare scope, ownership and reporting."
+      }
     ],
-    takeaways: [
-      "First movement in 30 days, material improvement by 60–90 days, full transformation by 90–180 days",
-      "High-authority negative sources (TMZ, Daily Mail) take longer to outrank than blogs or niche sites",
-      "Promises of results in 'two weeks' are red flags for black-hat techniques",
-      "Each case is unique — the free audit gives you a realistic timeline specific to your situation",
-      "White-hat suppression results are permanent; black-hat results are fragile and risky",
+    "takeaways": [
+      "Distinguish source deletion, search delisting and suppression",
+      "Measure exact queries and URLs against a dated baseline",
+      "Implementation deadlines are not guaranteed ranking deadlines",
+      "Request methodology and permission-backed evidence for any success rate",
+      "Recheck results after new reporting or platform changes"
     ],
-    relatedServiceSlugs: ["negative-search-results", "content-suppression"],
-    faqs: [
-      { q: "How long does it take to suppress negative Google results?", a: "First measurable movement typically occurs within 30 days. Material page-one improvement happens by 60–90 days. A full page-one transformation usually takes 90–180 days depending on the number and authority of negative sources." },
-      { q: "Can you permanently remove negative search results?", a: "Defamatory, privacy-violating, or policy-breaching content can often be permanently removed. Factually accurate content cannot be deleted but can be suppressed to page two and beyond where fewer than 6% of searchers look." },
-      { q: "How much does negative search result suppression cost?", a: "Monthly retainers typically range from $3,500 to $20,000 depending on the complexity of the situation, the number of negative results, and the authority of the source domains." },
+    "relatedServiceSlugs": [
+      "negative-search-results",
+      "google-results-removal",
+      "reputation-protection"
     ],
+    "faqs": [
+      {
+        "q": "How long does suppression take?",
+        "a": "There is no reliable universal deadline. Ask for a case-specific work schedule and checkpoints based on the actual queries, competing URLs and assets available."
+      },
+      {
+        "q": "Does reputation management actually work?",
+        "a": "It can support corrections, eligible removals and improved visibility of accurate material. Results depend on the available route and decisions made by publishers and search engines."
+      },
+      {
+        "q": "Are results permanent?",
+        "a": "Not necessarily. Deleted material can be republished, delisting may have a limited scope, and search positions change."
+      },
+      {
+        "q": "How much does suppression cost?",
+        "a": "Request a written quote tied to URLs, queries, deliverables and reporting. No verified agency price list or representative market dataset is supplied on this page."
+      }
+    ]
   },
   "google-knowledge-panel-guide": {
     intro: "The Google Knowledge Panel — that prominent info box on the right side of search results — is the single most visible piece of information about you on the internet. If it's wrong, incomplete, or missing, you're losing credibility before anyone even reads a search result.",
@@ -212,26 +306,55 @@ const coreBlogContent: Record<string, BlogContent> = {
     ],
   },
   "wikipedia-notability-explained": {
-    intro: "You want a Wikipedia page. You think you deserve one. But Wikipedia has a very specific definition of 'notability' that doesn't care about your follower count, your net worth, or your personal accomplishments. Understanding what notability actually requires is the first step toward getting — and keeping — a Wikipedia page.",
-    sections: [
-      { heading: "The General Notability Guideline (GNG)", body: "Wikipedia's GNG states that a topic is presumed notable if it has received 'significant coverage in reliable sources that are independent of the subject.' This is the threshold that most Wikipedia pages are evaluated against.\n\nSignificant coverage means the source devotes substantial attention to you as a primary subject — not a brief mention in a list or a passing reference in someone else's article. Reliable sources means publications with editorial oversight: newspapers, magazines, journals, and published books. Independent sources means sources that aren't connected to you: not your PR firm's press releases, not interviews you arranged, not your own website." },
-      { heading: "Subject-Specific Notability Guidelines", body: "Beyond the GNG, Wikipedia has additional notability guidelines for specific categories. For entertainers, notability is generally established by having appeared in notable productions, received notable awards, or been the subject of substantial independent media coverage. For athletes, notability is typically established by competing at the highest level of a sport (Olympic, professional league). For business people, notability requires coverage of the individual, not just their company.\n\nMeeting a subject-specific guideline is generally sufficient for notability, even without meeting the GNG." },
-      { heading: "What to Do If You Don't Meet Notability Yet", body: "If you don't currently meet Wikipedia's notability guidelines, the solution isn't to try to game the system — it's to generate the independent media coverage that establishes genuine notability. This might involve pitching stories to journalists, participating in notable events or projects, receiving industry recognition, or achieving measurable public impact.\n\nOnce you have 3–5 substantial articles in established independent media, you have the sourcing foundation for a successful Wikipedia page." },
+    updated: "2026-11-15",
+    "intro": "A Wikipedia article requires evidence that the subject meets the applicable notability guideline. Neither payment, follower count nor a fixed number of press placements guarantees an article. The subject does not own or control the page.",
+    "sections": [
+      {
+        "heading": "What notability means",
+        "body": "The [general notability guideline](https://en.wikipedia.org/wiki/Wikipedia:Notability) looks for significant coverage in reliable sources independent of the subject. Coverage must discuss the person or organization meaningfully, not merely mention a name. A large collection of brief mentions does not automatically meet this standard.\n\nEditors also consider the applicable subject-specific guideline and whether a separate article is appropriate. A source-count checklist is not a substitute for that assessment."
+      },
+      {
+        "heading": "Evaluate sources individually",
+        "body": "Create a source inventory recording the author, publisher, date, relevant passage and relationship to the subject. Separate independent reporting from press releases, company pages, advertising and self-authored material. These do not all serve the same purpose.\n\nAn interview may contain useful information, but the subject’s own answers do not automatically establish independent secondary coverage. Paywalls do not by themselves make a source unacceptable. Reliability, independence and the depth of coverage remain the key questions."
+      },
+      {
+        "heading": "Paid assistance and disclosure",
+        "body": "Representatives have a conflict of interest. Wikimedia’s [paid-contribution disclosure guidance](https://en.wikipedia.org/wiki/Wikipedia:Paid-contribution_disclosure) requires disclosure of relevant employer, client and affiliation. Disclosure does not purchase approval or make a promotional draft acceptable.\n\nOur [Wikipedia policy](/wikipedia-policy) explains the disclosure and request process. A representative should propose sourced changes through appropriate discussion or draft-review channels rather than treating the encyclopedia as an agency-controlled asset."
+      },
+      {
+        "heading": "Draft review is not a guaranteed publication route",
+        "body": "A draft should use neutral language, avoid promotional claims and substantiate its contents. Independent editors decide whether it meets the standards. A review may lead to rejection, revision, merging or acceptance; there is no universal completion date.\n\nDo not repeatedly recreate rejected content or buy media solely to manufacture notability. Genuine independent coverage may support an assessment, but editorial decisions remain separate from [digital PR outreach](/services/digital-pr-tier-one-placements)."
+      },
+      {
+        "heading": "After publication: accuracy, not narrative control",
+        "body": "The [biographies of living persons policy](https://en.wikipedia.org/wiki/Wikipedia:Biographies_of_living_persons) requires careful sourcing, particularly for contentious material. Document an error with the exact passage and reliable supporting evidence. Relevant negative reporting cannot simply be removed because the subject dislikes it.\n\nArticle publication does not guarantee a [Knowledge Panel](/services/knowledge-panel-management) or a particular AI answer. For an assessment, [contact the agency](/contact) with existing sources rather than a request to buy a page."
+      }
     ],
-    takeaways: [
-      "Wikipedia notability requires significant coverage in reliable, independent sources",
-      "Press releases, your own website, and arranged interviews don't count toward notability",
-      "Subject-specific guidelines may apply depending on your field",
-      "If you don't meet notability yet, focus on generating independent media coverage first",
-      "Attempting to create a page without sufficient notability usually results in deletion",
+    "takeaways": [
+      "Notability is assessed through source quality, independence and depth",
+      "There is no guaranteed source-count shortcut",
+      "Paid representatives must disclose their relationships",
+      "Independent editors decide whether drafts and changes are accepted",
+      "A Wikipedia page is not owned by its subject"
     ],
-    relatedServiceSlugs: ["wikipedia-for-celebrities", "knowledge-panel-management"],
-    faqs: [
-      { q: "What qualifies a public figure for a Wikipedia page?", a: "Wikipedia's biographical notability standard requires either significant coverage in multiple independent, reliable secondary sources over time — or specific criteria being met (e.g. actors with 'significant roles in multiple notable films', athletes competing at the highest professional level). Coverage must be substantive, not passing mentions." },
-      { q: "Can I create my own Wikipedia page?", a: "Wikipedia strongly discourages autobiographical pages and self-created pages by public figures, and pages created this way are frequently deleted. The compliant path is either being written about by an independent editor, or engaging a specialist to prepare a compliant draft submitted through Articles for Creation." },
-      { q: "What happens if I don't meet Wikipedia notability standards?", a: "Your page will be nominated for deletion (Articles for Deletion, or AfD) and usually removed within 7 days if the community consensus is that notability isn't established. Attempts to recreate the page will be blocked. Wait until independent, substantive coverage exists — then have the page created properly." },
-      { q: "Can I pay to get a Wikipedia page created?", a: "Paid editing is permitted only with mandatory disclosure under Wikipedia policy, and even disclosed paid edits are heavily scrutinised. Our [Wikipedia service](/services/wikipedia-for-celebrities) operates within Wikipedia's paid-editing rules — preparing sourced drafts and Talk-page submissions rather than editing pages directly." },
+    "relatedServiceSlugs": [
+      "wikipedia-for-celebrities",
+      "knowledge-panel-management"
     ],
+    "faqs": [
+      {
+        "q": "How many articles do I need for a Wikipedia page?",
+        "a": "There is no universal three-to-five-article rule. Review significant, reliable, independent coverage against the applicable guideline."
+      },
+      {
+        "q": "Can I pay for a guaranteed Wikipedia page?",
+        "a": "No legitimate consultant can guarantee community approval. Paid assistance requires disclosure and compliance with editorial policies."
+      },
+      {
+        "q": "How long does review take?",
+        "a": "Review depends on volunteer availability and the draft’s suitability. A fixed acceptance deadline cannot be promised."
+      }
+    ]
   },
   "celebrity-wikipedia-mistakes": {
     intro: "After reviewing thousands of celebrity Wikipedia pages, we've identified five mistakes that appear again and again — each one costing the subject credibility, accuracy, and control over their public narrative. Here's what they are and how to fix them.",
@@ -281,25 +404,56 @@ const coreBlogContent: Record<string, BlogContent> = {
     ],
   },
   "celebrity-reputation-management-cost": {
-    intro: "Pricing transparency is rare in the reputation management industry — most firms won't tell you what things cost until you're on a sales call. We think that's wrong. Here's what celebrity reputation management actually costs, based on our experience across 500+ engagements.",
-    sections: [
-      { heading: "Monthly Retainer Ranges", body: "Search result suppression: $3,500–$10,000/month. The range depends on the number and authority of negative results. A single blog post on a low-authority domain is at the lower end; five TMZ articles is at the higher end. Typical campaign length: 6–12 months.\n\nCrisis management: $10,000–$25,000/month during active crisis, dropping to $3,500–$7,500/month for post-crisis recovery. Premium pricing reflects 24/7 availability, rapid response requirements, and multi-channel execution.\n\nWikipedia management: $2,500–$8,000 for page creation or major editorial correction, plus $500–$1,500/month for ongoing monitoring and maintenance.\n\nKnowledge Panel management: $1,500–$4,000 for claiming, verification, and optimisation, often bundled with Wikipedia management.\n\nAI search reputation (GEO): $3,000–$8,000/month. A newer service category with pricing that reflects the specialised expertise required.\n\nOngoing monitoring: $1,000–$3,500/month for comprehensive monitoring across all platforms." },
-      { heading: "What Determines Where You Fall in the Range", body: "Complexity of your situation: More negative results from higher-authority sources = higher cost. Scope of services: Suppression alone vs. suppression + Wikipedia + AI + monitoring. Urgency: Crisis engagements command premium pricing for 24/7 availability. Geographic scope: International campaigns covering multiple jurisdictions cost more than US-only or UK-only.\n\nThe initial audit is always free and includes a detailed cost estimate based on your specific situation." },
-      { heading: "Red Flags in Reputation Management Pricing", body: "Too cheap: If someone offers to 'clean up your Google' for $500/month, they're either using black-hat techniques or doing nothing of value. Legitimate reputation management requires significant time, expertise, and resources.\n\nGuaranteed results: Nobody can guarantee specific Google rankings. Firms that promise guaranteed page-one clearance are either lying or planning to use techniques that risk Google penalties.\n\nLong-term lock-in: Reputable firms earn your business monthly. Be cautious of contracts requiring 12+ months with no performance benchmarks.\n\nNo reporting: If a firm won't commit to monthly SERP tracking reports, how will you know if they're doing anything?" },
+    updated: "2026-11-15",
+    "intro": "Celebrity reputation management pricing depends on the work required: monitoring, eligible removal requests, search suppression, crisis communications and digital PR have different deliverables. This page explains how to compare quotes; it is not a verified price list or an industry-rate survey.",
+    "sections": [
+      {
+        "heading": "Compare the scope before the headline price",
+        "body": "A quote for monitoring is not comparable to one for content production and journalist outreach. Identify affected names, query variations, countries, platforms and URLs. Clarify whether the engagement covers a public figure, their business, or both.\n\nAsk which workstreams are included, what is excluded, and whether counsel, media production or third-party tools are billed separately. Our [service directory](/services) distinguishes the options."
+      },
+      {
+        "heading": "Retainer, project and per-item fees",
+        "body": "A retainer can fund recurring research, monitoring, content and outreach. A project fee can fit a defined audit, asset or correction package. Per-item pricing may fit removal work, but the contract must define the result: submission, source deletion and search delisting are different deliverables.\n\nCheck setup costs, minimum term, cancellation rights, renewal, taxes and asset ownership. Performance fees need a measurable condition and an agreed observation period, not an undefined promise to repair your reputation."
+      },
+      {
+        "heading": "What changes the amount of work",
+        "body": "The number of distinct sources matters as much as the number of URLs. Ten copies of one story differ from ten independently reported articles. Language coverage, identity ambiguity, missing official assets and active new reporting can add work. Urgent requests may require additional staffing, but do not assume around-the-clock availability unless the agreement states it.\n\n[Website takedown assessment](/services/website-takedown-service) and [search suppression](/services/negative-search-results) should be priced around their different processes."
+      },
+      {
+        "heading": "Questions to send with a request for proposal",
+        "body": "Ask for the initial audit, proposed actions for each URL, quantities of commissioned work, reporting cadence, approval process and deliverable ownership. For digital PR, distinguish paid advertising from editorial pitching: no agency can commit an independent newsroom to publish a feature.\n\nRequest the response hours and escalation contacts in writing. Ask what happens if a publisher or platform refuses a request, and whether a failed outcome changes the invoice."
+      },
+      {
+        "heading": "Do not infer quality from price alone",
+        "body": "A low price is not proof of misconduct, and a high price is not proof of expertise. Review the methods. Purchased fake reviews and manipulative links create additional risk; Google explains its [spam policies](https://developers.google.com/search/docs/essentials/spam-policies).\n\nNo verified pricing schedule was provided for this site, so the earlier numeric ranges have been removed. [Request a consultation](/free-consultation) for a scoped proposal and use [how to choose a reputation management company](/blog/how-to-choose-a-reputation-management-company) for evaluation questions."
+      }
     ],
-    takeaways: [
-      "Monthly retainers typically range from $3,500 to $20,000+ depending on complexity and services",
-      "The initial audit is always free and includes transparent pricing for your situation",
-      "Crisis management commands premium pricing for 24/7 availability and rapid response",
-      "Beware of firms charging under $1,000/month or guaranteeing specific rankings",
-      "Reputable firms provide monthly reporting so you can verify results yourself",
+    "takeaways": [
+      "Compare equivalent scope and deliverables",
+      "Distinguish submission fees from successful removal fees",
+      "Get response hours, cancellation terms and asset ownership in writing",
+      "Editorial coverage and Google rankings cannot be bought as guaranteed outcomes",
+      "No verified price schedule is published in this guide"
     ],
-    relatedServiceSlugs: ["negative-search-results", "celebrity-crisis-management", "reputation-protection"],
-    faqs: [
-      { q: "How much does reputation management cost for a celebrity?", a: "Monthly retainers typically range from $3,500 to $20,000. Factors that affect cost include the number of negative results, authority of source domains, scope of services needed, and whether crisis management with 24/7 availability is required." },
-      { q: "Is celebrity reputation management worth the cost?", a: "For public figures whose income depends on their public image, yes. A single negative Google result can cost far more in lost sponsorships, cancelled projects, and damaged relationships than a year of reputation management." },
-      { q: "Do reputation management agencies charge upfront?", a: "Reputable firms typically charge a monthly retainer with transparent pricing and clear deliverables. Be wary of agencies demanding large upfront payments with vague promises. The initial audit should always be free." },
+    "relatedServiceSlugs": [
+      "negative-search-results",
+      "celebrity-crisis-management",
+      "digital-pr-tier-one-placements"
     ],
+    "faqs": [
+      {
+        "q": "How much does celebrity reputation management cost?",
+        "a": "A defensible quote requires an assessment of the affected URLs, queries and requested services. This page does not claim a verified market average or agency rate."
+      },
+      {
+        "q": "What should a quote include?",
+        "a": "Scope, deliverables, fees, third-party costs, reporting, response hours, minimum term, exit rights and asset ownership."
+      },
+      {
+        "q": "Does a larger retainer guarantee better results?",
+        "a": "No. Assess the proposed work and evidence, not price alone. Publishers and search engines retain control over their decisions."
+      }
+    ]
   },
   "reputation-management-vs-pr": {
     intro: "Reputation management and public relations are frequently confused — even by industry professionals. They're complementary disciplines that serve different functions, operate on different timelines, and require different expertise. Understanding the difference helps you hire the right help for the right problem.",
@@ -407,26 +561,60 @@ const coreBlogContent: Record<string, BlogContent> = {
     ],
   },
   "does-reputation-management-work": {
-    intro: "It's the question every potential client asks — and the one most reputation management companies dodge with vague promises. Does online reputation management actually work? The evidence from over 500 celebrity reputation management campaigns says yes, but with important caveats about what 'working' actually means.",
-    sections: [
-      { heading: "The Evidence: What the Data Shows", body: "Across 500+ [celebrity reputation management](/services) campaigns, our data shows a 94% page-one clearance rate — meaning 94% of clients see their target negative results displaced from Google page one within 6 months. First measurable movement typically occurs within 30 days. Full page-one transformation is achieved in 90–180 days for most cases.\n\nThese aren't marketing claims. They're based on monthly SERP tracking reports that every client receives. Each campaign has objective, measurable benchmarks: where negative results rank at the start, and where they rank over time.\n\nFor [AI search reputation management](/services/ai-search-reputation), results are measurable within 2–4 months as AI assistants update their answers based on improved web presence." },
-      { heading: "What 'Working' Actually Means (and What It Doesn't)", body: "Reputation management works by changing what people find when they search your name. It doesn't erase the past — the original content typically remains on the publisher's website. What changes is its visibility. When a negative article moves from position 3 on page one to position 5 on page three, fewer than 1% of searchers will ever find it.\n\n[Negative search result suppression](/services/negative-search-results) works because Google ranks pages based on authority, relevance, and recency. By creating and promoting higher-quality content, professional [reputation management companies](/blog/what-do-reputation-management-companies-do) build a portfolio of assets that outrank negative coverage.\n\nContent removal — when achievable through [Google results removal](/services/google-results-removal), legal action, or platform reporting — delivers permanent results. The content is gone, not just suppressed." },
-      { heading: "When Reputation Management Doesn't Work", body: "Honesty requires acknowledging the limitations. Reputation management is less effective when: the negative content is factually accurate and from extremely high-authority sources (major investigative journalism), new negative events keep occurring during the campaign, or the client doesn't have a sufficient positive footprint to build on.\n\nBlack-hat techniques — fake reviews, link farms, content spinning — don't work long-term and risk Google penalties that make the situation worse. Any firm promising overnight results or using techniques that feel manipulative is a red flag.\n\nThe free [reputation audit](/free-consultation) is designed to give you honest expectations before you spend a penny." },
-      { heading: "How to Verify a Firm's Claims", body: "Ask for case studies with before-and-after SERP screenshots. Ask what percentage of campaigns achieve their stated goals. Ask what happens if results aren't achieved. Ask about monthly reporting cadence.\n\nReputable [celebrity reputation management agencies](/blog/what-is-celebrity-reputation-management) provide transparent reporting and realistic expectations. They'll tell you if your situation is difficult, not promise easy fixes for hard problems." },
+    updated: "2026-11-15",
+    "intro": "Reputation management can improve the accuracy and visibility of information about a person or business, but it cannot guarantee removal, a particular Google position, or a completion date. Evaluate it against a documented baseline rather than an agency’s unsupported success percentage.",
+    "sections": [
+      {
+        "heading": "What can change, and who decides",
+        "body": "Separate three outcomes before comparing proposals. A publisher can correct or delete a page it controls. Google can delist eligible results under its policies. Search suppression tries to improve competing pages so a damaging result becomes less prominent. These outcomes are not interchangeable: delisting does not delete the source, and a lower position can change again.\n\nStart with [negative search result suppression](/services/negative-search-results) for lawful content that remains online, or [Google results removal](/services/google-results-removal) when a specific policy may apply."
+      },
+      {
+        "heading": "Why there is no universal suppression deadline",
+        "body": "The starting search results, query, country, language, competing pages, fresh reporting, and existing official assets all affect the work. A publisher’s response time is also separate from Google’s next crawl. New developments can change the result set even while a campaign is running.\n\nAsk for an initial audit, an implementation schedule, and review checkpoints. Treat those as dates for work and reassessment, not promised dates for page-one clearance. The [reputation management timeline guide](/blog/how-long-does-reputation-management-take) separates these stages."
+      },
+      {
+        "heading": "Build a baseline that can be checked",
+        "body": "Record the exact query, date, location and device, along with the target URLs and visible positions. Save screenshots and classify results as official, independent reporting, user commentary or irrelevant identity matches. Private browsing reduces some personalization but does not remove location differences.\n\nTrack completed corrections and submissions separately from observed ranking movement. Include whether people can find an accurate official biography and whether inaccurate information persists on another URL. If AI answers matter, save the answer and its citations rather than treating one favorable response as a permanent change."
+      },
+      {
+        "heading": "Evidence to request from a provider",
+        "body": "Ask for authorized examples with a starting state, the work performed, dated observations and unresolved limits. A success percentage without sample size, exclusions, measurement method and follow-up period cannot establish the likely outcome for your case. We do not publish a campaign success rate here because a verified dataset has not been supplied.\n\n[Google’s ranking systems guide](https://developers.google.com/search/docs/appearance/ranking-systems-guide) describes multiple signals, not a purchasable position. Its [people-first content guidance](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) explains why useful original material matters."
+      },
+      {
+        "heading": "When the objective should change",
+        "body": "Accurate public-interest reporting, ongoing proceedings and repeated new incidents can make complete displacement unrealistic. Correction, clear outcome coverage, privacy protection and better access to current facts may be more useful than a clean-results promise.\n\nFor a specific problem, [request a consultation](/free-consultation) with the affected URLs. Use the [provider selection checklist](/blog/how-to-choose-a-reputation-management-company) to compare scope, ownership and reporting."
+      }
     ],
-    takeaways: [
-      "94% of celebrity reputation management campaigns achieve page-one clearance within 6 months",
-      "Reputation management changes visibility, not history — negative content is suppressed, not erased",
-      "Results are measurable through monthly SERP tracking reports every client receives",
-      "Black-hat techniques don't work long-term and risk making the situation worse",
-      "A reputable firm will provide honest expectations and transparent reporting",
+    "takeaways": [
+      "Distinguish source deletion, search delisting and suppression",
+      "Measure exact queries and URLs against a dated baseline",
+      "Implementation deadlines are not guaranteed ranking deadlines",
+      "Request methodology and permission-backed evidence for any success rate",
+      "Recheck results after new reporting or platform changes"
     ],
-    relatedServiceSlugs: ["negative-search-results", "reputation-protection", "celebrity-crisis-management"],
-    faqs: [
-      { q: "Does online reputation management actually work?", a: "Yes. Data from 500+ campaigns shows a 94% page-one clearance rate within 6 months. Results are measurable through monthly SERP tracking reports." },
-      { q: "How long does reputation management take to show results?", a: "First measurable movement typically occurs within 30 days. Material page-one improvement by 60–90 days. Full page-one transformation in 90–180 days." },
-      { q: "What's the difference between suppression and removal?", a: "Removal permanently deletes content from the web or search results. Suppression pushes content to page two and beyond where fewer than 6% of searchers ever look. Both are effective strategies used in combination." },
+    "relatedServiceSlugs": [
+      "negative-search-results",
+      "google-results-removal",
+      "reputation-protection"
     ],
+    "faqs": [
+      {
+        "q": "How long does suppression take?",
+        "a": "There is no reliable universal deadline. Ask for a case-specific work schedule and checkpoints based on the actual queries, competing URLs and assets available."
+      },
+      {
+        "q": "Does reputation management actually work?",
+        "a": "It can support corrections, eligible removals and improved visibility of accurate material. Results depend on the available route and decisions made by publishers and search engines."
+      },
+      {
+        "q": "Are results permanent?",
+        "a": "Not necessarily. Deleted material can be republished, delisting may have a limited scope, and search positions change."
+      },
+      {
+        "q": "How much does suppression cost?",
+        "a": "Request a written quote tied to URLs, queries, deliverables and reporting. No verified agency price list or representative market dataset is supplied on this page."
+      }
+    ]
   },
   "how-to-remove-negative-articles-from-google": {
     intro: "Negative articles on Google can destroy careers, relationships, and mental health. Whether it's a tabloid hit piece, an outdated scandal, or outright defamation, there are legitimate methods to remove or suppress negative articles from Google search results. This guide covers every available approach — from direct removal to long-term suppression.",
@@ -726,28 +914,56 @@ const coreBlogContent: Record<string, BlogContent> = {
     ],
   },
   "generative-engine-optimization-guide": {
-    intro: "Generative Engine Optimization is the practice of making sure AI assistants cite you accurately — and cite you at all. ChatGPT, Perplexity, Gemini, and Claude now answer a large share of 'who is…' queries without ever showing a list of links, which means the classic page-one strategy no longer covers the whole search surface. This guide sets out how these systems select sources and what you can control.",
-    sections: [
-      { heading: "How AI Assistants Choose What to Cite", body: "Generative systems assemble answers from two channels. **Training data** is the corpus the model learned from, which is months to years old and cannot be edited. **Retrieval** pulls live pages at query time, and this is where influence is possible.\n\nRetrieval strongly favours a small set of properties: Wikipedia and Wikidata, major news publishers, official first-party domains, and structured, well-marked-up pages that answer a question directly in the opening lines. Content that buries its answer in narrative, or that lives only inside a JavaScript shell with no crawlable text, is systematically under-cited." },
-      { heading: "The Six Controllable GEO Levers", body: "**1. Wikipedia and Wikidata accuracy.** The highest-leverage single action for any public figure — see [Wikipedia management](/services/wikipedia-for-celebrities).\n\n**2. High-authority earned coverage.** Retrieval weights publisher trust heavily, which makes [Tier-1 placements](/services/digital-pr-tier-one-placements) the most durable GEO investment.\n\n**3. Answer-first content structure.** Lead each section with a two-sentence direct answer before the elaboration; this is the format extractive systems quote.\n\n**4. Structured data.** Person, Organization, Article, and FAQPage schema give machines unambiguous facts to reconcile.\n\n**5. Entity consistency.** Identical name spelling, title, and affiliation across every property, so the systems resolve you to one entity rather than several.\n\n**6. Machine-readable site files.** A clean llms.txt, an accurate sitemap, and crawlable server-rendered text." },
-      { heading: "Auditing What AI Currently Says About You", body: "Run the same five prompts across ChatGPT, Perplexity, Gemini, and Claude: 'Who is [name]?', 'What is [name] known for?', 'Is [name] controversial?', 'What has [name] been accused of?', and 'Should I work with [name]?'.\n\nRecord the answer, the cited sources, and any factual error. Perplexity is the most useful diagnostic because it displays its sources — those URLs are your actual GEO target list. Repeat monthly; answers drift as retrieval indexes change, and a single new negative page can flip a summary within days." },
-      { heading: "Fixing a Negative AI Narrative", body: "The order matters. First correct the underlying sources rather than arguing with the output: fix Wikipedia inaccuracies with cited evidence, pursue [removal](/services/website-takedown-service) of unlawful pages, and publish clear first-party statements of fact.\n\nThen add weight on the other side with authoritative new coverage, because these systems synthesise the balance of what they retrieve rather than the newest item. Finally, use each platform's feedback channel to report factual errors about a real person — it is slower and less reliable than fixing the sources, but it works often enough to be worth doing. This is the workflow behind our [AI search reputation](/services/ai-search-reputation) service.\n\nExpect 30–90 days for retrieval-driven answers to change and considerably longer for anything baked into training data." },
-      { heading: "Why GEO Is Now Non-Negotiable", body: "For a public figure, the AI summary is increasingly the first and only impression — a casting director, investor, journalist, or brand partner asks once and acts on the answer. There is no page two to bury anything on, and no ten blue links to give the reader a choice.\n\nThat concentration cuts both ways. It makes a negative narrative far more damaging than a single bad Google result, and it makes a well-sourced, well-structured, authoritatively covered profile disproportionately valuable. If you have not audited your AI answers yet, [start with a free reputation audit](/free-consultation) and see [what ChatGPT says about you](/blog/what-chatgpt-says-about-you)." },
+    updated: "2026-11-15",
+    "intro": "AI reputation work starts by checking what an assistant actually says and which sources it cites. Correcting source information and making accurate pages accessible can help, but no website owner can guarantee an AI citation, recommendation or rewritten answer.",
+    "sections": [
+      {
+        "heading": "Training and web search are different mechanisms",
+        "body": "An assistant may answer using learned model information, retrieved web pages or both. A correction to a live website does not directly edit a model’s training data. The retrieval behavior also varies by provider, settings and question.\n\nOpenAI’s [ChatGPT search documentation](https://help.openai.com/en/articles/9237897-chatgpt-search) explains search answers and citations. Do not assume every assistant searched the web or consulted every page about you."
+      },
+      {
+        "heading": "Create an audit you can repeat",
+        "body": "Use a consistent prompt set: who is this person, what is the company known for, and what happened in the specific matter you want checked. Record date, provider, model where available, search setting, complete answer and visible citations. Save factual errors separately from opinions or unfavorable but accurate reporting.\n\nRepeat with relevant name variations and distinguish identity confusion from an actual allegation. Different answers are observations, not proof that one response represents all users. Our [AI reputation guide](/blog/ai-reputation-management) discusses the wider monitoring workflow."
+      },
+      {
+        "heading": "Correct what the sources actually support",
+        "body": "If a cited page is wrong, identify the precise statement and provide documentary evidence to the publisher. If a Wikipedia statement is involved, follow [the disclosure and editorial process](/wikipedia-policy). Do not replace accurate criticism with promotional language.\n\nPublish clear official information where it helps: role, organization, relevant dates, verified biography and the documented outcome of a matter. Use [eligible removal routes](/services/google-results-removal) only when the content meets a real policy or legal threshold."
+      },
+      {
+        "heading": "Make accurate information accessible",
+        "body": "Google’s [AI features and your website guidance](https://developers.google.com/search/docs/appearance/ai-features) says normal SEO foundations apply and does not require special AI markup. Crawlable text, meaningful titles, useful internal links and factual structured data help discovery; they do not guarantee selection.\n\nAn llms.txt file can organize links for tools that choose to use it. It is not a Google indexing submission, a ranking factor established here, or a command that forces assistants to cite a site. Source-backed answers and original evidence matter more than a file alone."
+      },
+      {
+        "heading": "Measure changes without promising a deadline",
+        "body": "Track whether the same factual error persists, whether the citations change and whether corrected sources are discoverable. Record unresolved cases, including systems that do not display sources. Model updates and retrieval choices are outside an agency’s control.\n\nNo validated adoption percentage, source-weight ranking or universal correction timeline is supplied in this guide. [Request an AI search assessment](/free-consultation) with examples of the answers you want checked; consult [AI search reputation services](/services/ai-search-reputation) for scope."
+      }
     ],
-    takeaways: [
-      "AI answers come from fixed training data plus editable live retrieval — target retrieval",
-      "Wikipedia, Wikidata, and high-authority publishers dominate cited sources",
-      "Structure content answer-first and mark it up with Person, Article, and FAQ schema",
-      "Audit five standard prompts monthly across ChatGPT, Perplexity, Gemini, and Claude",
-      "Fix the underlying sources before reporting the output; expect 30–90 days for change",
+    "takeaways": [
+      "Audit the actual answer and citations, not assumptions about source weights",
+      "Changing a web page does not directly edit training data",
+      "Correct factual errors with evidence rather than removing accurate criticism",
+      "Normal search fundamentals also apply to Google AI features",
+      "llms.txt and structured data do not guarantee citations"
     ],
-    relatedServiceSlugs: ["ai-search-reputation", "wikipedia-for-celebrities", "digital-pr-tier-one-placements"],
-    faqs: [
-      { q: "What is Generative Engine Optimization (GEO)?", a: "GEO is the practice of shaping the sources AI assistants retrieve and cite, so that ChatGPT, Perplexity, Gemini, and Claude describe a person or organisation accurately and favourably." },
-      { q: "How is GEO different from SEO?", a: "SEO competes for ranked links on a results page. GEO competes to be the source a single synthesised answer is built from, which puts far more weight on source authority, entity consistency, and structured, answer-first content." },
-      { q: "How long does it take to change what ChatGPT says about you?", a: "Retrieval-driven answers usually shift within 30–90 days of the underlying sources changing. Facts embedded in training data only change with a subsequent model release." },
-      { q: "Which sources do AI assistants cite most for people?", a: "Wikipedia and Wikidata, major news publishers, and official first-party domains — which is why Wikipedia accuracy and Tier-1 earned coverage are the two highest-leverage GEO actions." },
+    "relatedServiceSlugs": [
+      "ai-search-reputation",
+      "wikipedia-for-celebrities",
+      "digital-pr-tier-one-placements"
     ],
+    "faqs": [
+      {
+        "q": "Can you control what ChatGPT says about you?",
+        "a": "You can correct eligible source information and report errors, but you cannot guarantee a provider’s answer or directly edit its model."
+      },
+      {
+        "q": "Does llms.txt guarantee AI citations?",
+        "a": "No. It is an optional resource list for tools that use it, not a guaranteed citation or ranking mechanism."
+      },
+      {
+        "q": "How long does an AI correction take?",
+        "a": "There is no universal deadline. It depends on the provider, the source, retrieval behavior and model updates. Track observed changes across repeat checks."
+      }
+    ]
   },
   "online-reputation-management-complete-guide": {
     intro: "Online reputation management (ORM) is the practice of controlling what people find when they search your name — across Google, social platforms, review sites, and now AI assistants. This is our complete, practitioner-level guide: the frameworks we use on live campaigns, what each tactic actually achieves, how long it takes, and where the honest limits are. If you want the shorter overview first, start with [what celebrity reputation management is](/blog/what-is-celebrity-reputation-management), then come back here for the full playbook.",

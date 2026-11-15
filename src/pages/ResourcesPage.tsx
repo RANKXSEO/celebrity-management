@@ -9,8 +9,8 @@ const HUB_FAQS = [
   { q: "Are these resources really free?", a: "Yes — every guide, checklist, and pricing breakdown linked from this page is fully public and free. Start with the [free reputation audit](/free-consultation) that turns these frameworks into a personalised plan for your specific situation." },
   { q: "Which resource should I read first?", a: "If you have a live crisis right now, start with [The First 48 Hours After a Story Breaks](/blog/first-48-hours-celebrity-crisis). If you're trying to understand the space generally, start with [The Complete Guide to Celebrity Reputation Management](/blog/what-is-celebrity-reputation-management). If you're evaluating cost, start with our [pricing guide](/blog/celebrity-reputation-management-cost)." },
   { q: "Can I share or cite these guides?", a: "Yes — we encourage it. Please link to the original source. For interview or expert-commentary requests, use our [contact page](/contact)." },
-  { q: "Do you have anything for lawyers or PR agencies I already work with?", a: "The resources here are written for the general public-figure audience, but our [reputation management vs PR guide](/blog/reputation-management-vs-pr) and the [defamation legal guide](/blog/can-you-sue-for-online-defamation) are frequently shared inside law firms and PR agencies coordinating with us on client work." },
-  { q: "How current is this content?", a: "Cornerstone guides are reviewed and updated quarterly; the update date is shown on every article. The reputation landscape (especially AI search) is moving fast — anything more than 12 months old on this topic is out of date." },
+  { q: "Do you have anything for lawyers or PR agencies I already work with?", a: "Our [reputation management vs PR guide](/blog/reputation-management-vs-pr) explains the division of work. The [defamation guide](/blog/can-you-sue-for-online-defamation) offers general background, not legal advice; a qualified lawyer should assess the specific facts and jurisdiction." },
+  { q: "How should I check whether guidance is current?", a: "Check the cited platform policy or legal source before acting. A publication date alone does not establish that a procedure still applies, and we do not claim a quarterly review schedule for every guide." },
 ];
 
 const HUB_INTRO = `Reputation management questions organized into free, plain-English resources you can read, save, and use even if you never engage us. The guides below cover the questions we hear most often: what reputation management actually is, what it costs, how long it takes, what the warning signs look like, and what to do in the first 48 hours of a live crisis.
@@ -38,7 +38,7 @@ const ResourcesPage = () => {
 
   usePageSEO({
     title: "Free Celebrity Reputation Management Resources & Guides",
-    description: "Free expert guides, crisis checklists, pricing transparency, and self-assessment tools.",
+    description: "Free reputation management guides for public figures and businesses: crisis planning, quote comparisons, privacy and eligible content removal.",
     jsonLd,
   });
   return (
@@ -59,7 +59,7 @@ const ResourcesPage = () => {
           <HubIntro intro={HUB_INTRO} faqs={HUB_FAQS} stats={[
             { num: "30+", label: "Free guides" },
             { num: "Search", label: "Visibility and removal" },
-            { num: "Quarterly", label: "Cornerstone updates" },
+            { num: "Planning", label: "Crisis preparation" },
             { num: "Privacy", label: "Personal information" },
           ]} />
 
@@ -70,7 +70,7 @@ const ResourcesPage = () => {
                 to: "/blog/what-is-celebrity-reputation-management",
                 icon: "📚",
                 title: "The Complete Guide to Celebrity Reputation Management (2026)",
-                desc: "Everything you need to know — from how search suppression works to what it costs, how long it takes, and what to look for in an agency. Our most comprehensive resource, updated quarterly.",
+                desc: "A starting point for search suppression, eligible removal, crisis communications and provider selection, with links to more detailed guides.",
                 tag: "Cornerstone Guide",
               },
               {
@@ -84,7 +84,7 @@ const ResourcesPage = () => {
                 to: "/blog/celebrity-reputation-management-cost",
                 icon: "💰",
                 title: "How Much Does Celebrity Reputation Management Cost?",
-                desc: "What to ask when comparing proposals. What to expect for suppression, crisis management, Wikipedia work, and ongoing monitoring. No vague 'it depends' — real numbers.",
+                desc: "Compare scope, deliverables, fee models, response hours and asset ownership before signing. No unsupported market averages or invented agency rates.",
                 tag: "Pricing Guide",
               },
               {

@@ -30,3 +30,10 @@
 
 ## Priority after publishing
 Inspect homepage, suppression service, personal reputation service, Wikipedia policy, timeline guide, DMCA guide and review guide. Confirm each is returned as full HTML with its own canonical for ordinary and crawler requests, then request indexing in Search Console. Monitor canonical decisions and coverage over subsequent crawls.
+
+## Follow-up priority editorial pass — November 15, 2026
+- Rewrote seven older guides: pricing, suppression timelines, effectiveness, Wikipedia creation, Wikipedia notability, ChatGPT reputation and GEO. Removed invented campaign datasets, fixed price ranges, source-weight claims, guaranteed timelines and source-count shortcuts; added primary-source links and practical assessment steps.
+- Added article-specific revision dates shared by visible bylines and Article schema. Existing publication dates were retained, not re-created.
+- Corrected About and Resources claims about staffing, response hours, NDA guarantees, global legal expertise and quarterly editorial updates. Removed unsupported 24/7 wording from the shared footer, homepage phone label and trust strip.
+- Corrected contradictory Google-review advice: requests must not be filtered to satisfied customers.
+- This is a priority pass, not a complete historical-content or legal approval. Other legacy articles, platform-specific procedures and remaining response-time claims still require review. No deployment or Google indexing request occurred in this pass.
