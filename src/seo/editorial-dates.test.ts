@@ -11,6 +11,11 @@ describe('page-specific editorial dates', () => {
       'wikipedia-notability-explained',
       'what-chatgpt-says-about-you',
       'generative-engine-optimization-guide',
+      'ai-reputation-management',
+      'ripoff-report-removal',
+      'glassdoor-review-removal',
+      'yelp-review-removal',
+      'remove-negative-google-reviews',
     ]) {
       expect(blogContent[slug]?.updated, slug).toBe('2026-11-15');
     }

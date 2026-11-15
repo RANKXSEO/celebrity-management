@@ -1,6 +1,7 @@
 # Roadmap
 
 ## In progress
+- [x] Verify and improve Yelp, Glassdoor, Ripoff Report and Google review-removal guidance, plus the remaining AI reputation spoke; add official sources, evidence steps, internal links and revision dates.
 - [x] Rewrite seven priority pricing, suppression, Wikipedia and AI guides with source links and genuine revision dates; correct company/resource claims and Google review-gating advice.
 - [x] Implement and test attached plan's crawler HTML, canonicals, metadata, missing priority content and reciprocal cluster links (110 sitemap URLs).
 - [x] Document verified indexing evidence and remaining workbook dependencies in SEO-IMPLEMENTATION.md.

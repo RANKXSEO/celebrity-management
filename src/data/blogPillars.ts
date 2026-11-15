@@ -36,31 +36,64 @@ export const pillarContent: Record<string, CaseStudyContent> = {
   },
 
   "remove-negative-google-reviews": {
-    intro: "Most advice about removing negative Google reviews is either wrong or dangerous. You cannot pay Google to delete a review, you cannot delete one yourself, and threatening a reviewer is the single fastest way to turn one bad review into a news story. What you can do is narrower and more effective than most owners realise: flag reviews that genuinely violate policy, escalate correctly when the first flag fails, use legal routes where the review is defamatory or fake, and rebuild the rating so the remaining reviews stop mattering. This guide covers all four in the order we run them.",
-    sections: [
-      { heading: "What Google Will and Will Not Remove", body: "Google removes reviews that breach its prohibited-and-restricted-content policies, not reviews that are unfair. The categories that succeed are specific: spam and fake engagement, content posted by someone with no genuine experience of the business, off-topic content, restricted or illegal content, sexually explicit material, offensive language, harassment targeting an individual, personal information such as a phone number or address, impersonation, and conflicts of interest such as a review from a competitor or a former employee.\n\nWhat Google will not remove: a genuine customer's honest negative opinion, a one-star rating with no text, a review about an experience you dispute, or a review you believe is exaggerated. There is no policy category for 'unfair'.\n\nThat distinction determines your entire strategy. If the review is genuine, the removal path is closed and the work shifts to [review management](/services/review-management) and rating recovery. If the review breaches a listed policy, you have a procedural route — and the outcome depends almost entirely on how precisely you name the policy." },
-      { heading: "The Flagging Sequence That Actually Works", body: "Step one: document before you act. Screenshot the review with its date, the reviewer's profile, their full review history, and anything that establishes they were never a customer — no booking, no order, no record. This evidence is what every later escalation depends on.\n\nStep two: flag the review in your Google Business Profile and choose the single policy category that fits best. Do not choose the most severe category available; choose the accurate one. Reviews flagged under a category the content plainly does not meet are dismissed automatically.\n\nStep three: if there is no response within a few days, use the review-management tool in your Business Profile to check status and submit an appeal with your documentation attached.\n\nStep four: escalate to Google Business Profile support and, where the review targets a named individual with personal information or harassment, use Google's legal removal request form rather than the standard flag. Legal requests are reviewed by a different team against a different standard.\n\nStep five: respond publicly. A short, factual, unemotional reply is read by every future customer and is the only part of this process entirely within your control. It also signals to Google that the listing is actively managed." },
-      { heading: "Fake Reviews, Competitor Attacks and Review Bombing", body: "Coordinated attacks have a signature: a cluster of one-star ratings inside a short window, reviewers with no other review history or a history spanning unrelated geographies, near-identical phrasing, and no verifiable transaction behind any of them.\n\nWhen you can demonstrate that pattern, treat it as one case rather than a series of individual flags. Submit the cluster together with a timeline, the reviewer profiles, and the absence of transaction records. Platform trust-and-safety teams are considerably more responsive to a documented coordinated pattern than to five separate complaints.\n\nWhere an attack originates from an identifiable competitor, the conflict-of-interest policy applies directly and the evidentiary bar is lower than defamation. Where it originates from an anonymous account making false factual claims — not opinions — about your business, the route may be legal rather than procedural, and it typically requires an unmasking step before anything else. Our [complaint site removal](/services/complaint-site-removal) practice handles the same problem on non-Google platforms." },
-      { heading: "When a Review Is Defamatory: The Legal Route", body: "A review is defamatory only if it states a false fact, not an opinion, and causes harm. 'The food was terrible' is opinion and is protected. 'They served me expired food and the health department shut them down' is a factual claim, and if it is false it may be actionable.\n\nThe practical sequence is a preservation notice, a documented rebuttal file, a demand letter to the platform citing the specific false statements, and — where the author is anonymous — a court process to identify them. In the United States, Section 230 means the platform is generally not liable for the review, so the target of any claim is the author, not Google.\n\nTwo cautions we give every client. First, a demand letter sent to an angry reviewer frequently produces a screenshot of that letter posted publicly, which is a worse outcome than the review. Second, in jurisdictions with anti-SLAPP statutes, a weak defamation claim against a consumer can end with you paying their legal costs. Read [can you sue for online defamation](/blog/can-you-sue-for-online-defamation) before sending anything." },
-      { heading: "Rating Recovery Without Review Gating", body: "The effect of new ratings depends on both existing review volume and the ratings submitted. A larger review history requires more new ratings to change the average by the same amount; it does not establish a recovery date.\n\nInvite customers consistently, regardless of satisfaction. Do not filter requests to happy customers, offer incentives, or ask people to revise a negative review in exchange for a benefit. Google's [prohibited content policy](https://support.google.com/business/answer/7400114?hl=en) requires genuine experiences and prohibits rating manipulation.\n\nRespond to the actual concern and fix recurring operational failures. Genuine reviews are feedback, not inventory to acquire for a target score. Our [business reputation management guide](/blog/business-reputation-management-guide) covers the wider program." },
-      { heading: "What This Looks Like for High-Profile Individuals and Brands", body: "For public figures and executive-owned businesses the stakes change, because the review profile sits alongside press coverage in the same search results. A cluster of hostile reviews aimed at a named individual is often part of a wider campaign that also touches complaint sites, forums and social platforms — handling the Google listing alone leaves the campaign intact.\n\nIn those cases we run review work as one workstream inside a broader program covering [negative search result suppression](/services/negative-search-results), [social media reputation](/services/social-media-reputation), and where content has jumped to third-party sites, [takedown](/services/website-takedown-service).\n\nIf you are facing a coordinated attack rather than a handful of unhappy customers, [request an assessment](/free-consultation) before flagging anything — the flagging order matters, and a dismissed flag makes the next one harder." },
+    "updated": "2026-11-15",
+    "intro": "Google can remove reviews that violate its content policies, but a business cannot delete someone else’s review simply because it is negative. Preserve the evidence, identify the actual policy concern, report it and check the decision in the Reviews Management Tool. Search removal and legal options are separate assessments.",
+    "sections": [
+      {
+        "heading": "What makes a review eligible for removal",
+        "body": "Google’s [prohibited and restricted content policy](https://support.google.com/business/answer/7400114?hl=en) addresses fake engagement, conflicts of interest, harassment, personal information and other categories. Match the actual content to the rule; do not label a genuine negative opinion as spam merely because it affects the rating.\n\nAn empty transaction search is not conclusive proof of a fake review. A reviewer may have interacted without a recorded purchase. Preserve what the records establish and be clear about their limits."
+      },
+      {
+        "heading": "Report the review through the official process",
+        "body": "Google’s [reporting instructions](https://support.google.com/business/answer/4596773?hl=en) describe reporting from the Business Profile and using the Reviews Management Tool. Save the review URL, screenshot, displayed date, exact wording and evidence before reporting. Select the reason that genuinely fits.\n\nKeep a record of the submission and status. Google says review evaluation typically takes several days; that is guidance, not a guaranteed service deadline for your case. Do not invent a faster agency queue or assume repeated reports make approval more likely."
+      },
+      {
+        "heading": "Appeal a decision when the tool permits it",
+        "body": "The official reporting instructions describe a one-time appeal for eligible decisions in the Reviews Management Tool. Check the status first, then use the available appeal option and explain the policy issue with supporting evidence. A pending assessment is not the same as a rejection eligible for appeal.\n\nDo not promise that appealing will remove the review. When a group of reviews appears suspicious, document timestamps, wording and verifiable connections, but do not treat timing or disagreement alone as proof of an organized attack. Follow the tool’s instructions for the individual reviews concerned."
+      },
+      {
+        "heading": "Respond without retaliation or disclosure",
+        "body": "A useful reply acknowledges the concern, explains the next step and avoids publishing private customer details. Correct only what can be substantiated. Invite appropriate direct contact without offering a benefit for changing or deleting the review.\n\nIf the content raises a threat, extortion or legal concern, preserve evidence and seek the appropriate support or professional help. Do not threaten a lawsuit as a routine response to criticism. The [defamation guidance](/blog/can-you-sue-for-online-defamation) is background, not legal advice."
+      },
+      {
+        "heading": "Invite genuine feedback without review gating",
+        "body": "Google prohibits incentives and rating manipulation. Invite customers consistently regardless of satisfaction; do not send only happy customers to the review form or discourage others from leaving criticism. Never purchase reviews or offer refunds, discounts or gifts in exchange for revision or removal.\n\nThe average depends on all contributing ratings and the existing volume. New reviews do not guarantee a target rating or completion date. [Review management](/services/review-management) should include response quality and operational improvements, not just rating acquisition."
+      },
+      {
+        "heading": "If removal is refused",
+        "body": "A retained review can still be answered professionally. Address recurring service problems and maintain accurate business information. [Complaint-site assessment](/services/complaint-site-removal) and [search suppression](/services/negative-search-results) are different workstreams, not another button for deleting Google reviews.\n\nUse the [business reputation guide](/blog/business-reputation-management-guide) for wider planning. [Request an assessment](/free-consultation) with the review URL, the policy concern and supporting records. No removal success percentage or universal appeal timeline is claimed here."
+      }
     ],
-    takeaways: [
-      "Google removes policy-violating reviews, not unfair ones — name the accurate policy category",
-      "Document the reviewer, their history and the absence of a transaction before you flag",
-      "Submit coordinated attacks as one documented pattern, not as separate complaints",
-      "Defamation applies to false facts, not opinions, and the author is the target, not the platform",
-      "Rating recovery math depends on existing review volume — often it beats chasing removals",
-      "Never incentivise or gate reviews; both breach policy and risk the entire listing",
+    "takeaways": [
+      "Only policy-violating reviews are eligible for removal",
+      "Document the exact content and evidence before reporting",
+      "Check status before using an available one-time appeal",
+      "Do not incentivize, gate or buy reviews",
+      "A negative review is not automatically fake"
     ],
-    relatedServiceSlugs: ["review-management", "complaint-site-removal", "negative-search-results"],
-    faqs: [
-      { q: "Can you pay Google to remove a negative review?", a: "No. Google does not sell review removal, and any service claiming a paid deletion route is either using policy flags you could file yourself or doing something that risks your listing. Removal only happens when a review breaches Google's content policies or a valid legal request is granted." },
-      { q: "How long does Google take to remove a flagged review?", a: "Automated assessment often happens within a few days. Appeals and escalations to support commonly take one to two weeks, and legal removal requests take longer because they are handled by a separate team against a different standard." },
-      { q: "Can you sue someone for a bad Google review?", a: "Only where the review states a false fact rather than an opinion and causes demonstrable harm. In the US the platform is generally protected under Section 230, so any claim targets the author, and anti-SLAPP statutes can leave a weak claimant paying the reviewer's costs." },
-      { q: "What happens if a fake review is not removed?", a: "The practical response is to respond publicly and factually, then dilute it with legitimate new reviews while addressing the operational issue behind any genuine complaints. Suppression of the wider search result set may also be needed if the review is being amplified off-platform." },
-      { q: "Is it against the rules to ask customers for reviews?", a: "Asking is allowed and encouraged. What breaches policy is offering incentives for reviews, or gating requests so only customers you expect to be positive are asked. Both can result in review removal or listing penalties." },
+    "relatedServiceSlugs": [
+      "review-management",
+      "complaint-site-removal",
+      "negative-search-results"
     ],
+    "faqs": [
+      {
+        "q": "Can you pay Google to remove a bad review?",
+        "a": "Google’s policy-reporting process is not a paid deletion service. A third-party fee cannot guarantee Google’s decision."
+      },
+      {
+        "q": "How long does Google review evaluation take?",
+        "a": "Google says evaluation typically takes several days. Check the Reviews Management Tool; this is not a guaranteed deadline."
+      },
+      {
+        "q": "Can I appeal a rejected report?",
+        "a": "The Reviews Management Tool offers a one-time appeal for eligible decisions. Check the status and follow the current instructions."
+      },
+      {
+        "q": "Can I ask customers to review my business?",
+        "a": "You may invite genuine feedback without incentives, selective positive-only requests or discouraging negative reviews. Yelp has different rules, so do not reuse this workflow there."
+      }
+    ]
   },
 
   "reputation-repair-guide": {

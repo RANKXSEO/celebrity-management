@@ -4,6 +4,7 @@
  * statements, published financial reporting) and are framed as analysis, not allegation.
  */
 export interface CaseStudyContent {
+  updated?: string;
   intro: string;
   sections: { heading: string; body: string }[];
   takeaways: string[];

@@ -37,3 +37,10 @@ Inspect homepage, suppression service, personal reputation service, Wikipedia po
 - Corrected About and Resources claims about staffing, response hours, NDA guarantees, global legal expertise and quarterly editorial updates. Removed unsupported 24/7 wording from the shared footer, homepage phone label and trust strip.
 - Corrected contradictory Google-review advice: requests must not be filtered to satisfied customers.
 - This is a priority pass, not a complete historical-content or legal approval. Other legacy articles, platform-specific procedures and remaining response-time claims still require review. No deployment or Google indexing request occurred in this pass.
+
+## Platform and AI guidance follow-up — November 15, 2026
+- Rewrote Yelp, Glassdoor, Ripoff Report, Google review-removal and AI reputation guides. Retained their existing URLs and cluster relationships, with contextual links to business reputation, removal, suppression and consultation pages.
+- Added official policy links, evidence-preservation steps, reporting limitations and matching revision dates. Removed unsupported removal rates, cost comparisons, guaranteed court-order delisting, automatic copy removal and AI source-weight claims.
+- Verified Glassdoor's official trust-page content through search; its separate Community Guidelines page returned 403. The article explicitly directs readers to the current reporting interface rather than asserting an unverified detailed rule list.
+- Distinguished Yelp recommendation filtering from moderation; corrected Yelp solicitation advice and Google's status-dependent appeal workflow. No new deadlines, paid platform deletion routes or legal entitlements were invented.
+- Remaining historical editorial/legal review, real company evidence, off-site research and deployment are still outstanding; this pass does not establish complete workbook execution or live indexation.

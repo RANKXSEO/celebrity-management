@@ -1,111 +1,245 @@
-/**
- * Platform-specific and AI-search cluster spokes.
- * Procedural guidance only; no guarantees of removal are implied.
- */
 import type { CaseStudyContent } from "./blogCaseStudies";
 
+/** Source-checked platform guidance; moderation outcomes remain with each platform. */
 export const platformSpokeContent: Record<string, CaseStudyContent> = {
-  "ai-reputation-management": {
-    intro: "AI reputation management is the work of controlling what ChatGPT, Perplexity, Gemini, Claude and Google's AI summaries say about a person or a company. It matters because those systems do not return ten links to weigh up — they return one synthesised answer, and for a growing share of buyers, recruiters, journalists and investors that answer is the entire research process. This guide covers how the answers are assembled, how to audit yours, and what actually changes them.",
-    sections: [
-      { heading: "How AI Assistants Build an Answer About You", body: "Two mechanisms, and the difference determines what you can influence.\n\nTraining data is the corpus a model learned from. It is fixed at training time, months or years stale, and cannot be edited. What you can do is change what future crawls find.\n\nRetrieval is live: when a question is specific or recent, the assistant searches the web, reads a handful of sources and summarises them. This is where most reputational damage now occurs, and it is directly addressable, because the source set is chosen from what currently ranks and what the system treats as authoritative.\n\nAcross both mechanisms a small number of sources carry disproportionate weight: [Wikipedia](/services/wikipedia-for-celebrities) and Wikidata, major news outlets, official and owned sites with clear structured data, and well-established reference or industry databases. Forums and aggregators are cited more often than most people expect, particularly where nothing authoritative exists on the question being asked." },
-      { heading: "Auditing Your AI Reputation Properly", body: "An audit is not typing your name into one chatbot. Run a matrix.\n\nQueries: your name alone; name plus company; 'is [name] trustworthy'; 'what happened with [name]'; 'is [company] a scam'; 'should I work with [company]'; plus the specific allegation if one exists. Adversarial phrasings matter most, because that is how sceptical people ask.\n\nSystems: ChatGPT, Perplexity, Gemini, Claude and Google's AI summaries, each with and without a logged-in account, because personalisation and memory distort results.\n\nRecord verbatim answers, and critically, record the cited sources. The citations are the intervention list — they tell you precisely which pages are shaping the narrative, which is usually a much shorter list than the full search result set.\n\nRepeat monthly. Answers drift as the retrieval layer re-reads the web, and a fix is only confirmed when it holds across systems over time. Our [GEO guide](/blog/generative-engine-optimization-guide) covers the optimisation side in depth." },
-      { heading: "What Actually Changes an AI Answer", body: "In rough order of impact.\n\nCorrecting the heavily weighted sources: an inaccurate Wikipedia statement or an outdated Wikidata value propagates into answers across every system. Correction must follow the platforms' sourcing rules, not marketing instincts.\n\nCreating the authoritative answer that does not yet exist. Assistants cite forums when nothing better addresses the question. A clear, well-sourced page on your own site answering the exact question directly is frequently enough to displace a forum citation.\n\nEarning credible coverage. Retrieval systems weight source authority heavily, so a substantive piece in a publication with real editorial standards moves answers in a way that self-published content cannot. This is why [digital PR](/services/digital-pr-tier-one-placements) is now part of AI reputation work.\n\nStructured data and entity consistency: Person or Organization schema, consistent naming, and sameAs references help systems resolve you correctly and avoid conflating you with someone else.\n\nCoverage of the resolution. Assistants summarise what exists, and allegations are always better covered than outcomes. If the conclusion was never published, the assistant cannot include it." },
-      { heading: "What Does Not Work", body: "Prompt-injection text hidden on your website. Major systems detect and discount it, and being caught doing it is a reputational story in itself.\n\nAsking the assistant to remember a correction. Personalisation affects your session only.\n\nMass-publishing thin pages restating your preferred narrative. Retrieval weights authority, and low-quality content farms are discounted by the same systems that demote them in search.\n\nFeedback buttons alone. Reporting an inaccurate answer is worth doing and occasionally works for clear factual errors, but it does not change the underlying source set, so the answer regenerates.\n\nWaiting. Every month an inaccurate answer persists, it is re-cited, screenshotted and quoted elsewhere — which creates exactly the corroboration the systems look for." },
-      { heading: "Building an Ongoing Programme", body: "Treat AI answers as a monitored surface with a named owner, the way brands treat page one of Google.\n\nMonthly: re-run the query matrix across systems and log answers and citations. Quarterly: review whether the cited source set has shifted and whether new authoritative material is needed. On any material event — a lawsuit, a funding round, a leadership change, a resolved dispute — publish and place the outcome coverage promptly, because the retrieval layer will be asked about it within days.\n\nExpect lag. Changes to the underlying sources typically take weeks to months to appear consistently in answers, and training-data effects take longer still. Anyone promising an immediate rewrite of what an assistant says does not understand the mechanism.\n\nTo get a baseline audit of what the major assistants currently say about you, [request a review](/free-consultation)." },
-    ],
-    takeaways: [
-      "Retrieval, not training data, is where most AI reputation damage is addressable",
-      "Record the citations in each answer — they are the precise intervention list",
-      "Audit with adversarial phrasings across several systems, logged out and logged in",
-      "Assistants cite forums when nothing authoritative answers the question — so publish that answer",
-      "Hidden prompt text, feedback buttons alone and thin content farms do not work",
-      "Publish outcome coverage promptly; assistants summarise allegations when resolutions are unpublished",
-    ],
-    relatedServiceSlugs: ["ai-search-reputation", "wikipedia-for-celebrities", "digital-pr-tier-one-placements"],
-    faqs: [
-      { q: "What is AI reputation management?", a: "It is the practice of auditing and shaping what AI assistants such as ChatGPT, Perplexity, Gemini and Claude say about a person or company, by correcting the high-weight sources they draw on, publishing authoritative answers to the questions being asked, and earning credible coverage that the retrieval layer trusts." },
-      { q: "Can you remove false information from ChatGPT?", a: "Not directly. You change the sources the system retrieves and was trained on: correct authoritative references, publish a clear sourced answer to the specific question, and secure credible coverage. Feedback reports can help with clear factual errors but do not change the underlying source set." },
-      { q: "How long does it take to change what AI says about you?", a: "Changes to retrieved sources typically appear over weeks to months, and effects mediated by training data take longer. Consistency across several systems is the signal that a fix has held." },
-      { q: "Does AI reputation management replace SEO?", a: "No, it extends it. The same authoritative sources that rank well are the ones assistants retrieve, but AI work adds question-level coverage, entity consistency and source-set correction that traditional ranking work does not address." },
-    ],
-  },
-
-  "ripoff-report-removal": {
-    intro: "Ripoff Report is one of the most durable reputation problems on the internet because of a single editorial policy: the site states it does not remove reports, even when the author asks. That policy, combined with strong domain authority and pages built around a business or person's name, means a single report can rank on page one for years. This guide sets out what is genuinely possible — the narrow removal routes, the rebuttal mechanics, the paid programme and its trade-offs, and the suppression path that resolves most cases.",
-    sections: [
-      { heading: "Why Ripoff Report Pages Rank and Persist", body: "Three factors compound. The domain has accumulated authority over two decades. Report pages are titled and structured around the subject's name, which makes them a close match for name queries that little else competes for. And the site's stated policy is that reports are not removed on request, including by the person who posted them.\n\nThat last point defeats the approach most people try first: contacting the author and asking them to take it down. Even a cooperative author generally cannot delete the page.\n\nUnderstand also that the report is rarely contained. Aggregators and scraper sites copy report text, so the original page is frequently accompanied by several derivative copies that rank for the same query — and those copies often can be removed even when the original cannot. Our [complaint site removal](/services/complaint-site-removal) work usually begins there, because it is the fastest measurable win." },
-      { heading: "The Narrow Routes That Do Produce Removal", body: "Removal of the original page is uncommon but not impossible. The routes that occasionally succeed:\n\nA court order. Where a court finds specific statements defamatory, search engines will generally de-index the identified URL from results for the affected queries even if the host does not remove it. This is the most reliable route and it requires actual litigation against the author, not a demand letter to the site.\n\nContent that breaches law rather than opinion policy — non-consensual imagery, exposed personal identifying information such as a social security number or home address, or content violating a specific statute. These are handled as legal requests rather than editorial ones.\n\nSearch-engine de-indexing under Google's own policies, which operates independently of the host. Personal contact information and identifying financial data qualify; an unflattering business complaint does not.\n\nWhat does not work: paying third parties who claim guaranteed deletion, sending mass DMCA notices for content you do not own, or pressuring the site publicly. Read [can you sue for online defamation](/blog/can-you-sue-for-online-defamation) before committing to the litigation route." },
-      { heading: "Rebuttals, Arbitration and the Paid Programmes", body: "The site offers a free rebuttal, which posts your response on the same page. A rebuttal is worth writing and worth writing carefully: it is read by anyone who reaches the page, and a calm, factual, specific response frequently does more commercial good than the report does harm. An angry rebuttal does the opposite and is often screenshotted.\n\nThe site has also operated paid programmes — including an arbitration process aimed at establishing whether specific statements are false, and commercial remediation programmes. The trade-offs deserve careful thought: cost, the fact that participation does not necessarily remove the page, and the reality that engaging commercially with the platform is itself something a journalist or competitor may surface. Many clients decline for that reason.\n\nBefore paying anything, price the alternative. Suppression of a single Ripoff Report page for a business name is frequently cheaper and produces a result that does not depend on the platform's cooperation." },
-      { heading: "Suppression: What Resolves Most Cases", body: "For the majority of cases, the practical objective is that the report no longer appears on page one for the queries that matter, and the mechanics are ordinary displacement work.\n\nWhat competes effectively against a complaint page: an authoritative owned site with genuine depth, complete and active profiles on high-authority platforms, legitimate review presence on Google and category-relevant platforms, earned press or trade coverage, and substantive published content that ranks for your name and its modifiers.\n\nWhat does not compete: thin directory listings and near-duplicate bio pages, which Google's quality systems now discount.\n\nExpect a timeline in months rather than weeks, driven by how many competing assets already exist. Our [negative search result suppression](/services/negative-search-results) work runs this sequence, and the [reputation repair guide](/blog/reputation-repair-guide) sets out the phases." },
-      { heading: "Handling the Underlying Complaint", body: "One point practitioners raise and vendors rarely do: a report frequently describes a real operational failure. Resolving it privately with the complainant will not remove the page, but it does stop the next one, and it materially strengthens any later legal or platform argument that you acted in good faith.\n\nIt also matters commercially. Prospects who find the report usually also find your recent reviews. A pattern of similar recent complaints validates the report; a clean recent record undermines it more effectively than any rebuttal.\n\nIf a report is currently ranking for your name or your business, [we will assess which routes genuinely apply](/free-consultation) — including telling you when removal is not one of them." },
-    ],
-    takeaways: [
-      "The site's stated policy is that reports are not removed on request, including by the author",
-      "Scraped copies on aggregator sites often can be removed even when the original cannot",
-      "A court order identifying defamatory statements is the most reliable de-indexing route",
-      "Write a calm, factual rebuttal — it is read by everyone who reaches the page",
-      "Price suppression before paying any platform programme; it does not depend on cooperation",
-      "Fix the underlying complaint: a clean recent record undermines an old report better than a rebuttal",
-    ],
-    relatedServiceSlugs: ["complaint-site-removal", "negative-search-results", "website-takedown-service"],
-    faqs: [
-      { q: "Can a Ripoff Report be removed?", a: "Rarely through the site itself, which states that reports are not removed on request. Removal or de-indexing is possible where a court finds specific statements defamatory, where content breaches law such as exposed personal identifying data, or where search-engine policies apply. Scraped copies on other sites are more often removable." },
-      { q: "Does responding to a Ripoff Report make it worse?", a: "A calm, factual rebuttal generally helps, because anyone who reaches the page reads it. An emotional or threatening response makes things worse and is frequently screenshotted and shared." },
-      { q: "How do you get a Ripoff Report off Google?", a: "For most businesses the realistic route is suppression: building authoritative owned, profile, review and earned-media assets that outrank the report for the affected queries. De-indexing is available where a court order identifies defamatory statements or where Google's personal-information policies apply." },
-      { q: "Should you pay for a Ripoff Report removal programme?", a: "Weigh it carefully. Participation does not necessarily remove the page, it carries cost, and commercial engagement with the platform can itself be surfaced later. Compare the price against suppression, which does not depend on the platform's cooperation." },
-    ],
-  },
-
-  "glassdoor-review-removal": {
-    intro: "Glassdoor reviews rank for your company name, are read by every serious candidate, and increasingly leak into customer and investor perception. They are also governed by a specific set of community guidelines that determine exactly what can be removed and what cannot. This guide covers the flag process that works, the anonymity question and what courts have said about it, and the employer-brand work that fixes the rating when removal is not available.",
-    sections: [
-      { heading: "What Glassdoor Will and Will Not Remove", body: "The platform removes content that breaches its community guidelines. The categories that succeed in practice: content identifying an individual by name or role in a way that breaches its people-naming rules; discriminatory, harassing or threatening language; disclosure of confidential or proprietary information; reviews from someone who was never an employee or contractor; duplicate reviews from the same person about the same employment period; content unrelated to the workplace; and conflicts of interest such as reviews solicited or written by management.\n\nWhat it will not remove: a former employee's genuine negative opinion about management, pay, culture or a termination, however inaccurate you believe it to be. Disagreement is not a removal ground, and framing a flag that way guarantees dismissal.\n\nThe platform's position on anonymity is also firm: it defends reviewer anonymity, and unmasking generally requires a legal process with a court weighing the claim's merit — a process that has repeatedly attracted press coverage, which is a consideration in itself." },
-      { heading: "Flagging Correctly, and Escalating When It Fails", body: "Precision is everything. Flags that name a single specific guideline and quote the offending text succeed at a far higher rate than general complaints of unfairness.\n\nThe sequence we run: screenshot and archive the review with its date and all metadata; identify the single strongest guideline breach; flag through the employer account citing that guideline and quoting the specific language; if the flag is dismissed, appeal with additional evidence rather than re-filing the same claim; and where the content is defamatory or discloses confidential information, escalate through a formal legal channel rather than the standard flag queue.\n\nTwo cautions. Do not attempt to identify the author internally and act on that identification — retaliation exposure is a far larger problem than the review. And never ask the whole team to flag a review; coordinated flagging is detectable and damages your standing with the platform." },
-      { heading: "When a Review Is Defamatory or Discloses Confidential Information", body: "A review stating a false fact — that the company failed an inspection it passed, or that a named executive committed a crime — is a different matter from criticism of culture or pay, and it is handled through legal channels.\n\nThe practical sequence is preservation, a documented rebuttal file establishing falsity, and where necessary a court process to unmask the author. Expect the platform to resist unmasking, and expect the attempt to be newsworthy. Weigh that against the harm: for a specific, damaging, provably false factual claim it can be worth it, and for a bad opinion it never is.\n\nConfidential-information disclosures — unreleased products, client names, financial data — are typically the fastest legitimate removals, because the guideline is unambiguous and the evidence is straightforward. Our [complaint site removal](/services/complaint-site-removal) team handles the same problem across other platforms." },
-      { heading: "Fixing the Rating Instead: Employer-Brand Work", body: "Most Glassdoor problems are rating problems rather than single-review problems, and rating problems are solved by volume and by fixing the cause.\n\nWhat is permitted: asking all employees to review, at a natural moment such as after onboarding or a company survey, without selecting who to ask and without incentives. What is not permitted: incentivising reviews, asking only employees you expect to be positive, or writing reviews as management. Each of these is detectable and risks the whole profile.\n\nRespond to reviews publicly, including critical ones, in a way that acknowledges the specific point and states what changed. Candidates read the responses as closely as the reviews, and a thoughtful response pattern is itself a hiring asset.\n\nThen address the substance. Where several reviews name the same manager, the same policy or the same compensation issue, that is free organisational diagnostics. Reputation work on an unresolved cause simply rebuys the same rating next year. Our [business reputation management guide](/blog/business-reputation-management-guide) covers the wider programme." },
-      { heading: "Employer Reviews in the Wider Search Profile", body: "Glassdoor rarely sits alone. A company name search typically returns the employer-review profile alongside Indeed, LinkedIn commentary, consumer reviews and press, and candidates read all of them as one picture.\n\nThat means the objective is not a perfect employer-review page but a coherent search profile: accurate listings, current owned content, credible coverage, and a rating that reflects the current organisation rather than a period you have already fixed. Where a review cluster is coordinated rather than organic — several accounts posting similar content in a narrow window — treat it as one documented case, as with any [review-bombing pattern](/blog/remove-negative-google-reviews).\n\nIf employer reviews are affecting hiring or deal conversations, [we will map the routes available](/free-consultation)." },
-    ],
-    takeaways: [
-      "Removal requires a specific guideline breach; disagreement with an opinion is never grounds",
-      "Quote the offending text and name one guideline — precise flags succeed far more often",
-      "Confidential-information disclosures are usually the fastest legitimate removals",
-      "Unmasking an anonymous reviewer requires a court process and is frequently newsworthy",
-      "Never incentivise, select or coordinate reviews — all are detectable and risk the profile",
-      "Respond publicly and fix the named cause; candidates read responses as closely as reviews",
-    ],
-    relatedServiceSlugs: ["review-management", "complaint-site-removal", "negative-search-results"],
-    faqs: [
-      { q: "Can you get a Glassdoor review removed?", a: "Yes, where it breaches a specific community guideline — naming individuals improperly, harassment or discrimination, confidential information, a reviewer who was never an employee, duplicates, off-topic content, or a conflict of interest. Genuine negative opinions about management, pay or culture are not removable." },
-      { q: "How do you flag a Glassdoor review successfully?", a: "Archive the review first, identify the single strongest guideline breach, and flag through the employer account quoting the specific offending language and naming that guideline. If dismissed, appeal with additional evidence rather than re-filing the same claim." },
-      { q: "Can you find out who wrote an anonymous Glassdoor review?", a: "Only through a legal process in which a court weighs the merits of the underlying claim, and the platform typically resists such requests. Attempts are frequently reported in the press, so the reputational cost should be weighed against the harm caused by the review." },
-      { q: "How do you improve a low Glassdoor rating?", a: "Ask all employees to review at a natural moment without incentives or selection, respond publicly and specifically to critical reviews, and fix the operational causes that recur across them. Rating movement is proportional to existing review volume." },
-    ],
-  },
-
   "yelp-review-removal": {
-    intro: "Yelp is unusual among review platforms in two ways that change the strategy completely: it operates an automated recommendation software that hides a large share of reviews from your visible rating, and it prohibits businesses from asking customers for reviews at all. Both facts invalidate most generic review advice. This guide covers what Yelp actually removes, how the recommendation filter works, what to do about review attacks, and the compliant path to a better rating.",
-    sections: [
-      { heading: "What Yelp Removes Under Its Content Guidelines", body: "Yelp removes reviews that breach its content guidelines, not reviews you consider unfair. The categories that succeed: conflicts of interest, including reviews by competitors, employees or the business owner; content with no genuine first-hand consumer experience; threats, harassment, hate speech or lewd content; promotional content; privacy violations such as posting a person's full name or contact details; reviews about a different business, which happens often after a relocation or an ownership change; and content relating to matters outside the consumer experience.\n\nThe last two are the most commonly overlooked and the most winnable. A review about the previous owner of the premises, or about an unrelated location, is a straightforward factual argument rather than a judgement call.\n\nYelp does not remove reviews for being inaccurate, exaggerated or one-sided, and it does not remove reviews because a dispute was resolved privately." },
-      { heading: "The Recommendation Filter: Why Reviews Disappear", body: "Yelp's automated software decides which reviews are 'recommended' and therefore counted in your visible star rating. Non-recommended reviews are still accessible behind a link but do not affect the rating.\n\nThe software is not disclosed in detail, but the pattern is consistent: reviews from established accounts with history, photos and a record of activity are recommended more often than those from new accounts with a single review. This means a burst of five-star reviews from brand-new accounts typically does nothing for your rating and may attract scrutiny.\n\nTwo practical consequences. First, an apparently disastrous review may already be filtered — check before spending effort on it. Second, soliciting reviews is not only prohibited, it is frequently ineffective, because solicited reviews from inactive accounts are exactly the profile the filter discounts." },
-      { heading: "Reporting, Responding and Review Attacks", body: "To report, use the report-review function and select the specific guideline at issue, with supporting detail: transaction records, the date mismatch, evidence the reviewer is a competitor, or the fact that the described experience belongs to another business.\n\nResponses come in two forms. A public comment is read by every future customer and should be brief, factual and unemotional. A direct message can resolve a genuine complaint privately, and is often the better first move, but it should never offer anything in exchange for changing or deleting a review — that breaches policy.\n\nFor coordinated attacks, Yelp has a specific process: it may place a Public Attention Alert on a listing when a business is the subject of a surge of activity driven by news coverage or social media, and it may clean up reviews from that period. Report the surge as a pattern with dates, screenshots and the originating post rather than filing individual reports. The same documentation logic applies across platforms — see [removing negative Google reviews](/blog/remove-negative-google-reviews)." },
-      { heading: "Improving a Yelp Rating Without Breaking the Rules", body: "Because solicitation is prohibited, the compliant levers are different from other platforms.\n\nClaim and complete the profile: hours, categories, photos, attributes and a current description. Completeness affects both conversion and how the listing performs.\n\nDisplay the Yelp badge and encourage visits to the page in passive ways that do not ask for a review. Genuine traffic produces genuine reviews from active accounts, which are the ones that count.\n\nRespond consistently, because prospects weigh response patterns heavily on Yelp specifically.\n\nAnd fix what the reviews describe. On Yelp more than most platforms, recurring operational complaints — wait times, a specific staff interaction, pricing surprises — are the rating. Our [review management](/services/review-management) work covers the cross-platform version of this." },
-      { heading: "When the Yelp Page Itself Is the Search Problem", body: "For many local businesses the Yelp listing ranks second or third for the business name, which means the rating shown in the search result is doing as much work as your own website.\n\nWhere the listing is damaging and removal routes are exhausted, the remaining options are rating improvement over time and strengthening the surrounding search profile so the listing carries less weight — a complete Google Business Profile, an authoritative owned site, and presence on the other platforms that rank for your category. Our [negative search result suppression](/services/negative-search-results) work handles the wider profile.\n\nIf a review attack or a mis-attributed listing is affecting your business, [we will review the available routes with you](/free-consultation)." },
+    "updated": "2026-11-15",
+    "intro": "Yelp review removal is possible when Yelp determines that content violates its guidelines. A business cannot delete another person’s review or buy its removal. Start by identifying a specific policy concern, preserving evidence and using the reporting process—not by promising the reviewer a benefit or requesting positive replacement reviews.",
+    "sections": [
+      {
+        "heading": "Which Yelp reviews can be reported",
+        "body": "Yelp’s [Content Guidelines](https://www.yelp.com/guidelines) address relevance, conflicts of interest, privacy and inappropriate content. A review should concern the consumer experience at the location visited or contacted. Threats, harassment and some disclosures of private information may raise separate concerns.\n\nCompare the exact passage with the actual rule. Negative tone, a low star rating or a disputed description alone does not establish a violation. A missing transaction in your records is supporting context, not conclusive proof that the person never had an experience. Do not assume that a change of ownership automatically invalidates every older review."
+      },
+      {
+        "heading": "Prepare an evidence file before reporting",
+        "body": "Save the review URL, screenshot, displayed date, business location and exact wording you want assessed. Record what is known separately from what is suspected. If the concern is a wrong location, show the location mismatch. If it is a conflict of interest, explain the relationship using verifiable information rather than an accusation.\n\nUse the reporting controls available on the review or business account. Yelp’s [content-moderation explanation](https://trust.yelp.com/content-moderation/) distinguishes human moderation from its recommendation software. Describe the policy issue clearly and retain the submission record. Follow any further instructions from support without repeatedly sending the same unsupported allegation."
+      },
+      {
+        "heading": "Not recommended does not mean deleted",
+        "body": "A review that is not recommended and a review removed for a guideline violation are different outcomes. Recommendation software selects which reviews contribute to the displayed recommendation and rating experience; moderation assesses whether content belongs on the platform.\n\nCheck the actual state before describing a success. Record whether the review is still accessible, whether it is recommended and whether it remains visible in search. Do not claim that buying advertising, editing a profile or adding reviews will force the recommendation system to change its decision."
+      },
+      {
+        "heading": "Respond without exposing customer information",
+        "body": "A useful public response acknowledges the concern, corrects only what you can substantiate and offers an appropriate way to continue the conversation. Avoid publishing private order details, contact information or speculation about the reviewer’s identity. A professional response can help readers understand your position without requiring agreement from the reviewer.\n\nIf several reviews appear linked to outside attention, preserve the chronology and report the pattern through the available support channels. Similar timing alone does not prove coordination. Do not organize retaliatory reviews or mass reporting against an individual."
+      },
+      {
+        "heading": "Why asking for Yelp reviews is the wrong recovery tactic",
+        "body": "Yelp’s [Don’t Ask for Reviews policy](https://biz.yelp.com/support-center/Reviews/Best_Practices/Don-t-Ask-for-Reviews/en-US) explicitly says not to solicit reviews from customers, staff, friends or family. It also prohibits incentives for posting or removing reviews. A workflow permitted on another platform is not automatically appropriate for Yelp.\n\nInstead, correct profile information, address recurring service concerns and respond consistently. Our [review management service](/services/review-management) should be assessed platform by platform, not as a generic positive-review acquisition package."
+      },
+      {
+        "heading": "If the review stays online",
+        "body": "Removal is Yelp’s decision. No validated success percentage or fixed removal deadline is supplied here. Where the content remains, assess the wider search profile: accurate official pages, customer information and relevant independent coverage. [Search suppression](/services/negative-search-results) is a separate process, not deletion of the Yelp page.\n\nThe [business reputation management guide](/blog/business-reputation-management-guide) explains the broader assessment. For help organizing a specific case, [request a consultation](/free-consultation) with the review URL and supporting evidence."
+      }
     ],
-    takeaways: [
-      "Yelp removes guideline breaches — conflicts of interest, no first-hand experience, wrong business — not unfair opinions",
-      "The recommendation filter decides which reviews count; check whether a bad review is already filtered",
-      "Asking customers for reviews breaches Yelp policy and is usually ineffective anyway",
-      "Report coordinated attacks as a documented surge, not as individual reports",
-      "Never offer anything in exchange for changing or removing a review",
-      "Reviews about a previous owner or a different location are among the most winnable removals",
+    "takeaways": [
+      "Report a specific guideline concern, not merely a low rating",
+      "Preserve the location, URL, wording and evidence",
+      "Removal and recommendation filtering are different outcomes",
+      "Do not solicit or incentivize Yelp reviews",
+      "A retained review can still be answered professionally"
     ],
-    relatedServiceSlugs: ["review-management", "negative-search-results", "complaint-site-removal"],
-    faqs: [
-      { q: "Can you get a Yelp review removed?", a: "Yes, where it breaches Yelp's content guidelines: conflicts of interest, no genuine first-hand experience, threats or harassment, promotional or privacy-violating content, or a review about a different business or a previous owner. Reviews that are simply negative or exaggerated are not removed." },
-      { q: "Why do some Yelp reviews not count towards the rating?", a: "Yelp's automated recommendation software decides which reviews are recommended and counted. Reviews from established accounts with history and activity are recommended more often than those from new single-review accounts, which are typically filtered and excluded from the visible rating." },
-      { q: "Can businesses ask customers for Yelp reviews?", a: "No. Yelp prohibits soliciting reviews, and solicited reviews from inactive accounts are commonly filtered out anyway. Compliant alternatives are completing the profile, driving genuine traffic to the page and responding consistently." },
-      { q: "What do you do about a Yelp review attack?", a: "Report it as one documented pattern with dates, screenshots and the originating social or news post rather than filing separate reports. Yelp may apply a Public Attention Alert to the listing and clean up reviews posted during the surge." },
+    "relatedServiceSlugs": [
+      "review-management",
+      "negative-search-results",
+      "complaint-site-removal"
     ],
+    "faqs": [
+      {
+        "q": "Can a business delete a Yelp review?",
+        "a": "No. A business can report a policy concern; Yelp decides whether the review should be removed."
+      },
+      {
+        "q": "Can I pay Yelp to remove a review?",
+        "a": "Do not treat advertising or a third-party fee as a removal entitlement. Content is assessed under the guidelines, and incentives for changing or removing reviews are prohibited."
+      },
+      {
+        "q": "Can I ask customers for Yelp reviews?",
+        "a": "No. Yelp’s published policy tells businesses not to solicit reviews, including requests to customers, staff, friends or family."
+      },
+      {
+        "q": "How long does Yelp removal take?",
+        "a": "This guide does not establish a fixed timeline. Track the report and follow the platform’s current instructions."
+      }
+    ]
   },
+  "glassdoor-review-removal": {
+    "updated": "2026-11-15",
+    "intro": "Employers cannot purchase Glassdoor review removal. Glassdoor says it removes content under its policies rather than because an employer dislikes it or pays for recruiting services. The practical approach is to document a specific concern, request assessment and address genuine workplace feedback without trying to identify or punish a reviewer.",
+    "sections": [
+      {
+        "heading": "What Glassdoor says about removal",
+        "body": "Glassdoor’s [content-removal policy](https://www.glassdoor.com/about/trust/when-is-content-removed/) states that employers cannot pay for reviews to be removed. It describes assessment against its Community Guidelines and says it generally does not take sides in factual disagreements about review content.\n\nThis means a critical employee opinion is not automatically removable because management disputes it. Read the rule linked in the current reporting interface before selecting a reason. Do not rely on an agency’s older checklist for changing rules about names, review frequency or confidential information."
+      },
+      {
+        "heading": "Authenticity is not the same as sentiment",
+        "body": "Glassdoor’s [review-authenticity explanation](https://www.glassdoor.com/about/trust/fighting-fake-reviews/) says positive and negative contributions receive equal treatment and describes checks for fraud and manipulation. A review’s tone is not proof of authenticity, and an anonymous account is not proof of fraud.\n\nIdentify the evidence for the concern. Keep a timeline, exact passage and relevant business record. Be explicit about uncertainty. A cluster of reviews after a workplace event may reflect genuine shared experiences, not a coordinated attack."
+      },
+      {
+        "heading": "A practical reporting record",
+        "body": "Preserve the page URL, review date, screenshot and relevant text before submitting a report. Use the available reporting option and follow the current instructions in the account. Match the concern to a rule you can actually identify, explain the evidence and keep a copy of any support correspondence.\n\nIf further review is available, add material information rather than repeating the same complaint. This guide does not promise a universal appeal channel, response deadline or removal rate. We could verify Glassdoor’s official trust pages, but not the separate Community Guidelines page directly; consult the current platform interface for its detailed categories."
+      },
+      {
+        "heading": "Respond for readers, not to win an argument",
+        "body": "A response should acknowledge the issue, distinguish verified facts from disputed claims and state what the organization is doing where appropriate. Do not disclose medical, personnel, disciplinary or other private information to defend the company in public.\n\nAvoid demands that a reviewer reveal their identity. If a complaint describes a recurring workplace problem, investigate it through the proper internal process. The [business reputation management guide](/blog/business-reputation-management-guide) connects employer feedback with the wider company search profile."
+      },
+      {
+        "heading": "When a legal assessment is needed",
+        "body": "A statement alleging a specific false fact is different from an unfavorable opinion, but that difference alone does not establish a successful legal claim. Jurisdiction, evidence, defenses and potential publicity need qualified legal assessment. Do not assume a demand letter or court filing will require Glassdoor or Google to remove a URL.\n\nPreserve evidence and speak with counsel about deadlines and lawful options. The [defamation lawyer versus reputation management guide](/blog/defamation-lawyer-vs-reputation-management) introduces the division of responsibilities; it is not legal advice for your matter."
+      },
+      {
+        "heading": "A broader plan when deletion is unavailable",
+        "body": "Correct company information, maintain an accurate careers page and address patterns in the feedback. Do not buy fabricated employee reviews, offer benefits for favorable ratings or pressure staff to change criticism. Any invitation workflow should be checked against Glassdoor’s current rules.\n\n[Review management](/services/review-management) and [search suppression](/services/negative-search-results) address different surfaces. A stronger official careers page is not removal of an employee review. [Request an assessment](/free-consultation) with the specific URLs and the facts supporting your concern."
+      }
+    ],
+    "takeaways": [
+      "Glassdoor says employers cannot pay for removal",
+      "A disagreement about content is not automatically a guideline violation",
+      "Document facts without speculating about reviewer identity",
+      "Check current reporting rules before filing",
+      "Legal action and search suppression do not guarantee deletion"
+    ],
+    "relatedServiceSlugs": [
+      "review-management",
+      "complaint-site-removal",
+      "negative-search-results"
+    ],
+    "faqs": [
+      {
+        "q": "Can employers remove Glassdoor reviews?",
+        "a": "They cannot directly delete another user’s review. Glassdoor assesses reported content under its policies."
+      },
+      {
+        "q": "Does buying recruiting services remove negative reviews?",
+        "a": "No. Glassdoor’s official removal policy expressly rejects paid review removal."
+      },
+      {
+        "q": "Can I identify an anonymous reviewer?",
+        "a": "Do not infer identity or retaliate. Ask qualified counsel about any lawful process and its risks; this guide does not establish a right to obtain identifying information."
+      },
+      {
+        "q": "What if Glassdoor keeps the review?",
+        "a": "Respond appropriately, investigate genuine feedback and improve accurate employer information across your search profile."
+      }
+    ]
+  },
+  "ripoff-report-removal": {
+    "updated": "2026-11-15",
+    "intro": "Ripoff Report removal should not be sold as a guaranteed deletion service. The platform’s published FAQs describe a general policy against removing reports, including on author request. Assess the source page, any copies, possible policy or legal concerns and Google visibility separately before paying for a program.",
+    "sections": [
+      {
+        "heading": "Start with the platform’s stated policy",
+        "body": "Ripoff Report’s [FAQs](https://www.ripoffreport.com/faqs) explain its report-removal policy and the options for people or businesses named in a report. Its own explanations are a source for what the platform says, not an independent legal determination or proof that every statement on the site is true.\n\nRead the current terms and identify the exact outcome being offered. Removal of a statement, an added response, a label and deletion of an entire page are different deliverables. Do not assume a cooperative author can remove the report at will."
+      },
+      {
+        "heading": "Build a URL-by-URL evidence map",
+        "body": "Record the original report URL, displayed date, exact disputed statements and any copies visible in search. Separate a false factual allegation from an opinion, a customer complaint or accurate reporting. For each asserted error, identify the supporting document and who can verify it.\n\nA scraper copy on another domain needs its own assessment. It is not automatically unlawful because it is duplicated, and a removal decision at the original site does not automatically apply elsewhere. Our [complaint-site removal service](/services/complaint-site-removal) covers this route assessment rather than blanket deletion promises."
+      },
+      {
+        "heading": "A rebuttal is publication, not erasure",
+        "body": "The platform describes response and rebuttal options in its FAQs. Before posting, consider whether the response adds useful facts or unnecessarily repeats an allegation. Keep it concise, factual and free of private customer information. Avoid threats, unsupported accusations and promises that cannot be checked.\n\nWhere the matter is disputed or sensitive, get counsel’s review before responding publicly. A rebuttal may remain available alongside the original complaint. Its presence does not prove that the report was removed or that its search visibility changed."
+      },
+      {
+        "heading": "Assess commercial programs on their actual terms",
+        "body": "Ripoff Report’s [information about false reports and legal disputes](https://www.ripoffreport.com/want-to-sue-ripoff) describes programs and its position on legal demands. Ask for current written terms, costs, the decision standard and precisely what happens to the page. An agency’s description is not a substitute for the platform’s agreement.\n\nThis guide does not endorse a paid program or claim that suppression is always cheaper. Compare the deliverables and risks using the [provider-selection checklist](/blog/how-to-choose-a-reputation-management-company). Independent legal advice may be appropriate before entering a dispute-resolution program."
+      },
+      {
+        "heading": "Google removal is a separate decision",
+        "body": "Google’s [personal-content removal guidance](https://support.google.com/websearch/answer/9673730?hl=en) identifies eligible categories and distinguishes search removal from source deletion. A damaging business complaint is not automatically eligible. Public interest and the specific policy matter.\n\nA legal request is also not a guaranteed approval. Counsel should assess the claim, the effect of any order and the relevant jurisdiction. Do not send copyright notices unless you have the authority and a genuine infringement basis. The [Google results removal service](/services/google-results-removal) explains assessment at the search layer."
+      },
+      {
+        "heading": "When the report remains online",
+        "body": "The objective may be better access to accurate company information rather than deletion. Correct actual service failures, keep official pages current and document any resolution that can lawfully be shared. [Search suppression](/services/negative-search-results) seeks improved visibility of competing material; it cannot promise a permanent page-one result.\n\nUse the [business reputation guide](/blog/business-reputation-management-guide) for wider planning. For a particular report, [request a consultation](/free-consultation) with URLs and evidence, not just a request for guaranteed removal."
+      }
+    ],
+    "takeaways": [
+      "Read the platform’s actual removal and response terms",
+      "Distinguish statement changes, rebuttals, source deletion and Google delisting",
+      "Treat each copied URL as a separate assessment",
+      "A court order or complaint does not guarantee Google removal",
+      "Compare deliverables before paying for a program"
+    ],
+    "relatedServiceSlugs": [
+      "complaint-site-removal",
+      "negative-search-results",
+      "website-takedown-service"
+    ],
+    "faqs": [
+      {
+        "q": "Can a Ripoff Report be deleted on request?",
+        "a": "The platform’s FAQs describe a general non-removal policy. Do not assume author cooperation or a paid service guarantees deletion."
+      },
+      {
+        "q": "Will a court order automatically remove a report from Google?",
+        "a": "No automatic result is established here. Qualified counsel should assess the order, and Google separately evaluates requests."
+      },
+      {
+        "q": "Is a rebuttal the same as removal?",
+        "a": "No. A rebuttal adds a response; the original page may remain available."
+      },
+      {
+        "q": "Can copied reports be removed?",
+        "a": "Assess each copy against the host’s policies and any applicable legal basis. Duplication alone does not establish entitlement to removal."
+      }
+    ]
+  },
+  "ai-reputation-management": {
+    "updated": "2026-11-15",
+    "intro": "AI reputation management means auditing answers about a person or business, identifying factual errors and improving the accessible source record. It does not mean controlling a model’s training data or guaranteeing what every assistant will say. The most useful starting point is an actual answer, its settings and any visible citations.",
+    "sections": [
+      {
+        "heading": "Learn which answer you are assessing",
+        "body": "Record the provider, date, model where displayed, whether web search was used and the prompt. A response from learned model information is not the same as a web-search answer. OpenAI’s [ChatGPT search explanation](https://help.openai.com/en/articles/9237897-chatgpt-search) describes cited search responses; other providers have their own behavior.\n\nDo not infer that an uncited response consulted Wikipedia or that one favorable answer represents all users. A source correction does not directly edit already-trained model parameters."
+      },
+      {
+        "heading": "Build a repeatable factual audit",
+        "body": "Use relevant prompts about the person’s role, company, professional history and any documented public matter. Save complete responses and citations. Distinguish incorrect facts, omitted context, identity confusion and opinions. If the system gives a claim without a source, mark it unverified rather than inventing a source chain.\n\nRepeat the same checks to observe changes, with the same settings where possible. This is a monitoring method, not a claim that every inaccurate statement is replicated to a fixed share of users."
+      },
+      {
+        "heading": "Correct the actual record",
+        "body": "Identify the exact source passage at issue and assemble evidence for the correction. Contact the publisher through its corrections process. For Wikipedia, use the [disclosure and Talk-page policy](/wikipedia-policy) and reliable sourcing rather than promotional editing.\n\nPublish accurate official information where it fills a genuine gap: name, current role, affiliations, dates and verified outcome documents. If the problem is private data or unlawful content, use [eligible removal routes](/services/google-results-removal). Accurate negative reporting is not a factual error simply because it is undesirable."
+      },
+      {
+        "heading": "Help discovery without claiming a citation formula",
+        "body": "Google’s [AI features guidance](https://developers.google.com/search/docs/appearance/ai-features) says normal SEO fundamentals apply. Accessible text, clear titles, useful links and factual structured data support discovery; no special schema or AI file guarantees inclusion.\n\nEarned [digital PR coverage](/services/digital-pr-tier-one-placements) may add independent information, but an agency cannot guarantee an editorial feature or dictate an assistant’s source selection. Use the [GEO guide](/blog/generative-engine-optimization-guide) for practical site-level checks."
+      },
+      {
+        "heading": "Report errors and measure unresolved cases",
+        "body": "Use the provider’s current feedback or reporting channel where appropriate. Explain the false statement, evidence and affected person without sending unnecessary sensitive documents. A report is not proof that the provider corrected the output.\n\nTrack answer accuracy and citation changes separately from submissions and content production. No universal weeks-to-months correction deadline or source-weight ranking has been verified here. Improvements in web sources may not appear in every response or persist through later model changes."
+      },
+      {
+        "heading": "Connect AI checks with the wider reputation plan",
+        "body": "An AI answer can expose an existing source problem, but the audience may also use traditional search, review sites and official profiles. Monitor those surfaces without treating them as one identical mechanism. The [business reputation guide](/blog/business-reputation-management-guide) provides the broader framework.\n\nFor help, [request an AI reputation assessment](/free-consultation) with the prompt, date, response and source links. The [AI search reputation service](/services/ai-search-reputation) should be scoped around observable work and limits rather than a promised narrative rewrite."
+      }
+    ],
+    "takeaways": [
+      "Save prompts, settings, answers and citations",
+      "Separate factual errors from opinions and identity confusion",
+      "Correct source information using evidence",
+      "Neither structured data nor llms.txt guarantees citation",
+      "Measure observed answers separately from work completed"
+    ],
+    "relatedServiceSlugs": [
+      "ai-search-reputation",
+      "wikipedia-for-celebrities",
+      "digital-pr-tier-one-placements"
+    ],
+    "faqs": [
+      {
+        "q": "Can an agency rewrite ChatGPT’s training data?",
+        "a": "No. Changing public sources does not directly edit a deployed model’s training data."
+      },
+      {
+        "q": "Can factual AI errors be corrected?",
+        "a": "Source corrections and provider reports may help, but the output remains under the provider’s control. Verify the observed answer rather than assuming success."
+      },
+      {
+        "q": "Does a Wikipedia correction change every assistant?",
+        "a": "No guaranteed propagation exists. Audit the actual answers and follow Wikipedia’s sourcing and disclosure rules."
+      },
+      {
+        "q": "Is AI reputation work a replacement for SEO?",
+        "a": "No. It adds answer and citation checks to the broader work of improving accessible, accurate information."
+      }
+    ]
+  }
 };
